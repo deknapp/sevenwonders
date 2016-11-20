@@ -12,6 +12,14 @@ int Player::canAfford(Card card) {
 		return 1;
 }
 
+void Player::discard() {
+
+	srand (time(NULL));
+	index = rand() % cards.length();
+	playedCard = hand.at(index);
+	money += 4;
+}
+
 std::vector<Card> Player::getPossibleCards(){
 
 	std::vector<Card> possibleCards;
@@ -26,11 +34,18 @@ std::vector<Card> Player::getPossibleCards(){
 
 void Player::playTurn(int round) {
 
-	Card playedCard = strategies.at(round).chooseCard(getPossibleCards());
-	playedCards.insert(playedCard);
+	Card playedCard;
+	if (getPossibleCards.length() == 0) {
+		discard();
+	}
+	else {
+		playedCard = strategies.at(round).chooseCard(getPossibleCards());
+		playedCards.insert(playedCard);
+	}
 	hand.remove(playedCard);
 	if (round == 0 || round == 2)
 		leftNeighbor.getNewHand(hand);
 	else
 		rightNeighbor.getNewHand(hand);
 }
+

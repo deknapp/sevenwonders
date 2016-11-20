@@ -7,18 +7,15 @@
 
 int main(int argc, char* argv[]) {
 
+	ArgProcessor args(argc, argv);
 	std::vector<Results> all_results;
-
-	if (argv[0] > 2)
-		std::cout << "invalid number of arguments" << std::endl;
-
-	int number_of_games = argv[1];
+	int numOfPlayers = args.getNumberOfPlayers();
 
 	Results results;
 
-	for (int i=0; i<number_of_games; i++) {
+	for (int i=0; i<args.getNumberOfGames(); i++) {
 
-		std::unique_ptr<Game> game(new Game());
+		std::unique_ptr<Game> game(new Game(numOfPlayers, strategies));
 		all_results.push_back(game->play());
 	}
 
