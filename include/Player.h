@@ -14,9 +14,11 @@ class Player {
 	Player();
 	~Player();
 	init(Wonder wonder);
+	playTurn(int round);
 
  private:
 
+ 	std::string name;
  	std::vector<Card> deck;
  	std::set<Card> playedCards;
  	

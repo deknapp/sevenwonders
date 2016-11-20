@@ -1,18 +1,17 @@
-#ifndef Player_H
-#define Player_H
+#ifndef Wonder_H
+#define Wonder_H
 
 #include <vector>
 
 #include "Card.h"
-#include "Player.h"
+#include "Wonder.h"
 #include "Wonder.h"
 
-
-class Player {
+class Wonder {
 
  public:
-	Player();
-	~Player();
+	Wonder();
+	~Wonder();
 	init(Wonder wonder);
 
  private:
@@ -22,15 +21,15 @@ class Player {
  	
  	Card disCard;
  	Card newCard;
- 	Player leftNeighbor;
- 	Player rightNeighbor;
+ 	Wonder leftNeighbor;
+ 	Wonder rightNeighbor;
  	Wonder wonder;
  	int cash;
 
  	// prevent generated functions --------------------------------------------
-	Player(const Player&);
-	Player& operator=(const Player&);
+	Wonder(const Wonder&);
+	Wonder& operator=(const Wonder&);
 };
 
-#endif /* Player_H */
+#endif /* Wonder_H */
 

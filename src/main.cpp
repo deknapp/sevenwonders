@@ -1,12 +1,13 @@
-
-
 #include <iostream>
+#include <vector>
 
 #include "Game.h"
 #include "Score.h"
 #include "Results.h"
 
 int main(int argc, char* argv[]) {
+
+	std::vector<Results> all_results;
 
 	if (argv[0] > 2)
 		std::cout << "invalid number of arguments" << std::endl;
@@ -17,12 +18,10 @@ int main(int argc, char* argv[]) {
 
 	for (int i=0; i<number_of_games; i++) {
 
-		Game* game;
-		Score* score = game.score();
-		results.add(score);
+		std::unique_ptr<Game> game(new Game());
+		all_results.push_back(game->play());
 	}
 
-	results.analzye();
-	results.print();
-
+	Analyzer analyzer(all_results);
+	analyzer.print();
 }

@@ -11,16 +11,21 @@
 class Game {
 
  public:
+
+ 	const int NUM_ROUNDS = 3;
+
 	Game(int number_of_players);
 	~Game();
-	play();
-	score();
+	std::shared_ptr<Results> play();
+	Results score();
 
  private:
 
  	std::vector<Player> players;
  	std::vector<Wonder> wonders;
  	std::vector<Card> deck;
+
+ 	Results results;
 
  	// prevent generated functions --------------------------------------------
 	Game(const Game&);
