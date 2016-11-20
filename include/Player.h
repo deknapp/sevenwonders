@@ -18,15 +18,14 @@ class Player {
 
  private:
 
+ 	std::vector<Card> getPossibleCards();
  	std::vector<Strategy> strategies;
  	std::string name;
  	std::vector<Card> hand;
- 	std::vector<Card> nextHand;
  	std::set<Card> playedCards;
- 	Player leftNeighbor;
- 	Player rightNeighbor;
- 	Wonder wonder;
- 	Card wonderCard;
+ 	Player* leftNeighbor;
+ 	Player* rightNeighbor;
+ 	Wonder* wonder;
  	int cash;
 
  	// prevent generated functions --------------------------------------------
