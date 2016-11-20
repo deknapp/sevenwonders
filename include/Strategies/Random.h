@@ -9,12 +9,12 @@
 #include "Random.h"
 #include "Wonder.h"
 
-class Random {
+class Random : public Strategy {
 
  public:
 	Random();
 	~Random();
-	virtual chooseCardToPlay() = 0;
+	Card chooseCardToPlay(std::vector<Card> cards);
 
  private:
  	// prevent generated functions --------------------------------------------

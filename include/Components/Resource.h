@@ -12,6 +12,7 @@ class Resource {
  public:
 	Resource();
 	~Resource();
+	int operator>(const Resource& b);
 
  private:
 

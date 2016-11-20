@@ -25,7 +25,11 @@ class Player {
  	std::set<Card> playedCards;
  	Player* leftNeighbor;
  	Player* rightNeighbor;
- 	Wonder* wonder;
+ 	Resource resource;
+ 	Science science;
+ 	Guild guild;
+ 	Economy economy;
+ 	Wonder wonder;
  	int cash;
 
  	// prevent generated functions --------------------------------------------

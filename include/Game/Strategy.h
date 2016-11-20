@@ -13,7 +13,7 @@ class Strategy {
 
  public:
 	Strategy();
-	~Strategy();
+	virtual ~Strategy();
 	virtual chooseCardToPlay() = 0;
 
  private:

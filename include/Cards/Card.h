@@ -12,7 +12,7 @@ class Card {
  private:
 
  	std::string name;
- 	Cost cost;
+ 	Resource cost;
  	Type type;
  	
  	// prevent generated functions --------------------------------------------
