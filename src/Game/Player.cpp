@@ -4,6 +4,12 @@ Player::Player() {}
 
 Player::~Player() {}
 
+int Player::score() {
+
+	int sum = 0;
+	sum += science.score() + military.score() + 
+}
+
 int Player::canAfford(Card card) {
 
 	if (card.cost() > resource) 
@@ -49,3 +55,28 @@ void Player::playTurn(int round) {
 		rightNeighbor.getNewHand(hand);
 }
 
+void Player::updateMilitaryPoints(int round) {
+
+	int newPoints = 0;
+	int bonus = 1;
+	if (round == 1)
+		bonus = 3;
+	if (round == 2) 
+		bonus = 5;
+
+	if (leftNeighbor.strength() < strength)
+		newPoints += bonus;
+	else
+		newPoints -= 1;
+
+	if (rightNeighbor.strength() < strength)
+		newPoints += bonus;
+	else
+		newPoints -= 1;
+
+}
+
+void Player::strength() {
+
+	return military.strength();
+}

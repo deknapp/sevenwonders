@@ -15,6 +15,8 @@ class Player {
 	~Player();
 	init(Wonder wonder);
 	playTurn(int round);
+	void updateMilitaryPoints();
+	int strength();
 
  private:
 

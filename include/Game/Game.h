@@ -17,13 +17,18 @@ class Game {
 	Game(int number_of_players);
 	~Game();
 	std::shared_ptr<Results> play();
+	void setup();
 	Results score();
+
 
  private:
 
  	std::vector<Player> players;
  	std::vector<Wonder> wonders;
- 	std::vector<Card> deck;
+ 	
+ 	std::vector<Card> firstAgeDeck;
+ 	std::vector<Card> secondAgeDeck;
+ 	std::vector<Card> thirdAgeDeck;
 
  	Results results;
 

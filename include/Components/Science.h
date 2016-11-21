@@ -12,6 +12,7 @@ class Science {
  public:
 	Science();
 	~Science();
+	int score();
 
  private:
 

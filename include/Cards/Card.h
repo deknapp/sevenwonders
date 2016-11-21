@@ -13,7 +13,8 @@ class Card {
 
  	std::string name;
  	Resource cost;
- 	Type type;
+ 	std::string type;
+ 	int minPlayers;
  	
  	// prevent generated functions --------------------------------------------
 	Card(const Card&);
