@@ -1,9 +1,5 @@
-#include <stdlib.h>     /* srand, rand */
-#include <time.h>       /* time */
-#include <vector>
+#include "Random.h"
 
 Card chooseCardToPlay(std::vector<Card> cards) {
-	srand (time(NULL));
-	index = rand() % cards.length();
-	return cards.at(index);
+	return randomCard(cards);
 }

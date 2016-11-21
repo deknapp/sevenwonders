@@ -1,12 +1,19 @@
 #include "Player.h"
 
-Player::Player() : gold(3),  {
+Player::Player() : gold(3) { }
 
+Player::initPlayer(Player* left, Player* right) { 
 
-
+	leftNeighbor = left;
+	rightNeighbor = right;
 }
 
 Player::~Player() {}
+
+void Player::addToHand(Card newCard) {
+
+	hand.push_back(newCard);
+}
 
 int Player::score() {
 

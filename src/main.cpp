@@ -1,13 +1,8 @@
-#include <iostream>
-#include <vector>
-
 #include "ArgProcessor.h"
 #include "Game.h"
 
 int main(int argc, char* argv[]) {
 
-	ArgProcessor args(argc, argv);
-	Game game(args.getNumberOfPlayers(), args.getStrategies());
+	Game game(std::unique_ptr<ArgProcessor>(new ArgProcessor(argc, argv));
 	game.play();
-	game.printScores();
 }

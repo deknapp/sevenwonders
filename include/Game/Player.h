@@ -16,6 +16,7 @@ class Player {
 	init(Wonder wonder);
 	playTurn(int round);
 	void updateMilitaryPoints();
+	void addToHand(Card newCard);
 	int strength();
 
  private:
@@ -27,8 +28,7 @@ class Player {
  	std::set<Card> playedCards;
  	Player leftNeighbor;
  	Player rightNeighbor;
- 	// Wonder wonder;
- 	// Card wonderCard;
+ 	Strategy strategy;
  	int gold;
 
  	// prevent generated functions --------------------------------------------
