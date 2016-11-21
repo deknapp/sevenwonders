@@ -10,7 +10,7 @@
 class Resource {
 
  public:
-	Resource();
+	Resource(int wood, int brick, int stone, int ore);
 	~Resource();
 	int operator>(const Resource& b);
 

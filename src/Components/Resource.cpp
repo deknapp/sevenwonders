@@ -1,3 +1,6 @@
+Resource::Resource(int _wood, int _brick, int _stone, int _ore) : 
+				  (wood(_wood), brick(_brick), stone(_stone), ore(_ore) {}
+
 int Resource::operator>(const Resource& b) {
 
 	if (this->money > b.money)

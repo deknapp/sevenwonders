@@ -124,9 +124,6 @@ Game::getScienceCards() {
 	deck.push_back(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, minPlayers));
 	deck.push_back(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, minPlayers));
 
-
-	if (minPlayers > 3) {
-	}
 }
 
 Game::getDeck(int numPlayers) {
@@ -135,7 +132,6 @@ Game::getDeck(int numPlayers) {
 	getBlueCards(numPlayers);
 	getMilitaryCards(numPlayers);
 	getScienceCards(numPlayers);
-	
 }
 
 Game::setup() {

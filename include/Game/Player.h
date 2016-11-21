@@ -27,9 +27,9 @@ class Player {
  	std::set<Card> playedCards;
  	Player leftNeighbor;
  	Player rightNeighbor;
- 	Wonder wonder;
- 	Card wonderCard;
- 	int cash;
+ 	// Wonder wonder;
+ 	// Card wonderCard;
+ 	int gold;
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);

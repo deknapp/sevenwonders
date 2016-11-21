@@ -8,6 +8,7 @@ class Card {
  public:
 	Card();
 	~Card();
+	virtual play() = 0;
 
  private:
 

@@ -1,6 +1,10 @@
 #include "Player.h"
 
-Player::Player() {}
+Player::Player() : gold(3),  {
+
+
+
+}
 
 Player::~Player() {}
 
