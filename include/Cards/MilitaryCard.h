@@ -9,8 +9,9 @@
 class MilitaryCard : public Card {
 
  public:
-	MilitaryCard(std::string _name, int _gold, int _minPlayers);
-	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int _gold, int _minPlayers);
+	MilitaryCard(std::string _name, int _gold, int _age, int _minPlayers);
+	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int _gold, int _age, int _minPlayers);
+	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int glass, int carpet, int paper, int _gold, int _age, int _minPlayers);
 	~MilitaryCard();
 
  private:
@@ -18,6 +19,7 @@ class MilitaryCard : public Card {
  	std::string name;
  	std::unique_ptr<Resource> resourceCost;
  	int gold;
+ 	int age;
  	int minPlayers;
  	
  	// prevent generated functions --------------------------------------------

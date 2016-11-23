@@ -87,60 +87,62 @@ void Game::getBlueCards(int minPlayers) {
 void Game::getMilitaryCards(int minPlayers) {
 
 	int age = 1;
+	int cost = 0;
 
-	firstAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("stockade", 1, 0, 0, 0, age, minPlayers)));
-	firstAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("barracks", 0, 0, 0, 1, age, minPlayers)));
-	firstAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("guardTower", 0, 0, 1, 0, age,  minPlayers)));
+	firstAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("stockade", 1, 0, 0, 0, age, cost, minPlayers)));
+	firstAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("barracks", 0, 0, 0, 1, age, cost, minPlayers)));
+	firstAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("guardTower", 0, 0, 1, 0, age, cost, minPlayers)));
 
 	age = 2, 
 
-	secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age,  minPlayers)));
-	secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, minPlayers)));
-	secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, cost, minPlayers)));
 
 	age = 3;
 
-	thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("fortifications", 0, 1, 0, 3, age,  minPlayers)));
-	thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, minPlayers)));
-	thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("fortifications", 0, 1, 0, 3, age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, cost, minPlayers)));
 
 
 	if (minPlayers > 3) {
-		secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, 2,  minPlayers)));
-		thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, 3,  minPlayers)));
+		secondAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, 2, cost,  minPlayers)));
+		thirdAgeDeck.push_back(std::unique_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, 3, cost, minPlayers)));
 	}
 }
 
 void Game::getScienceCards(int minPlayers) {
 
 	int age = 1;
+	int cost = 0;
 
-	firstAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, "A", age, minPlayers)));
-	firstAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, "wheel", age, minPlayers)));
-	firstAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, "tablet", age, minPlayers)));
+	firstAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, "A", age, cost, minPlayers)));
+	firstAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, "wheel", age, cost, minPlayers)));
+	firstAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, "tablet", age, cost, minPlayers)));
 
 	age = 2, 
 
-	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, "A", age, minPlayers)));
-	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "wheel", age, minPlayers)));
-	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, minPlayers)));
-	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, "A", age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "wheel", age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, cost, minPlayers)));
 
 	age = 3;
 
-	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, "A", age, minPlayers)));
-	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "wheel", age, minPlayers)));
-	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, minPlayers)));
-	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, "A", age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "wheel", age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::unique_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, cost, minPlayers)));
 
 }
 
 void Game::getDeck(int minPlayers) {
 
-	getResourceCards(minPlayers)));
-	getBlueCards(minPlayers)));
-	getMilitaryCards(minPlayers)));
-	getScienceCards(minPlayers)));
+	getResourceCards(minPlayers);
+	getBlueCards(minPlayers);
+	getMilitaryCards(minPlayers);
+	getScienceCards(minPlayers);
 
 	// TODO: add other types of cards. 
 }
@@ -183,7 +185,7 @@ void Game::dealRound(int rund) {
 void Game::initPlayers() {
 
 	for (int i=0; i<numPlayers; i++) {
-		players.push_back(std::unique_ptr<ResourceCard>(new Player())
+		players.push_back(std::unique_ptr<ResourceCard>(new Player()))
 		playerAt(i).setStrategy(arg.strategyAt(i));
 	}
 
