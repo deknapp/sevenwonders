@@ -12,7 +12,7 @@ class Game {
 
  	const int NUM_ROUNDS = 3;
 
-	Game(int number_of_players);
+	Game(std::unique_ptr<ArgProcessor> args_pointer);
 	~Game();
 	void play();
 	void setup();
@@ -21,6 +21,7 @@ class Game {
 
  private:
 
+ 	std::unique_ptr<ArgProcessor> args;
  	std::vector<Player> players;
  	std::vector<Card> firstAgeDeck;
  	std::vector<Card> secondAgeDeck;

@@ -14,11 +14,6 @@ class Card {
 	virtual void play();
 
  private:
-
- 	std::string name;
- 	Resource cost;
- 	std::string type;
- 	int minPlayers;
  	
  	// prevent generated functions --------------------------------------------
 	Card(const Card&);

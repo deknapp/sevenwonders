@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game(): {}
+Game::Game(std::unique_ptr<ArgProcessor> args_pointer) : args(args_pointer) {}
 
 Game::~Game() {}
 

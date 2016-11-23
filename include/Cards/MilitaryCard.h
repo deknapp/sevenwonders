@@ -2,18 +2,22 @@
 #define MilitaryCard_H
 
 #include <vector>
+#include <string> 
+#include "../../include/components/Resource.h"
 
 class MilitaryCard {
 
  public:
-	MilitaryCard();
+	MilitaryCard(std::string _name, int _gold, int _minPlayers);
+	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int _gold, int _minPlayers);
 	~MilitaryCard();
 
  private:
 
  	std::string name;
- 	Cost cost;
- 	Type type;
+ 	std::unique_ptr<Resource> resourceCost;
+ 	int gold;
+ 	int minPlayers;
  	
  	// prevent generated functions --------------------------------------------
 	MilitaryCard(const MilitaryCard&);

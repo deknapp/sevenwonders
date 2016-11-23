@@ -3,12 +3,13 @@
 
 #include <vector>
 
-#include "../cards/Card.h"
-
 class Resource {
 
  public:
+	Resource();
+	Resource(int glass, int paper, int carpet);
 	Resource(int wood, int brick, int stone, int ore);
+	Resource(int wood, int brick, int stone, int ore, int glass, int paper, int carpet);
 	~Resource();
 	int operator>(const Resource& b);
 
@@ -18,6 +19,9 @@ class Resource {
  	int brick;
  	int stone;
  	int ore;
+ 	int glass;
+ 	int paper;
+ 	int carpet;
 
  	// prevent generated functions --------------------------------------------
 	Resource(const Resource&);

@@ -30,11 +30,37 @@ string
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
 
+/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+vector
+-
+string
+-
+../../include/components/Resource.h
+/Users/nath/sevenwonders/include/components/Resource.h
+
+/Users/nath/sevenwonders/include/cards/ResourceCard.h
+string
+-
+vector
+-
+../components/Resource.h
+/Users/nath/sevenwonders/include/components/Resource.h
+
+/Users/nath/sevenwonders/include/cards/ScienceCard.h
+vector
+-
+string
+-
+../components/Resource.h
+/Users/nath/sevenwonders/include/components/Resource.h
+
+/Users/nath/sevenwonders/include/components/Military.h
+vector
+-
+
 /Users/nath/sevenwonders/include/components/Resource.h
 vector
 -
-../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
 
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 vector
@@ -75,22 +101,30 @@ string
 -
 
 /Users/nath/sevenwonders/src/cards/Card.cpp
-Card.h
-/Users/nath/sevenwonders/src/cards/Card.h
+../../include/cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
 
 /Users/nath/sevenwonders/src/cards/MilitaryCard.cpp
-MilitaryCard.h
-/Users/nath/sevenwonders/src/cards/MilitaryCard.h
+../../include/cards/MilitaryCard.h
+/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+string
+-
 
 /Users/nath/sevenwonders/src/cards/ResourceCard.cpp
-ResourceCard.h
-/Users/nath/sevenwonders/src/cards/ResourceCard.h
+../../include/cards/ResourceCard.h
+/Users/nath/sevenwonders/include/cards/ResourceCard.h
+string
+-
 
 /Users/nath/sevenwonders/src/cards/ScienceCard.cpp
-ScienceCard.h
-/Users/nath/sevenwonders/src/cards/ScienceCard.h
+../../include/cards/ScienceCard.h
+/Users/nath/sevenwonders/include/cards/ScienceCard.h
+string
+-
 
 /Users/nath/sevenwonders/src/components/Military.cpp
+../../include/components/Military.h
+/Users/nath/sevenwonders/include/components/Military.h
 
 /Users/nath/sevenwonders/src/components/Resource.cpp
 

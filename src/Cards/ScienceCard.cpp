@@ -1,12 +1,14 @@
-#include "ScienceCard.h"
+#include "../../include/cards/ScienceCard.h"
+#include <string>
 
-ScienceCard::ScienceCard(std::string name, int glass, int carpet, int paper, std::string type, int age, int minPlayers) :
-						 :
-}
+ScienceCard::ScienceCard(std::string _name, int _minPlayers) :
+						name(_name), resourceCost(new Resource()), gold(0), minPlayers(_minPlayers) {}
 
-ScienceCard::ScienceCard(std::string name, int wood, int stone, int brick, int ore, int glass, int carpet, int paper, std::string type, int age, int minPlayers) {
+ScienceCard::ScienceCard(std::string _name, int _glass, int _carpet, int _paper, int _gold, int _minPlayers) :
+						name(_name), resourceCost(new Resource(_glass, _carpet, _paper)), gold(_gold), minPlayers(_minPlayers) {}
 
+ScienceCard::ScienceCard(std::string _name, int _wood, int _stone, int _brick, int _ore, int _glass, int _carpet, int _paper, int _gold, int _minPlayers) :
+						name(_name), resourceCost(new Resource(_wood, _stone, _brick, _ore, _glass, _carpet, _paper)), gold(_gold), minPlayers(_minPlayers) {}
 
-}
 
 ScienceCard::~ScienceCard() {}

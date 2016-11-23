@@ -3,17 +3,13 @@
 
 #include <vector>
 
-#include "Card.h"
-#include "Military.h"
-#include "Wonder.h"
-
 class Military {
 
  public:
 	Military();
 	~Military();
-	int score();
-	int strength();
+	int getScore();
+	int getStrength();
 
  private:
 
