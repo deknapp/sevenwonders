@@ -23,12 +23,16 @@ class Game {
 	void score();
 
 
+
  private:
+
 
  	void getBlueCards(int minPlayers);
  	void getMilitaryCards(int minPlayers);
  	void getResourceCards(int minPlayers);
  	void getScienceCards(int minPlayers);
+ 	void getDeck(int minPlayers);
+ 	std::vector<Card> shuffle(std::vector<Card> deck);
 
  	std::shared_ptr<ArgProcessor> args;
  	std::vector<Player> players;

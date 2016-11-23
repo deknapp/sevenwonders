@@ -150,8 +150,8 @@ void Game::getDeck(int minPlayers) {
 std::vector<Card> Game::shuffle(std::vector<Card> deck) {
 
 	std::vector<Card> newDeck;
-	int index:
-	for (int i = 0; i < deck.length(); i++) {
+	int index;
+	for (int i = 0; i < deck.size(); i++) {
 		index = randomIndex(deck);
 		newDeck.push_back(deck.at(index));
 		deck.remove(index);
@@ -172,7 +172,7 @@ void Game::dealRound(int rund) {
 		deck = thirdAgeDeck;
 
 	deck = shuffle(deck);
-	int numCards = deck.length() / numPlayers;
+	int numCards = deck.size() / numPlayers;
 
 	for (const auto& it: players) {
 		for (int i=0; i<numPlayers; i++)  {
