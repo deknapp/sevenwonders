@@ -10,8 +10,8 @@ class Card {
 
  public:
 	Card();
-	~Card();
-	virtual void play() = 0;
+	virtual ~Card();
+	virtual void play();
 
  private:
 

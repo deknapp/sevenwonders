@@ -14,6 +14,14 @@ time.h
 vector
 -
 
+/Users/nath/sevenwonders/include/cards/BlueCard.h
+vector
+-
+string
+-
+../components/Resource.h
+/Users/nath/sevenwonders/include/components/Resource.h
+
 /Users/nath/sevenwonders/include/cards/Card.h
 vector
 -
@@ -61,8 +69,10 @@ vector
 /Users/nath/sevenwonders/include/RandomUtility.h
 
 /Users/nath/sevenwonders/src/cards/BlueCard.cpp
-BlueCard.h
-/Users/nath/sevenwonders/src/cards/BlueCard.h
+../../include/cards/BlueCard.h
+/Users/nath/sevenwonders/include/cards/BlueCard.h
+string
+-
 
 /Users/nath/sevenwonders/src/cards/Card.cpp
 Card.h

@@ -1,23 +1,20 @@
-#ifndef BlueCard_H
-#define BlueCard_H
-
 #include <vector>
+#include <string>
+#include "../components/Resource.h"
 
 class BlueCard {
 
  public:
-	BlueCard();
+	BlueCard(std::string _name, int money);
+	BlueCard(std::string _name, int money, int brick, int stone, int wood, int ore);
 	~BlueCard();
 
  private:
 
  	std::string name;
- 	Cost cost;
- 	Type type;
+ 	Resource cost;
  	
  	// prevent generated functions --------------------------------------------
 	BlueCard(const BlueCard&);
 	BlueCard& operator=(const BlueCard&);
 };
-
-#endif /* BlueCard_H */
