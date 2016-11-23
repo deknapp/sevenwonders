@@ -1,3 +1,5 @@
+#include "../../include/components/Resource.h"
+
 Resource::Resource() : wood(0), brick(0), stone(0), ore(0), glass(0), paper(0), carpet(0) {}
 
 Resource::Resource(int _glass, int _paper, int _carpet) : wood(0), brick(0), stone(0), ore(0), 

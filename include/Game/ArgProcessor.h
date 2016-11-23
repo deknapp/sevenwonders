@@ -1,6 +1,12 @@
+#ifndef ArgProcessor_H
+#define ArgProcessor_H
+
 #include <vector>
+#include <string>
+
 #include "../cards/Card.h"
 #include "../game/Player.h"
+
 
 class ArgProcessor {
 
@@ -23,3 +29,4 @@ class ArgProcessor {
 };
 
 
+#endif /* ArgProcessor_H */

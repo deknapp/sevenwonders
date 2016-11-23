@@ -4,6 +4,7 @@
 #include <vector>
 
 #include "../cards/Card.h"
+#include "ArgProcessor.h"
 #include "Player.h"
 
 class Game {
@@ -12,8 +13,11 @@ class Game {
 
  	const int NUM_ROUNDS = 3;
 
-	Game(std::unique_ptr<ArgProcessor> args_pointer);
+	Game(std::shared_ptr<ArgProcessor> args_pointer);
 	~Game();
+
+
+
 	void play();
 	void setup();
 	void score();
@@ -21,11 +25,16 @@ class Game {
 
  private:
 
- 	std::unique_ptr<ArgProcessor> args;
+ 	void getBlueCards(int minPlayers);
+ 	void getMilitaryCards(int minPlayers);
+ 	void getResourceCards(int minPlayers);
+ 	void getScienceCards(int minPlayers);
+
+ 	std::shared_ptr<ArgProcessor> args;
  	std::vector<Player> players;
- 	std::vector<Card> firstAgeDeck;
- 	std::vector<Card> secondAgeDeck;
- 	std::vector<Card> thirdAgeDeck;
+ 	std::vector<std::unique_ptr<Card>> firstAgeDeck;
+ 	std::vector<std::unique_ptr<Card>> secondAgeDeck;
+ 	std::vector<std::unique_ptr<Card>> thirdAgeDeck;
 
  	// prevent generated functions --------------------------------------------
 	Game(const Game&);

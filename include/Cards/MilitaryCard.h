@@ -3,9 +3,10 @@
 
 #include <vector>
 #include <string> 
+#include "../cards/Card.h"
 #include "../../include/components/Resource.h"
 
-class MilitaryCard {
+class MilitaryCard : public Card {
 
  public:
 	MilitaryCard(std::string _name, int _gold, int _minPlayers);

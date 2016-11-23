@@ -1,7 +1,9 @@
+#include "../../include/components/Science.h"
+#include <math.h>
+
 int Science::score() {
 
 	int sum = 0;
-	int max_ct = std::max(wheels, std::max(abacus, tablet));
 	int min_ct = std::min(wheels, std::min(abacus, tablet));
 	min_ct += wild;
 

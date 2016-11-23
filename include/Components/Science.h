@@ -3,10 +3,6 @@
 
 #include <vector>
 
-#include "Card.h"
-#include "Science.h"
-#include "Wonder.h"
-
 class Science {
 
  public:

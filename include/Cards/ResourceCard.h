@@ -4,21 +4,26 @@
 #include <string>
 #include <vector>
 
+#include "../cards/Card.h"
 #include "../components/Resource.h"
 
-class ResourceCard {
+class ResourceCard : public Card {
 
  public:
-	ResourceCard(std::string _name, int _gold, int _minPlayers);
-	ResourceCard(std::string _name, int brick, int stone, int wood, int ore, int _gold, int _minPlayers);
+	ResourceCard(std::string _name, int age, int _gold, int _minPlayers);
+	ResourceCard(std::string _name, int age, int wood, int stone, int brick, int ore, int _gold, int _minPlayers);
+	ResourceCard(std::string _name, int age, int _gold, int brick, int stone, int wood, int ore, int either_or, int _minPlayers);
 	~ResourceCard();
 
  private:
 
  	std::string name;
+ 	int age;
  	std::unique_ptr<Resource> resourceCost;
  	int gold;
+ 	int either_or;
  	int minPlayers;
+ 
  	
  	// prevent generated functions --------------------------------------------
 	ResourceCard(const ResourceCard&);

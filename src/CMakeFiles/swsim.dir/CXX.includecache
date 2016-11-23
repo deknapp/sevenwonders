@@ -19,6 +19,8 @@ vector
 -
 string
 -
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
 
@@ -35,6 +37,8 @@ vector
 -
 string
 -
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
 ../../include/components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
 
@@ -43,6 +47,8 @@ string
 -
 vector
 -
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
 
@@ -51,6 +57,8 @@ vector
 -
 string
 -
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
 
@@ -62,8 +70,14 @@ vector
 vector
 -
 
+/Users/nath/sevenwonders/include/components/Science.h
+vector
+-
+
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 vector
+-
+string
 -
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
@@ -75,6 +89,8 @@ vector
 -
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
+ArgProcessor.h
+/Users/nath/sevenwonders/include/game/ArgProcessor.h
 Player.h
 /Users/nath/sevenwonders/include/game/Player.h
 
@@ -127,14 +143,34 @@ string
 /Users/nath/sevenwonders/include/components/Military.h
 
 /Users/nath/sevenwonders/src/components/Resource.cpp
+../../include/components/Resource.h
+/Users/nath/sevenwonders/include/components/Resource.h
 
 /Users/nath/sevenwonders/src/components/Science.cpp
+../../include/components/Science.h
+/Users/nath/sevenwonders/include/components/Science.h
+math.h
+-
 
 /Users/nath/sevenwonders/src/game/ArgProcessor.cpp
+../../include/game/ArgProcessor.h
+/Users/nath/sevenwonders/include/game/ArgProcessor.h
+iostream
+-
+string
+-
 
 /Users/nath/sevenwonders/src/game/Game.cpp
-Game.h
-/Users/nath/sevenwonders/src/game/Game.h
+../../include/game/Game.h
+/Users/nath/sevenwonders/include/game/Game.h
+../../include/cards/BlueCard.h
+/Users/nath/sevenwonders/include/cards/BlueCard.h
+../../include/cards/MilitaryCard.h
+/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+../../include/cards/ResourceCard.h
+/Users/nath/sevenwonders/include/cards/ResourceCard.h
+../../include/cards/ScienceCard.h
+/Users/nath/sevenwonders/include/cards/ScienceCard.h
 
 /Users/nath/sevenwonders/src/game/Player.cpp
 Player.h

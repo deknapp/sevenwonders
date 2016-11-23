@@ -3,6 +3,7 @@
 
 src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.o
  /Users/nath/sevenwonders/include/cards/BlueCard.h
+ /Users/nath/sevenwonders/include/cards/Card.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/BlueCard.cpp
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o
@@ -10,14 +11,17 @@ src/CMakeFiles/swsim.dir/cards/Card.cpp.o
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/Card.cpp
 src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o
+ /Users/nath/sevenwonders/include/cards/Card.h
  /Users/nath/sevenwonders/include/cards/MilitaryCard.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/MilitaryCard.cpp
 src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o
+ /Users/nath/sevenwonders/include/cards/Card.h
  /Users/nath/sevenwonders/include/cards/ResourceCard.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/ResourceCard.cpp
 src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o
+ /Users/nath/sevenwonders/include/cards/Card.h
  /Users/nath/sevenwonders/include/cards/ScienceCard.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/ScienceCard.cpp
@@ -25,12 +29,31 @@ src/CMakeFiles/swsim.dir/components/Military.cpp.o
  /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/src/components/Military.cpp
 src/CMakeFiles/swsim.dir/components/Resource.cpp.o
+ /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/components/Resource.cpp
 src/CMakeFiles/swsim.dir/components/Science.cpp.o
+ /Users/nath/sevenwonders/include/components/Science.h
  /Users/nath/sevenwonders/src/components/Science.cpp
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
+ /Users/nath/sevenwonders/include/RandomUtility.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/game/ArgProcessor.h
+ /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Strategy.h
  /Users/nath/sevenwonders/src/game/ArgProcessor.cpp
 src/CMakeFiles/swsim.dir/game/Game.cpp.o
+ /Users/nath/sevenwonders/include/RandomUtility.h
+ /Users/nath/sevenwonders/include/cards/BlueCard.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/cards/MilitaryCard.h
+ /Users/nath/sevenwonders/include/cards/ResourceCard.h
+ /Users/nath/sevenwonders/include/cards/ScienceCard.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/game/ArgProcessor.h
+ /Users/nath/sevenwonders/include/game/Game.h
+ /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Strategy.h
  /Users/nath/sevenwonders/src/game/Game.cpp
 src/CMakeFiles/swsim.dir/game/Player.cpp.o
  /Users/nath/sevenwonders/src/game/Player.cpp
