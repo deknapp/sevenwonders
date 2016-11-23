@@ -1,5 +1,5 @@
 #include "../include/game/ArgProcessor.h"
-#include "Game.h"
+#include "../include/game/Game.h"
 
 int main(int argc, char* argv[]) {
 

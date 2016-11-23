@@ -2,13 +2,16 @@
 #define Card_H
 
 #include <vector>
+#include <string>
+
+#include "../components/Resource.h"
 
 class Card {
 
  public:
 	Card();
 	~Card();
-	virtual play() = 0;
+	virtual void play() = 0;
 
  private:
 

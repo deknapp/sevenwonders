@@ -4,14 +4,15 @@
 #include <vector>
 
 #include "../cards/Card.h"
+#include "../strategies/Strategy.h"
 
 class Player {
 
  public:
 	Player();
 	~Player();
-	init(Wonder wonder);
-	playTurn(int round);
+	void init();
+	void playTurn(int round);
 	void updateMilitaryPoints();
 	void addToHand(Card newCard);
 	int strength();
@@ -22,9 +23,9 @@ class Player {
  	std::string name;
  	std::vector<Card> hand;
  	std::vector<Card> nextHand;
- 	std::set<Card> playedCards;
- 	Player leftNeighbor;
- 	Player rightNeighbor;
+ 	std::vector<Card> playedCards;
+ 	std::unique_ptr<Player> leftNeighbor;
+ 	std::unique_ptr<Player> rightNeighbor;
  	Strategy strategy;
  	int gold;
 

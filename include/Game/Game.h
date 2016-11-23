@@ -3,10 +3,8 @@
 
 #include <vector>
 
-#include "Card.h"
+#include "../cards/Card.h"
 #include "Player.h"
-#include "Wonder.h"
-
 
 class Game {
 
@@ -16,21 +14,17 @@ class Game {
 
 	Game(int number_of_players);
 	~Game();
-	std::shared_ptr<Results> play();
+	void play();
 	void setup();
-	Results score();
+	void score();
 
 
  private:
 
  	std::vector<Player> players;
- 	std::vector<Wonder> wonders;
- 	
  	std::vector<Card> firstAgeDeck;
  	std::vector<Card> secondAgeDeck;
  	std::vector<Card> thirdAgeDeck;
-
- 	Results results;
 
  	// prevent generated functions --------------------------------------------
 	Game(const Game&);

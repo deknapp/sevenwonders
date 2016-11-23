@@ -3,9 +3,7 @@
 
 #include <vector>
 
-#include "Card.h"
-#include "Resource.h"
-#include "Wonder.h"
+#include "../cards/Card.h"
 
 class Resource {
 
