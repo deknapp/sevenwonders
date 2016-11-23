@@ -1,0 +1,5 @@
+/Users/nath/sevenwonders/CMakeFiles/rebuild_cache.dir
+/Users/nath/sevenwonders/CMakeFiles/edit_cache.dir
+/Users/nath/sevenwonders/src/CMakeFiles/rebuild_cache.dir
+/Users/nath/sevenwonders/src/CMakeFiles/edit_cache.dir
+/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir

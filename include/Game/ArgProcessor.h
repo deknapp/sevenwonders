@@ -1,11 +1,6 @@
-#ifndef ArgProcessor_H
-#define ArgProcessor_H
-
 #include <vector>
-
-#include "Card.h"
-#include "Player.h"
-#include "Wonder.h"
+#include "../cards/Card.h"
+#include "../game/Player.h"
 
 class ArgProcessor {
 
@@ -27,5 +22,4 @@ class ArgProcessor {
 	ArgProcessor& operator=(const ArgProcessor&);
 };
 
-#endif /* ArgProcessor_H */
 

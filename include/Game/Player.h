@@ -3,10 +3,7 @@
 
 #include <vector>
 
-#include "Card.h"
-#include "Player.h"
-#include "Wonder.h"
-
+#include "../cards/Card.h"
 
 class Player {
 
