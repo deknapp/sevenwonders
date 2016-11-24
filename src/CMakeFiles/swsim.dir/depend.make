@@ -95,7 +95,10 @@ src/CMakeFiles/swsim.dir/main.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/strategies/StrategyFactory.h
 src/CMakeFiles/swsim.dir/main.cpp.o: src/main.cpp
 
-src/CMakeFiles/swsim.dir/strategies/Priority.cpp.o: src/strategies/Priority.cpp
+src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/strategies/PriorityOrder.h
+src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: src/strategies/PriorityOrder.cpp
 
 src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o: src/strategies/ProcessArgs.cpp
 

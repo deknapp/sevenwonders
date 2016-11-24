@@ -1,8 +1,9 @@
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 #include <vector>
+#include "../../include/strategies/PriorityOrder.h"
 
-Card chooseCardToPlay(std::vector<Card> cards, std::string order) {
+std::shared_ptr<Card> PriorityOrder::chooseCardToPlay(std::vector<std::shared_ptr<Card>> cards) {
 
 	for (const auto& it: order) {
 
@@ -13,7 +14,7 @@ Card chooseCardToPlay(std::vector<Card> cards, std::string order) {
 	return NULL;
 }
 
-Card chooseType(std::vector<Card> cards, std::string type) {
+std::shared_ptr<Card> PriorityOrder::chooseType(std::vector<Card> cards, std::string type) {
 
 	for (const auto& it: cards) {
 		if (it.type.equals(type))

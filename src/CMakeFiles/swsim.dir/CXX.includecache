@@ -222,13 +222,15 @@ string
 ../include/game/Game.h
 /Users/nath/sevenwonders/include/game/Game.h
 
-/Users/nath/sevenwonders/src/strategies/Priority.cpp
+/Users/nath/sevenwonders/src/strategies/PriorityOrder.cpp
 stdlib.h
 -
 time.h
 -
 vector
 -
+../../include/strategies/PriorityOrder.h
+/Users/nath/sevenwonders/include/strategies/PriorityOrder.h
 
 /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp
 

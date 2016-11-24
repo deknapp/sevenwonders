@@ -449,32 +449,32 @@ main.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-strategies/Priority.o: strategies/Priority.cpp.o
+strategies/PriorityOrder.o: strategies/PriorityOrder.cpp.o
 
-.PHONY : strategies/Priority.o
+.PHONY : strategies/PriorityOrder.o
 
 # target to build an object file
-strategies/Priority.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Priority.cpp.o
-.PHONY : strategies/Priority.cpp.o
+strategies/PriorityOrder.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o
+.PHONY : strategies/PriorityOrder.cpp.o
 
-strategies/Priority.i: strategies/Priority.cpp.i
+strategies/PriorityOrder.i: strategies/PriorityOrder.cpp.i
 
-.PHONY : strategies/Priority.i
+.PHONY : strategies/PriorityOrder.i
 
 # target to preprocess a source file
-strategies/Priority.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Priority.cpp.i
-.PHONY : strategies/Priority.cpp.i
+strategies/PriorityOrder.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.i
+.PHONY : strategies/PriorityOrder.cpp.i
 
-strategies/Priority.s: strategies/Priority.cpp.s
+strategies/PriorityOrder.s: strategies/PriorityOrder.cpp.s
 
-.PHONY : strategies/Priority.s
+.PHONY : strategies/PriorityOrder.s
 
 # target to generate assembly for a file
-strategies/Priority.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Priority.cpp.s
-.PHONY : strategies/Priority.cpp.s
+strategies/PriorityOrder.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.s
+.PHONY : strategies/PriorityOrder.cpp.s
 
 strategies/ProcessArgs.o: strategies/ProcessArgs.cpp.o
 
@@ -602,9 +602,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... strategies/Priority.o"
-	@echo "... strategies/Priority.i"
-	@echo "... strategies/Priority.s"
+	@echo "... strategies/PriorityOrder.o"
+	@echo "... strategies/PriorityOrder.i"
+	@echo "... strategies/PriorityOrder.s"
 	@echo "... strategies/ProcessArgs.o"
 	@echo "... strategies/ProcessArgs.i"
 	@echo "... strategies/ProcessArgs.s"
