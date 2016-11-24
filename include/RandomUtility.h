@@ -1,3 +1,6 @@
+#ifndef RandomUtility_H
+#define RandomUtility_H
+
 #include <stdlib.h>     /* srand, rand */
 #include <time.h>       /* time */
 #include <vector>
@@ -15,3 +18,5 @@ static inline int randomIndex(std::vector<T> cards) {
 	int index = rand() % cards.size();
 	return index;
 }
+
+#endif /* RandomUtility_H */

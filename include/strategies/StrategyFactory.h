@@ -5,7 +5,7 @@
 #include "Strategy.h"
 #include "Random.h"
 #include "Greedy.h"
-#include "Priority.h"
+#include "PriorityOrder.h"
 
 class StrategyFactory {
 

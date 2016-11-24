@@ -5,9 +5,8 @@
 
 #include <vector>
 
-#include "Card.h"
-#include "RandomUtility.h"
-#include "Wonder.h"
+#include "../cards/Card.h"
+#include "../RandomUtility.h"
 
 class Random : public Strategy {
 

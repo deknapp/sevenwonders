@@ -37,10 +37,16 @@ src/CMakeFiles/swsim.dir/components/Science.cpp.o
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
  /Users/nath/sevenwonders/include/RandomUtility.h
  /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Science.h
  /Users/nath/sevenwonders/include/game/ArgProcessor.h
  /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Greedy.h
+ /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+ /Users/nath/sevenwonders/include/strategies/Random.h
  /Users/nath/sevenwonders/include/strategies/Strategy.h
+ /Users/nath/sevenwonders/include/strategies/StrategyFactory.h
  /Users/nath/sevenwonders/src/game/ArgProcessor.cpp
 src/CMakeFiles/swsim.dir/game/Game.cpp.o
  /Users/nath/sevenwonders/include/RandomUtility.h
@@ -49,33 +55,59 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o
  /Users/nath/sevenwonders/include/cards/MilitaryCard.h
  /Users/nath/sevenwonders/include/cards/ResourceCard.h
  /Users/nath/sevenwonders/include/cards/ScienceCard.h
+ /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Science.h
  /Users/nath/sevenwonders/include/game/ArgProcessor.h
  /Users/nath/sevenwonders/include/game/Game.h
  /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Greedy.h
+ /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+ /Users/nath/sevenwonders/include/strategies/Random.h
  /Users/nath/sevenwonders/include/strategies/Strategy.h
+ /Users/nath/sevenwonders/include/strategies/StrategyFactory.h
  /Users/nath/sevenwonders/src/game/Game.cpp
 src/CMakeFiles/swsim.dir/game/Player.cpp.o
  /Users/nath/sevenwonders/include/RandomUtility.h
  /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Science.h
  /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Greedy.h
+ /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+ /Users/nath/sevenwonders/include/strategies/Random.h
  /Users/nath/sevenwonders/include/strategies/Strategy.h
+ /Users/nath/sevenwonders/include/strategies/StrategyFactory.h
  /Users/nath/sevenwonders/src/game/Player.cpp
 src/CMakeFiles/swsim.dir/main.cpp.o
  /Users/nath/sevenwonders/include/RandomUtility.h
  /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Science.h
  /Users/nath/sevenwonders/include/game/ArgProcessor.h
  /Users/nath/sevenwonders/include/game/Game.h
  /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Greedy.h
+ /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+ /Users/nath/sevenwonders/include/strategies/Random.h
  /Users/nath/sevenwonders/include/strategies/Strategy.h
+ /Users/nath/sevenwonders/include/strategies/StrategyFactory.h
  /Users/nath/sevenwonders/src/main.cpp
-src/CMakeFiles/swsim.dir/strategies/ArgProcessor.cpp.o
- /Users/nath/sevenwonders/src/strategies/ArgProcessor.cpp
 src/CMakeFiles/swsim.dir/strategies/Priority.cpp.o
  /Users/nath/sevenwonders/src/strategies/Priority.cpp
 src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o
  /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp
 src/CMakeFiles/swsim.dir/strategies/Random.cpp.o
  /Users/nath/sevenwonders/src/strategies/Random.cpp
+src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o
+ /Users/nath/sevenwonders/include/RandomUtility.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/strategies/Greedy.h
+ /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+ /Users/nath/sevenwonders/include/strategies/Random.h
+ /Users/nath/sevenwonders/include/strategies/Strategy.h
+ /Users/nath/sevenwonders/include/strategies/StrategyFactory.h
+ /Users/nath/sevenwonders/src/strategies/StrategyFactory.cpp

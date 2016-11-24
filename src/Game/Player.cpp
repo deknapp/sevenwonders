@@ -4,7 +4,7 @@ Player::Player() : gold(3) {}
 Player::~Player() {}
 
 void Player::setStrategy(std::string _strategy) {
-	strategy = std::shared_ptr<Strategy>(new Strategy(_strategy));
+	strategy = strategyFactory.getStrategy(_strategy);
 }
 
 void Player::addToHand(std::shared_ptr<Card> newCard) {
@@ -15,12 +15,15 @@ void Player::addToHand(std::shared_ptr<Card> newCard) {
 int Player::score() {
 
 	int sum = 0;
-	sum += science.score() + military.score();
+	sum += science.score() + military.getScore();
+	return sum;
 }
 
 int Player::canAfford(std::shared_ptr<Card> card) {
 
-	if (card.cost() > resource) 
+	if (card->getResourceCost() > resource) 
+		return 0;
+	if (card->getGoldCost() > gold)
 		return 0;
 	else
 		return 1;
@@ -29,17 +32,17 @@ int Player::canAfford(std::shared_ptr<Card> card) {
 void Player::discard() {
 
 	srand (time(NULL));
-	index = rand() % cards.length();
-	std::shared_ptr<Card> = hand.at(index);
-	money += 4;
+	int index = rand() % hand.size();
+	hand.erase(hand.begin() + index);
+	gold += 4;
 }
 
-std::vector<std::shared_Ptr<Card>> Player::getPossibleCards(){
+std::vector<std::shared_ptr<Card>> Player::getPossibleCards() {
 
-	std::vector<Card> possibleCards;
+	std::vector<std::shared_ptr<Card>> possibleCards;
 
-	for (const& auto it:hand) {
-		if (it.canAfford())
+	for (auto const& it:hand) {
+		if (canAfford(it))
 			possibleCards.push_back(it);
 	}
 
@@ -48,19 +51,30 @@ std::vector<std::shared_Ptr<Card>> Player::getPossibleCards(){
 
 void Player::playTurn(int round) {
 
-	std::shared_ptr<Card> playedCard;
-	if (getPossibleCards.length() == 0) {
+	int playedCardIndex = 0;
+	if (getPossibleCards().size() == 0) {
 		discard();
 	}
 	else {
-		playedstd::shared_ptr<Card> = strategies.at(round).chooseCard(getPossibleCards());
-		playedCards.insert(playedCard);
+		setStrategy(strategies.at(round));
+		playedCardIndex = currentStrategy->chooseCardToPlay(getPossibleCards());
+		playedCards.push_back(hand.at(playedCardIndex));
+		hand.erase(hand.begin() + playedCardIndex);
 	}
-	hand.remove(playedCard);
+	hand.erase(hand.begin() + playedCardIndex);
 	if (round == 0 || round == 2)
-		leftNeighbor.getNewHand(hand);
+		leftNeighbor->getNewHand(hand);
 	else
-		rightNeighbor.getNewHand(hand);
+		rightNeighbor->getNewHand(hand);
+}
+
+void Player::getNewHand(std::vector<std::shared_ptr<Card>> newHand) {
+	hand = newHand;
+}
+
+int Player::strength() {
+
+	return military.getStrength();
 }
 
 void Player::updateMilitaryPoints(int round) {
@@ -72,19 +86,15 @@ void Player::updateMilitaryPoints(int round) {
 	if (round == 2) 
 		bonus = 5;
 
-	if (leftNeighbor.strength() < strength)
+	if (leftNeighbor->strength() < strength())
 		newPoints += bonus;
 	else
 		newPoints -= 1;
 
-	if (rightNeighbor.strength() < strength)
+	if (rightNeighbor->strength() < strength())
 		newPoints += bonus;
 	else
 		newPoints -= 1;
-
 }
 
-void Player::strength() {
 
-	return military.strength();
-}

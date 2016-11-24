@@ -4,17 +4,14 @@
 #define Greedy_H
 
 #include <vector>
-
-#include "Card.h"
-#include "Greedy.h"
-#include "Wonder.h"
+#include "../cards/Card.h"
 
 class Greedy {
 
  public:
 	Greedy();
 	~Greedy();
-	virtual chooseCardToPlay() = 0;
+	std::shared_ptr<Card> chooseCardToPlay(std::vector<std::shared_ptr<Card>>);
 
  private:
  	// prevent generated functions --------------------------------------------

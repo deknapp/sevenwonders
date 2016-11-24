@@ -12,6 +12,8 @@ class Card {
 	Card();
 	virtual ~Card();
 	virtual void play();
+	virtual Resource getResourceCost();
+	virtual int getGoldCost();
 
  private:
  	

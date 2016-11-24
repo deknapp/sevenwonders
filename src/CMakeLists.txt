@@ -19,9 +19,9 @@ set(SRC_LIST ${SRC_LIST}
     game/Player.cpp)
 
 set(SRC_LIST ${SRC_LIST}
-    strategies/ArgProcessor.cpp
     strategies/Priority.cpp
     strategies/ProcessArgs.cpp
-    strategies/Random.cpp)
+    strategies/Random.cpp
+    strategies/StrategyFactory.cpp)
 
 add_executable(swsim ${SRC_LIST})

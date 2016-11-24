@@ -2,22 +2,18 @@
 #define PriorityOrder_H
 
 #include <vector>
-
-#include "Card.h"
-#include "PriorityOrder.h"
-#include "Wonder.h"
+#include "../cards/Card.h"
 
 class PriorityOrder {
 
  public:
-	PriorityOrder(std::string PriorityOrder_H);
+	PriorityOrder();
 	~PriorityOrder();
-	chooseCardToPlay();
+	std::shared_ptr<Card> chooseCardToPlay(std::vector<std::shared_ptr<Card>>);
 
  private:
 
  	std::string order;
-
  	// prevent generated functions --------------------------------------------
 	PriorityOrder(const PriorityOrder&);
 	PriorityOrder& operator=(const PriorityOrder&);

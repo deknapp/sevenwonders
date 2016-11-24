@@ -13,7 +13,7 @@ class Strategy {
  public:
 	Strategy();
 	~Strategy();
-	Card chooseCardToPlay(std::vector<Card> cards);
+	virtual int chooseCardToPlay(std::vector<std::shared_ptr<Card>> cards);
 
  private:
  	// prevent generated functions --------------------------------------------

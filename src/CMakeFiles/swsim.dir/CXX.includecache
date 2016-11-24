@@ -97,10 +97,38 @@ Player.h
 /Users/nath/sevenwonders/include/game/Player.h
 vector
 -
+string
+-
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
+../components/Military.h
+/Users/nath/sevenwonders/include/components/Military.h
+../components/Science.h
+/Users/nath/sevenwonders/include/components/Science.h
 ../strategies/Strategy.h
 /Users/nath/sevenwonders/include/strategies/Strategy.h
+../strategies/StrategyFactory.h
+/Users/nath/sevenwonders/include/strategies/StrategyFactory.h
+
+/Users/nath/sevenwonders/include/strategies/Greedy.h
+vector
+-
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
+
+/Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+vector
+-
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
+
+/Users/nath/sevenwonders/include/strategies/Random.h
+vector
+-
+../cards/Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
+../RandomUtility.h
+/Users/nath/sevenwonders/include/RandomUtility.h
 
 /Users/nath/sevenwonders/include/strategies/Strategy.h
 vector
@@ -109,6 +137,18 @@ vector
 /Users/nath/sevenwonders/include/cards/Card.h
 ../RandomUtility.h
 /Users/nath/sevenwonders/include/RandomUtility.h
+
+/Users/nath/sevenwonders/include/strategies/StrategyFactory.h
+string
+-
+Strategy.h
+/Users/nath/sevenwonders/include/strategies/Strategy.h
+Random.h
+/Users/nath/sevenwonders/include/strategies/Random.h
+Greedy.h
+/Users/nath/sevenwonders/include/strategies/Greedy.h
+PriorityOrder.h
+/Users/nath/sevenwonders/include/strategies/PriorityOrder.h
 
 /Users/nath/sevenwonders/src/cards/BlueCard.cpp
 ../../include/cards/BlueCard.h
@@ -182,8 +222,6 @@ string
 ../include/game/Game.h
 /Users/nath/sevenwonders/include/game/Game.h
 
-/Users/nath/sevenwonders/src/strategies/ArgProcessor.cpp
-
 /Users/nath/sevenwonders/src/strategies/Priority.cpp
 stdlib.h
 -
@@ -197,4 +235,8 @@ vector
 /Users/nath/sevenwonders/src/strategies/Random.cpp
 Random.h
 /Users/nath/sevenwonders/src/strategies/Random.h
+
+/Users/nath/sevenwonders/src/strategies/StrategyFactory.cpp
+../../include/strategies/StrategyFactory.h
+/Users/nath/sevenwonders/include/strategies/StrategyFactory.h
 

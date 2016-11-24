@@ -2,15 +2,20 @@
 #define Player_H
 
 #include <vector>
+#include <string>
 
 #include "../cards/Card.h"
+#include "../components/Military.h"
+#include "../components/Science.h"
 #include "../strategies/Strategy.h"
+#include "../strategies/StrategyFactory.h"
 
 class Player {
 
  public:
 	Player();
 	~Player();
+	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
 	void updateMilitaryPoints();
 	void addToHand(std::shared_ptr<Card> newCard);
@@ -19,10 +24,16 @@ class Player {
 	void setRight(std::shared_ptr<Player> rightNeighbor);
 	void setStrategy(std::string _strategy);
 	int score();
+	void discard();
+	void getNewHand(std::vector<std::shared_ptr<Card>> hand);
+	std::vector<std::shared_ptr<Card>> getPossibleCards();
+	void updateMilitaryPoints(int round);
 
  private:
 
- 	std::vector<Strategy> strategies;
+ 	StrategyFactory strategyFactory;
+ 	std::shared_ptr<Strategy> currentStrategy;
+ 	std::vector<std::string> strategies;
  	std::string name;
  	std::vector<std::shared_ptr<Card>> hand;
  	std::vector<std::shared_ptr<Card>> nextHand;
@@ -30,6 +41,9 @@ class Player {
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;
  	std::shared_ptr<Strategy> strategy;
+ 	Science science;
+ 	Military military;
+ 	Resource resource;
  	int gold;
 
  	// prevent generated functions --------------------------------------------

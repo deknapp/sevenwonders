@@ -449,33 +449,6 @@ main.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-strategies/ArgProcessor.o: strategies/ArgProcessor.cpp.o
-
-.PHONY : strategies/ArgProcessor.o
-
-# target to build an object file
-strategies/ArgProcessor.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ArgProcessor.cpp.o
-.PHONY : strategies/ArgProcessor.cpp.o
-
-strategies/ArgProcessor.i: strategies/ArgProcessor.cpp.i
-
-.PHONY : strategies/ArgProcessor.i
-
-# target to preprocess a source file
-strategies/ArgProcessor.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ArgProcessor.cpp.i
-.PHONY : strategies/ArgProcessor.cpp.i
-
-strategies/ArgProcessor.s: strategies/ArgProcessor.cpp.s
-
-.PHONY : strategies/ArgProcessor.s
-
-# target to generate assembly for a file
-strategies/ArgProcessor.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ArgProcessor.cpp.s
-.PHONY : strategies/ArgProcessor.cpp.s
-
 strategies/Priority.o: strategies/Priority.cpp.o
 
 .PHONY : strategies/Priority.o
@@ -557,6 +530,33 @@ strategies/Random.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Random.cpp.s
 .PHONY : strategies/Random.cpp.s
 
+strategies/StrategyFactory.o: strategies/StrategyFactory.cpp.o
+
+.PHONY : strategies/StrategyFactory.o
+
+# target to build an object file
+strategies/StrategyFactory.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o
+.PHONY : strategies/StrategyFactory.cpp.o
+
+strategies/StrategyFactory.i: strategies/StrategyFactory.cpp.i
+
+.PHONY : strategies/StrategyFactory.i
+
+# target to preprocess a source file
+strategies/StrategyFactory.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.i
+.PHONY : strategies/StrategyFactory.cpp.i
+
+strategies/StrategyFactory.s: strategies/StrategyFactory.cpp.s
+
+.PHONY : strategies/StrategyFactory.s
+
+# target to generate assembly for a file
+strategies/StrategyFactory.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.s
+.PHONY : strategies/StrategyFactory.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -602,9 +602,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... strategies/ArgProcessor.o"
-	@echo "... strategies/ArgProcessor.i"
-	@echo "... strategies/ArgProcessor.s"
 	@echo "... strategies/Priority.o"
 	@echo "... strategies/Priority.i"
 	@echo "... strategies/Priority.s"
@@ -614,6 +611,9 @@ help:
 	@echo "... strategies/Random.o"
 	@echo "... strategies/Random.i"
 	@echo "... strategies/Random.s"
+	@echo "... strategies/StrategyFactory.o"
+	@echo "... strategies/StrategyFactory.i"
+	@echo "... strategies/StrategyFactory.s"
 .PHONY : help
 
 
