@@ -29,14 +29,14 @@ class Game {
  	void getScienceCards(int minPlayers);
  	void getDeck(int minPlayers);
  	void initPlayers();
- 	Player playerAt(int i);
+ 	std::shared_ptr<Player> playerAt(int i);
 
- 	std::vector<std::unique_ptr<Card>> shuffle(std::vector<std::unique_ptr<Card>> deck);
+ 	std::vector<std::shared_ptr<Card>> shuffle(std::vector<std::shared_ptr<Card>> deck);
  	std::shared_ptr<ArgProcessor> args;
- 	std::vector<shareD_ptr<Player>> players;
- 	std::vector<std::unique_ptr<Card>> firstAgeDeck;
- 	std::vector<std::unique_ptr<Card>> secondAgeDeck;
- 	std::vector<std::unique_ptr<Card>> thirdAgeDeck;
+ 	std::vector<std::shared_ptr<Player>> players;
+ 	std::vector<std::shared_ptr<Card>> firstAgeDeck;
+ 	std::vector<std::shared_ptr<Card>> secondAgeDeck;
+ 	std::vector<std::shared_ptr<Card>> thirdAgeDeck;
 
  	// prevent generated functions --------------------------------------------
 	Game(const Game&);

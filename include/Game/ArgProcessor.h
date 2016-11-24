@@ -16,6 +16,7 @@ class ArgProcessor {
 	int getNumGames();
 	int getNumPlayers();
 	std::vector<std::string> getStrategies();
+	std::string strategyAt(int i);
 
  private:
 

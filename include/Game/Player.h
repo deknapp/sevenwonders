@@ -11,24 +11,25 @@ class Player {
  public:
 	Player();
 	~Player();
-	void init();
 	void playTurn(int round);
 	void updateMilitaryPoints();
-	void addToHand(Card newCard);
+	void addToHand(std::shared_ptr<Card> newCard);
 	int strength();
 	void setLeft(std::shared_ptr<Player> leftNeighbor);
 	void setRight(std::shared_ptr<Player> rightNeighbor);
+	void setStrategy(std::string _strategy);
+	int score();
 
  private:
 
  	std::vector<Strategy> strategies;
  	std::string name;
- 	std::vector<Card> hand;
- 	std::vector<Card> nextHand;
- 	std::vector<Card> playedCards;
- 	std::unique_ptr<Player> leftNeighbor;
- 	std::unique_ptr<Player> rightNeighbor;
- 	Strategy strategy;
+ 	std::vector<std::shared_ptr<Card>> hand;
+ 	std::vector<std::shared_ptr<Card>> nextHand;
+ 	std::vector<std::shared_ptr<Card>> playedCards;
+ 	std::shared_ptr<Player> leftNeighbor;
+ 	std::shared_ptr<Player> rightNeighbor;
+ 	std::shared_ptr<Strategy> strategy;
  	int gold;
 
  	// prevent generated functions --------------------------------------------

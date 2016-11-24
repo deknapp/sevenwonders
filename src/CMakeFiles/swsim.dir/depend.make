@@ -55,6 +55,11 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/Player.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: src/game/Game.cpp
 
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/RandomUtility.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/game/Player.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: src/game/Player.cpp
 
 src/CMakeFiles/swsim.dir/main.cpp.o: include/RandomUtility.h

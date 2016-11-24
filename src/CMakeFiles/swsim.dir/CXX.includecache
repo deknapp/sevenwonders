@@ -173,8 +173,8 @@ string
 /Users/nath/sevenwonders/include/cards/ScienceCard.h
 
 /Users/nath/sevenwonders/src/game/Player.cpp
-Player.h
-/Users/nath/sevenwonders/src/game/Player.h
+../../include/game/Player.h
+/Users/nath/sevenwonders/include/game/Player.h
 
 /Users/nath/sevenwonders/src/main.cpp
 ../include/game/ArgProcessor.h

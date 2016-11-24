@@ -56,6 +56,11 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o
  /Users/nath/sevenwonders/include/strategies/Strategy.h
  /Users/nath/sevenwonders/src/game/Game.cpp
 src/CMakeFiles/swsim.dir/game/Player.cpp.o
+ /Users/nath/sevenwonders/include/RandomUtility.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/strategies/Strategy.h
  /Users/nath/sevenwonders/src/game/Player.cpp
 src/CMakeFiles/swsim.dir/main.cpp.o
  /Users/nath/sevenwonders/include/RandomUtility.h

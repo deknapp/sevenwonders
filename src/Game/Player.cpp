@@ -1,16 +1,13 @@
-#include "Player.h"
+#include "../../include/game/Player.h"
 
-Player::Player() : gold(3) { }
-
-Player::initPlayer(Player* left, Player* right) { 
-
-	leftNeighbor = left;
-	rightNeighbor = right;
-}
-
+Player::Player() : gold(3) {}
 Player::~Player() {}
 
-void Player::addToHand(Card newCard) {
+void Player::setStrategy(std::string _strategy) {
+	strategy = std::shared_ptr<Strategy>(new Strategy(_strategy));
+}
+
+void Player::addToHand(std::shared_ptr<Card> newCard) {
 
 	hand.push_back(newCard);
 }
@@ -18,10 +15,10 @@ void Player::addToHand(Card newCard) {
 int Player::score() {
 
 	int sum = 0;
-	sum += science.score() + military.score() + 
+	sum += science.score() + military.score();
 }
 
-int Player::canAfford(Card card) {
+int Player::canAfford(std::shared_ptr<Card> card) {
 
 	if (card.cost() > resource) 
 		return 0;
@@ -33,11 +30,11 @@ void Player::discard() {
 
 	srand (time(NULL));
 	index = rand() % cards.length();
-	playedCard = hand.at(index);
+	std::shared_ptr<Card> = hand.at(index);
 	money += 4;
 }
 
-std::vector<Card> Player::getPossibleCards(){
+std::vector<std::shared_Ptr<Card>> Player::getPossibleCards(){
 
 	std::vector<Card> possibleCards;
 
@@ -51,12 +48,12 @@ std::vector<Card> Player::getPossibleCards(){
 
 void Player::playTurn(int round) {
 
-	Card playedCard;
+	std::shared_ptr<Card> playedCard;
 	if (getPossibleCards.length() == 0) {
 		discard();
 	}
 	else {
-		playedCard = strategies.at(round).chooseCard(getPossibleCards());
+		playedstd::shared_ptr<Card> = strategies.at(round).chooseCard(getPossibleCards());
 		playedCards.insert(playedCard);
 	}
 	hand.remove(playedCard);
