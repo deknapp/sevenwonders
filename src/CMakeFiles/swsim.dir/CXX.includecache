@@ -113,18 +113,24 @@ string
 /Users/nath/sevenwonders/include/strategies/Greedy.h
 vector
 -
+Strategy.h
+/Users/nath/sevenwonders/include/strategies/Strategy.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 
 /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
 vector
 -
+Strategy.h
+/Users/nath/sevenwonders/include/strategies/Strategy.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 
 /Users/nath/sevenwonders/include/strategies/Random.h
 vector
 -
+Strategy.h
+/Users/nath/sevenwonders/include/strategies/Strategy.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../RandomUtility.h
@@ -235,8 +241,8 @@ vector
 /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp
 
 /Users/nath/sevenwonders/src/strategies/Random.cpp
-Random.h
-/Users/nath/sevenwonders/src/strategies/Random.h
+../../include/strategies/Random.h
+/Users/nath/sevenwonders/include/strategies/Random.h
 
 /Users/nath/sevenwonders/src/strategies/StrategyFactory.cpp
 ../../include/strategies/StrategyFactory.h

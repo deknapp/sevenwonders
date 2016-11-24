@@ -14,8 +14,11 @@ class Card {
 	virtual void play();
 	virtual Resource getResourceCost();
 	virtual int getGoldCost();
+	std::string getType();
 
  private:
+
+ 	std::string type;
  	
  	// prevent generated functions --------------------------------------------
 	Card(const Card&);

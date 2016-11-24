@@ -1,5 +1,5 @@
-#include "Random.h"
+#include "../../include/strategies/Random.h"
 
-Card chooseCardToPlay(std::vector<Card> cards) {
-	return randomCard(cards);
+int chooseCardToPlay(std::vector<std::shared_ptr<Card>> cards) {
+	return randomIndex(cards);
 }

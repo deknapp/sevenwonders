@@ -4,14 +4,15 @@
 #define Greedy_H
 
 #include <vector>
+#include "Strategy.h"
 #include "../cards/Card.h"
 
-class Greedy {
+class Greedy : public Strategy {
 
  public:
 	Greedy();
 	~Greedy();
-	std::shared_ptr<Card> chooseCardToPlay(std::vector<std::shared_ptr<Card>>);
+	int chooseCardToPlay(std::vector<std::shared_ptr<Card>>);
 
  private:
  	// prevent generated functions --------------------------------------------

@@ -2,3 +2,7 @@
 
 Card::Card() {}
 Card::~Card() {}
+
+std::string Card::getType() {
+	return type;
+}

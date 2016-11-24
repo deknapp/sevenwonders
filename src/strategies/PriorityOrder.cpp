@@ -3,7 +3,25 @@
 #include <vector>
 #include "../../include/strategies/PriorityOrder.h"
 
-std::shared_ptr<Card> PriorityOrder::chooseCardToPlay(std::vector<std::shared_ptr<Card>> cards) {
+PriorityOrder::PriorityOrder(std::string type) {
+
+	for (int i=0; i<3; i++) {
+		order.push_back(type);
+	}
+}
+
+int PriorityOrder::chooseType(std::vector<std::shared_ptr<Card>> cards, std::string type) {
+
+
+	for (int i = 0; i < cards.size(); i++) {
+		if (cards.at(i)->getType().compare(type))
+			return i;
+	}
+
+	return 0;
+}
+
+int PriorityOrder::chooseCardToPlay(std::vector<std::shared_ptr<Card>> cards) {
 
 	for (const auto& it: order) {
 
@@ -11,15 +29,6 @@ std::shared_ptr<Card> PriorityOrder::chooseCardToPlay(std::vector<std::shared_pt
 			return chooseType(cards, it);
 	}
 
-	return NULL;
+	return 0;
 }
 
-std::shared_ptr<Card> PriorityOrder::chooseType(std::vector<Card> cards, std::string type) {
-
-	for (const auto& it: cards) {
-		if (it.type.equals(type))
-			return it;
-	}
-
-	return NULL:
-}

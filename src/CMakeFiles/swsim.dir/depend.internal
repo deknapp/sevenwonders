@@ -96,13 +96,20 @@ src/CMakeFiles/swsim.dir/main.cpp.o
  /Users/nath/sevenwonders/include/strategies/StrategyFactory.h
  /Users/nath/sevenwonders/src/main.cpp
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o
+ /Users/nath/sevenwonders/include/RandomUtility.h
  /Users/nath/sevenwonders/include/cards/Card.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
+ /Users/nath/sevenwonders/include/strategies/Strategy.h
  /Users/nath/sevenwonders/src/strategies/PriorityOrder.cpp
 src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o
  /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp
 src/CMakeFiles/swsim.dir/strategies/Random.cpp.o
+ /Users/nath/sevenwonders/include/RandomUtility.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/strategies/Random.h
+ /Users/nath/sevenwonders/include/strategies/Strategy.h
  /Users/nath/sevenwonders/src/strategies/Random.cpp
 src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o
  /Users/nath/sevenwonders/include/RandomUtility.h

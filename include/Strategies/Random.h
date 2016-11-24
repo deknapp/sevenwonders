@@ -5,6 +5,7 @@
 
 #include <vector>
 
+#include "Strategy.h"
 #include "../cards/Card.h"
 #include "../RandomUtility.h"
 
@@ -13,7 +14,7 @@ class Random : public Strategy {
  public:
 	Random();
 	~Random();
-	Card chooseCardToPlay(std::vector<Card> cards);
+	int chooseCardToPlay(std::vector<std::shared_ptr<Card>> cards);
 
  private:
  	// prevent generated functions --------------------------------------------

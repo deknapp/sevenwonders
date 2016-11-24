@@ -95,13 +95,20 @@ src/CMakeFiles/swsim.dir/main.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/strategies/StrategyFactory.h
 src/CMakeFiles/swsim.dir/main.cpp.o: src/main.cpp
 
+src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/RandomUtility.h
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/cards/Card.h
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/strategies/PriorityOrder.h
+src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: src/strategies/PriorityOrder.cpp
 
 src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o: src/strategies/ProcessArgs.cpp
 
+src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/RandomUtility.h
+src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/strategies/Random.h
+src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: src/strategies/Random.cpp
 
 src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o: include/RandomUtility.h

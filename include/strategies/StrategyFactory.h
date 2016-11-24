@@ -13,7 +13,6 @@ class StrategyFactory {
 
 	StrategyFactory();
 	~StrategyFactory();
-
 	std::shared_ptr<Strategy> getStrategy(std::string type);
 
  private:
