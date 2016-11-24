@@ -3,8 +3,16 @@
 Player::Player() : gold(3) {}
 Player::~Player() {}
 
+void Player::setLeft(std::shared_ptr<Player> _leftNeighbor) {
+	leftNeighbor = _leftNeighbor;
+}
+
+void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
+	leftNeighbor = _rightNeighbor;
+}
+
 void Player::setStrategy(std::string _strategy) {
-	strategy = strategyFactory.getStrategy(_strategy);
+	strategy = std::shared_ptr<Strategy>(strategyFactory.getStrategy(_strategy));
 }
 
 void Player::addToHand(std::shared_ptr<Card> newCard) {
@@ -21,7 +29,7 @@ int Player::score() {
 
 int Player::canAfford(std::shared_ptr<Card> card) {
 
-	if (card->getResourceCost() > resource) 
+	if (*(card->getResourceCost()) > resource) 
 		return 0;
 	if (card->getGoldCost() > gold)
 		return 0;

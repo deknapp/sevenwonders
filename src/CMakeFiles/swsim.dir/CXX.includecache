@@ -228,6 +228,10 @@ string
 ../include/game/Game.h
 /Users/nath/sevenwonders/include/game/Game.h
 
+/Users/nath/sevenwonders/src/strategies/Greedy.cpp
+../../include/strategies/Greedy.h
+/Users/nath/sevenwonders/include/strategies/Greedy.h
+
 /Users/nath/sevenwonders/src/strategies/PriorityOrder.cpp
 stdlib.h
 -
@@ -237,8 +241,6 @@ vector
 -
 ../../include/strategies/PriorityOrder.h
 /Users/nath/sevenwonders/include/strategies/PriorityOrder.h
-
-/Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp
 
 /Users/nath/sevenwonders/src/strategies/Random.cpp
 ../../include/strategies/Random.h

@@ -12,3 +12,9 @@ ScienceCard::ScienceCard(std::string _name, int wood, int stone, int brick, int 
 
 
 ScienceCard::~ScienceCard() {}
+
+std::shared_ptr<Resource> ScienceCard::getResourceCost() {
+	return resourceCost;
+}
+
+void ScienceCard::play() {}

@@ -12,13 +12,14 @@ class Card {
 	Card();
 	virtual ~Card();
 	virtual void play();
-	virtual Resource getResourceCost();
-	virtual int getGoldCost();
+	virtual std::shared_ptr<Resource> getResourceCost();
+	int getGoldCost();
 	std::string getType();
 
  private:
 
  	std::string type;
+ 	int gold;
  	
  	// prevent generated functions --------------------------------------------
 	Card(const Card&);

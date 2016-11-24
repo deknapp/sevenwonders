@@ -1,6 +1,8 @@
 #include "../../include/strategies/StrategyFactory.h"
 
-Strategy* getStrategy(std::string type) {
+StrategyFactory::StrategyFactory() {}
+
+Strategy* StrategyFactory::getStrategy(std::string type) {
 
 
 	if (type.compare("R"))

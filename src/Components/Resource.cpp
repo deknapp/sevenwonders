@@ -11,6 +11,8 @@ Resource::Resource(int _wood, int _brick, int _stone, int _ore) :
 Resource::Resource(int _wood, int _brick, int _stone, int _ore, int _glass, int _paper, int _carpet) : 
 				  wood(_wood), brick(_brick), stone(_stone), ore(_ore), glass(_glass), paper(_paper), carpet(_carpet) {}
 
+Resource::~Resource() {}
+
 int Resource::operator>(const Resource& b) {
 
 	if (this->glass > b.glass)

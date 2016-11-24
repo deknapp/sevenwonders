@@ -345,9 +345,33 @@ src/CMakeFiles/swsim.dir/game/Player.cpp.o.provides: src/CMakeFiles/swsim.dir/ga
 src/CMakeFiles/swsim.dir/game/Player.cpp.o.provides.build: src/CMakeFiles/swsim.dir/game/Player.cpp.o
 
 
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o: src/CMakeFiles/swsim.dir/flags.make
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o: src/strategies/Greedy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/strategies/Greedy.cpp.o -c /Users/nath/sevenwonders/src/strategies/Greedy.cpp
+
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/swsim.dir/strategies/Greedy.cpp.i"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nath/sevenwonders/src/strategies/Greedy.cpp > CMakeFiles/swsim.dir/strategies/Greedy.cpp.i
+
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/swsim.dir/strategies/Greedy.cpp.s"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nath/sevenwonders/src/strategies/Greedy.cpp -o CMakeFiles/swsim.dir/strategies/Greedy.cpp.s
+
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.requires
+
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.provides: src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.provides.build
+.PHONY : src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.provides
+
+src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.provides.build: src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o
+
+
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o: src/strategies/PriorityOrder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o -c /Users/nath/sevenwonders/src/strategies/PriorityOrder.cpp
 
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.i: cmake_force
@@ -367,30 +391,6 @@ src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o.provides: src/CMakeFiles
 .PHONY : src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o.provides
 
 src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o.provides.build: src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o
-
-
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o: src/CMakeFiles/swsim.dir/flags.make
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o: src/strategies/ProcessArgs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o"
-	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o -c /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp
-
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.i"
-	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp > CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.i
-
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.s"
-	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp -o CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.s
-
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.requires:
-
-.PHONY : src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.requires
-
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.provides: src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.requires
-	$(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.provides.build
-.PHONY : src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.provides
-
-src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.provides.build: src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o
 
 
 src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: src/CMakeFiles/swsim.dir/flags.make
@@ -455,8 +455,8 @@ swsim_OBJECTS = \
 "CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o" \
 "CMakeFiles/swsim.dir/game/Game.cpp.o" \
 "CMakeFiles/swsim.dir/game/Player.cpp.o" \
+"CMakeFiles/swsim.dir/strategies/Greedy.cpp.o" \
 "CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o" \
-"CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o" \
 "CMakeFiles/swsim.dir/strategies/Random.cpp.o" \
 "CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o"
 
@@ -475,8 +475,8 @@ src/swsim: src/CMakeFiles/swsim.dir/components/Science.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/Game.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/Player.cpp.o
+src/swsim: src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o
-src/swsim: src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/strategies/Random.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/build.make
@@ -501,8 +501,8 @@ src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/components/Science.c
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/Game.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/Player.cpp.o.requires
+src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o.requires
-src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/strategies/Random.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o.requires
 

@@ -11,14 +11,15 @@ class BlueCard : public Card {
 	BlueCard(std::string _name, int brick, int stone, int wood, int ore, int age, int points, int minPlayers);
 	BlueCard(std::string _name, int brick, int stone, int wood, int ore, int glass, int carpet, int paper, int age, int points, int minPlayers);
 	~BlueCard();
+	std::shared_ptr<Resource> getResourceCost();
+	void play();
 
  private:
  	std::string name;
- 	std::unique_ptr<Resource> resourceCost;
+ 	std::shared_ptr<Resource> resourceCost;
  	int age;
  	int points;
  	int minPlayers;
- 	
  	// prevent generated functions --------------------------------------------
 	BlueCard(const BlueCard&);
 	BlueCard& operator=(const BlueCard&);

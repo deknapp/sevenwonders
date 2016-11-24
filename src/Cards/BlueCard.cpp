@@ -8,3 +8,9 @@ BlueCard::BlueCard(std::string _name, int brick, int stone, int wood, int ore, i
  			name(_name), resourceCost(std::unique_ptr<Resource>(new Resource(brick, stone, wood, ore))), age(_age), points(_points), minPlayers(_minPlayers) {}
 
 BlueCard::~BlueCard() {}
+
+std::shared_ptr<Resource> BlueCard::getResourceCost() {
+	return resourceCost;
+}
+
+void BlueCard::play() {}

@@ -13,11 +13,13 @@ class MilitaryCard : public Card {
 	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int _gold, int _age, int _minPlayers);
 	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int glass, int carpet, int paper, int _gold, int _age, int _minPlayers);
 	~MilitaryCard();
+ 	std::shared_ptr<Resource> getResourceCost();
+ 	void play();
 
  private:
 
  	std::string name;
- 	std::unique_ptr<Resource> resourceCost;
+ 	std::shared_ptr<Resource> resourceCost;
  	int gold;
  	int age;
  	int minPlayers;

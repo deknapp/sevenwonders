@@ -1,6 +1,10 @@
 #include "../../include/components/Science.h"
 #include <math.h>
 
+
+Science::Science() {}
+Science::~Science() {}
+
 int Science::score() {
 
 	int sum = 0;

@@ -13,11 +13,13 @@ class ScienceCard : public Card {
 	ScienceCard(std::string name, int glass, int carpet, int paper, std::string type, int age, int gold, int minPlayers);
 	ScienceCard(std::string name, int wood, int stone, int brick, int ore, int glass, int carpet, int paper, std::string type, int age, int gold, int minPlayers);
 	~ScienceCard();
+	std::shared_ptr<Resource> getResourceCost();
+	void play();
 
  private:
 
  	std::string name;
- 	std::unique_ptr<Resource> resourceCost;
+ 	std::shared_ptr<Resource> resourceCost;
  	std::string type;
  	int age;
  	int gold;

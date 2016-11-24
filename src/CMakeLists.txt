@@ -19,8 +19,8 @@ set(SRC_LIST ${SRC_LIST}
     game/Player.cpp)
 
 set(SRC_LIST ${SRC_LIST}
+    strategies/Greedy.cpp
     strategies/PriorityOrder.cpp
-    strategies/ProcessArgs.cpp
     strategies/Random.cpp
     strategies/StrategyFactory.cpp)
 

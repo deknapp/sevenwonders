@@ -16,8 +16,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nath/sevenwonders/src/game/Game.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/Game.cpp.o"
   "/Users/nath/sevenwonders/src/game/Player.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/Player.cpp.o"
   "/Users/nath/sevenwonders/src/main.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/main.cpp.o"
+  "/Users/nath/sevenwonders/src/strategies/Greedy.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o"
   "/Users/nath/sevenwonders/src/strategies/PriorityOrder.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o"
-  "/Users/nath/sevenwonders/src/strategies/ProcessArgs.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o"
   "/Users/nath/sevenwonders/src/strategies/Random.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/Random.cpp.o"
   "/Users/nath/sevenwonders/src/strategies/StrategyFactory.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o"
   )

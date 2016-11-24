@@ -2,6 +2,8 @@
 
 Military::Military() : score(0), strength(0) {}
 
+Military::~Military() {}
+
 int Military::getScore() {
 
 	return score;

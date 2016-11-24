@@ -10,10 +10,8 @@
 class StrategyFactory {
 
  public:
-
-	StrategyFactory();
-	~StrategyFactory();
-	std::shared_ptr<Strategy> getStrategy(std::string type);
+ 	StrategyFactory();
+	Strategy* getStrategy(std::string type);
 
  private:
 

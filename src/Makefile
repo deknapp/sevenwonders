@@ -449,6 +449,33 @@ main.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+strategies/Greedy.o: strategies/Greedy.cpp.o
+
+.PHONY : strategies/Greedy.o
+
+# target to build an object file
+strategies/Greedy.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o
+.PHONY : strategies/Greedy.cpp.o
+
+strategies/Greedy.i: strategies/Greedy.cpp.i
+
+.PHONY : strategies/Greedy.i
+
+# target to preprocess a source file
+strategies/Greedy.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.i
+.PHONY : strategies/Greedy.cpp.i
+
+strategies/Greedy.s: strategies/Greedy.cpp.s
+
+.PHONY : strategies/Greedy.s
+
+# target to generate assembly for a file
+strategies/Greedy.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.s
+.PHONY : strategies/Greedy.cpp.s
+
 strategies/PriorityOrder.o: strategies/PriorityOrder.cpp.o
 
 .PHONY : strategies/PriorityOrder.o
@@ -475,33 +502,6 @@ strategies/PriorityOrder.s: strategies/PriorityOrder.cpp.s
 strategies/PriorityOrder.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.s
 .PHONY : strategies/PriorityOrder.cpp.s
-
-strategies/ProcessArgs.o: strategies/ProcessArgs.cpp.o
-
-.PHONY : strategies/ProcessArgs.o
-
-# target to build an object file
-strategies/ProcessArgs.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.o
-.PHONY : strategies/ProcessArgs.cpp.o
-
-strategies/ProcessArgs.i: strategies/ProcessArgs.cpp.i
-
-.PHONY : strategies/ProcessArgs.i
-
-# target to preprocess a source file
-strategies/ProcessArgs.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.i
-.PHONY : strategies/ProcessArgs.cpp.i
-
-strategies/ProcessArgs.s: strategies/ProcessArgs.cpp.s
-
-.PHONY : strategies/ProcessArgs.s
-
-# target to generate assembly for a file
-strategies/ProcessArgs.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/ProcessArgs.cpp.s
-.PHONY : strategies/ProcessArgs.cpp.s
 
 strategies/Random.o: strategies/Random.cpp.o
 
@@ -602,12 +602,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... strategies/Greedy.o"
+	@echo "... strategies/Greedy.i"
+	@echo "... strategies/Greedy.s"
 	@echo "... strategies/PriorityOrder.o"
 	@echo "... strategies/PriorityOrder.i"
 	@echo "... strategies/PriorityOrder.s"
-	@echo "... strategies/ProcessArgs.o"
-	@echo "... strategies/ProcessArgs.i"
-	@echo "... strategies/ProcessArgs.s"
 	@echo "... strategies/Random.o"
 	@echo "... strategies/Random.i"
 	@echo "... strategies/Random.s"

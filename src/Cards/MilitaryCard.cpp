@@ -12,3 +12,9 @@ MilitaryCard::MilitaryCard(std::string _name, int brick, int stone, int wood, in
  			name(_name), resourceCost(std::unique_ptr<Resource>(new Resource(brick, stone, wood, ore, glass, carpet, paper))), gold(_gold), age(_age), minPlayers(_minPlayers) {}
 
 MilitaryCard::~MilitaryCard() {}
+
+std::shared_ptr<Resource> MilitaryCard::getResourceCost() {
+	return resourceCost;
+}
+
+void MilitaryCard::play() {}
