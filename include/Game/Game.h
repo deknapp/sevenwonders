@@ -16,26 +16,24 @@ class Game {
 	Game(std::shared_ptr<ArgProcessor> args_pointer);
 	~Game();
 
-
-
 	void play();
 	void setup();
 	void score();
 
-
-
  private:
 
-
+ 	void dealRound(int rund);
  	void getBlueCards(int minPlayers);
  	void getMilitaryCards(int minPlayers);
  	void getResourceCards(int minPlayers);
  	void getScienceCards(int minPlayers);
  	void getDeck(int minPlayers);
- 	std::vector<Card> shuffle(std::vector<Card> deck);
+ 	void initPlayers();
+ 	Player playerAt(int i);
 
+ 	std::vector<std::unique_ptr<Card>> shuffle(std::vector<std::unique_ptr<Card>> deck);
  	std::shared_ptr<ArgProcessor> args;
- 	std::vector<Player> players;
+ 	std::vector<shareD_ptr<Player>> players;
  	std::vector<std::unique_ptr<Card>> firstAgeDeck;
  	std::vector<std::unique_ptr<Card>> secondAgeDeck;
  	std::vector<std::unique_ptr<Card>> thirdAgeDeck;

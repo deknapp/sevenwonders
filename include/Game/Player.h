@@ -16,6 +16,8 @@ class Player {
 	void updateMilitaryPoints();
 	void addToHand(Card newCard);
 	int strength();
+	void setLeft(std::shared_ptr<Player> leftNeighbor);
+	void setRight(std::shared_ptr<Player> rightNeighbor);
 
  private:
 

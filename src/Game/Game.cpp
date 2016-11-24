@@ -147,14 +147,14 @@ void Game::getDeck(int minPlayers) {
 	// TODO: add other types of cards. 
 }
 
-std::vector<Card> Game::shuffle(std::vector<Card> deck) {
+std::vector<std::unique_ptr<Card>> Game::shuffle(std::vector<std::unique_ptr<Card>> deck) {
 
-	std::vector<Card> newDeck;
+	std::vector<std::unique_ptr<Card>> newDeck;
 	int index;
 	for (int i = 0; i < deck.size(); i++) {
 		index = randomIndex(deck);
 		newDeck.push_back(deck.at(index));
-		deck.remove(index);
+		deck.erase(deck.begin() + index);
 	}
 
 	return newDeck;
@@ -162,7 +162,7 @@ std::vector<Card> Game::shuffle(std::vector<Card> deck) {
 
 void Game::dealRound(int rund) {
 
-	std::vector<Card> deck;
+	std::vector<std::unique_ptr<Card>> deck;
 
 	if (rund == 0)
 		deck = firstAgeDeck;
@@ -182,6 +182,10 @@ void Game::dealRound(int rund) {
 	}
 }
 
+void Game::playerAt(int i) {
+	return players.at(i);
+}
+
 void Game::initPlayers() {
 
 	for (int i=0; i<numPlayers; i++) {
@@ -189,6 +193,7 @@ void Game::initPlayers() {
 		playerAt(i).setStrategy(arg.strategyAt(i));
 	}
 
+	int numPlayers = args->getNumPlayers();
 	playerAt(0).setLeft(playerAt(numPlayers - 1));
 	playerAt(0).setRight(playerAt(1));
 	playerAt(numPlayers - 1).setLeft(playerAt(numPlayers - 2));
