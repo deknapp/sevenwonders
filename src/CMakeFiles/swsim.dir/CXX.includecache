@@ -246,6 +246,10 @@ vector
 ../../include/strategies/Random.h
 /Users/nath/sevenwonders/include/strategies/Random.h
 
+/Users/nath/sevenwonders/src/strategies/Strategy.cpp
+../../include/strategies/Strategy.h
+/Users/nath/sevenwonders/include/strategies/Strategy.h
+
 /Users/nath/sevenwonders/src/strategies/StrategyFactory.cpp
 ../../include/strategies/StrategyFactory.h
 /Users/nath/sevenwonders/include/strategies/StrategyFactory.h

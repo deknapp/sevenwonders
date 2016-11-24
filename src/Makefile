@@ -530,6 +530,33 @@ strategies/Random.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Random.cpp.s
 .PHONY : strategies/Random.cpp.s
 
+strategies/Strategy.o: strategies/Strategy.cpp.o
+
+.PHONY : strategies/Strategy.o
+
+# target to build an object file
+strategies/Strategy.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o
+.PHONY : strategies/Strategy.cpp.o
+
+strategies/Strategy.i: strategies/Strategy.cpp.i
+
+.PHONY : strategies/Strategy.i
+
+# target to preprocess a source file
+strategies/Strategy.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.i
+.PHONY : strategies/Strategy.cpp.i
+
+strategies/Strategy.s: strategies/Strategy.cpp.s
+
+.PHONY : strategies/Strategy.s
+
+# target to generate assembly for a file
+strategies/Strategy.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.s
+.PHONY : strategies/Strategy.cpp.s
+
 strategies/StrategyFactory.o: strategies/StrategyFactory.cpp.o
 
 .PHONY : strategies/StrategyFactory.o
@@ -611,6 +638,9 @@ help:
 	@echo "... strategies/Random.o"
 	@echo "... strategies/Random.i"
 	@echo "... strategies/Random.s"
+	@echo "... strategies/Strategy.o"
+	@echo "... strategies/Strategy.i"
+	@echo "... strategies/Strategy.s"
 	@echo "... strategies/StrategyFactory.o"
 	@echo "... strategies/StrategyFactory.i"
 	@echo "... strategies/StrategyFactory.s"

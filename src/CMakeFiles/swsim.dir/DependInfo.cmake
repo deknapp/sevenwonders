@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nath/sevenwonders/src/strategies/Greedy.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o"
   "/Users/nath/sevenwonders/src/strategies/PriorityOrder.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o"
   "/Users/nath/sevenwonders/src/strategies/Random.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/Random.cpp.o"
+  "/Users/nath/sevenwonders/src/strategies/Strategy.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o"
   "/Users/nath/sevenwonders/src/strategies/StrategyFactory.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")

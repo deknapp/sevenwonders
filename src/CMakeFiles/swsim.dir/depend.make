@@ -116,6 +116,12 @@ src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/strategies/Random.h
 src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/strategies/Random.cpp.o: src/strategies/Random.cpp
 
+src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o: include/RandomUtility.h
+src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o: include/strategies/Strategy.h
+src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o: src/strategies/Strategy.cpp
+
 src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o: include/RandomUtility.h
 src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o: include/cards/Card.h
 src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o: include/components/Resource.h

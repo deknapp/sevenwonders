@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o"
   "CMakeFiles/swsim.dir/game/Game.cpp.o"
   "CMakeFiles/swsim.dir/game/Player.cpp.o"
+  "CMakeFiles/swsim.dir/strategies/Strategy.cpp.o"
   "CMakeFiles/swsim.dir/strategies/Greedy.cpp.o"
   "CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o"
   "CMakeFiles/swsim.dir/strategies/Random.cpp.o"
