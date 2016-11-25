@@ -14,8 +14,8 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) {
 	for (int i=0; i < numPlayers; i++) {
 		std::vector<std::string> playerStrategies;
 		for (int i = 0; i < 3; i++) {
-			if (i < argc - 1)
-				playerStrategies.push_back(std::string(argv[i]));
+			if (i + 2 < argc - 1)
+				playerStrategies.push_back(std::string(argv[i + 2]));
 			else
 				playerStrategies.push_back(std::string("random"));
 		}

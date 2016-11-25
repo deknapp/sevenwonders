@@ -30,6 +30,8 @@ class Player {
 	std::vector<std::shared_ptr<Card>> getPossibleCards();
 	void updateMilitaryPoints(int round);
 	void endRound(int round);
+	void printScore();
+	void print();
 
  private:
 

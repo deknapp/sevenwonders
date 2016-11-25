@@ -29,6 +29,22 @@ int Player::score() {
 	return sum;
 }
 
+void Player::print() {
+
+	std::cout << "Strategies are ";;
+	for (const auto& strategy:strategies) {
+		std::cout << strategy << " ";
+	}
+	std::cout << std::endl;
+
+}
+
+void Player::printScore() {
+	print();
+	std::cout << "score is " << score() << std::endl;
+	
+}
+
 int Player::canAfford(std::shared_ptr<Card> card) {
 
 	if (*(card->getResourceCost()) > resource) 

@@ -221,6 +221,16 @@ void Game::initPlayers() {
 		players.at(i)->initStrategies(args->strategiesForPlayer(i));
 }
 
+void Game::score() {
+
+	int i = 0;
+	for (const auto& it: players) {
+
+		std::cout << "Player " << i << std::endl;
+		it->printScore();
+	}
+}
+
 void Game::play() {
 
 	initPlayers();
@@ -235,6 +245,8 @@ void Game::play() {
 				it->playTurn(rund);
 		}
 	}
+
+	score();
 }
 
 
