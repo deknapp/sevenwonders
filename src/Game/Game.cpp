@@ -8,11 +8,20 @@
 #include <iostream>
 
 
-Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {}
+Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {
+	int numPlayers = args_pointer->getNumPlayers();
+	minPlayers = 3;
+	if (numPlayers > 3)
+		minPlayers = 4;
+	if (numPlayers > 4)
+		minPlayers = 5;
+	if (numPlayers > 5)
+		minPlayers = 6;
+}
 
 Game::~Game() {}
 
-void Game::getResourceCards(int minPlayers) {
+void Game::getResourceCards() {
 
 	std::string type = "Resource";
 	int cost = 0;
@@ -50,7 +59,7 @@ void Game::getResourceCards(int minPlayers) {
 	}
 }
 
-void Game::getBlueCards(int minPlayers) {
+void Game::getBlueCards() {
 
 	int age = 1;
 	int points = 2;
@@ -87,7 +96,7 @@ void Game::getBlueCards(int minPlayers) {
 		thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, points, minPlayers)));
 }
 
-void Game::getMilitaryCards(int minPlayers) {
+void Game::getMilitaryCards() {
 
 	int age = 1;
 	int cost = 0;
@@ -115,7 +124,7 @@ void Game::getMilitaryCards(int minPlayers) {
 	}
 }
 
-void Game::getScienceCards(int minPlayers) {
+void Game::getScienceCards() {
 
 	int age = 1;
 	int cost = 0;
@@ -140,13 +149,14 @@ void Game::getScienceCards(int minPlayers) {
 
 }
 
-void Game::getDeck(int minPlayers) {
+void Game::getDeck() {
 
-	getResourceCards(minPlayers);
-	getBlueCards(minPlayers);
-	getMilitaryCards(minPlayers);
-	getScienceCards(minPlayers);
-
+	for (int i = 0; i < 3; i++) {
+		getResourceCards();
+		getBlueCards();
+		getMilitaryCards();
+		getScienceCards();
+	}
 	// TODO: add other types of cards. 
 }
 
@@ -176,7 +186,7 @@ void Game::dealRound(int rund) {
 
 	deck = shuffle(deck);
 	int numPlayers = args->getNumPlayers();
-	int numCards = deck.size() / numPlayers;
+	numCards = deck.size() / numPlayers;
 
 	for (const auto& it: players) {
 		for (int i=0; i<numCards; i++)  {
@@ -213,12 +223,16 @@ void Game::initPlayers() {
 void Game::play() {
 
 	initPlayers();
+	getDeck();
 
 	for (int i=0; i<NUM_ROUNDS; i++) {
 
 		dealRound(i);
-		for (const auto& it: players) 
-			it->playTurn(i);
+
+		for (int i = 0; i < numCards; i++) {
+			for (const auto& it: players) 
+				it->playTurn(i);
+		}
 	}
 }
 

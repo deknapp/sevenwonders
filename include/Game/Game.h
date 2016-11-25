@@ -23,12 +23,14 @@ class Game {
  private:
 
  	void dealRound(int rund);
- 	void getBlueCards(int minPlayers);
- 	void getMilitaryCards(int minPlayers);
- 	void getResourceCards(int minPlayers);
- 	void getScienceCards(int minPlayers);
- 	void getDeck(int minPlayers);
+ 	void getBlueCards();
+ 	void getMilitaryCards();
+ 	void getResourceCards();
+ 	void getScienceCards();
+ 	void getDeck();
  	void initPlayers();
+ 	int minPlayers;
+ 	int numCards;
  	std::shared_ptr<Player> playerAt(int i);
 
  	std::vector<std::shared_ptr<Card>> shuffle(std::vector<std::shared_ptr<Card>> deck);

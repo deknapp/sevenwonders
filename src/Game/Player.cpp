@@ -69,11 +69,14 @@ void Player::playTurn(int round) {
 		playedCards.push_back(hand.at(playedCardIndex));
 		hand.erase(hand.begin() + playedCardIndex);
 	}
-	hand.erase(hand.begin() + playedCardIndex);
+}
+
+void Player::endRound(int round) {
 	if (round == 0 || round == 2)
 		leftNeighbor->getNewHand(hand);
 	else
 		rightNeighbor->getNewHand(hand);
+
 }
 
 void Player::getNewHand(std::vector<std::shared_ptr<Card>> newHand) {

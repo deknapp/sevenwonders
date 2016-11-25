@@ -28,6 +28,7 @@ class Player {
 	void getNewHand(std::vector<std::shared_ptr<Card>> hand);
 	std::vector<std::shared_ptr<Card>> getPossibleCards();
 	void updateMilitaryPoints(int round);
+	void endRound(int round);
 
  private:
 
