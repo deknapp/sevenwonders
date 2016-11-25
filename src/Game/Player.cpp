@@ -9,7 +9,7 @@ void Player::setLeft(std::shared_ptr<Player> _leftNeighbor) {
 }
 
 void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
-	leftNeighbor = _rightNeighbor;
+	rightNeighbor = _rightNeighbor;
 }
 
 void Player::setStrategy(int rund) {
@@ -80,14 +80,34 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 
+void Player::playMilitaryCard(std::shared_ptr<MilitaryCard> card) {
+	military.addStrength(card.getStrength());
+}
+
+void Player::playScienceCard(std::shared_ptr<ScienceCard> card) {
+	science.addCard(card.getCategory());
+}
+
+void Player::play(std::shared_ptr<Card> card) {
+
+	if (card.getType() == "military")
+		playMilitaryCard(card);
+	if (card.getType() == "science")
+		playScienceCard(card);
+	if (card.getType() == "blue")
+		playBlueCard(card);
+	if (card.getType() == "resource")
+		playResourceCard(card);
+}
+
 void Player::playTurn(int round) {
 
 	int playedCardIndex = 0;
 	if (getPossibleCards().size() == 0) 
 		discard();
 	else {
-		setStrategy(round);
 		playedCardIndex = currentStrategy->chooseCardToPlay(getPossibleCards());
+		play(hand.at(playedCardIndex));
 		playedCards.push_back(hand.at(playedCardIndex));
 		hand.erase(hand.begin() + playedCardIndex);
 	}
@@ -121,13 +141,15 @@ void Player::updateMilitaryPoints(int round) {
 
 	if (leftNeighbor->strength() < strength())
 		newPoints += bonus;
-	else
+	if (leftNeighbor->strength() > strength())
 		newPoints -= 1;
 
 	if (rightNeighbor->strength() < strength())
 		newPoints += bonus;
-	else
+	if (rightNeighbor->strength() > strength())
 		newPoints -= 1;
+
+	military.addPoints(newPoints);
 }
 
 

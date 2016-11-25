@@ -5,9 +5,16 @@
 #include <string>
 
 #include "../cards/Card.h"
+
+#include "../cards/BlueCard.h"
+#include "../cards/MilitaryCard.h"
+#include "../cards/ResourceCard.h"
+#include "../cards/ScienceCard.h"
+
 #include "../components/Military.h"
 #include "../components/Science.h"
 #include "../strategies/Strategy.h"
+
 #include "../strategies/StrategyFactory.h"
 
 class Player {
@@ -32,8 +39,17 @@ class Player {
 	void endRound(int round);
 	void printScore();
 	void print();
+	
 
  private:
+
+
+ 	void play(std::shared_ptr<Card> card);
+ 	void playMilitaryCard(std::shared_ptr<MilitaryCard> card);
+ 	void playScienceCard(std::shared_ptr<ScienceCard> card);
+
+ 	// void playResourceCard(std::shared_ptr<ResourceCard> card);
+ 	// void playBlueCard(std::shared_ptr<BlueCard> card);
 
  	StrategyFactory strategyFactory;
  	std::shared_ptr<Strategy> currentStrategy;

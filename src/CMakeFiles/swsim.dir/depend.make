@@ -35,7 +35,11 @@ src/CMakeFiles/swsim.dir/components/Science.cpp.o: include/components/Science.h
 src/CMakeFiles/swsim.dir/components/Science.cpp.o: src/components/Science.cpp
 
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/RandomUtility.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/MilitaryCard.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/ResourceCard.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Science.h
@@ -69,7 +73,11 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/strategies/StrategyFactory.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: src/game/Game.cpp
 
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/RandomUtility.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/MilitaryCard.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/ResourceCard.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Science.h
@@ -82,7 +90,11 @@ src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/strategies/StrategyFactory.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: src/game/Player.cpp
 
 src/CMakeFiles/swsim.dir/main.cpp.o: include/RandomUtility.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/MilitaryCard.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/ResourceCard.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Science.h

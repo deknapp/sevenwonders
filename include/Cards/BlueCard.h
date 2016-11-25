@@ -1,3 +1,6 @@
+#ifndef BlueCard_H
+#define BlueCard_H
+
 #include <vector>
 #include <string>
 
@@ -7,20 +10,26 @@
 class BlueCard : public Card {
 
  public:
-	BlueCard(std::string _name, int age, int points, int minPlayers);
-	BlueCard(std::string _name, int brick, int stone, int wood, int ore, int age, int points, int minPlayers);
-	BlueCard(std::string _name, int brick, int stone, int wood, int ore, int glass, int carpet, int paper, int age, int points, int minPlayers);
+	BlueCard(std::string _name, int _age, int _minPlayers, int _points);
+	BlueCard(std::string _name, 
+						 int glass, int carpet, int paper, 
+						 int _age, int _minPlayers, int _points);
+
+	BlueCard(std::string _name, 
+						 int wood, int stone, int brick, int ore,
+						 int _age, int _minPlayers, int _points);
+
+	BlueCard(std::string _name, 
+						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, 
+						int _minPlayers, int _points);
 	~BlueCard();
-	std::shared_ptr<Resource> getResourceCost();
-	void play();
 
  private:
- 	std::string name;
- 	std::shared_ptr<Resource> resourceCost;
- 	int age;
  	int points;
- 	int minPlayers;
+
  	// prevent generated functions --------------------------------------------
 	BlueCard(const BlueCard&);
 	BlueCard& operator=(const BlueCard&);
 };
+
+#endif /* BlueCard_H */

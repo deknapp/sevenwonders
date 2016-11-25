@@ -9,17 +9,25 @@
 class Card {
 
  public:
-	Card();
-	virtual ~Card();
-	virtual void play();
-	virtual std::shared_ptr<Resource> getResourceCost();
-	int getGoldCost();
-	std::string getType();
+ 	Card(std::string _type, std::string _name,  int _age, int _minPlayers);
+ 	Card(std::string _type, std::string _name, int glass, int paper, int carpet, int _age, int _minPlayers);
+ 	Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int _age, int _minPlayers);
+ 	Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int glass, int paper, int carpet, int _age, int _minPlayers);
 
- private:
+	virtual ~Card();
+	virtual std::shared_ptr<Resource> getResourceCost();
+	std::string getType();
+	int getAge();
+
+ protected:
 
  	std::string type;
- 	int gold;
+ 	std::string name;
+ 	std::shared_ptr<Resource> resourceCost;
+ 	int age;
+ 	int minPlayers;
+
+ private:
  	
  	// prevent generated functions --------------------------------------------
 	Card(const Card&);

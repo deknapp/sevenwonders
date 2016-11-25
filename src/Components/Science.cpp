@@ -1,5 +1,6 @@
 #include "../../include/components/Science.h"
 #include <math.h>
+#include <string>
 
 
 Science::Science() {}
@@ -17,4 +18,15 @@ int Science::score() {
 
 	sum += min_ct*7;
 	return sum;
+}
+
+void Science::addCard(std::string type) {
+	if (type == "wild")
+		wild += 1;
+	if (type == "abacus")
+		abacus += 1;
+	if (type == "wheels")
+		wheels += 1;
+	if (type == "tablet")
+		tablet += 1;
 }

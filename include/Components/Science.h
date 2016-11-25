@@ -9,6 +9,7 @@ class Science {
 	Science();
 	~Science();
 	int score();
+	void addCard(std::string type);
 
  private:
 

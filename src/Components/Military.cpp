@@ -13,3 +13,11 @@ int Military::getStrength() {
 
 	return strength;
 }
+
+void Military::addPoints(int newPoints) {
+	score += newPoints;
+}
+
+void Military::addStrength(int newStrength) {
+	strength += newStrength;
+}

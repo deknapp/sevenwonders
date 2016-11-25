@@ -9,20 +9,18 @@
 class MilitaryCard : public Card {
 
  public:
-	MilitaryCard(std::string _name, int _gold, int _age, int _minPlayers);
-	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int _gold, int _age, int _minPlayers);
-	MilitaryCard(std::string _name, int brick, int stone, int wood, int ore, int glass, int carpet, int paper, int _gold, int _age, int _minPlayers);
+	MilitaryCard(std::string _name, int _age, int _minPlayers);
+
+	MilitaryCard(std::string _name, 
+						 int wood, int stone, int brick, int ore, 
+						 int _age, int _minPlayers);
+
+	MilitaryCard(std::string _name, 
+						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, int _minPlayers);
 	~MilitaryCard();
- 	std::shared_ptr<Resource> getResourceCost();
- 	void play();
+ 	int getStrength();
 
  private:
-
- 	std::string name;
- 	std::shared_ptr<Resource> resourceCost;
- 	int gold;
- 	int age;
- 	int minPlayers;
  	
  	// prevent generated functions --------------------------------------------
 	MilitaryCard(const MilitaryCard&);

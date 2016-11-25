@@ -10,23 +10,24 @@
 class ResourceCard : public Card {
 
  public:
-	ResourceCard(std::string _name, int age, int _gold, int _minPlayers);
-	ResourceCard(std::string _name, int age, int wood, int stone, int brick, int ore, int _gold, int _minPlayers);
-	ResourceCard(std::string _name, int age, int _gold, int brick, int stone, int wood, int ore, int either_or, int _minPlayers);
-	std::shared_ptr<Resource> getResourceCost();
+	ResourceCard(std::string _name, int _age, int _minPlayers, int _gold);
+	ResourceCard(std::string _name, 
+						 int glass, int carpet, int paper, 
+						 int _age, int _minPlayers, int _gold);
+
+	ResourceCard(std::string _name, 
+						 int wood, int stone, int brick, int ore,
+						 int _age, int _minPlayers, int _gold, int _either_or);
+
+	ResourceCard(std::string _name, 
+						 int wood, int stone, int brick, int ore,
+						 int _age, int _minPlayers, int _gold);
 	~ResourceCard();
-	void play();
 
  private:
-
- 	std::string name;
- 	int age;
- 	std::shared_ptr<Resource> resourceCost;
- 	int gold;
  	int either_or;
- 	int minPlayers;
+ 	int gold;
  
- 	
  	// prevent generated functions --------------------------------------------
 	ResourceCard(const ResourceCard&);
 	ResourceCard& operator=(const ResourceCard&);

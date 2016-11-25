@@ -103,6 +103,14 @@ string
 -
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
+../cards/BlueCard.h
+/Users/nath/sevenwonders/include/cards/BlueCard.h
+../cards/MilitaryCard.h
+/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+../cards/ResourceCard.h
+/Users/nath/sevenwonders/include/cards/ResourceCard.h
+../cards/ScienceCard.h
+/Users/nath/sevenwonders/include/cards/ScienceCard.h
 ../components/Military.h
 /Users/nath/sevenwonders/include/components/Military.h
 ../components/Science.h
@@ -198,6 +206,8 @@ string
 ../../include/components/Science.h
 /Users/nath/sevenwonders/include/components/Science.h
 math.h
+-
+string
 -
 
 /Users/nath/sevenwonders/src/game/ArgProcessor.cpp

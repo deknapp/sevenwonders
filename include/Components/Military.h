@@ -10,6 +10,8 @@ class Military {
 	~Military();
 	int getScore();
 	int getStrength();
+	void addPoints(int newPoints);
+	void addStrength(int strength);
 
  private:
 

@@ -24,38 +24,38 @@ Game::~Game() {}
 void Game::getResourceCards() {
 
 	std::string type = "Resource";
-	int cost = 0;
+	int gold = 0;
 	int age= 1;
-	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", age, cost, 1, 0, 0, 0, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", age, cost, 0, 1, 0, 0, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", age, cost, 0, 0, 1, 0, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", age, cost, 0, 0, 0, 1, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", 0, 1, 0, 0, age, gold, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
 
-	cost = 1;
+	gold = 1;
 	age = 2;
 
-	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("sawmill", age, cost, 2, 0, 0, 0, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("quarry", age, cost, 0, 2, 0, 0, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("brickyard", age, cost, 0, 0, 2, 0, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("foundry", age, cost, 0, 0, 0, 2, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("sawmill", 2, 0, 0, 0, age, gold, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("quarry", 0, 2, 0, 0, age, gold, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("brickyard", 0, 0, 2, 0, age, gold, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("foundry", 0, 0, 0, 2, age, gold, minPlayers)));
 
 	int either_or = 1;
 	age = 1;
 
-	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("clayPit", age, cost, 0, 0, 1, 1, either_or, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("timberYard", age, cost, 1, 1, 0, 0, either_or, minPlayers)));	
+	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("clayPit", 0, 0, 1, 1, age, gold, minPlayers, either_or)));
+	firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("timberYard", 1, 1, 0, 0, age, gold, minPlayers, either_or)));	
 
 	if (minPlayers > 3) {
-		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("excavation", age, cost, 0, 1, 0, 1, either_or, minPlayers)));
+		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("excavation", 0, 1, 0, 1, age, gold, minPlayers, either_or)));
 	}
 
 	if (minPlayers > 4) {
-		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("forestCave", age, cost, 1, 0, 0, 1, either_or, minPlayers)));
+		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("forestCave", 1, 0, 0, 1, age, gold, minPlayers, either_or)));
 	}
 
 	if (minPlayers > 5) {
-		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("mine", age, cost, 0, 1, 0, 1, either_or, minPlayers)));
-		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("treeFarm", age, cost, 1, 0, 1, 0, either_or, minPlayers)));
+		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("mine", 0, 1, 0, 1, age, gold, minPlayers, either_or)));
+		firstAgeDeck.push_back(std::shared_ptr<ResourceCard>(new ResourceCard("treeFarm", 1, 0, 1, 0, age, gold, minPlayers, either_or)));
 	}
 }
 
@@ -65,87 +65,87 @@ void Game::getBlueCards() {
 	int points = 2;
 
 
-	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("altar", age, points, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("theater", age, points, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("altar", age, minPlayers, points)));
+	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("theater", age, minPlayers, points)));
 
 	points = 3;
-	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("baths", 0, 1, 0, 0, age, points, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("temple", 0, 1, 0, 0, 1, 0, 0, age, points, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("baths", 0, 1, 0, 0, age, minPlayers, points)));
+	firstAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("temple", 0, 1, 0, 0, 1, 0, 0, age, minPlayers, points)));
 
 	age = 2;
 	points = 4;
-	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("statue", 1, 0, 0, 2, age, points, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("courthouse", 0, 0, 2, 0, 0, 1, 0, age, points, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("statue", 1, 0, 0, 2, age, minPlayers, points)));
+	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("courthouse", 0, 0, 2, 0, 0, 1, 0, age, minPlayers, points)));
 
 	points = 5;
-	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("aqueduct", 0, 3, 0, 0, age, points, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("gardens", 1, 0, 2, 0, age, points, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("aqueduct", 0, 3, 0, 0, age, minPlayers, points)));
+	secondAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("gardens", 1, 0, 2, 0, age, minPlayers, points)));
 
 	age = 3;
 	points = 6;
-	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("townHall", 0, 2, 0, 1, 1, 9, 9, age, points, minPlayers)));
-	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("senate", 2, 1, 0, 1, age, points, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("townHall", 0, 2, 0, 1, 1, 9, 9, age, minPlayers, points)));
+	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("senate", 2, 1, 0, 1, age, minPlayers, points)));
 
 	points = 7;
-	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("pantheon", 0, 0, 2, 1, 1, 1, 1, age, points, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("pantheon", 0, 0, 2, 1, 1, 1, 1, age, minPlayers, points)));
 
 	points = 8;
-	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("palace", 1, 1, 1, 1, 1, 1, 1, age, points, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("palace", 1, 1, 1, 1, 1, 1, 1, age, minPlayers, points)));
 
 	if (minPlayers > 3)
-		thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, points, minPlayers)));
+		thirdAgeDeck.push_back(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, minPlayers, points)));
 }
 
 void Game::getMilitaryCards() {
 
 	int age = 1;
-	int cost = 0;
 
-	firstAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("stockade", 1, 0, 0, 0, age, cost, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("barracks", 0, 0, 0, 1, age, cost, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("guardTower", 0, 0, 1, 0, age, cost, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("stockade", 1, 0, 0, 0, age, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("barracks", 0, 0, 0, 1, age, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("guardTower", 0, 0, 1, 0, age, minPlayers)));
 
 	age = 2, 
 
-	secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, cost, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, cost, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, minPlayers)));
 
 	age = 3;
 
-	thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("fortifications", 0, 1, 0, 3, age, cost, minPlayers)));
-	thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, cost, minPlayers)));
-	thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("fortifications", 0, 1, 0, 3, age, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, minPlayers)));
 
 
 	if (minPlayers > 3) {
-		secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, 2, cost,  minPlayers)));
-		thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, 3, cost, minPlayers)));
+		age = 2;
+		secondAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+		age = 3;
+		thirdAgeDeck.push_back(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, age, minPlayers)));
 	}
 }
 
 void Game::getScienceCards() {
 
 	int age = 1;
-	int cost = 0;
 
-	firstAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, "A", age, cost, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, "wheel", age, cost, minPlayers)));
-	firstAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, "tablet", age, cost, minPlayers)));
+	firstAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, age, minPlayers, "A")));
+	firstAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, age, minPlayers, "wheel")));
+	firstAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, age, minPlayers, "tablet")));
 
 	age = 2, 
 
-	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, "A", age, cost, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "wheel", age, cost, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, cost, minPlayers)));
-	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, cost, minPlayers)));
+	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
+	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "wheel")));
+	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "tablet")));
+	secondAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "tablet")));
 
 	age = 3;
 
-	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, "A", age, cost, minPlayers)));
-	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "wheel", age, cost, minPlayers)));
-	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "tablet", age, cost, minPlayers)));
-	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "tablet", age, cost, minPlayers)));
+	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
+	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "A")));
+	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "A")));
+	thirdAgeDeck.push_back(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "A")));
 
 }
 
@@ -239,10 +239,17 @@ void Game::play() {
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
 		dealRound(rund);
+		for (const auto& it: players) {
+			it->setStrategy(rund);
+		}
 
 		for (int turn = 0; turn < numCards - 1; turn++) {
 			for (const auto& it: players) 
 				it->playTurn(rund);
+		}
+
+		for (const auto& it: players) {
+			it->updateMilitaryPoints(rund);
 		}
 	}
 
