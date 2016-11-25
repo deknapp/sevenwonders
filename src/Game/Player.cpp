@@ -1,4 +1,5 @@
 #include "../../include/game/Player.h"
+#include <iostream>
 
 Player::Player() : gold(3) {}
 Player::~Player() {}
@@ -11,8 +12,9 @@ void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
 	leftNeighbor = _rightNeighbor;
 }
 
-void Player::setStrategy(std::string _strategy) {
-	strategy = std::shared_ptr<Strategy>(strategyFactory.getStrategy(_strategy));
+void Player::setStrategy(int rund) {
+	std::string _strategy = strategies.at(rund);
+	currentStrategy = std::shared_ptr<Strategy>(strategyFactory.getStrategy(_strategy));
 }
 
 void Player::addToHand(std::shared_ptr<Card> newCard) {
@@ -57,14 +59,18 @@ std::vector<std::shared_ptr<Card>> Player::getPossibleCards() {
 	return possibleCards;
 }
 
+void Player::initStrategies(std::vector<std::string> _strategies) {
+	strategies = _strategies;
+}
+
+
 void Player::playTurn(int round) {
 
 	int playedCardIndex = 0;
-	if (getPossibleCards().size() == 0) {
+	if (getPossibleCards().size() == 0) 
 		discard();
-	}
 	else {
-		setStrategy(strategies.at(round));
+		setStrategy(round);
 		playedCardIndex = currentStrategy->chooseCardToPlay(getPossibleCards());
 		playedCards.push_back(hand.at(playedCardIndex));
 		hand.erase(hand.begin() + playedCardIndex);

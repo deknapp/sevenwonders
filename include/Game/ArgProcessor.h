@@ -15,12 +15,12 @@ class ArgProcessor {
 	ArgProcessor(int argc, char* argv[]);
 	int getNumGames();
 	int getNumPlayers();
-	std::vector<std::string> getStrategies();
-	std::string strategyAt(int i);
+	std::vector<std::vector<std::string>> getStrategies();
+	std::vector<std::string> strategiesForPlayer(int i);
 
  private:
 
- 	std::vector<std::string> strategies;
+ 	std::vector<std::vector<std::string>>  strategies;
  	int numPlayers;
  	int numGames;
 

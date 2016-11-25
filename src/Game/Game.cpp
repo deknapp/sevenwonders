@@ -204,11 +204,9 @@ std::shared_ptr<Player> Game::playerAt(int i) {
 void Game::initPlayers() {
 
 	int numPlayers = args->getNumPlayers();
-	for (int i=0; i<numPlayers; i++) {
+	for (int i=0; i<numPlayers; i++) 
 		players.push_back(std::shared_ptr<Player>(new Player()));
-		playerAt(i)->setStrategy(args->strategyAt(i));
-	}
-
+	
 	playerAt(0)->setLeft(playerAt(numPlayers - 1));
 	playerAt(0)->setRight(playerAt(1));
 	playerAt(numPlayers - 1)->setLeft(playerAt(numPlayers - 2));
@@ -218,6 +216,9 @@ void Game::initPlayers() {
 		playerAt(i)->setLeft(playerAt(i-1));
 		playerAt(i)->setRight(playerAt(i+1));
 	}
+
+	for (int i = 0; i < players.size(); i ++) 
+		players.at(i)->initStrategies(args->strategiesForPlayer(i));
 }
 
 void Game::play() {
@@ -225,13 +226,13 @@ void Game::play() {
 	initPlayers();
 	getDeck();
 
-	for (int i=0; i<NUM_ROUNDS; i++) {
+	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
-		dealRound(i);
+		dealRound(rund);
 
-		for (int i = 0; i < numCards; i++) {
+		for (int turn = 0; turn < numCards - 1; turn++) {
 			for (const auto& it: players) 
-				it->playTurn(i);
+				it->playTurn(rund);
 		}
 	}
 }

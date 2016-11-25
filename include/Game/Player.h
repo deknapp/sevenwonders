@@ -22,7 +22,8 @@ class Player {
 	int strength();
 	void setLeft(std::shared_ptr<Player> leftNeighbor);
 	void setRight(std::shared_ptr<Player> rightNeighbor);
-	void setStrategy(std::string _strategy);
+	void initStrategies(std::vector<std::string> strategies);
+	void setStrategy(int rund);
 	int score();
 	void discard();
 	void getNewHand(std::vector<std::shared_ptr<Card>> hand);
@@ -41,7 +42,6 @@ class Player {
  	std::vector<std::shared_ptr<Card>> playedCards;
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;
- 	std::shared_ptr<Strategy> strategy;
  	Science science;
  	Military military;
  	Resource resource;

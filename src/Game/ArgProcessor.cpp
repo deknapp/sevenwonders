@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 
-std::string ArgProcessor::strategyAt(int i) {
+std::vector<std::string> ArgProcessor::strategiesForPlayer(int i) {
 	return strategies.at(i);
 }
 
@@ -12,10 +12,14 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) {
 	numGames = atoi(argv[2]);
 
 	for (int i=0; i < numPlayers; i++) {
-		if (i < argc - 1)
-			strategies.push_back(std::string(argv[i]));
-		else
-			strategies.push_back(std::string("random"));
+		std::vector<std::string> playerStrategies;
+		for (int i = 0; i < 3; i++) {
+			if (i < argc - 1)
+				playerStrategies.push_back(std::string(argv[i]));
+			else
+				playerStrategies.push_back(std::string("random"));
+		}
+		strategies.push_back(playerStrategies);
 	}
 }
 
@@ -27,6 +31,6 @@ int ArgProcessor::getNumGames() {
 	return numGames;
 }
 
-std::vector<std::string> ArgProcessor::getStrategies() {
+std::vector<std::vector<std::string>> ArgProcessor::getStrategies() {
 	return strategies;
 }
