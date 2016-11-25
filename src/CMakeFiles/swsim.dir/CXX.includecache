@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/Users/nath/sevenwonders/include/Constants.h
+
 /Users/nath/sevenwonders/include/RandomUtility.h
 stdlib.h
 -
@@ -217,6 +219,10 @@ string
 /Users/nath/sevenwonders/include/cards/ResourceCard.h
 ../../include/cards/ScienceCard.h
 /Users/nath/sevenwonders/include/cards/ScienceCard.h
+../../include/Constants.h
+/Users/nath/sevenwonders/include/Constants.h
+iostream
+-
 
 /Users/nath/sevenwonders/src/game/Player.cpp
 ../../include/game/Player.h
@@ -227,6 +233,8 @@ string
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 ../include/game/Game.h
 /Users/nath/sevenwonders/include/game/Game.h
+iostream
+-
 
 /Users/nath/sevenwonders/src/strategies/Greedy.cpp
 ../../include/strategies/Greedy.h

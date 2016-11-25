@@ -3,6 +3,9 @@
 #include "../../include/cards/MilitaryCard.h"
 #include "../../include/cards/ResourceCard.h"
 #include "../../include/cards/ScienceCard.h"
+#include "../../include/Constants.h"
+
+#include <iostream>
 
 
 Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {}

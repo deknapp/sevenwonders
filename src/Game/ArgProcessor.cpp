@@ -8,21 +8,14 @@ std::string ArgProcessor::strategyAt(int i) {
 
 ArgProcessor::ArgProcessor(int argc, char* argv[]) {
 
-	if (atoi(argv[0]) < 3) 
-		std::cout << "invalid number of arguments" << std::endl;
-
-	numGames = atoi(argv[2]);
 	numPlayers = atoi(argv[1]);
+	numGames = atoi(argv[2]);
 
-	for (int i=3; i < argc; i++) 
-		strategies.push_back(std::string(argv[i]));
-
-	int numRandoms = numPlayers - (argc - 2);
-
-	if (numRandoms > 0) {
-		for (int i= 0; i<numRandoms; i++) {
+	for (int i=0; i < numPlayers; i++) {
+		if (i < argc - 1)
+			strategies.push_back(std::string(argv[i]));
+		else
 			strategies.push_back(std::string("random"));
-		}	
 	}
 }
 

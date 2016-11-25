@@ -48,6 +48,7 @@ src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/strategies/Strategy.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/strategies/StrategyFactory.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: src/game/ArgProcessor.cpp
 
+src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/Constants.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/RandomUtility.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/Card.h
