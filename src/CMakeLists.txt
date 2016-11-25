@@ -15,6 +15,7 @@ set(SRC_LIST ${SRC_LIST}
 
 set(SRC_LIST ${SRC_LIST}
     game/ArgProcessor.cpp
+    game/Deck.cpp
     game/Game.cpp
     game/Player.cpp)
 

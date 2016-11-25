@@ -18,6 +18,7 @@ class Card {
 	virtual std::shared_ptr<Resource> getResourceCost();
 	std::string getType();
 	int getAge();
+	int getGoldCost();
 
  protected:
 

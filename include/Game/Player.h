@@ -55,9 +55,9 @@ class Player {
  	std::shared_ptr<Strategy> currentStrategy;
  	std::vector<std::string> strategies;
  	std::string name;
- 	std::vector<std::shared_ptr<Card>> hand;
- 	std::vector<std::shared_ptr<Card>> nextHand;
- 	std::vector<std::shared_ptr<Card>> playedCards;
+ 	Deck hand;
+ 	Deck nextHand;
+ 	Deck playedCards;
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;
  	Science science;

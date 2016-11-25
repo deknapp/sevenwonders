@@ -33,12 +33,11 @@ class Game {
  	int numCards;
  	std::shared_ptr<Player> playerAt(int i);
 
- 	std::vector<std::shared_ptr<Card>> shuffle(std::vector<std::shared_ptr<Card>> deck);
  	std::shared_ptr<ArgProcessor> args;
  	std::vector<std::shared_ptr<Player>> players;
- 	std::vector<std::shared_ptr<Card>> firstAgeDeck;
- 	std::vector<std::shared_ptr<Card>> secondAgeDeck;
- 	std::vector<std::shared_ptr<Card>> thirdAgeDeck;
+ 	Deck firstAgeDeck;
+ 	Deck secondAgeDeck;
+ 	Deck thirdAgeDeck;
 
  	// prevent generated functions --------------------------------------------
 	Game(const Game&);

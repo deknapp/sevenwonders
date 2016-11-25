@@ -8,6 +8,7 @@ src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.o
  /Users/nath/sevenwonders/src/cards/BlueCard.cpp
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o
  /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/cards/ResourceCard.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/Card.cpp
 src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o

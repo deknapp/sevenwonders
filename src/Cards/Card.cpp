@@ -1,4 +1,5 @@
 #include "../../include/cards/Card.h"
+#include "../../include/cards/ResourceCard.h"
 
 Card::Card(std::string _type, std::string _name, int _age, int _minPlayers) :
 		   type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource())), age(_age), minPlayers(_minPlayers) {}
@@ -20,6 +21,10 @@ std::shared_ptr<Resource> Card::getResourceCost() {
 
 std::string Card::getType() {
 	return type;
+}
+
+int Card::getGoldCost() {
+	return 0;
 }
 
 int Card::getAge() {

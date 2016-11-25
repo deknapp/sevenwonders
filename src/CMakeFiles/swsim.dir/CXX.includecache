@@ -175,6 +175,8 @@ string
 /Users/nath/sevenwonders/src/cards/Card.cpp
 ../../include/cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
+../../include/cards/ResourceCard.h
+/Users/nath/sevenwonders/include/cards/ResourceCard.h
 
 /Users/nath/sevenwonders/src/cards/MilitaryCard.cpp
 ../../include/cards/MilitaryCard.h

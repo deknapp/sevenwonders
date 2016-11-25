@@ -7,6 +7,7 @@ src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.o: src/cards/BlueCard.cpp
 
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/cards/Card.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o: src/cards/Card.cpp
 

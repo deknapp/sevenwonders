@@ -18,7 +18,11 @@ ResourceCard::ResourceCard(std::string _name,
 ResourceCard::ResourceCard(std::string _name, 
 						 int glass, int carpet, int paper, 
 						 int _age, int _minPlayers, int _gold):
-						 Card("resource", _name, _age, glass, carpet, paper,  _minPlayers), gold(_gold) {}
+						 Card("resource", _name, _age, glass, carpet, paper,  _minPlayers), gold(_gold) {}\
 						
 
 ResourceCard::~ResourceCard() {}
+
+int ResourceCard::getResourceGoldCost() {
+	return gold;
+}

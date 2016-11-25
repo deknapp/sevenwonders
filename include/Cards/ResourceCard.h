@@ -24,6 +24,8 @@ class ResourceCard : public Card {
 						 int _age, int _minPlayers, int _gold);
 	~ResourceCard();
 
+	int getResourceGoldCost();
+
  private:
  	int either_or;
  	int gold;

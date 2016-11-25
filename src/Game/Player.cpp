@@ -80,23 +80,23 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 
-void Player::playMilitaryCard(std::shared_ptr<MilitaryCard> card) {
-	military.addStrength(card.getStrength());
+void Player::playMilitaryCard() {
+	military.addStrength(card->getStrength());
 }
 
-void Player::playScienceCard(std::shared_ptr<ScienceCard> card) {
-	science.addCard(card.getCategory());
+void Player::playScienceCard() {
+	science.addCard(card->getCategory());
 }
 
-void Player::play(std::shared_ptr<Card> card) {
+void Player::play(std::string type) {
 
-	if (card.getType() == "military")
+	if (type == "military")
 		playMilitaryCard(card);
-	if (card.getType() == "science")
+	if (type == "science")
 		playScienceCard(card);
-	if (card.getType() == "blue")
+	if (type == "blue")
 		playBlueCard(card);
-	if (card.getType() == "resource")
+	if (type == "resource")
 		playResourceCard(card);
 }
 
