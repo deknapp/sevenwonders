@@ -14,9 +14,16 @@ class Deck {
  	void addMilitaryCard(std::shared_ptr<MilitaryCard>);
  	void addScienceCard(std::shared_ptr<ScienceCard>);
  	void addResourceCard(std::shared_ptr<ResourceCard>);
+
+ 	void getBlueCard(std::shared_ptr<BlueCard>);
+ 	void getMilitaryCard(std::shared_ptr<MilitaryCard>);
+ 	void getScienceCard(std::shared_ptr<ScienceCard>);
+ 	void getResourceCard(std::shared_ptr<ResourceCard>);
+
  	void shuffle();
  	void removeRandom(std::string type);
  	std::shared_ptr<Deck> getAffordableCards(std::shared_ptr<Player> player);
+ 	int cardInDeck(std::string card_name);
 
  private:
 
