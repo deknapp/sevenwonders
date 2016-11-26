@@ -44,8 +44,8 @@ void Player::print() {
 
 void Player::printScore() {
 	print();
-	std::cout << "score is " << score() << std::endl;
-	
+	std::cout << "science score is " << science.score() << std::endl;
+	std::cout << "military score is " << military.getScore() << std::endl;
 }
 
 void Player::discard() {
@@ -59,29 +59,37 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 void Player::playResourceCard() {
-
-	if (hand->canAffordResourceCard()) {
-		std::cout << "playing MilitaryCard" << std::endl;
-		std::shared_ptr<ResourceCard> card = hand->buyResourceCard(gold);
+	std::shared_ptr<ResourceCard> card = hand->getResourceCard();
+	if (card) {
+		std::cout << "playing ResourceCard" << std::endl;
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
 	}
-	else;
+
+	else
 		discard();
 }
 
 void Player::playMilitaryCard() {
-	std::cout << "playing MilitaryCard" << std::endl;
-	std::shared_ptr<MilitaryCard> card = hand->buyMilitaryCard(resource);
-	if (card)
+	
+	std::shared_ptr<MilitaryCard> card = hand->getMilitaryCard();
+	if (card) {
+		std::cout << "playing MilitaryCard" << std::endl;
 		military.addStrength(card->getStrength());
+	}
+	else 
+		discard();
 }
 
 void Player::playScienceCard() {
-	std::cout << "playing ScienceCard" << std::endl;
-	std::shared_ptr<ScienceCard> card= hand->buyScienceCard(resource);
-	if (card)
+	
+	std::shared_ptr<ScienceCard> card= hand->getScienceCard();
+	if (card) {
+		std::cout << "playing ScienceCard" << std::endl;
 		science.addCard(card->getCategory());
+	}
+	else 
+		discard();
 }
 
 void Player::play(std::string type) {

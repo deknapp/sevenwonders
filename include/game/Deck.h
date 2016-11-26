@@ -20,9 +20,7 @@ class Deck {
 
  	int size();
  	void discard();
-
- 	int canAffordResourceCard();
-
+ 	void print();
  	void addBlueCard(std::shared_ptr<BlueCard> card);
  	void addMilitaryCard(std::shared_ptr<MilitaryCard> card);
  	void addScienceCard(std::shared_ptr<ScienceCard> card);
@@ -35,13 +33,6 @@ class Deck {
 
  	int containsCard(std::string card_name);
  	int cardPlayed(std::string card_name);
-
- 	int canPlayScience(std::shared_ptr<Resource> resource);
- 	int canPlayMilitary(std::shared_ptr<Resource> resource);
-
- 	std::shared_ptr<ScienceCard> buyScienceCard(std::shared_ptr<Resource> resource);
- 	std::shared_ptr<MilitaryCard> buyMilitaryCard(std::shared_ptr<Resource> resource);
- 	std::shared_ptr<ResourceCard> buyResourceCard(int gold);
 
  private:
 

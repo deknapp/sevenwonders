@@ -48,10 +48,10 @@ RM = /usr/local/Cellar/cmake/3.7.0/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/nath/sevenwonders/src
+CMAKE_SOURCE_DIR = /Users/nath/sevenwonders
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/nath/sevenwonders/src
+CMAKE_BINARY_DIR = /Users/nath/sevenwonders
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nath/sevenwonders/src/CMakeFiles /Users/nath/sevenwonders/src/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nath/sevenwonders/src/CMakeFiles 0
+	cd /Users/nath/sevenwonders && $(CMAKE_COMMAND) -E cmake_progress_start /Users/nath/sevenwonders/CMakeFiles /Users/nath/sevenwonders/src/CMakeFiles/progress.marks
+	cd /Users/nath/sevenwonders && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/nath/sevenwonders/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /Users/nath/sevenwonders && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,30 +97,32 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/nath/sevenwonders && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/nath/sevenwonders && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/nath/sevenwonders && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named swsim
+# Convenience name for target.
+src/CMakeFiles/swsim.dir/rule:
+	cd /Users/nath/sevenwonders && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/swsim.dir/rule
+.PHONY : src/CMakeFiles/swsim.dir/rule
 
-# Build rule for target.
-swsim: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 swsim
+# Convenience name for target.
+swsim: src/CMakeFiles/swsim.dir/rule
+
 .PHONY : swsim
 
 # fast build rule for target.
 swsim/fast:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/build
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/build
 .PHONY : swsim/fast
 
 cards/BlueCard.o: cards/BlueCard.cpp.o
@@ -129,7 +131,7 @@ cards/BlueCard.o: cards/BlueCard.cpp.o
 
 # target to build an object file
 cards/BlueCard.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/BlueCard.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.o
 .PHONY : cards/BlueCard.cpp.o
 
 cards/BlueCard.i: cards/BlueCard.cpp.i
@@ -138,7 +140,7 @@ cards/BlueCard.i: cards/BlueCard.cpp.i
 
 # target to preprocess a source file
 cards/BlueCard.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/BlueCard.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.i
 .PHONY : cards/BlueCard.cpp.i
 
 cards/BlueCard.s: cards/BlueCard.cpp.s
@@ -147,7 +149,7 @@ cards/BlueCard.s: cards/BlueCard.cpp.s
 
 # target to generate assembly for a file
 cards/BlueCard.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/BlueCard.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.s
 .PHONY : cards/BlueCard.cpp.s
 
 cards/Card.o: cards/Card.cpp.o
@@ -156,7 +158,7 @@ cards/Card.o: cards/Card.cpp.o
 
 # target to build an object file
 cards/Card.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/Card.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/Card.cpp.o
 .PHONY : cards/Card.cpp.o
 
 cards/Card.i: cards/Card.cpp.i
@@ -165,7 +167,7 @@ cards/Card.i: cards/Card.cpp.i
 
 # target to preprocess a source file
 cards/Card.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/Card.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/Card.cpp.i
 .PHONY : cards/Card.cpp.i
 
 cards/Card.s: cards/Card.cpp.s
@@ -174,7 +176,7 @@ cards/Card.s: cards/Card.cpp.s
 
 # target to generate assembly for a file
 cards/Card.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/Card.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/Card.cpp.s
 .PHONY : cards/Card.cpp.s
 
 cards/MilitaryCard.o: cards/MilitaryCard.cpp.o
@@ -183,7 +185,7 @@ cards/MilitaryCard.o: cards/MilitaryCard.cpp.o
 
 # target to build an object file
 cards/MilitaryCard.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o
 .PHONY : cards/MilitaryCard.cpp.o
 
 cards/MilitaryCard.i: cards/MilitaryCard.cpp.i
@@ -192,7 +194,7 @@ cards/MilitaryCard.i: cards/MilitaryCard.cpp.i
 
 # target to preprocess a source file
 cards/MilitaryCard.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.i
 .PHONY : cards/MilitaryCard.cpp.i
 
 cards/MilitaryCard.s: cards/MilitaryCard.cpp.s
@@ -201,7 +203,7 @@ cards/MilitaryCard.s: cards/MilitaryCard.cpp.s
 
 # target to generate assembly for a file
 cards/MilitaryCard.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.s
 .PHONY : cards/MilitaryCard.cpp.s
 
 cards/ResourceCard.o: cards/ResourceCard.cpp.o
@@ -210,7 +212,7 @@ cards/ResourceCard.o: cards/ResourceCard.cpp.o
 
 # target to build an object file
 cards/ResourceCard.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o
 .PHONY : cards/ResourceCard.cpp.o
 
 cards/ResourceCard.i: cards/ResourceCard.cpp.i
@@ -219,7 +221,7 @@ cards/ResourceCard.i: cards/ResourceCard.cpp.i
 
 # target to preprocess a source file
 cards/ResourceCard.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/ResourceCard.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.i
 .PHONY : cards/ResourceCard.cpp.i
 
 cards/ResourceCard.s: cards/ResourceCard.cpp.s
@@ -228,7 +230,7 @@ cards/ResourceCard.s: cards/ResourceCard.cpp.s
 
 # target to generate assembly for a file
 cards/ResourceCard.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/ResourceCard.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.s
 .PHONY : cards/ResourceCard.cpp.s
 
 cards/ScienceCard.o: cards/ScienceCard.cpp.o
@@ -237,7 +239,7 @@ cards/ScienceCard.o: cards/ScienceCard.cpp.o
 
 # target to build an object file
 cards/ScienceCard.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o
 .PHONY : cards/ScienceCard.cpp.o
 
 cards/ScienceCard.i: cards/ScienceCard.cpp.i
@@ -246,7 +248,7 @@ cards/ScienceCard.i: cards/ScienceCard.cpp.i
 
 # target to preprocess a source file
 cards/ScienceCard.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/ScienceCard.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.i
 .PHONY : cards/ScienceCard.cpp.i
 
 cards/ScienceCard.s: cards/ScienceCard.cpp.s
@@ -255,7 +257,7 @@ cards/ScienceCard.s: cards/ScienceCard.cpp.s
 
 # target to generate assembly for a file
 cards/ScienceCard.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/cards/ScienceCard.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.s
 .PHONY : cards/ScienceCard.cpp.s
 
 components/Military.o: components/Military.cpp.o
@@ -264,7 +266,7 @@ components/Military.o: components/Military.cpp.o
 
 # target to build an object file
 components/Military.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Military.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Military.cpp.o
 .PHONY : components/Military.cpp.o
 
 components/Military.i: components/Military.cpp.i
@@ -273,7 +275,7 @@ components/Military.i: components/Military.cpp.i
 
 # target to preprocess a source file
 components/Military.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Military.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Military.cpp.i
 .PHONY : components/Military.cpp.i
 
 components/Military.s: components/Military.cpp.s
@@ -282,7 +284,7 @@ components/Military.s: components/Military.cpp.s
 
 # target to generate assembly for a file
 components/Military.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Military.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Military.cpp.s
 .PHONY : components/Military.cpp.s
 
 components/Resource.o: components/Resource.cpp.o
@@ -291,7 +293,7 @@ components/Resource.o: components/Resource.cpp.o
 
 # target to build an object file
 components/Resource.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Resource.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Resource.cpp.o
 .PHONY : components/Resource.cpp.o
 
 components/Resource.i: components/Resource.cpp.i
@@ -300,7 +302,7 @@ components/Resource.i: components/Resource.cpp.i
 
 # target to preprocess a source file
 components/Resource.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Resource.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Resource.cpp.i
 .PHONY : components/Resource.cpp.i
 
 components/Resource.s: components/Resource.cpp.s
@@ -309,7 +311,7 @@ components/Resource.s: components/Resource.cpp.s
 
 # target to generate assembly for a file
 components/Resource.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Resource.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Resource.cpp.s
 .PHONY : components/Resource.cpp.s
 
 components/Science.o: components/Science.cpp.o
@@ -318,7 +320,7 @@ components/Science.o: components/Science.cpp.o
 
 # target to build an object file
 components/Science.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Science.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Science.cpp.o
 .PHONY : components/Science.cpp.o
 
 components/Science.i: components/Science.cpp.i
@@ -327,7 +329,7 @@ components/Science.i: components/Science.cpp.i
 
 # target to preprocess a source file
 components/Science.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Science.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Science.cpp.i
 .PHONY : components/Science.cpp.i
 
 components/Science.s: components/Science.cpp.s
@@ -336,7 +338,7 @@ components/Science.s: components/Science.cpp.s
 
 # target to generate assembly for a file
 components/Science.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/components/Science.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Science.cpp.s
 .PHONY : components/Science.cpp.s
 
 game/ArgProcessor.o: game/ArgProcessor.cpp.o
@@ -345,7 +347,7 @@ game/ArgProcessor.o: game/ArgProcessor.cpp.o
 
 # target to build an object file
 game/ArgProcessor.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
 .PHONY : game/ArgProcessor.cpp.o
 
 game/ArgProcessor.i: game/ArgProcessor.cpp.i
@@ -354,7 +356,7 @@ game/ArgProcessor.i: game/ArgProcessor.cpp.i
 
 # target to preprocess a source file
 game/ArgProcessor.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/ArgProcessor.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.i
 .PHONY : game/ArgProcessor.cpp.i
 
 game/ArgProcessor.s: game/ArgProcessor.cpp.s
@@ -363,7 +365,7 @@ game/ArgProcessor.s: game/ArgProcessor.cpp.s
 
 # target to generate assembly for a file
 game/ArgProcessor.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/ArgProcessor.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.s
 .PHONY : game/ArgProcessor.cpp.s
 
 game/Deck.o: game/Deck.cpp.o
@@ -372,7 +374,7 @@ game/Deck.o: game/Deck.cpp.o
 
 # target to build an object file
 game/Deck.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Deck.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Deck.cpp.o
 .PHONY : game/Deck.cpp.o
 
 game/Deck.i: game/Deck.cpp.i
@@ -381,7 +383,7 @@ game/Deck.i: game/Deck.cpp.i
 
 # target to preprocess a source file
 game/Deck.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Deck.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Deck.cpp.i
 .PHONY : game/Deck.cpp.i
 
 game/Deck.s: game/Deck.cpp.s
@@ -390,7 +392,7 @@ game/Deck.s: game/Deck.cpp.s
 
 # target to generate assembly for a file
 game/Deck.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Deck.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Deck.cpp.s
 .PHONY : game/Deck.cpp.s
 
 game/Game.o: game/Game.cpp.o
@@ -399,7 +401,7 @@ game/Game.o: game/Game.cpp.o
 
 # target to build an object file
 game/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Game.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Game.cpp.o
 .PHONY : game/Game.cpp.o
 
 game/Game.i: game/Game.cpp.i
@@ -408,7 +410,7 @@ game/Game.i: game/Game.cpp.i
 
 # target to preprocess a source file
 game/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Game.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Game.cpp.i
 .PHONY : game/Game.cpp.i
 
 game/Game.s: game/Game.cpp.s
@@ -417,7 +419,7 @@ game/Game.s: game/Game.cpp.s
 
 # target to generate assembly for a file
 game/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Game.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Game.cpp.s
 .PHONY : game/Game.cpp.s
 
 game/Player.o: game/Player.cpp.o
@@ -426,7 +428,7 @@ game/Player.o: game/Player.cpp.o
 
 # target to build an object file
 game/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Player.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Player.cpp.o
 .PHONY : game/Player.cpp.o
 
 game/Player.i: game/Player.cpp.i
@@ -435,7 +437,7 @@ game/Player.i: game/Player.cpp.i
 
 # target to preprocess a source file
 game/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Player.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Player.cpp.i
 .PHONY : game/Player.cpp.i
 
 game/Player.s: game/Player.cpp.s
@@ -444,7 +446,7 @@ game/Player.s: game/Player.cpp.s
 
 # target to generate assembly for a file
 game/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/game/Player.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Player.cpp.s
 .PHONY : game/Player.cpp.s
 
 main.o: main.cpp.o
@@ -453,7 +455,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/main.cpp.o
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -462,7 +464,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/main.cpp.i
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -471,7 +473,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/swsim.dir/build.make CMakeFiles/swsim.dir/main.cpp.s
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -533,6 +535,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/nath/sevenwonders && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

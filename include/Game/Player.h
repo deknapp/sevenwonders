@@ -33,7 +33,6 @@ class Player {
 	int score();
 	void discard();
 	void getNewHand(std::shared_ptr<Deck> hand);
-	std::vector<std::shared_ptr<Card> > getPossibleCards();
 	void updateMilitaryPoints(int round);
 	void endRound(int round);
 	void printScore();

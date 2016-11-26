@@ -5,23 +5,24 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
-int Deck::canAffordResourceCard() {
-	std::cout << "size is " << resourceCards.size() << std::endl;
-	if (resourceCards.size() == 0)
-		return 0;
-	else
-		return 1;
+void Deck::print() {
+	std::cout << "PRINTING DECK " << std::endl;
+	std::cout << "ScienceCards total = " << scienceCards.size() << std::endl;
+	std::cout << "ResourceCards total = " << resourceCards.size() << std::endl;
+	std::cout << "MilitaryCards total = " << militaryCards.size() << std::endl;
 }
 
 void Deck::discard() {
 
-	if (blueCards.size() > 0)
+	if (size() == 0)
+		std::cout << "ERROR NO CARD TO DISCARD" << std::endl;
+	else if (blueCards.size() > 0)
 		blueCards.pop_back();
-	if (scienceCards.size() > 0)
+	else if (scienceCards.size() > 0)
 		scienceCards.pop_back();
-	if (militaryCards.size() > 0)
+	else if (militaryCards.size() > 0)
 		militaryCards.pop_back();
-	if (resourceCards.size() > 0)
+	else if (resourceCards.size() > 0)
 		resourceCards.pop_back();
 }
 
@@ -67,37 +68,38 @@ void Deck::addResourceCard(std::shared_ptr<ResourceCard> card) {
 }
 
 std::shared_ptr<MilitaryCard> Deck::getMilitaryCard() {
-	return militaryCards.at(randomInt(militaryCards.size()));
+
+	if (militaryCards.size() == 0) {
+		std::cout << "why the fuck is it empty " << std::endl;
+		return nullptr;
+	}
+
+	std::shared_ptr<MilitaryCard> popped = militaryCards.at(militaryCards.size() - 1);
+	militaryCards.pop_back();
+	return popped;
 }
 
 std::shared_ptr<ScienceCard> Deck::getScienceCard() {
 
-	return scienceCards.at(randomInt(scienceCards.size()));
+	if (scienceCards.size() == 0) {
+		std::cout << "why the fuck is it empty " << std::endl;
+		return nullptr;
+	}
+
+	std::shared_ptr<ScienceCard> popped = scienceCards.at(scienceCards.size() - 1);
+	scienceCards.pop_back();
+	return popped;
 }
 
 std::shared_ptr<ResourceCard> Deck::getResourceCard() {
-	return resourceCards.at(randomInt(resourceCards.size()));
-}
 
-
-std::shared_ptr<MilitaryCard> Deck::buyMilitaryCard(std::shared_ptr<Resource> resource) {
-	for (const auto& card:militaryCards) {
-		if (resource > card->getResourceCost())
-			return card;
+	if (resourceCards.size() == 0) {
+		std::cout << "why the fuck is it empty " << std::endl;
+		return nullptr;
 	}
+
+	std::shared_ptr<ResourceCard> popped = resourceCards.at(resourceCards.size() - 1);
+	resourceCards.pop_back();
+	return popped;
 }
 
-std::shared_ptr<ScienceCard> Deck::buyScienceCard(std::shared_ptr<Resource> resource) {
-
-	for (const auto& card:scienceCards) {
-		if (resource > card->getResourceCost())
-			return card;
-	}
-}
-
-std::shared_ptr<ResourceCard> Deck::buyResourceCard(int gold) {
-	for (const auto& card:resourceCards) {
-		//if (gold > card->getGoldCost())
-			return card;
-	}
-}

@@ -9,14 +9,13 @@ static inline int randomInt(int range) {
 	if (range == 0)
 		return 0;
 	else {
-		srand (time(NULL));
 		return rand() % range;\
 	}
 }
 
 template <typename T>
-static inline int pop(std::vector<T> cards) {
-	T popped = cards.at(cards.size() - 1);
+static inline int pop(std::vector<std::shared_ptr<T>> cards) {
+	std::shared_ptr<T> popped = cards.at(cards.size() - 1);
 	cards.pop();
 	return popped;
 }
