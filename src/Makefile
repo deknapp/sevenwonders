@@ -368,6 +368,33 @@ game/ArgProcessor.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.s
 .PHONY : game/ArgProcessor.cpp.s
 
+game/Deck.o: game/Deck.cpp.o
+
+.PHONY : game/Deck.o
+
+# target to build an object file
+game/Deck.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Deck.cpp.o
+.PHONY : game/Deck.cpp.o
+
+game/Deck.i: game/Deck.cpp.i
+
+.PHONY : game/Deck.i
+
+# target to preprocess a source file
+game/Deck.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Deck.cpp.i
+.PHONY : game/Deck.cpp.i
+
+game/Deck.s: game/Deck.cpp.s
+
+.PHONY : game/Deck.s
+
+# target to generate assembly for a file
+game/Deck.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/game/Deck.cpp.s
+.PHONY : game/Deck.cpp.s
+
 game/Game.o: game/Game.cpp.o
 
 .PHONY : game/Game.o
@@ -449,141 +476,6 @@ main.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-strategies/Greedy.o: strategies/Greedy.cpp.o
-
-.PHONY : strategies/Greedy.o
-
-# target to build an object file
-strategies/Greedy.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.o
-.PHONY : strategies/Greedy.cpp.o
-
-strategies/Greedy.i: strategies/Greedy.cpp.i
-
-.PHONY : strategies/Greedy.i
-
-# target to preprocess a source file
-strategies/Greedy.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.i
-.PHONY : strategies/Greedy.cpp.i
-
-strategies/Greedy.s: strategies/Greedy.cpp.s
-
-.PHONY : strategies/Greedy.s
-
-# target to generate assembly for a file
-strategies/Greedy.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Greedy.cpp.s
-.PHONY : strategies/Greedy.cpp.s
-
-strategies/PriorityOrder.o: strategies/PriorityOrder.cpp.o
-
-.PHONY : strategies/PriorityOrder.o
-
-# target to build an object file
-strategies/PriorityOrder.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.o
-.PHONY : strategies/PriorityOrder.cpp.o
-
-strategies/PriorityOrder.i: strategies/PriorityOrder.cpp.i
-
-.PHONY : strategies/PriorityOrder.i
-
-# target to preprocess a source file
-strategies/PriorityOrder.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.i
-.PHONY : strategies/PriorityOrder.cpp.i
-
-strategies/PriorityOrder.s: strategies/PriorityOrder.cpp.s
-
-.PHONY : strategies/PriorityOrder.s
-
-# target to generate assembly for a file
-strategies/PriorityOrder.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/PriorityOrder.cpp.s
-.PHONY : strategies/PriorityOrder.cpp.s
-
-strategies/Random.o: strategies/Random.cpp.o
-
-.PHONY : strategies/Random.o
-
-# target to build an object file
-strategies/Random.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Random.cpp.o
-.PHONY : strategies/Random.cpp.o
-
-strategies/Random.i: strategies/Random.cpp.i
-
-.PHONY : strategies/Random.i
-
-# target to preprocess a source file
-strategies/Random.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Random.cpp.i
-.PHONY : strategies/Random.cpp.i
-
-strategies/Random.s: strategies/Random.cpp.s
-
-.PHONY : strategies/Random.s
-
-# target to generate assembly for a file
-strategies/Random.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Random.cpp.s
-.PHONY : strategies/Random.cpp.s
-
-strategies/Strategy.o: strategies/Strategy.cpp.o
-
-.PHONY : strategies/Strategy.o
-
-# target to build an object file
-strategies/Strategy.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.o
-.PHONY : strategies/Strategy.cpp.o
-
-strategies/Strategy.i: strategies/Strategy.cpp.i
-
-.PHONY : strategies/Strategy.i
-
-# target to preprocess a source file
-strategies/Strategy.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.i
-.PHONY : strategies/Strategy.cpp.i
-
-strategies/Strategy.s: strategies/Strategy.cpp.s
-
-.PHONY : strategies/Strategy.s
-
-# target to generate assembly for a file
-strategies/Strategy.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/Strategy.cpp.s
-.PHONY : strategies/Strategy.cpp.s
-
-strategies/StrategyFactory.o: strategies/StrategyFactory.cpp.o
-
-.PHONY : strategies/StrategyFactory.o
-
-# target to build an object file
-strategies/StrategyFactory.cpp.o:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.o
-.PHONY : strategies/StrategyFactory.cpp.o
-
-strategies/StrategyFactory.i: strategies/StrategyFactory.cpp.i
-
-.PHONY : strategies/StrategyFactory.i
-
-# target to preprocess a source file
-strategies/StrategyFactory.cpp.i:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.i
-.PHONY : strategies/StrategyFactory.cpp.i
-
-strategies/StrategyFactory.s: strategies/StrategyFactory.cpp.s
-
-.PHONY : strategies/StrategyFactory.s
-
-# target to generate assembly for a file
-strategies/StrategyFactory.cpp.s:
-	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/strategies/StrategyFactory.cpp.s
-.PHONY : strategies/StrategyFactory.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -620,6 +512,9 @@ help:
 	@echo "... game/ArgProcessor.o"
 	@echo "... game/ArgProcessor.i"
 	@echo "... game/ArgProcessor.s"
+	@echo "... game/Deck.o"
+	@echo "... game/Deck.i"
+	@echo "... game/Deck.s"
 	@echo "... game/Game.o"
 	@echo "... game/Game.i"
 	@echo "... game/Game.s"
@@ -629,21 +524,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... strategies/Greedy.o"
-	@echo "... strategies/Greedy.i"
-	@echo "... strategies/Greedy.s"
-	@echo "... strategies/PriorityOrder.o"
-	@echo "... strategies/PriorityOrder.i"
-	@echo "... strategies/PriorityOrder.s"
-	@echo "... strategies/Random.o"
-	@echo "... strategies/Random.i"
-	@echo "... strategies/Random.s"
-	@echo "... strategies/Strategy.o"
-	@echo "... strategies/Strategy.i"
-	@echo "... strategies/Strategy.s"
-	@echo "... strategies/StrategyFactory.o"
-	@echo "... strategies/StrategyFactory.i"
-	@echo "... strategies/StrategyFactory.s"
 .PHONY : help
 
 

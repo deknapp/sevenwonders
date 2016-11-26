@@ -23,6 +23,10 @@ std::string Card::getType() {
 	return type;
 }
 
+std::string Card::getName() {
+	return name;
+}
+
 int Card::getGoldCost() {
 	return 0;
 }

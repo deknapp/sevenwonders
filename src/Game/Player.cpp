@@ -4,22 +4,25 @@
 Player::Player() : gold(3) {}
 Player::~Player() {}
 
+void Player::addToHand(std::shared_ptr<Deck> deck) {
+
+	int selector = randomInt(3);
+	if (selector == 0) {
+
+		hand->addScienceCard(deck->getScienceCard());
+	}
+	if (selector == 1)
+		hand->addResourceCard(deck->getResourceCard());
+	else 
+		hand->addMilitaryCard(deck->getMilitaryCard());
+}
+
 void Player::setLeft(std::shared_ptr<Player> _leftNeighbor) {
 	leftNeighbor = _leftNeighbor;
 }
 
 void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
 	rightNeighbor = _rightNeighbor;
-}
-
-void Player::setStrategy(int rund) {
-	std::string _strategy = strategies.at(rund);
-	currentStrategy = std::shared_ptr<Strategy>(strategyFactory.getStrategy(_strategy));
-}
-
-void Player::addToHand(std::shared_ptr<Card> newCard) {
-
-	hand.push_back(newCard);
 }
 
 int Player::score() {
@@ -45,72 +48,56 @@ void Player::printScore() {
 	
 }
 
-int Player::canAfford(std::shared_ptr<Card> card) {
-
-	if (*(card->getResourceCost()) > resource) 
-		return 0;
-	if (card->getGoldCost() > gold)
-		return 0;
-	else
-		return 1;
-}
-
 void Player::discard() {
 
-	srand (time(NULL));
-	int index = rand() % hand.size();
-	hand.erase(hand.begin() + index);
-	gold += 4;
-}
-
-std::vector<std::shared_ptr<Card>> Player::getPossibleCards() {
-
-	std::vector<std::shared_ptr<Card>> possibleCards;
-
-	for (auto const& it:hand) {
-		if (canAfford(it))
-			possibleCards.push_back(it);
-	}
-
-	return possibleCards;
+	int index = randomInt(hand->size());
+	gold += 3;
 }
 
 void Player::initStrategies(std::vector<std::string> _strategies) {
 	strategies = _strategies;
 }
 
+void Player::playResourceCard() {
+	card = deck.getResourceCard();
+	if (card)
+		resource.addCard(card);
+	else
+		discard();
+}
 
 void Player::playMilitaryCard() {
-	military.addStrength(card->getStrength());
+	card = deck.getMilitaryCard();
+	if (card)
+		military.addStrength(card->getStrength());
 }
 
 void Player::playScienceCard() {
-	science.addCard(card->getCategory());
+	card = deck.getScienceCard();
+	if (card)
+		science.addCard(card->getCategory());
 }
 
 void Player::play(std::string type) {
 
-	if (type == "military")
-		playMilitaryCard(card);
-	if (type == "science")
-		playScienceCard(card);
-	if (type == "blue")
-		playBlueCard(card);
 	if (type == "resource")
-		playResourceCard(card);
+		playResourceCard();
+	if (type == "military")
+		playMilitaryCard();
+	if (type == "science")
+		playScienceCard();
+	else
+		discard();
 }
 
 void Player::playTurn(int round) {
 
-	int playedCardIndex = 0;
-	if (getPossibleCards().size() == 0) 
-		discard();
-	else {
-		playedCardIndex = currentStrategy->chooseCardToPlay(getPossibleCards());
-		play(hand.at(playedCardIndex));
-		playedCards.push_back(hand.at(playedCardIndex));
-		hand.erase(hand.begin() + playedCardIndex);
-	}
+	if (round == 0)
+		play("resource");
+	if (round == 1)
+		play("science");
+	if (round == 2)
+		play("military");
 }
 
 void Player::endRound(int round) {
@@ -118,7 +105,6 @@ void Player::endRound(int round) {
 		leftNeighbor->getNewHand(hand);
 	else
 		rightNeighbor->getNewHand(hand);
-
 }
 
 void Player::getNewHand(std::vector<std::shared_ptr<Card>> newHand) {

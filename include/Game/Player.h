@@ -4,8 +4,8 @@
 #include <vector>
 #include <string>
 
+#include "Deck.h"
 #include "../cards/Card.h"
-
 #include "../cards/BlueCard.h"
 #include "../cards/MilitaryCard.h"
 #include "../cards/ResourceCard.h"
@@ -13,9 +13,9 @@
 
 #include "../components/Military.h"
 #include "../components/Science.h"
-#include "../strategies/Strategy.h"
+#include "../components/Resource.h"
 
-#include "../strategies/StrategyFactory.h"
+#include "../RandomUtility.h"
 
 class Player {
 
@@ -25,7 +25,7 @@ class Player {
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
 	void updateMilitaryPoints();
-	void addToHand(std::shared_ptr<Card> newCard);
+	void addToHand(std::shared_ptr<Deck> newHand);
 	int strength();
 	void setLeft(std::shared_ptr<Player> leftNeighbor);
 	void setRight(std::shared_ptr<Player> rightNeighbor);
@@ -48,18 +48,15 @@ class Player {
  	void playMilitaryCard(std::shared_ptr<MilitaryCard> card);
  	void playScienceCard(std::shared_ptr<ScienceCard> card);
 
- 	// void playResourceCard(std::shared_ptr<ResourceCard> card);
- 	// void playBlueCard(std::shared_ptr<BlueCard> card);
-
- 	StrategyFactory strategyFactory;
- 	std::shared_ptr<Strategy> currentStrategy;
- 	std::vector<std::string> strategies;
  	std::string name;
- 	Deck hand;
- 	Deck nextHand;
- 	Deck playedCards;
+ 	std::shared_ptr<Deck> hand;
+ 	std::shared_ptr<Deck>  nextHand;
+ 	
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;
+
+ 	std::vector<std::string> strategies;
+
  	Science science;
  	Military military;
  	Resource resource;

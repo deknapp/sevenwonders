@@ -5,18 +5,18 @@
 #include <time.h>       /* time */
 #include <vector>
 
-template <typename T>
-static inline T randomCard(std::vector<T> cards) {
+static inline int randomInt(int range) {
 	srand (time(NULL));
-	int index = rand() % cards.size();
-	return cards.at(index);
+	int index = rand() % range;
+	return index;
 }
 
 template <typename T>
-static inline int randomIndex(std::vector<T> cards) {
-	srand (time(NULL));
-	int index = rand() % cards.size();
-	return index;
+static inline int pop(std::vector<T> cards) {
+	T popped = cards.at(cards.size() - 1);
+	cards.pop();
+	return popped;
 }
+
 
 #endif /* RandomUtility_H */
