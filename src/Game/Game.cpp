@@ -8,7 +8,11 @@
 #include <iostream>
 
 
-Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {
+Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer), 
+			firstAgeDeck(std::shared_ptr<Deck>(new Deck())), 
+			secondAgeDeck(std::shared_ptr<Deck>(new Deck())),
+			thirdAgeDeck(std::shared_ptr<Deck>(new Deck())) {
+
 	int numPlayers = args_pointer->getNumPlayers();
 	minPlayers = 3;
 	if (numPlayers > 3)
@@ -23,7 +27,6 @@ Game::~Game() {}
 
 void Game::getResourceCards() {
 
-	std::string type = "Resource";
 	int gold = 0;
 	int age= 1;
 	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
@@ -225,14 +228,18 @@ void Game::play() {
 		dealRound(rund);
 
 		for (int turn = 0; turn < numCards - 1; turn++) {
-			for (const auto& it: players) 
+			for (const auto& it: players) {
 				it->playTurn(rund);
+				std::cout << "after a turn " << std::endl;
+			}
 		}
 
 		for (const auto& it: players) {
 			it->updateMilitaryPoints(rund);
 		}
 	}
+
+	std::cout << "HERE 3" << std::endl;
 
 	score();
 }

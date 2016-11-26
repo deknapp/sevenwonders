@@ -1,7 +1,7 @@
 #include "../../include/game/Player.h"
 #include <iostream>
 
-Player::Player() : gold(3) {}
+Player::Player() : hand(std::shared_ptr<Deck>(new Deck())), gold(3) {}
 Player::~Player() {}
 
 void Player::addToHand(std::shared_ptr<Deck> deck) {
@@ -49,7 +49,7 @@ void Player::printScore() {
 }
 
 void Player::discard() {
-
+	std::cout << "discarding" << std::endl;
 	hand->discard();
 	gold += 3;
 }
@@ -59,6 +59,7 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 void Player::playResourceCard() {
+	std::cout << "playing ResourceCard" << std::endl;
 	std::shared_ptr<ResourceCard> card = hand->buyResourceCard(gold);
 	if (card) {
 		std::shared_ptr<Resource> value = card->getResourceCost();
@@ -69,12 +70,14 @@ void Player::playResourceCard() {
 }
 
 void Player::playMilitaryCard() {
+	std::cout << "playing MilitaryCard" << std::endl;
 	std::shared_ptr<MilitaryCard> card = hand->buyMilitaryCard(resource);
 	if (card)
 		military.addStrength(card->getStrength());
 }
 
 void Player::playScienceCard() {
+	std::cout << "playing ScienceCard" << std::endl;
 	std::shared_ptr<ScienceCard> card= hand->buyScienceCard(resource);
 	if (card)
 		science.addCard(card->getCategory());

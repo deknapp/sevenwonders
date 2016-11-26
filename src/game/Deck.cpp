@@ -1,4 +1,5 @@
 #include "../../include/game/Deck.h"
+#include <iostream>
 
 Deck::Deck() {}
 
@@ -38,22 +39,18 @@ int Deck::size() {
 
 // ADD METHODS
 void Deck::addBlueCard(std::shared_ptr<BlueCard> card) {
-	currentCards.insert(card->getName());
 	blueCards.push_back(card);
 }
 
 void Deck::addMilitaryCard(std::shared_ptr<MilitaryCard> card) {
-	currentCards.insert(card->getName());
 	militaryCards.push_back(card);
 }
 
 void Deck::addScienceCard(std::shared_ptr<ScienceCard> card) {
-	currentCards.insert(card->getName());
 	scienceCards.push_back(card);
 }
 
 void Deck::addResourceCard(std::shared_ptr<ResourceCard> card) {
-	currentCards.insert(card->getName());
 	resourceCards.push_back(card);
 }
 
