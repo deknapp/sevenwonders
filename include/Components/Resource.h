@@ -11,17 +11,19 @@ class Resource {
 	Resource(int wood, int brick, int stone, int ore);
 	Resource(int wood, int brick, int stone, int ore, int glass, int paper, int carpet);
 	~Resource();
+	void addCard(int wood, int brick, int stone, int ore, int glass, int paper, int carpet);
 	int operator>(const Resource& b);
-
- private:
-
- 	int wood;
+	 int wood;
  	int brick;
  	int stone;
  	int ore;
  	int glass;
  	int paper;
  	int carpet;
+
+ private:
+
+
 
  	// prevent generated functions --------------------------------------------
 	Resource(const Resource&);

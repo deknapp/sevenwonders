@@ -13,7 +13,6 @@ class Card {
  	Card(std::string _type, std::string _name, int glass, int paper, int carpet, int _age, int _minPlayers);
  	Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int _age, int _minPlayers);
  	Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int glass, int paper, int carpet, int _age, int _minPlayers);
-
 	virtual ~Card();
 	
 	std::shared_ptr<Resource> getResourceCost();

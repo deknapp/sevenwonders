@@ -4,6 +4,18 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
+void Deck::discard() {
+
+	if (blueCards.size() > 0)
+		blueCards.pop_back();
+	if (scienceCards.size() > 0)
+		scienceCards.pop_back();
+	if (militaryCards.size() > 0)
+		militaryCards.pop_back();
+	if (resourceCards.size() > 0)
+		resourceCards.pop_back();
+}
+
 int Deck::containsCard(std::string name) {
 
 	if (currentCards.count(name) != 0) 

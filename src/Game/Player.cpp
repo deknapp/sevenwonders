@@ -50,7 +50,7 @@ void Player::printScore() {
 
 void Player::discard() {
 
-	int index = randomInt(hand->size());
+	hand->discard();
 	gold += 3;
 }
 
@@ -59,21 +59,23 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 void Player::playResourceCard() {
-	card = deck.getResourceCard();
-	if (card)
-		resource.addCard(card);
+	std::shared_ptr<ResourceCard> card = hand->buyResourceCard(gold);
+	if (card) {
+		std::shared_ptr<Resource> value = card->getResourceCost();
+		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
+	}
 	else
 		discard();
 }
 
 void Player::playMilitaryCard() {
-	card = deck.getMilitaryCard();
+	std::shared_ptr<MilitaryCard> card = hand->buyMilitaryCard(resource);
 	if (card)
 		military.addStrength(card->getStrength());
 }
 
 void Player::playScienceCard() {
-	card = deck.getScienceCard();
+	std::shared_ptr<ScienceCard> card= hand->buyScienceCard(resource);
 	if (card)
 		science.addCard(card->getCategory());
 }
@@ -107,7 +109,7 @@ void Player::endRound(int round) {
 		rightNeighbor->getNewHand(hand);
 }
 
-void Player::getNewHand(std::vector<std::shared_ptr<Card>> newHand) {
+void Player::getNewHand(std::shared_ptr<Deck> newHand) {
 	hand = newHand;
 }
 

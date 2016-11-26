@@ -30,23 +30,24 @@ class Player {
 	void setLeft(std::shared_ptr<Player> leftNeighbor);
 	void setRight(std::shared_ptr<Player> rightNeighbor);
 	void initStrategies(std::vector<std::string> strategies);
-	void setStrategy(int rund);
 	int score();
 	void discard();
-	void getNewHand(std::vector<std::shared_ptr<Card>> hand);
+	void getNewHand(std::shared_ptr<Deck> hand);
 	std::vector<std::shared_ptr<Card>> getPossibleCards();
 	void updateMilitaryPoints(int round);
 	void endRound(int round);
 	void printScore();
 	void print();
+	void play(std::string type);
 	
 
  private:
 
 
- 	void play(std::shared_ptr<Card> card);
- 	void playMilitaryCard(std::shared_ptr<MilitaryCard> card);
- 	void playScienceCard(std::shared_ptr<ScienceCard> card);
+ 	void play();
+ 	void playMilitaryCard();
+ 	void playScienceCard();
+ 	void playResourceCard();
 
  	std::string name;
  	std::shared_ptr<Deck> hand;
@@ -59,7 +60,7 @@ class Player {
 
  	Science science;
  	Military military;
- 	Resource resource;
+ 	std::shared_ptr<Resource> resource;
  	int gold;
 
  	// prevent generated functions --------------------------------------------

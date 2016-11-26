@@ -19,6 +19,7 @@ class Deck {
  	~Deck();
 
  	int size();
+ 	void discard();
 
  	void addBlueCard(std::shared_ptr<BlueCard> card);
  	void addMilitaryCard(std::shared_ptr<MilitaryCard> card);

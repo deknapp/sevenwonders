@@ -13,6 +13,16 @@ Resource::Resource(int _wood, int _brick, int _stone, int _ore, int _glass, int 
 
 Resource::~Resource() {}
 
+void Resource::addCard(int wood, int brick, int stone, int ore, int glass, int paper, int carpet) {
+	wood += wood;
+	stone += stone;
+	brick += brick;
+	ore += ore;
+	glass += glass;
+	paper += paper;
+	carpet += carpet;
+}
+
 int Resource::operator>(const Resource& b) {
 
 	if (this->glass > b.glass)

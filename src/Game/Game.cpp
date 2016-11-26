@@ -223,9 +223,6 @@ void Game::play() {
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
 		dealRound(rund);
-		for (const auto& it: players) {
-			it->setStrategy(rund);
-		}
 
 		for (int turn = 0; turn < numCards - 1; turn++) {
 			for (const auto& it: players) 
