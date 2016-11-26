@@ -154,7 +154,7 @@ void Game::getScienceCards() {
 
 void Game::getDeck() {
 
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < 2; i++) {
 		getResourceCards();
 		getBlueCards();
 		getMilitaryCards();
@@ -177,9 +177,10 @@ void Game::dealRound(int rund) {
 	int numPlayers = args->getNumPlayers();
 	numCards = deck->size() / numPlayers;
 
-	for (const auto& it: players) {
+	for (const auto& player: players) {
+		std::cout << " NEW PLAYER " << std::endl << std::endl;
 		for (int i=0; i<numCards; i++)  {
-			it->addToHand(deck);
+			player->addToHand(deck);
 		}
 	}
 }
@@ -237,6 +238,8 @@ void Game::play() {
 		for (const auto& it: players) {
 			it->updateMilitaryPoints(rund);
 		}
+
+		std::cout << "AFTER ROUND " << rund << std::endl;
 	}
 
 	std::cout << "HERE 3" << std::endl;

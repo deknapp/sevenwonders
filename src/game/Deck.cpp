@@ -5,6 +5,14 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
+int Deck::canAffordResourceCard() {
+	std::cout << "size is " << resourceCards.size() << std::endl;
+	if (resourceCards.size() == 0)
+		return 0;
+	else
+		return 1;
+}
+
 void Deck::discard() {
 
 	if (blueCards.size() > 0)
@@ -39,18 +47,22 @@ int Deck::size() {
 
 // ADD METHODS
 void Deck::addBlueCard(std::shared_ptr<BlueCard> card) {
+	std::cout << "addded blue card" << std::endl;
 	blueCards.push_back(card);
 }
 
 void Deck::addMilitaryCard(std::shared_ptr<MilitaryCard> card) {
+	std::cout << "addded military card to hand" << std::endl;
 	militaryCards.push_back(card);
 }
 
 void Deck::addScienceCard(std::shared_ptr<ScienceCard> card) {
+	std::cout << "addded science card to hand" << std::endl;
 	scienceCards.push_back(card);
 }
 
 void Deck::addResourceCard(std::shared_ptr<ResourceCard> card) {
+	std::cout << "addded resource card to hand" << std::endl;
 	resourceCards.push_back(card);
 }
 
@@ -73,7 +85,6 @@ std::shared_ptr<MilitaryCard> Deck::buyMilitaryCard(std::shared_ptr<Resource> re
 		if (resource > card->getResourceCost())
 			return card;
 	}
-	return NULL;
 }
 
 std::shared_ptr<ScienceCard> Deck::buyScienceCard(std::shared_ptr<Resource> resource) {
@@ -82,13 +93,11 @@ std::shared_ptr<ScienceCard> Deck::buyScienceCard(std::shared_ptr<Resource> reso
 		if (resource > card->getResourceCost())
 			return card;
 	}
-	return NULL;
 }
 
 std::shared_ptr<ResourceCard> Deck::buyResourceCard(int gold) {
 	for (const auto& card:resourceCards) {
-		if (gold > card->getGoldCost())
+		//if (gold > card->getGoldCost())
 			return card;
 	}
-	return NULL;
 }

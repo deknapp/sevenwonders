@@ -6,9 +6,12 @@
 #include <vector>
 
 static inline int randomInt(int range) {
-	srand (time(NULL));
-	int index = rand() % range;
-	return index;
+	if (range == 0)
+		return 0;
+	else {
+		srand (time(NULL));
+		return rand() % range;\
+	}
 }
 
 template <typename T>

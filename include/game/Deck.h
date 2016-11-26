@@ -21,6 +21,8 @@ class Deck {
  	int size();
  	void discard();
 
+ 	int canAffordResourceCard();
+
  	void addBlueCard(std::shared_ptr<BlueCard> card);
  	void addMilitaryCard(std::shared_ptr<MilitaryCard> card);
  	void addScienceCard(std::shared_ptr<ScienceCard> card);
@@ -45,10 +47,10 @@ class Deck {
 
  	std::set<std::string> currentCards;
  	std::set<std::string> playedCards;
- 	std::vector<std::shared_ptr<BlueCard>> blueCards;
- 	std::vector<std::shared_ptr<MilitaryCard>> militaryCards;
- 	std::vector<std::shared_ptr<ResourceCard>> resourceCards;
- 	std::vector<std::shared_ptr<ScienceCard>> scienceCards;
+ 	std::vector<std::shared_ptr<BlueCard> > blueCards;
+ 	std::vector<std::shared_ptr<MilitaryCard> > militaryCards;
+ 	std::vector<std::shared_ptr<ResourceCard> > resourceCards;
+ 	std::vector<std::shared_ptr<ScienceCard> > scienceCards;
  	
  	
  	// prevent generated functions --------------------------------------------

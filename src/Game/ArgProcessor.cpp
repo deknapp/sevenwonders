@@ -31,6 +31,6 @@ int ArgProcessor::getNumGames() {
 	return numGames;
 }
 
-std::vector<std::vector<std::string>> ArgProcessor::getStrategies() {
+std::vector<std::vector<std::string> > ArgProcessor::getStrategies() {
 	return strategies;
 }

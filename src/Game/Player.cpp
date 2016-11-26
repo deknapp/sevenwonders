@@ -6,12 +6,12 @@ Player::~Player() {}
 
 void Player::addToHand(std::shared_ptr<Deck> deck) {
 
-	int selector = randomInt(3);
-	if (selector == 0) {
-
+	int selector = randomInt(1000);
+	std::cout << "selector is " << selector << std::endl;
+	if (selector < 200) {
 		hand->addScienceCard(deck->getScienceCard());
 	}
-	if (selector == 1)
+	if (selector < 800)
 		hand->addResourceCard(deck->getResourceCard());
 	else 
 		hand->addMilitaryCard(deck->getMilitaryCard());
@@ -59,13 +59,14 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 void Player::playResourceCard() {
-	std::cout << "playing ResourceCard" << std::endl;
-	std::shared_ptr<ResourceCard> card = hand->buyResourceCard(gold);
-	if (card) {
+
+	if (hand->canAffordResourceCard()) {
+		std::cout << "playing MilitaryCard" << std::endl;
+		std::shared_ptr<ResourceCard> card = hand->buyResourceCard(gold);
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
 	}
-	else
+	else;
 		discard();
 }
 

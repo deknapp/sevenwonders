@@ -34,7 +34,7 @@ class Game {
  	std::shared_ptr<Player> playerAt(int i);
 
  	std::shared_ptr<ArgProcessor> args;
- 	std::vector<std::shared_ptr<Player>> players;
+ 	std::vector<std::shared_ptr<Player> > players;
  	std::shared_ptr<Deck> firstAgeDeck;
  	std::shared_ptr<Deck>  secondAgeDeck;
  	std::shared_ptr<Deck>  thirdAgeDeck;
