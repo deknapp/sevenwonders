@@ -25,7 +25,7 @@ class Player {
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
 	void updateMilitaryPoints();
-	void addToHand(std::shared_ptr<Deck> newHand);
+	void addRandomCardToHand(std::shared_ptr<Deck> newHand);
 	int strength();
 	void setLeft(std::shared_ptr<Player> leftNeighbor);
 	void setRight(std::shared_ptr<Player> rightNeighbor);
@@ -38,15 +38,16 @@ class Player {
 	void printScore();
 	void print();
 	void play(std::string type);
-	
 
  private:
 
 
  	void play();
+ 	void playRandomCard();
  	void playMilitaryCard();
  	void playScienceCard();
  	void playResourceCard();
+ 	void playBlueCard();
 
  	std::string name;
  	std::shared_ptr<Deck> hand;
@@ -61,6 +62,7 @@ class Player {
  	Military military;
  	std::shared_ptr<Resource> resource;
  	int gold;
+ 	int bluePoints;
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);

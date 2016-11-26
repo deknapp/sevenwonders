@@ -24,6 +24,8 @@ class BlueCard : public Card {
 						int _minPlayers, int _points);
 	~BlueCard();
 
+	int getPoints();
+
  private:
  	int points;
 

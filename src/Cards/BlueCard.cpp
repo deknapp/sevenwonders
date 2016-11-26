@@ -22,3 +22,7 @@ BlueCard::BlueCard(std::string _name,
 
 BlueCard::~BlueCard() {}
 
+int BlueCard::getPoints() {
+	return points;
+}
+

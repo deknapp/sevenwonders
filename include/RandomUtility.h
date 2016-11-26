@@ -13,12 +13,4 @@ static inline int randomInt(int range) {
 	}
 }
 
-template <typename T>
-static inline int pop(std::vector<std::shared_ptr<T>> cards) {
-	std::shared_ptr<T> popped = cards.at(cards.size() - 1);
-	cards.pop();
-	return popped;
-}
-
-
 #endif /* RandomUtility_H */

@@ -154,7 +154,7 @@ void Game::getScienceCards() {
 
 void Game::getDeck() {
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 100; i++) {
 		getResourceCards();
 		getBlueCards();
 		getMilitaryCards();
@@ -173,21 +173,21 @@ void Game::dealRound(int rund) {
 			firstAgeDeck->print();
 			numCards = firstAgeDeck->size() / numPlayers;
 			for (int i=0; i<numCards; i++)  {
-				player->addToHand(firstAgeDeck);
+				player->addRandomCardToHand(firstAgeDeck);
 			}
 		} 
 		else if (rund == 2) {
 			secondAgeDeck->print();
 			numCards = secondAgeDeck->size() / numPlayers;
 			for (int i=0; i<numCards; i++)  {
-				player->addToHand(secondAgeDeck);
+				player->addRandomCardToHand(secondAgeDeck);
 			}
 		}
 		else if (rund == 3) {
 			thirdAgeDeck->print();
 			numCards = thirdAgeDeck->size() / numPlayers;
 			for (int i=0; i<numCards; i++)  {
-				player->addToHand(thirdAgeDeck);
+				player->addRandomCardToHand(thirdAgeDeck);
 			}
 		}
 
@@ -236,25 +236,18 @@ void Game::play() {
 
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
-		std::cout << "STARTING ROUND " << rund << std::endl;
-
 		dealRound(rund);
 
 		for (int turn = 0; turn < numCards - 1; turn++) {
 			for (const auto& it: players) {
 				it->playTurn(rund);
-				std::cout << "after a turn " << std::endl;
 			}
 		}
 
 		for (const auto& it: players) {
 			it->updateMilitaryPoints(rund);
 		}
-
-		std::cout << "AFTER ROUND " << rund << std::endl;
 	}
-
-	std::cout << "HERE 3" << std::endl;
 
 	score();
 }

@@ -4,14 +4,14 @@
 Player::Player() : hand(std::shared_ptr<Deck>(new Deck())), gold(3) {}
 Player::~Player() {}
 
-void Player::addToHand(std::shared_ptr<Deck> deck) {
+void Player::addRandomCardToHand(std::shared_ptr<Deck> deck) {
 
-	int selector = randomInt(1000);
-	std::cout << "selector is " << selector << std::endl;
-	if (selector < 200) {
+	int selector = randomInt(4000);
+	if (selector < 1000) 
 		hand->addScienceCard(deck->getScienceCard());
-	}
-	if (selector < 800)
+	else if (selector < 2000)
+		hand->addBlueCard(deck->getBlueCard());
+	else if (selector < 3000)
 		hand->addResourceCard(deck->getResourceCard());
 	else 
 		hand->addMilitaryCard(deck->getMilitaryCard());
@@ -28,7 +28,7 @@ void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
 int Player::score() {
 
 	int sum = 0;
-	sum += science.score() + military.getScore();
+	sum += science.score() + military.getScore() + gold/3 + bluePoints;
 	return sum;
 }
 
@@ -46,10 +46,12 @@ void Player::printScore() {
 	print();
 	std::cout << "science score is " << science.score() << std::endl;
 	std::cout << "military score is " << military.getScore() << std::endl;
+	std::cout << "gold score is " << gold/3 << std::endl;
+	std::cout << "blue points score is " << bluePoints << std::endl;
+
 }
 
 void Player::discard() {
-	std::cout << "discarding" << std::endl;
 	hand->discard();
 	gold += 3;
 }
@@ -61,7 +63,6 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 void Player::playResourceCard() {
 	std::shared_ptr<ResourceCard> card = hand->getResourceCard();
 	if (card) {
-		std::cout << "playing ResourceCard" << std::endl;
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
 	}
@@ -74,7 +75,6 @@ void Player::playMilitaryCard() {
 	
 	std::shared_ptr<MilitaryCard> card = hand->getMilitaryCard();
 	if (card) {
-		std::cout << "playing MilitaryCard" << std::endl;
 		military.addStrength(card->getStrength());
 	}
 	else 
@@ -85,21 +85,49 @@ void Player::playScienceCard() {
 	
 	std::shared_ptr<ScienceCard> card= hand->getScienceCard();
 	if (card) {
-		std::cout << "playing ScienceCard" << std::endl;
 		science.addCard(card->getCategory());
 	}
 	else 
 		discard();
 }
 
-void Player::play(std::string type) {
+void Player::playBlueCard() {
+	
+	std::shared_ptr<BlueCard> card = hand->getBlueCard();
+	if (card) {
+		std::cout << "playing BlueCard" << std::endl;
+		bluePoints += card->getPoints();
+	}
+	else 
+		discard();
+}
 
-	if (type == "resource")
+void Player::playRandomCard() {
+	int selector = randomInt(4000);
+	if (selector < 1000)
 		playResourceCard();
-	if (type == "military")
+	else if (selector < 2000)
 		playMilitaryCard();
-	if (type == "science")
+	else if (selector < 3000)
 		playScienceCard();
+	else if (selector < 4000)
+		playBlueCard();
+	else
+		discard();
+}
+
+void Player::play(std::string strategy) {
+
+	if (strategy == "resource")
+		playResourceCard();
+	if (strategy == "military")
+		playMilitaryCard();
+	if (strategy == "science")
+		playScienceCard();
+	if (strategy == "blue")
+		playBlueCard();
+	if (strategy == "random")
+		playRandomCard();
 	else
 		discard();
 }
@@ -107,11 +135,11 @@ void Player::play(std::string type) {
 void Player::playTurn(int round) {
 
 	if (round == 0)
-		play("resource");
+		play(strategies.at(round));
 	if (round == 1)
-		play("science");
+		play(strategies.at(round));
 	if (round == 2)
-		play("military");
+		play(strategies.at(round));
 }
 
 void Player::endRound(int round) {
