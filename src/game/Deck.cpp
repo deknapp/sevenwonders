@@ -10,9 +10,10 @@ std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resourc
 	std::shared_ptr<Deck> affordable(new Deck());
 
 	for (auto const& card:resourceCards) {
-		//card->cost = 0;
-		//if (card->canPurchase(resource->gold, playedCards))
+		if (card->canPurchase(resource->gold, playedCards)) {
+			resource->gold -= card->gold;
 			affordable->addResourceCard(card);
+		}
 	}
 
 	for (auto const& card:blueCards) {
