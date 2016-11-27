@@ -1,3 +1,48 @@
+A SIDES:
+
+Olympia:
+1 wood free 
+1st wonder: cost: 2 wood, 3 points
+2nd wonder: cost: 2 stone, 1 discard from any age
+3rd wonder: cost: 2 ore, 7 points
+
+Gizah:
+1 stone free,
+1st wonder: cost: 2 stone, 3 points
+2nd wonder: cost: 3 wood, 5 points
+3rd wonder: cost: 4 stone, 7 points
+
+Ephesos:
+1 paper free,
+1st wonder: cost: 2 stone, 3 points
+2nd wonder: cost: 2 wood, 9 gold
+3rd wonder: cost: 2 paper, 7 points
+
+Babylon:
+1 brick free
+1st wonder: cost: 2 brick, 3 points
+2nd wonder: cost, 3 wood, science wild card
+3rd wonder: cost: 4 brick, 7 points
+
+Alexandria:
+1 glass free
+1st wonder: cost: 2 stone, 3 points
+2nd wonder: cost: 2 ore, brown wild card
+3rd wonder: cost: 2 glass, 7 points
+
+Halikarnassos:
+1 carpet free
+1st wonder: cost: 2 brick, 3 points
+2nd wonder: cost: 3 ore, 1 discard
+3rd wonder: cost: 2 carpet, 7 points
+
+Rhodos:
+1 ore free
+1st wonder: cost: 2 wood, 3 points
+2nd wonder: cost: 3 brick, 2 military
+3rd wonder: cost: 4 ore, 7 points
+
+
 B SIDES:
 
 Olympia:
@@ -32,4 +77,12 @@ Alexandria:
 
 Halikarnassos:
 1 carpet free
-1st wonder: cost: 2 ore, 
+1st wonder: cost: 2 ore, 2 points, 1 discard
+2nd wonder: cost: 3 brick, 1 point, 1 discard
+3rd wonder: cost: 1 of each silver, 1 discard
+
+Rhodos:
+1 ore free
+1st wonder: cost: 3 stone, 1 military, 3 points, 3 gold
+2nd wonder: cost: 4 ore, 1 military 4 points, 4 gold
+
