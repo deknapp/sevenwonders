@@ -161,7 +161,7 @@ void Player::playRandomCard(int recursion_depth) {
 		success = playScienceCard();
 	else if (selector < 4000)
 		success = playBlueCard();
-	else
+	if (success == 0)
 		playRandomCard(recursion_depth + 1);
 }
 
@@ -170,15 +170,15 @@ void Player::play(std::string strategy) {
 	int success = 0;
 	if (strategy == "resource")
 		success = playResourceCard();
-	if (strategy == "military")
+	else if (strategy == "military")
 		success = playMilitaryCard();
-	if (strategy == "science")
+	else if (strategy == "science")
 		success = playScienceCard();
-	if (strategy == "blue")
+	else if (strategy == "blue")
 		success = playBlueCard();
-	if (strategy == "greedy")
+	else if (strategy == "greedy")
 		success = playGreedy();
-	if (strategy == "fight")
+	else if (strategy == "fight")
 		success = playFight();
 	if (success == 0)
 		playRandomCard(0);
