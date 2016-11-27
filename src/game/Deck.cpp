@@ -9,22 +9,22 @@ void Deck::filterForNumPlayers(int numPlayers) {
 
 	for (int i=0; i < scienceCards.size(); i++) {
 		if (numPlayers < scienceCards.at(i)->minPlayers)
-			scienceCards.erase(i);
+			scienceCards.erase(scienceCards.begin() + i);
 	}
 
 	for (int i=0; i < militaryCards.size(); i++) {
 		if (numPlayers < militaryCards.at(i)->minPlayers)
-			militaryCards.erase(i);
+			militaryCards.erase(militaryCards.begin() + i);
 	}
 
 	for (int i=0; i < blueCards.size(); i++) {
 		if (numPlayers < blueCards.at(i)->minPlayers)
-			blueCards.erase(i);
+			blueCards.erase(blueCards.begin() + i);
 	}
 
 	for (int i=0; i < resourceCards.size(); i++) {
 		if (numPlayers < resourceCards.at(i)->minPlayers)
-			resourceCards.erase(i);
+			resourceCards.erase(resourceCards.begin() + i);
 	}
 }
 

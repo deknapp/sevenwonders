@@ -9,10 +9,10 @@ std::vector<std::string> ArgProcessor::strategiesForPlayer(int i) {
 ArgProcessor::ArgProcessor(int argc, char* argv[]) {
 
 	numPlayers = atoi(argv[1]);
-	std::cout << "NUMBER OF PLAYERS" << numPlayers << std::endl;
+	std::cout << "NUMBER OF PLAYERS " << numPlayers << std::endl;
 
 	numGames = atoi(argv[2]);
-	std::cout << "NUMBER OF GAMES" << numGames << std::endl;
+	std::cout << "NUMBER OF GAMES " << numGames << std::endl;
 
 	for (int i=0; i < numPlayers; i++) {
 		std::vector<std::string> playerStrategies;

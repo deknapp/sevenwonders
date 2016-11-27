@@ -14,13 +14,10 @@ philosophers guild, cost: 3 brick, 1 paper, 1 carpet, 1 point for every science 
 workers guild, cost: 2 ore, 1 brick, 1 stone, 1 wood, 1 point for every resource card of neighbors
 
 Military:
-
-
 arsenal, cost: 2 wood, 1 ore, 1 carpet, 3+, 4+, 7+
 siege workshop, cost: 3 brick, 1 wood, buyCards: laboratory, 3+, 5+
 fortifications, cost: 3 ore, 1 stone, buyCards: walls, 3+, 7+
 circus, cost: 3 stone, 1 ore, buyCards: training ground, 4+, 5+, 6+
-
 
 Economy:
 arena, cost: 2 stone, 1 ore, buyCards: dispensary, 5+, 3 gold and 1 point for every wonder, 3+,  5+, 7+
@@ -43,8 +40,6 @@ lodge, cost: 2 brick, 1 paper, 1 carpet, buyCards: dispensary, 1 A, 3+, 6+
 observatory, cost: 2 ore, 1 glass, 1 carpet, buyCards: laboratory, 1 wheel, 3+, 7+
 academy, cost: 3 stone, 1 glass, buyCards: school, 1 A, 3+ 7+ 
 
-
-
 AGE 2:
 
 Resource:
@@ -64,7 +59,6 @@ laboratory, cost: 2 brick, 1 paper, buyCards: workshop, 1 wheel, canBuy: observa
 library, cost: 2 stone, 1 carpet, buyCards: scriptorium, 1 tablet, canBuy: senate, university, 3+, 6+
 school, cost: 1 wood, 1 paper, 1 tablet, canBuy: academy, study, 3+, 7+
 
-
 Military:
 
 stables, cost: 1 ore, 1 wood, 1 brick, buyCards: apothecary, 3+, 5+
@@ -77,8 +71,6 @@ courthouse, cost: 2 brick, 1 carpet, points: 4, buyCards: scriptorium, 3+, 5+
 aqueduct, cost: 3 stone, points: 5, buyCards: baths, 3+, 6+, 
 temple, cost: 1 wood, 1 brick, 1 glass, points: 3, buyCards: altar, canBuy: pantheon, 3+
 statue: cost: 2 ore, 1 wood, points: 4, buyCards: theater, canBuy: gardens, 3+, 7+
-aqueduct: cost: 3 stone, points: 5, buyCards: baths
-
 
 Economy:
 caravansery, cost: 2 wood, buyCards: marketplace, canBuy: lighthouse, wild card: wood, stone, ore, brick, 3+, 5+, 6+

@@ -21,7 +21,7 @@ class Card {
 	std::string getName();
 	int getAge();
 	int getGoldCost();
-	int cost; 
+	int minPlayers;
 
  protected:
 
@@ -30,7 +30,7 @@ class Card {
  	std::shared_ptr<Resource> resourceCost;
  	std::set<std::string> buyCards;
  	int age;
- 	int minPlayers;
+ 
 
  private:
  	
