@@ -12,7 +12,7 @@ class Resource {
 	Resource(int wood, int brick, int stone, int ore);
 	Resource(int wood, int brick, int stone, int ore, int glass, int paper, int carpet);
 	~Resource();
-	bool canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor);
+	int canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor);
 	bool canBuyComponent(int gold, int inHand, int inNeighborsHand);
 	std::shared_ptr<Resource> addTo(std::shared_ptr<Resource> otherResource);
 	 // order is wood, stone, brick, ore, glass, carpet, paper

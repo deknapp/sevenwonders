@@ -29,11 +29,13 @@ class ResourceCard : public Card {
 
 	int getResourceGoldCost();
 
-	bool canBuy(int gold, std::set<std::string> playedCards);
+	bool canPurchase(int buyGold, std::set<std::string> playedCards);
+
+	 int gold;
 
  private:
  	int either_or;
- 	int gold;
+
  
  	// prevent generated functions --------------------------------------------
 	ResourceCard(const ResourceCard&);

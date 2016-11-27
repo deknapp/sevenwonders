@@ -10,24 +10,37 @@ std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resourc
 	std::shared_ptr<Deck> affordable(new Deck());
 
 	for (auto const& card:resourceCards) {
-		if (card->canBuy(resource->gold, playedCards))
+		//card->cost = 0;
+		//if (card->canPurchase(resource->gold, playedCards))
 			affordable->addResourceCard(card);
 	}
 
 	for (auto const& card:blueCards) {
-		if (card->canBuy(playedCards, resource, resourcesToTradeFor))
+		// card->cost = 0;
+		//int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
+		//if (newCost >= 0) {
+			//card->cost = newCost;
 			affordable->addBlueCard(card);
+		//}
 	}
 
 	for (auto const& card:militaryCards) {
-		if (card->canBuy(playedCards, resource, resourcesToTradeFor))
+		//card->cost = 0;
+		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
+		// if (newCost >= 0) {
+			//card->cost = newCost;
 			affordable->addMilitaryCard(card);
+		//}
 	}
 
 
 	for (auto const& card:scienceCards) {
-		if (card->canBuy(playedCards, resource, resourcesToTradeFor))
+		//card->cost = 0;
+		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
+		// if (newCost >= 0) {
+			//card->cost = newCost;
 			affordable->addScienceCard(card);
+		//}
 	}
 	
 	return affordable;

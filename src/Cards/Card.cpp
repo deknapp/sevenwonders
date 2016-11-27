@@ -1,16 +1,16 @@
 #include "../../include/cards/Card.h"
 #include "../../include/cards/ResourceCard.h"
 
-Card::Card(std::string _type, std::string _name, int _age, int _minPlayers) :
+Card::Card(std::string _type, std::string _name, int _age, int _minPlayers) : cost(0),
 		   type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource())), age(_age), minPlayers(_minPlayers) {}
 
-Card::Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int _age, int _minPlayers) :	 
+Card::Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int _age, int _minPlayers) : cost(0), 
 		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(wood, stone, brick, ore))), age(_age), minPlayers(_minPlayers) {}  
 
-Card::Card(std::string _type, std::string _name, int glass, int paper, int carpet, int _age, int _minPlayers) :	 
+Card::Card(std::string _type, std::string _name, int glass, int paper, int carpet, int _age, int _minPlayers) :	cost(0), 
 		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(glass, paper, carpet))), age(_age), minPlayers(_minPlayers) {}  
 
-Card::Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int glass, int paper, int carpet, int _age, int _minPlayers) :	 
+Card::Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int glass, int paper, int carpet, int _age, int _minPlayers) : cost(0),  
 		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(wood, stone, brick, ore, glass, paper, carpet))), age(_age), minPlayers(_minPlayers) {}  
 
 Card::~Card() {}
@@ -33,4 +33,17 @@ int Card::getGoldCost() {
 
 int Card::getAge() {
 	return age;
+}
+
+int Card::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourceToTrade) {
+
+	if (playedCards.count(name))
+		return -1;
+	// if (canCardBuy(buyCards, playedCards))
+	// 	return 0;
+	int cost = resource->canBuy(resourceCost, resourceToTrade);
+	if (cost >= 0)
+		return cost;
+	else
+		return -1;
 }

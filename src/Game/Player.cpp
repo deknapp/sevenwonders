@@ -64,6 +64,7 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 int Player::playResourceCard() {
 	std::shared_ptr<ResourceCard> card = affordableHand->getResourceCard();
 	if (card) {
+		resource->gold -= card->gold;
 		std::cout << "playing ResourceCard " << std::endl;
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource = resource->addTo(value);
@@ -78,6 +79,7 @@ int Player::playMilitaryCard() {
 	
 	std::shared_ptr<MilitaryCard> card = affordableHand->getMilitaryCard();
 	if (card) {
+		resource->gold -= card->cost;
 		std::cout << "playing MilitaryCard " << std::endl;
 		military.addStrength(card->getStrength());
 		playedCards.insert(card->getName());
@@ -91,6 +93,7 @@ int Player::playScienceCard() {
 	
 	std::shared_ptr<ScienceCard> card = affordableHand->getScienceCard();
 	if (card) {
+		resource->gold -= card->cost;
 		std::cout << "playing ScienceCard " << std::endl;
 		science.addCard(card->getCategory());
 		playedCards.insert(card->getName());
@@ -104,6 +107,7 @@ int Player::playBlueCard() {
 	
 	std::shared_ptr<BlueCard> card = affordableHand->getBlueCard();
 	if (card) {
+		resource->gold -= card->cost;
 		std::cout << "playing BlueCard " << std::endl;
 		bluePoints += card->getPoints();
 		playedCards.insert(card->getName());

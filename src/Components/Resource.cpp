@@ -73,7 +73,7 @@ void Resource::addTo(int i, int amount) {
  	resources.at(i) += amount;
 }
 
-bool Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor) {
+int Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor) {
 
 	int goldStillThere = gold;
 	int cost = 0;
@@ -83,7 +83,7 @@ bool Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Re
 
 		cost = componentCost(goldStillThere, resourceCost->at(i), resources.at(i), resourcesToTradeFor->at(i));
 		if (cost < 0)
-			return false;
+			return -1;
 		else {
 			if (cost > 0)
 				traded = true;
@@ -96,8 +96,7 @@ bool Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Re
 		std::cout << "SUCCESSFULLY TRADED" << std::endl;
 	}
 
-	gold = goldStillThere;
-	return true;	
+	return (gold - goldStillThere);	
 }
 
 

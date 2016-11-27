@@ -28,7 +28,7 @@ int ResourceCard::getResourceGoldCost() {
 	return gold;
 }
 
-bool ResourceCard::canBuy(int buyGold, std::set<std::string> playedCards) {
+bool ResourceCard::canPurchase(int buyGold, std::set<std::string> playedCards) {
 	if (playedCards.count(name)) {
 		return false;
 	}

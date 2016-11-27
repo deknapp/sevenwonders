@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <set>
 
 #include "../components/Resource.h"
 
@@ -20,12 +21,15 @@ class Card {
 	std::string getName();
 	int getAge();
 	int getGoldCost();
+	int cost; 
+	int canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourceToTrade);
 
  protected:
 
  	std::string type;
  	std::string name;
  	std::shared_ptr<Resource> resourceCost;
+ 	std::set<std::string> buyCards;
  	int age;
  	int minPlayers;
 
