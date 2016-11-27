@@ -1,5 +1,6 @@
 #include "../../include/cards/ResourceCard.h"
 #include <string>
+#include <iostream>
 
 ResourceCard::ResourceCard(std::string _name, int _age,  int _minPlayers, int _gold) :
 						 Card("resource", _name, _age, _minPlayers), gold(_gold) {}
@@ -28,10 +29,13 @@ int ResourceCard::getResourceGoldCost() {
 }
 
 bool ResourceCard::canBuy(int buyGold, std::set<std::string> playedCards) {
-	if (playedCards.count(name))
+	if (playedCards.count(name)) {
 		return false;
-	if (gold > buyGold)
+	}
+	if (gold > buyGold) {
 		return false;
-	else
+	}
+	else {
 		return true;
+	}
 }

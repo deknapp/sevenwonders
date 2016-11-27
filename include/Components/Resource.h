@@ -12,8 +12,8 @@ class Resource {
 	Resource(int wood, int brick, int stone, int ore, int glass, int paper, int carpet);
 	~Resource();
 	void addCard(int wood, int brick, int stone, int ore, int glass, int paper, int carpet);
-	int operator>(const Resource& b);
-	 int wood;
+	int canBuy(std::shared_ptr<Resource> resourceCost);
+	int wood;
  	int brick;
  	int stone;
  	int ore;
@@ -21,9 +21,7 @@ class Resource {
  	int paper;
  	int carpet;
 
- private:
-
-
+ private: 
 
  	// prevent generated functions --------------------------------------------
 	Resource(const Resource&);

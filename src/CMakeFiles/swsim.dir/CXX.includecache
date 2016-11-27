@@ -195,6 +195,8 @@ string
 /Users/nath/sevenwonders/include/cards/ResourceCard.h
 string
 -
+iostream
+-
 
 /Users/nath/sevenwonders/src/cards/ScienceCard.cpp
 ../../include/cards/ScienceCard.h

@@ -19,7 +19,7 @@ static inline int randomInt(int range) {
 static inline bool canCardBuy(std::set<std::string> buyCards, std::set<std::string> playedCards) {
 
 	for (const auto& card:buyCards) {
-		if (playedCards.count(card))
+		if (playedCards.count(card)) 
 			return true;
 	}
 

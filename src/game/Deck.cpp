@@ -29,7 +29,6 @@ std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resourc
 		if (card->canBuy(playedCards, resource))
 			affordable->addScienceCard(card);
 	}
-
 	
 	return affordable;
 }

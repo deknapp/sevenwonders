@@ -23,21 +23,21 @@ void Resource::addCard(int wood, int brick, int stone, int ore, int glass, int p
 	carpet += carpet;
 }
 
-int Resource::operator>(const Resource& b) {
+int Resource::canBuy(std::shared_ptr<Resource> resourceCost) {
 
-	if (this->glass > b.glass)
+	if (glass < resourceCost->glass)
 		return 0;
-	if (this->paper > b.paper)
+	if (paper < resourceCost->paper)
 		return 0;
-	if (this->carpet > b.carpet)
+	if (carpet < resourceCost->carpet)
 		return 0;
-	if (this->wood > b.wood)
+	if (wood < resourceCost->wood)
 		return 0;
-	if (this->brick > b.brick)
+	if (brick < resourceCost->brick)
 		return 0;
-	if (this->stone > b.stone)
+	if (stone < resourceCost->stone)
 		return 0;
-	if (this->ore > b.ore)
+	if (ore < resourceCost->ore)
 		return 0;
 	else
 		return 1;

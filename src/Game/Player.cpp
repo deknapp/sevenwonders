@@ -1,7 +1,7 @@
 #include "../../include/game/Player.h"
 #include <iostream>
 
-Player::Player() : hand(std::shared_ptr<Deck>(new Deck())), gold(3) {}
+Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), resource(std::shared_ptr<Resource>(new Resource())), gold(3) {}
 Player::~Player() {}
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck) {
@@ -63,6 +63,7 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 void Player::playResourceCard() {
 	std::shared_ptr<ResourceCard> card = affordableHand->getResourceCard();
 	if (card) {
+		std::cout << "playing ResourceCard " << std::endl;
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
 		playedCards.insert(card->getName());
@@ -76,6 +77,7 @@ void Player::playMilitaryCard() {
 	
 	std::shared_ptr<MilitaryCard> card = affordableHand->getMilitaryCard();
 	if (card) {
+		std::cout << "playing MilitaryCard " << std::endl;
 		military.addStrength(card->getStrength());
 		playedCards.insert(card->getName());
 	}
@@ -87,6 +89,7 @@ void Player::playScienceCard() {
 	
 	std::shared_ptr<ScienceCard> card= affordableHand->getScienceCard();
 	if (card) {
+		std::cout << "playing ScienceCard " << std::endl;
 		science.addCard(card->getCategory());
 		playedCards.insert(card->getName());
 	}
@@ -98,7 +101,7 @@ void Player::playBlueCard() {
 	
 	std::shared_ptr<BlueCard> card = affordableHand->getBlueCard();
 	if (card) {
-		std::cout << "playing BlueCard" << std::endl;
+		std::cout << "playing BlueCard " << std::endl;
 		bluePoints += card->getPoints();
 		playedCards.insert(card->getName());
 	}

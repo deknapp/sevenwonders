@@ -20,7 +20,7 @@
 class Player {
 
  public:
-	Player();
+	Player(int name);
 	~Player();
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);

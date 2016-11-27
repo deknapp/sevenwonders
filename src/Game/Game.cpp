@@ -170,21 +170,18 @@ void Game::dealRound(int rund) {
 	for (const auto& player: players) {
 
 		if (rund == 1) {
-			firstAgeDeck->print();
 			numCards = firstAgeDeck->size() / numPlayers;
 			for (int i=0; i<numCards; i++)  {
 				player->addRandomCardToHand(firstAgeDeck);
 			}
 		} 
 		else if (rund == 2) {
-			secondAgeDeck->print();
 			numCards = secondAgeDeck->size() / numPlayers;
 			for (int i=0; i<numCards; i++)  {
 				player->addRandomCardToHand(secondAgeDeck);
 			}
 		}
 		else if (rund == 3) {
-			thirdAgeDeck->print();
 			numCards = thirdAgeDeck->size() / numPlayers;
 			for (int i=0; i<numCards; i++)  {
 				player->addRandomCardToHand(thirdAgeDeck);
@@ -202,7 +199,7 @@ void Game::initPlayers() {
 
 	int numPlayers = args->getNumPlayers();
 	for (int i=0; i<numPlayers; i++) 
-		players.push_back(std::shared_ptr<Player>(new Player()));
+		players.push_back(std::shared_ptr<Player>(new Player(i)));
 	
 	playerAt(0)->setLeft(playerAt(numPlayers - 1));
 	playerAt(0)->setRight(playerAt(1));
