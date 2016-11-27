@@ -213,6 +213,8 @@ string
 /Users/nath/sevenwonders/src/components/Resource.cpp
 ../../include/components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
+iostream
+-
 
 /Users/nath/sevenwonders/src/components/Science.cpp
 ../../include/components/Science.h

@@ -30,7 +30,7 @@ class Deck {
  	std::shared_ptr<MilitaryCard> getMilitaryCard();
  	std::shared_ptr<ScienceCard> getScienceCard();
  	std::shared_ptr<ResourceCard> getResourceCard();
- 	std::shared_ptr<Deck> getAffordableCards(std::shared_ptr<Resource> resource, int gold, std::set<std::string> playedCards);
+ 	std::shared_ptr<Deck> getAffordableCards(std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourcesToTradeFor, std::set<std::string> playedCards);
  	
  private:
 

@@ -5,28 +5,28 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
-std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resource, int gold, std::set<std::string> playedCards) {
+std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourcesToTradeFor, std::set<std::string> playedCards) {
 
 	std::shared_ptr<Deck> affordable(new Deck());
 
 	for (auto const& card:resourceCards) {
-		if (card->canBuy(gold, playedCards))
+		if (card->canBuy(resource->gold, playedCards))
 			affordable->addResourceCard(card);
 	}
 
 	for (auto const& card:blueCards) {
-		if (card->canBuy(playedCards, resource))
+		if (card->canBuy(playedCards, resource, resourcesToTradeFor))
 			affordable->addBlueCard(card);
 	}
 
 	for (auto const& card:militaryCards) {
-		if (card->canBuy(playedCards, resource))
+		if (card->canBuy(playedCards, resource, resourcesToTradeFor))
 			affordable->addMilitaryCard(card);
 	}
 
 
 	for (auto const& card:scienceCards) {
-		if (card->canBuy(playedCards, resource))
+		if (card->canBuy(playedCards, resource, resourcesToTradeFor))
 			affordable->addScienceCard(card);
 	}
 	

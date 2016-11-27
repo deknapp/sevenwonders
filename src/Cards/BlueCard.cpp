@@ -22,13 +22,13 @@ BlueCard::BlueCard(std::string _name,
 
 BlueCard::~BlueCard() {}
 
-bool BlueCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource) {
+bool BlueCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourcesToTrade) {
 
 	if (playedCards.count(name))
 		return false;
 	// if (canCardBuy(buyCards, playedCards))
 	// 	return true;
-	if (resource->canBuy(resourceCost))
+	if (resource->canBuy(resourceCost, resourcesToTrade))
 		return true;
 	else
 		return false;

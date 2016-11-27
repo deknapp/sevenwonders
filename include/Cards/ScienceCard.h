@@ -22,7 +22,7 @@ class ScienceCard : public Card {
 						int _minPlayers, std::string _category) ;
 	~ScienceCard();
 	std::string getCategory();
-	bool canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource);
+	bool canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourceToTrade);
 
  private:
  	std::string category;

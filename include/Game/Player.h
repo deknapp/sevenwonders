@@ -39,6 +39,7 @@ class Player {
 	void print();
 	void play(std::string type);
 	void getAvailableResources();
+	std::shared_ptr<Resource> getResource();
 
  private:
 
@@ -65,8 +66,7 @@ class Player {
  	Science science;
  	Military military;
  	std::shared_ptr<Resource> resource;
- 	std::vector<std::shared_ptr<Resource>> availableResources;
- 	int gold;
+ 	std::shared_ptr<Resource> resourcesToTradeFor;
  	int bluePoints;
 
  	// prevent generated functions --------------------------------------------

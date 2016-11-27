@@ -24,7 +24,7 @@ class MilitaryCard : public Card {
 	~MilitaryCard();
  	int getStrength();
 
- 	bool canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource);
+ 	bool canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourceToTrade);
 
  private:
 

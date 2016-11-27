@@ -1,4 +1,5 @@
 #include "../../include/components/Resource.h"
+#include <iostream>
 
 Resource::Resource() : gold(3) {
 
@@ -44,8 +45,10 @@ Resource::~Resource() {}
 
 std::shared_ptr<Resource> Resource::addTo(std::shared_ptr<Resource> otherResource) {
 
+	std::shared_ptr<Resource> sum(new Resource());
+
 	for (int i=0; i<7; i++) {
-		sum.addTo(i, resource.at(i) + otherResource.at(i));
+		sum->addTo(i, resources.at(i) + otherResource->at(i));
 	}
 
 	sum->gold = gold + otherResource->gold;
@@ -62,30 +65,37 @@ int Resource::componentCost(int gold, int cost, int inHand, int inNeighborsHand)
 		return numberToBuy*2;
 }
 
-int Resource::atI() {
+int Resource::at(int i) {
 	return resources.at(i);
 }
 
- void addTo(int i, int amount) {
+void Resource::addTo(int i, int amount) {
  	resources.at(i) += amount;
- }
+}
 
 bool Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor) {
 
 	int goldStillThere = gold;
 	int cost = 0;
+	bool traded = false;
 
 	for (int i=0; i < 7; i++) {
 
-		cost = componentCost(goldStillThere, resourceCost->atI(), resource->atI(), resourcesToTradeFor->atI());
+		cost = componentCost(goldStillThere, resourceCost->at(i), resources.at(i), resourcesToTradeFor->at(i));
 		if (cost < 0)
 			return false;
 		else {
+			if (cost > 0)
+				traded = true;
 			goldStillThere -= cost*2;
 			resourcesToTradeFor->addTo(i, -1*cost);
 		}
 	}
 		
+	if (traded) {
+		std::cout << "SUCCESSFULLY TRADED" << std::endl;
+	}
+
 	gold = goldStillThere;
 	return true;	
 }

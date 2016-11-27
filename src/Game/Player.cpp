@@ -1,7 +1,8 @@
 #include "../../include/game/Player.h"
 #include <iostream>
 
-Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), resource(std::shared_ptr<Resource>(new Resource())), gold(3) {}
+Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), resource(std::shared_ptr<Resource>(new Resource())), 
+						   resourcesToTradeFor(std::shared_ptr<Resource>(new Resource())) {}
 Player::~Player() {}
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck) {
@@ -28,7 +29,7 @@ void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
 int Player::score() {
 
 	int sum = 0;
-	sum += science.score() + military.getScore() + gold/3 + bluePoints;
+	sum += science.score() + military.getScore() + resource->gold/3 + bluePoints;
 	return sum;
 }
 
@@ -46,14 +47,14 @@ void Player::printScore() {
 	print();
 	std::cout << "science score is " << science.score() << std::endl;
 	std::cout << "military score is " << military.getScore() << std::endl;
-	std::cout << "gold score is " << gold/3 << std::endl;
+	std::cout << "gold score is " << resource->gold/3 << std::endl;
 	std::cout << "blue points score is " << bluePoints << std::endl;
 
 }
 
 void Player::discard() {
 	hand->discard();
-	gold += 3;
+	resource->gold += 3;
 }
 
 void Player::initStrategies(std::vector<std::string> _strategies) {
@@ -65,7 +66,7 @@ void Player::playResourceCard() {
 	if (card) {
 		std::cout << "playing ResourceCard " << std::endl;
 		std::shared_ptr<Resource> value = card->getResourceCost();
-		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
+		resource = resource->addTo(value);
 		playedCards.insert(card->getName());
 	}
 
@@ -139,10 +140,17 @@ void Player::play(std::string strategy) {
 		discard();
 }
 
+std::shared_ptr<Resource> Player::getResource() {
+	return resource;
+}
+
 void Player::playTurn(int round) {
 
-	affordableHand = hand->getAffordableCards(resource, gold, playedCards);
-	availableResources = getAvailabeResources();
+	resourcesToTradeFor->addTo(leftNeighbor->getResource());
+	resourcesToTradeFor->addTo(rightNeighbor->getResource());
+
+	affordableHand = hand->getAffordableCards(resource, resourcesToTradeFor, playedCards);
+	
 	if (round == 0)
 		play(strategies.at(round));
 	if (round == 1)

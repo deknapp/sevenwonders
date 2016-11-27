@@ -17,13 +17,13 @@ MilitaryCard::MilitaryCard(std::string _name,
 
 MilitaryCard::~MilitaryCard() {}
 
-bool MilitaryCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource) {
+bool MilitaryCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourceToTrade) {
 
 	if (playedCards.count(name))
 		return false;
 	// if (canCardBuy(buyCards, playedCards))
 	// 	return true;
-	if (resource->canBuy(resourceCost))
+	if (resource->canBuy(resourceCost, resourceToTrade))
 		return true;
 	else
 		return false;
