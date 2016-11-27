@@ -55,16 +55,6 @@ std::shared_ptr<Resource> Resource::addTo(std::shared_ptr<Resource> otherResourc
 	return sum;
 }
 
-// returns -1 if component is unaffordable, returns the cost otherwise
-int Resource::componentCost(int gold, int cost, int inHand, int inNeighborsHand) {
-
-	int numberToBuy = cost - inHand;
-	if (gold < numberToBuy*2) 
-		return -1;
-	else 
-		return numberToBuy*2;
-}
-
 int Resource::at(int i) {
 	return resources.at(i);
 }
@@ -73,31 +63,7 @@ void Resource::addTo(int i, int amount) {
  	resources.at(i) += amount;
 }
 
-int Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor) {
 
-	int goldStillThere = gold;
-	int cost = 0;
-	bool traded = false;
-
-	for (int i=0; i < 7; i++) {
-
-		cost = componentCost(goldStillThere, resourceCost->at(i), resources.at(i), resourcesToTradeFor->at(i));
-		if (cost < 0)
-			return -1;
-		else {
-			if (cost > 0)
-				traded = true;
-			goldStillThere -= cost*2;
-			resourcesToTradeFor->addTo(i, -1*cost);
-		}
-	}
-		
-	if (traded) {
-		std::cout << "SUCCESSFULLY TRADED" << std::endl;
-	}
-
-	return (gold - goldStillThere);	
-}
 
 
 

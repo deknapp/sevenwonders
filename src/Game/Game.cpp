@@ -29,14 +29,18 @@ void Game::getResourceCards() {
 
 	int gold = 0;
 	int age= 1;
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", 0, 1, 0, 0, age, gold, minPlayers)));
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
 
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
-	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
+	for (int i = 0; i < 2; i++) {
+		
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", 0, 1, 0, 0, age, gold, minPlayers)));
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
+
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
+		firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
+	}
 
 	gold = 1;
 	age = 2;
@@ -162,12 +166,13 @@ void Game::getScienceCards() {
 
 void Game::getDeck() {
 
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 1; i++) {
 		getResourceCards();
 		getBlueCards();
 		getMilitaryCards();
 		getScienceCards();
 	}
+
 	// TODO: add other types of cards. 
 }
 

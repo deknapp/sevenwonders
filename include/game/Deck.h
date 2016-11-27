@@ -31,13 +31,18 @@ class Deck {
  	std::shared_ptr<ScienceCard> getScienceCard();
  	std::shared_ptr<ResourceCard> getResourceCard();
 
+ 	bool hasBlue();
+ 	bool hasMilitary();
+ 	bool hasResource();
+ 	bool hasScience();
+ 	
+ private:
+
  	std::vector<std::shared_ptr<BlueCard> > blueCards;
  	std::vector<std::shared_ptr<MilitaryCard> > militaryCards;
  	std::vector<std::shared_ptr<ResourceCard> > resourceCards;
  	std::vector<std::shared_ptr<ScienceCard> > scienceCards;
- 	
- private:
- 	
+
  	// prevent generated functions --------------------------------------------
 	Deck(const Deck&);
 	Deck& operator=(const Deck&);

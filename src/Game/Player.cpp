@@ -1,50 +1,10 @@
 #include "../../include/game/Player.h"
 #include <iostream>
 
-Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), affordableHand(std::shared_ptr<Deck>(new Deck)), 
+Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), 
 						   resource(std::shared_ptr<Resource>(new Resource())), 
 						   resourcesToTradeFor(std::shared_ptr<Resource>(new Resource())) {}
 Player::~Player() {}
-
-void Player::getAffordableCards() {
-
-	std::shared_ptr<Deck> affordable(new Deck());
-
-	for (auto const& card:hand->resourceCards) {
-		if (card->canPurchase(resource->gold, playedCards)) {
-			resource->gold -= card->gold;
-			affordableHand->addResourceCard(card);
-		}
-	}
-
-	for (auto const& card:hand->blueCards) {
-		// card->cost = 0;
-		//int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
-		//if (newCost >= 0) {
-			//card->cost = newCost;
-			affordableHand->addBlueCard(card);
-		//}
-	}
-
-	for (auto const& card:hand->militaryCards) {
-		//card->cost = 0;
-		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
-		// if (newCost >= 0) {
-			//card->cost = newCost;
-			affordableHand->addMilitaryCard(card);
-		//}
-	}
-
-
-	for (auto const& card:hand->scienceCards) {
-		//card->cost = 0;
-		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
-		// if (newCost >= 0) {
-			//card->cost = newCost;
-			affordableHand->addScienceCard(card);
-		//}
-	}
-}
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck) {
 
@@ -96,6 +56,7 @@ void Player::printScore() {
 void Player::discard() {
 	hand->discard();
 	resource->gold += 3;
+	std::cout << "DISCARDED" << std::endl;
 }
 
 void Player::initStrategies(std::vector<std::string> _strategies) {
@@ -103,59 +64,64 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 int Player::playResourceCard() {
-	std::shared_ptr<ResourceCard> card = affordableHand->getResourceCard();
+	std::shared_ptr<ResourceCard> card = hand->getResourceCard();
 	if (card) {
-		resource->gold -= card->gold;
-		std::cout << "playing ResourceCard " << std::endl;
-		std::shared_ptr<Resource> value = card->getResourceCost();
-		resource = resource->addTo(value);
-		playedCards.insert(card->getName());
-		return 1;
+		if (playedCards.count(card->getName()))
+			return 0;
+		if (resource->gold > card->getResourceGoldCost()) {
+			std::cout << "playing ResourceCard " << std::endl;
+			std::shared_ptr<Resource> value = card->getResourceCost();
+			resource = resource->addTo(value);
+			playedCards.insert(card->getName());
+			return 1;
+		}
 	}
-	else 
-		return 0;
+	return 0;
 }
 
 int Player::playMilitaryCard() {
 	
-	std::shared_ptr<MilitaryCard> card = affordableHand->getMilitaryCard();
+	std::shared_ptr<MilitaryCard> card = hand->getMilitaryCard();
 	if (card) {
-		resource->gold -= card->cost;
-		std::cout << "playing MilitaryCard " << std::endl;
-		military.addStrength(card->getStrength());
-		playedCards.insert(card->getName());
-		return 1;
+		if (canPlay(card->getName(), card->getResourceCost())) {
+			buy(card->getResourceCost());
+			std::cout << "playing MilitaryCard " << std::endl;
+			military.addStrength(card->getStrength());
+			playedCards.insert(card->getName());
+			return 1;
+		}
 	}
-	else 
-		return 0;
+	return 0;
 }
 
 int Player::playScienceCard() {
 	
-	std::shared_ptr<ScienceCard> card = affordableHand->getScienceCard();
+	std::shared_ptr<ScienceCard> card = hand->getScienceCard();
 	if (card) {
-		resource->gold -= card->cost;
-		std::cout << "playing ScienceCard " << std::endl;
-		science.addCard(card->getCategory());
-		playedCards.insert(card->getName());
-		return 1;
+		if (canPlay(card->getName(), card->getResourceCost())) {
+			buy(card->getResourceCost());
+			std::cout << "playing ScienceCard " << std::endl;
+			science.addCard(card->getCategory());
+			playedCards.insert(card->getName());
+			return 1;
+		}
 	}
-	else 
-		return 0;
+	return 0;
 }
 
 int Player::playBlueCard() {
 	
-	std::shared_ptr<BlueCard> card = affordableHand->getBlueCard();
+	std::shared_ptr<BlueCard> card = hand->getBlueCard();
 	if (card) {
-		resource->gold -= card->cost;
-		std::cout << "playing BlueCard " << std::endl;
-		bluePoints += card->getPoints();
-		playedCards.insert(card->getName());
-		return 1;
+		if (canPlay(card->getName(), card->getResourceCost())) {
+			buy(card->getResourceCost());
+			std::cout << "playing BlueCard " << std::endl;
+			bluePoints += card->getPoints();
+			playedCards.insert(card->getName());
+			return 1;
+		}
 	}
-	else 
-		return 0;
+	return 0;
 }
 
 int Player::playFight() {
@@ -180,8 +146,10 @@ int Player::playGreedy() {
 
 void Player::playRandomCard(int recursion_depth) {
 
-	if (recursion_depth > 5)
+	if (recursion_depth > 5) {
+		discard();
 		return;
+	}
 
 	int selector = randomInt(4000);
 	int success = 0;
@@ -220,17 +188,6 @@ std::shared_ptr<Resource> Player::getResource() {
 	return resource;
 }
 
-bool Player::canBuy(std::shared_ptr<Card> card) {
-
-	if (playedCards.count(card->getName()))
-		return false;
-	int cost = resource->canBuy(card->getResourceCost(), resourcesToTradeFor);
-	if (cost >= 0)
-		return true;
-	else
-		return false;
-}
-
 void Player::playTurn(int round) {
 
 	std::shared_ptr<Resource> fresh(new Resource());
@@ -263,7 +220,6 @@ int Player::strength() {
 	return military.getStrength();
 }
 
-
 void Player::updateMilitaryPoints(int round) {
 
 	int newPoints = 0;
@@ -284,6 +240,54 @@ void Player::updateMilitaryPoints(int round) {
 		newPoints -= 1;
 
 	military.addPoints(newPoints);
+}
+
+// returns -1 if component is unaffordable, returns the cost otherwise
+int componentCost(int gold, int cost, int inHand, int inNeighborsHand) {
+
+	int numberToBuy = cost - inHand;
+	if (gold < numberToBuy*2) 
+		return -1;
+	else 
+		return numberToBuy*2;
+}
+
+void Player::buy(std::shared_ptr<Resource> resourceCost) {
+
+	int cost = 0;
+	for (int i=0; i < 7; i++) {
+		if (cost > 0)
+			std::cout << "TRADED " << std::endl;
+		cost = componentCost(resource->gold, resourceCost->at(i), resource->at(i), resourcesToTradeFor->at(i));
+		resource->gold -= cost;
+	}
+}
+
+bool Player::canPlay(std::string name, std::shared_ptr<Resource> resourceCost) {
+
+	if (playedCards.count(name))
+		return false;
+	else
+		return canAfford(resourceCost);
+}
+
+bool Player::canAfford(std::shared_ptr<Resource> resourceCost) {
+
+	int goldStillThere = resource->gold;
+	int cost = 0;
+
+	for (int i=0; i < 7; i++) {
+
+		cost = componentCost(goldStillThere, resourceCost->at(i), resource->at(i), resourcesToTradeFor->at(i));
+		if (cost < 0)
+			return false;
+		else {
+			goldStillThere -= cost;
+			resourcesToTradeFor->addTo(i, -0.5*cost);
+		}
+	}
+	
+	return true;
 }
 
 

@@ -53,14 +53,14 @@ class Player {
  	int playResourceCard();
  	int playBlueCard();
  	int playFight();
- 	bool canBuy(std::shared_ptr<Card> card);
+ 	void buy(std::shared_ptr<Resource> resourceCost);
+ 	bool canAfford(std::shared_ptr<Resource> resourceCost);
+ 	bool canPlay(std::string name, std::shared_ptr<Resource> resourceCost);
 
  	std::set<std::string> playedCards;
 
  	std::string name;
  	std::shared_ptr<Deck> hand;
- 	std::shared_ptr<Deck> affordableHand;
-
  	
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;
