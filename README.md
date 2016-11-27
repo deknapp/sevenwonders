@@ -10,8 +10,8 @@ Although the rules programmed are very simple at the moment, the simulation is u
 
 Usage:
 
-./swsim [NUMBER OF PLAYERS] [NUMBER OF GAMES]
+To build: cmake . (in root directory)
+To compile: make (in root or src directory)
+To run: ./swsim [NUMBER OF PLAYERS] [NUMBER OF GAMES]
 
-Example:
-
-./swsim 7 10
+Example: ./swsim 7 10
