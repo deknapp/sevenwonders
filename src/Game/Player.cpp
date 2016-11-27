@@ -142,7 +142,7 @@ void Player::play(std::string strategy) {
 void Player::playTurn(int round) {
 
 	affordableHand = hand->getAffordableCards(resource, gold, playedCards);
-
+	availableResources = getAvailabeResources();
 	if (round == 0)
 		play(strategies.at(round));
 	if (round == 1)

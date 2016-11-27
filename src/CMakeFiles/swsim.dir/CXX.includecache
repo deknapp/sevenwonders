@@ -101,6 +101,8 @@ vector
 /Users/nath/sevenwonders/include/components/Resource.h
 vector
 -
+cstdbool
+-
 
 /Users/nath/sevenwonders/include/components/Science.h
 vector

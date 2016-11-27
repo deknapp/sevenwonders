@@ -38,6 +38,7 @@ class Player {
 	void printScore();
 	void print();
 	void play(std::string type);
+	void getAvailableResources();
 
  private:
 
@@ -64,6 +65,7 @@ class Player {
  	Science science;
  	Military military;
  	std::shared_ptr<Resource> resource;
+ 	std::vector<std::shared_ptr<Resource>> availableResources;
  	int gold;
  	int bluePoints;
 

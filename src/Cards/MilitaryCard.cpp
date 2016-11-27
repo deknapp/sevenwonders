@@ -21,8 +21,8 @@ bool MilitaryCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Res
 
 	if (playedCards.count(name))
 		return false;
-	if (canCardBuy(buyCards, playedCards))
-		return true;
+	// if (canCardBuy(buyCards, playedCards))
+	// 	return true;
 	if (resource->canBuy(resourceCost))
 		return true;
 	else

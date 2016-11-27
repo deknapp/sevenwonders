@@ -1,44 +1,116 @@
 #include "../../include/components/Resource.h"
 
-Resource::Resource() : wood(0), brick(0), stone(0), ore(0), glass(0), paper(0), carpet(0) {}
+Resource::Resource() : gold(3) {
 
-Resource::Resource(int _glass, int _paper, int _carpet) : wood(0), brick(0), stone(0), ore(0), 
-														 glass(_glass), paper(_paper), carpet(_carpet) {}
+	for (int i=0; i < 7; i++) {
+		resources.push_back(0);
+	}
+}
 
-Resource::Resource(int _wood, int _brick, int _stone, int _ore) : 
-				  wood(_wood), brick(_brick), stone(_stone), ore(_ore), glass(0), paper(0), carpet(0) {}
+Resource::Resource(int _glass, int _paper, int _carpet) : gold(3) {
 
-Resource::Resource(int _wood, int _brick, int _stone, int _ore, int _glass, int _paper, int _carpet) : 
-				  wood(_wood), brick(_brick), stone(_stone), ore(_ore), glass(_glass), paper(_paper), carpet(_carpet) {}
+	for (int i=0; i < 4; i++) {
+		resources.push_back(0);
+	}
+	resources.push_back(_glass);
+	resources.push_back(_paper);
+	resources.push_back(_carpet);
+}
+
+Resource::Resource(int _wood, int _brick, int _stone, int _ore) : gold(3){
+
+	resources.push_back(_wood);
+	resources.push_back(_brick);
+	resources.push_back(_stone);
+	resources.push_back(_ore);
+
+	for (int i=0; i < 3; i++) {
+		resources.push_back(0);
+	}
+}
+
+Resource::Resource(int _wood, int _brick, int _stone, int _ore, int _glass, int _paper, int _carpet) : gold(3){
+
+	resources.push_back(_wood);
+	resources.push_back(_brick);
+	resources.push_back(_stone);
+	resources.push_back(_ore);
+	resources.push_back(_glass);
+	resources.push_back(_paper);
+	resources.push_back(_carpet);
+}
 
 Resource::~Resource() {}
 
-void Resource::addCard(int wood, int brick, int stone, int ore, int glass, int paper, int carpet) {
-	wood += wood;
-	stone += stone;
-	brick += brick;
-	ore += ore;
-	glass += glass;
-	paper += paper;
-	carpet += carpet;
+std::shared_ptr<Resource> Resource::addTo(std::shared_ptr<Resource> otherResource) {
+
+	for (int i=0; i<7; i++) {
+		sum.addTo(i, resource.at(i) + otherResource.at(i));
+	}
+
+	sum->gold = gold + otherResource->gold;
+	return sum;
 }
 
-int Resource::canBuy(std::shared_ptr<Resource> resourceCost) {
+// returns -1 if component is unaffordable, returns the cost otherwise
+int Resource::componentCost(int gold, int cost, int inHand, int inNeighborsHand) {
 
-	if (glass < resourceCost->glass)
-		return 0;
-	if (paper < resourceCost->paper)
-		return 0;
-	if (carpet < resourceCost->carpet)
-		return 0;
-	if (wood < resourceCost->wood)
-		return 0;
-	if (brick < resourceCost->brick)
-		return 0;
-	if (stone < resourceCost->stone)
-		return 0;
-	if (ore < resourceCost->ore)
-		return 0;
-	else
-		return 1;
+	int numberToBuy = cost - inHand;
+	if (gold < numberToBuy*2) 
+		return -1;
+	else 
+		return numberToBuy*2;
 }
+
+int Resource::atI() {
+	return resources.at(i);
+}
+
+ void addTo(int i, int amount) {
+ 	resources.at(i) += amount;
+ }
+
+bool Resource::canBuy(std::shared_ptr<Resource> resourceCost, std::shared_ptr<Resource> resourcesToTradeFor) {
+
+	int goldStillThere = gold;
+	int cost = 0;
+
+	for (int i=0; i < 7; i++) {
+
+		cost = componentCost(goldStillThere, resourceCost->atI(), resource->atI(), resourcesToTradeFor->atI());
+		if (cost < 0)
+			return false;
+		else {
+			goldStillThere -= cost*2;
+			resourcesToTradeFor->addTo(i, -1*cost);
+		}
+	}
+		
+	gold = goldStillThere;
+	return true;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
