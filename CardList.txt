@@ -13,6 +13,31 @@ strategies guild, cost: 2 ore, 1 stone, 1 carpet, 1 points for every -1 token of
 philosophers guild, cost: 3 brick, 1 paper, 1 carpet, 1 point for every science card of neighbors
 workers guild, cost: 2 ore, 1 brick, 1 stone, 1 wood, 1 point for every resource card of neighbors
 
+Military:
+circus, cost: 3 stone, 1 ore, buyCards: training ground, 4+, 5+, 6+
+fortifications, cost: 3 ore, 1 stone, buyCards: walls, 3+, 7+
+arsenal, cost: 2 wood, 1 ore, 1 carpet, 3+, 4+, 7+
+siege workshop, cost: 3 brick, 1 wood, buyCards: laboratory, 3+, 5+
+
+Economy:
+arena, cost: 2 stone, 1 ore, buyCards: dispensary, 5+, 3 gold and 1 point for every wonder, 3+,  5+, 7+
+chamber of commerce, cost: 2 brick, 1 paper,  2 gold and 2 points for every silver, 4+, 6+
+lighthouse, cost: 1 stone, 1 glass, buyCards: caravansery, 1 gold and 1 point for every yellow card, 3+, 6+
+haven, cost: 1 wood, 1 ore, 1 carpet, buyCards: forum, 1 gold and 1 point for every brown card, 3+, 4+, 
+
+Blue cards: 
+palace, cost: 1 of each resource, points: 8, 3+, 7+, 
+pantheon, cost: 2 of brick, 1 of others except wood, points: 7, 3+, 6+
+gardens, cost: 2 brick, 1 wood, buyCards: statue, points: 5, 3+, 4+
+town hall, cost: 2 stone, 1 ore, 1 glass, points: 6, 3+, 5+, 6+
+senate, cost: 2 wood, 1 stone, 1 ore, buyCards: library, points: 6, 3+, 5+ 
+
+Science cards:
+academy, cost: 3 stone, 1 glass, buyCards: school, 1 A, 3+ 7+ 
+observatory, cost: 2 ore, 1 glass, 1 carpet, buyCards: laboratory, 1 wheel, 3+, 7+
+study, cost: 1 wood, 1 paper, 1 carpet, buyCards: school, 1 wheel, 3+, 5+
+university, cost: 2 brick, 1 paper, 1 glass, buyCards: library, 1 tablet, 3+, 4+
+lodge, cost: 2 brick, 1 paper, 1 carpet, buyCards: dispensary, 1 A, 3+, 6+
 
 
 
