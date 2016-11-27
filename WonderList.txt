@@ -1,0 +1,35 @@
+B SIDES:
+
+Olympia:
+1 wood free 
+1st wonder: cost: 2 wood, 1 coin port for brown cards of both neighbors
+2nd wonder: cost: 2 stone, 5 points
+3rd wonder: cost: 2 stone, 1 carpet, use one guild card of a neighbor
+
+Gizah:
+1 stone free,
+1st wonder: cost: 2 wood, 3 points
+2nd wonder: cost: 3 stone, 5 points
+3rd wonder: cost: 3 brick, 5 points, 
+4th wonder: cost: 4 stone, 1 paper, 7 points
+
+Ephesos:
+1 paper free,
+1st wonder: cost: 2 stone, 2 points, 4 gold
+2nd wonder: cost: 2 wood, 3 points, 4 gold
+3rd wonder: cost: 1 of each silver, 5 points, 4 gold
+
+Babylon:
+1 brick free
+1st wonder: cost: 1 carpet, 1 brick, 3 points
+2nd wonder: cost: 2 wood, 1 glass, 2 check mark cards
+
+Alexandria:
+1 glass free
+1st wonder: cost: 2 brick, brown wild card
+2nd wonder: cost, 2 wood, science wild card
+3rd wonder: cost: 3 stone, 7 points
+
+Halikarnassos:
+1 carpet free
+1st wonder: cost: 2 ore, 

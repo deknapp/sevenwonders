@@ -9,6 +9,7 @@ class Wonder {
  public:
 	Wonder();
 	~Wonder();
+	int status;
 
  private:
 
