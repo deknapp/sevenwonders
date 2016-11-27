@@ -1,7 +1,20 @@
-WONDER LIST:
+AGE 3:
+
+Guild cards:
+
+Magistrates guild: cost: 3 wood, 1 stone, 1 carpet, 1 point for every blue card of neighbors
+Shipowners guild: cost: 3 wood, 1 glass, 1 paper, 1 point for every resource card and guild card
+Spies guild: cost: 3 brick, 1 glass, 1 point for every military card of neighbors
+Builders guild: cost: 2 stone, 2 brick, 1 glass, 1 point for every wonder of you and neighbors
+Scientists guild: cost: 2 brick, 2 ore, 1 paper, science wild card
+traders guild: cost, 1 glass, 1 carpet, 1 paper, 1 point for every economy card of neighbors
+craftsmens guild: cost: 2 ore, 2 stone, 2 points for every silver card of neighbors
+strategies guild, cost: 2 ore, 1 stone, 1 carpet, 1 points for every -1 token of neighbors
+philosophers guild, cost: 3 brick, 1 paper, 1 carpet, 1 point for every science card of neighbors
+workers guild, cost: 2 ore, 1 brick, 1 stone, 1 wood, 1 point for every resource card of neighbors
 
 
-CARD LIST:
+
 
 AGE 2:
 
