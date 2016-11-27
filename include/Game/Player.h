@@ -49,9 +49,12 @@ class Player {
  	void playResourceCard();
  	void playBlueCard();
 
+ 	std::set<std::string> playedCards;
+
  	std::string name;
  	std::shared_ptr<Deck> hand;
- 	std::shared_ptr<Deck>  nextHand;
+ 	std::shared_ptr<Deck> affordableHand;
+
  	
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;

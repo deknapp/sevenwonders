@@ -61,10 +61,11 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 }
 
 void Player::playResourceCard() {
-	std::shared_ptr<ResourceCard> card = hand->getResourceCard();
+	std::shared_ptr<ResourceCard> card = affordableHand->getResourceCard();
 	if (card) {
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource->addCard(value->wood, value->stone, value->brick, value->ore, value->glass, value->paper, value->carpet);
+		playedCards.insert(card->getName());
 	}
 
 	else
@@ -73,9 +74,10 @@ void Player::playResourceCard() {
 
 void Player::playMilitaryCard() {
 	
-	std::shared_ptr<MilitaryCard> card = hand->getMilitaryCard();
+	std::shared_ptr<MilitaryCard> card = affordableHand->getMilitaryCard();
 	if (card) {
 		military.addStrength(card->getStrength());
+		playedCards.insert(card->getName());
 	}
 	else 
 		discard();
@@ -83,9 +85,10 @@ void Player::playMilitaryCard() {
 
 void Player::playScienceCard() {
 	
-	std::shared_ptr<ScienceCard> card= hand->getScienceCard();
+	std::shared_ptr<ScienceCard> card= affordableHand->getScienceCard();
 	if (card) {
 		science.addCard(card->getCategory());
+		playedCards.insert(card->getName());
 	}
 	else 
 		discard();
@@ -93,10 +96,11 @@ void Player::playScienceCard() {
 
 void Player::playBlueCard() {
 	
-	std::shared_ptr<BlueCard> card = hand->getBlueCard();
+	std::shared_ptr<BlueCard> card = affordableHand->getBlueCard();
 	if (card) {
 		std::cout << "playing BlueCard" << std::endl;
 		bluePoints += card->getPoints();
+		playedCards.insert(card->getName());
 	}
 	else 
 		discard();
@@ -134,6 +138,8 @@ void Player::play(std::string strategy) {
 
 void Player::playTurn(int round) {
 
+	affordableHand = hand->getAffordableCards(resource, gold, playedCards);
+
 	if (round == 0)
 		play(strategies.at(round));
 	if (round == 1)
@@ -157,6 +163,7 @@ int Player::strength() {
 
 	return military.getStrength();
 }
+
 
 void Player::updateMilitaryPoints(int round) {
 

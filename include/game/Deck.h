@@ -30,15 +30,11 @@ class Deck {
  	std::shared_ptr<MilitaryCard> getMilitaryCard();
  	std::shared_ptr<ScienceCard> getScienceCard();
  	std::shared_ptr<ResourceCard> getResourceCard();
-
- 	int containsCard(std::string card_name);
- 	int cardPlayed(std::string card_name);
  	std::shared_ptr<Deck> getAffordableCards(std::shared_ptr<Resource> resource, int gold, std::set<std::string> playedCards);
  	
  private:
 
  	std::set<std::string> currentCards;
- 	std::set<std::string> playedCards;
  	std::vector<std::shared_ptr<BlueCard> > blueCards;
  	std::vector<std::shared_ptr<MilitaryCard> > militaryCards;
  	std::vector<std::shared_ptr<ResourceCard> > resourceCards;

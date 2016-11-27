@@ -7,8 +7,30 @@ Deck::~Deck() {}
 
 std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resource, int gold, std::set<std::string> playedCards) {
 
-	std::shared_ptr<Deck> affordable;
-	// TODO: write method
+	std::shared_ptr<Deck> affordable(new Deck());
+
+	for (auto const& card:resourceCards) {
+		if (card->canBuy(gold, playedCards))
+			affordable->addResourceCard(card);
+	}
+
+	for (auto const& card:blueCards) {
+		if (card->canBuy(playedCards, resource))
+			affordable->addBlueCard(card);
+	}
+
+	for (auto const& card:militaryCards) {
+		if (card->canBuy(playedCards, resource))
+			affordable->addMilitaryCard(card);
+	}
+
+
+	for (auto const& card:scienceCards) {
+		if (card->canBuy(playedCards, resource))
+			affordable->addScienceCard(card);
+	}
+
+	
 	return affordable;
 }
 
@@ -32,21 +54,6 @@ void Deck::discard() {
 		resourceCards.pop_back();
 }
 
-int Deck::containsCard(std::string name) {
-
-	if (currentCards.count(name) != 0) 
-		return 1;
-	else 
-		return 0;
-}
-
-int Deck::cardPlayed(std::string name) {
-
-	if (playedCards.count(name) != 0) 
-		return 1;
-	else 
-		return 0;
-}
 
 int Deck::size() {
 	return resourceCards.size() + scienceCards.size() + blueCards.size() + militaryCards.size();
