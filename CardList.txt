@@ -14,10 +14,13 @@ philosophers guild, cost: 3 brick, 1 paper, 1 carpet, 1 point for every science 
 workers guild, cost: 2 ore, 1 brick, 1 stone, 1 wood, 1 point for every resource card of neighbors
 
 Military:
-circus, cost: 3 stone, 1 ore, buyCards: training ground, 4+, 5+, 6+
-fortifications, cost: 3 ore, 1 stone, buyCards: walls, 3+, 7+
+
+
 arsenal, cost: 2 wood, 1 ore, 1 carpet, 3+, 4+, 7+
 siege workshop, cost: 3 brick, 1 wood, buyCards: laboratory, 3+, 5+
+fortifications, cost: 3 ore, 1 stone, buyCards: walls, 3+, 7+
+circus, cost: 3 stone, 1 ore, buyCards: training ground, 4+, 5+, 6+
+
 
 Economy:
 arena, cost: 2 stone, 1 ore, buyCards: dispensary, 5+, 3 gold and 1 point for every wonder, 3+,  5+, 7+
@@ -65,8 +68,8 @@ school, cost: 1 wood, 1 paper, 1 tablet, canBuy: academy, study, 3+, 7+
 Military:
 
 stables, cost: 1 ore, 1 wood, 1 brick, buyCards: apothecary, 3+, 5+
-walls, cost: 3 stone, canBuy: fortifications, 3+, 7+
 archery range, cost: 2 wood, 1 ore, buyCards: workshop, 3+, 6+
+walls, cost: 3 stone, canBuy: fortifications, 3+, 7+
 training ground: cost: 2 ore, 1 wood, canBUy: circus, 4+, 6+, 7+
 
 Blue:
@@ -91,13 +94,15 @@ Glassworks, 1 glass, 3+, 6+
 Loom, 1 carpet, 3+, 6+
 Press, 1 paper, 3+, 6+
 
-Stone pit, 1 stone, 5+
 Ore vein, 1 ore, 3+, 4+
-Clay pool, 1 brick, 3+, 5+
 Lumber yard, 1 wood, 3+, 4+
+Clay pool, 1 brick, 3+, 5+
+Stone pit, 1 stone, 5+
 
-Timber yard, 1 stone OR wood, 3+, 5+
+
 Clay pit, 1 brick OR ore, 3+ 
+Timber yard, 1 stone OR wood, 3+, 5+
+
 Forest cave, 1 wood OR ore, 5+
 Excavation, 1 stone OR brick, 4+
 Mine, 1 stone OR brick, 6+
@@ -116,9 +121,10 @@ altar, points: 2, canBuy: temple, 3+, 5+
 
 
 Military:
+guard tower: cost: 1 brick, 3+, 4+ 
 barracks, cost: 1 ore,  3+,  5+
 stockade, cost: 1 wood,  3+,  7+
-guard tower: cost: 1 brick, 3+, 4+ 
+
 
 Economy:
 tavern, adds 5 gold, 1 7+,  4+, 5+

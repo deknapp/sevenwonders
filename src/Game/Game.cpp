@@ -140,29 +140,60 @@ void Game::getBlueCards() {
 void Game::getMilitaryCards() {
 
 	int age = 1;
-
+	int minPlayers = 3;
 	decks.at(0)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("stockade", 1, 0, 0, 0, age, minPlayers)));
 	decks.at(0)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("barracks", 0, 0, 0, 1, age, minPlayers)));
 	decks.at(0)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("guardTower", 0, 0, 1, 0, age, minPlayers)));
 
-	age = 2, 
+	minPlayers = 4;
+	decks.at(0)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("guardTower", 0, 0, 1, 0, age, minPlayers)));
 
+	minPlayers = 5;
+	decks.at(0)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("barracks", 0, 0, 0, 1, age, minPlayers)));
+
+	minPlayers = 7;
+	decks.at(0)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("stockade", 1, 0, 0, 0, age, minPlayers)));
+
+	age = 2, 
+	minPlayers = 3;
 	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, minPlayers)));
 	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, minPlayers)));
 	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, minPlayers)));
 
-	age = 3;
+	minPlayers = 4;
+	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
 
+	minPlayers = 5;
+	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, minPlayers)));
+
+	minPlayers = 6;
+	ecks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, minPlayers)));
+	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+
+	minPlayers = 7;
+	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, minPlayers)));
+	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+
+	age = 3;
+	minPlayers = 3;
 	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("fortifications", 0, 1, 0, 3, age, minPlayers)));
 	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, minPlayers)));
 	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, minPlayers)));
 
-
-	minPlayers = 4;
-	age = 2;
-	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
-	age = 3;
+	minPlayers = 4
 	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, age, minPlayers)));
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, minPlayers)));
+
+	minPlayers = 5;
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, minPlayers)));
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, age, minPlayers)));
+
+	minPlayers = 6;
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, age, minPlayers)));
+
+	minPlayers = 7;
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("arsenal", 2, 0, 0, 1, 0, 1, 0, age, minPlayers)));
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("fortifications", 0, 1, 0, 3, age, minPlayers)));
 }
 
 void Game::getScienceCards() {
@@ -223,8 +254,6 @@ void Game::getScienceCards() {
 	minPlayers = 7;
 	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("observatory", 0, 0, 0, 2, 1, 1, 0,  age, minPlayers, "wheel")));
 	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("academy", 0, 3, 0, 0, 1, 0, 0, age, minPlayers, "A")));
-
-
 }
 
 void Game::getDeck() {
