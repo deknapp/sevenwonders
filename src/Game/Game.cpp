@@ -34,6 +34,10 @@ void Game::getResourceCards() {
 	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
 	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
 
+	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
+	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
+	firstAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
+
 	gold = 1;
 	age = 2;
 
@@ -41,6 +45,10 @@ void Game::getResourceCards() {
 	secondAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("quarry", 0, 2, 0, 0, age, gold, minPlayers)));
 	secondAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("brickyard", 0, 0, 2, 0, age, gold, minPlayers)));
 	secondAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("foundry", 0, 0, 0, 2, age, gold, minPlayers)));
+
+	secondAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
+	secondAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
+	secondAgeDeck->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
 
 	int either_or = 1;
 	age = 1;
