@@ -30,21 +30,34 @@ void Game::getResourceCards() {
 
 	int gold = 0;
 	int age= 1;
-
-	for (int i = 0; i < 2; i++) {
+	int minPlayers = 3;
 		
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", 0, 1, 0, 0, age, gold, minPlayers)));
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", 0, 1, 0, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
 
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
-	}
+
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
+
+	int minPlayers = 4;
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("oreVein", 0, 0, 0, 1, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("lumberYard", 1, 0, 0, 0, age, gold, minPlayers)));
+
+	int minPlayers = 5;
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPool", 0, 0, 1, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("stonePit", 0, 1, 0, 0, age, gold, minPlayers)));
+
+	int minPlayers = 6;
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
 
 	gold = 1;
 	age = 2;
+	minPlayers = 3;
 
 	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("sawmill", 2, 0, 0, 0, age, gold, minPlayers)));
 	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("quarry", 0, 2, 0, 0, age, gold, minPlayers)));
@@ -55,24 +68,36 @@ void Game::getResourceCards() {
 	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
 	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
 
+	minPlayers = 4;
+
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("sawmill", 2, 0, 0, 0, age, gold, minPlayers)));
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("quarry", 0, 2, 0, 0, age, gold, minPlayers)));
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("brickyard", 0, 0, 2, 0, age, gold, minPlayers)));
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("foundry", 0, 0, 0, 2, age, gold, minPlayers)));
+
+	minPlayers = 5;
+
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("glassworks", 1, 0, 0, age, gold, minPlayers)));
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("loom", 0, 1, 0, age, gold, minPlayers)));
+	decks.at(1)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("press", 0, 0, 1, age, gold, minPlayers)));
+
 	int either_or = 1;
 	age = 1;
+	minPlayers = 3;
 
 	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("clayPit", 0, 0, 1, 1, age, gold, minPlayers, either_or)));
 	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("timberYard", 1, 1, 0, 0, age, gold, minPlayers, either_or)));	
 
-	if (minPlayers > 3) {
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("excavation", 0, 1, 0, 1, age, gold, minPlayers, either_or)));
-	}
+	minPlayers = 4;
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("excavation", 0, 1, 0, 1, age, gold, minPlayers, either_or)));
 
-	if (minPlayers > 4) {
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("forestCave", 1, 0, 0, 1, age, gold, minPlayers, either_or)));
-	}
+	minPLayers = 5;
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("forestCave", 1, 0, 0, 1, age, gold, minPlayers, either_or)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("timberYard", 1, 1, 0, 0, age, gold, minPlayers, either_or)));	
 
-	if (minPlayers > 5) {
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("mine", 0, 1, 0, 1, age, gold, minPlayers, either_or)));
-		decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("treeFarm", 1, 0, 1, 0, age, gold, minPlayers, either_or)));
-	}
+	minPlayers = 6;
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("mine", 0, 1, 0, 1, age, gold, minPlayers, either_or)));
+	decks.at(0)->addResourceCard(std::shared_ptr<ResourceCard>(new ResourceCard("treeFarm", 1, 0, 1, 0, age, gold, minPlayers, either_or)));
 }
 
 void Game::getBlueCards() {
@@ -108,8 +133,8 @@ void Game::getBlueCards() {
 	points = 8;
 	decks.at(2)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("palace", 1, 1, 1, 1, 1, 1, 1, age, minPlayers, points)));
 
-	if (minPlayers > 3)
-		decks.at(2)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, minPlayers, points)));
+	minPlayers = 4;
+	decks.at(2)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, minPlayers, points)));
 }
 
 void Game::getMilitaryCards() {
@@ -133,48 +158,87 @@ void Game::getMilitaryCards() {
 	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("siegeWorkshop", 1, 3, 0, 0, age, minPlayers)));
 
 
-	if (minPlayers > 3) {
-		age = 2;
-		decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
-		age = 3;
-		decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, age, minPlayers)));
-	}
+	minPlayers = 4;
+	age = 2;
+	decks.at(1)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+	age = 3;
+	decks.at(2)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("circus", 0, 3, 0, 1, age, minPlayers)));
 }
 
 void Game::getScienceCards() {
 
 	int age = 1;
-
+	int minPlayers = 3;
 	decks.at(0)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, age, minPlayers, "A")));
 	decks.at(0)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, age, minPlayers, "wheel")));
 	decks.at(0)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, age, minPlayers, "tablet")));
 
+	minPlayers = 4;
+	decks.at(0)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, age, minPlayers, "tablet")));
+
+	minPlayers = 5;
+	decks.at(0)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, age, minPlayers, "A")));
+
+	minPlayers = 7;
+	decks.at(0)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, age, minPlayers, "wheel")));
+
 	age = 2, 
 
-	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
+	minPlayers = 3;
+	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("dispensary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
 	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "wheel")));
 	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "tablet")));
 	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "tablet")));
 
-	age = 3;
+	minPlayers = 4;
+	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("dispensary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
 
-	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
-	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "A")));
-	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "A")));
-	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "A")));
+	minPlayers = 5;
+	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "wheel")));
+
+	minPlayers = 6;
+	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "tablet")));
+
+	minPlayers = 7;
+	decks.at(1)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "tablet")));
+
+
+	age = 3;
+	minPlayers = 3;
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("university", 0, 0, 2, 0, 1, 0, 1,  age, minPlayers, "tablet")));
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("study", 1, 0, 0, 0, 0, 1, 1,  age, minPlayers, "wheel")));
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("lodge", 0, 0, 2, 0, 0, 1, 1,  age, minPlayers, "A")));
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("observatory", 0, 0, 0, 2, 1, 1, 0,  age, minPlayers, "wheel")));
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("academy", 0, 3, 0, 0, 1, 0, 0, age, minPlayers, "A")));
+
+	minPlayers = 4;
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("university", 0, 0, 2, 0, 1, 0, 1,  age, minPlayers, "tablet")));
+
+	minPlayers = 5;
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("study", 1, 0, 0, 0, 0, 1, 1,  age, minPlayers, "wheel")));
+
+	minPlayers = 6;
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("lodge", 0, 0, 2, 0, 0, 1, 1,  age, minPlayers, "A")));
+
+	minPlayers = 7;
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("observatory", 0, 0, 0, 2, 1, 1, 0,  age, minPlayers, "wheel")));
+	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("academy", 0, 3, 0, 0, 1, 0, 0, age, minPlayers, "A")));
+
 
 }
 
 void Game::getDeck() {
 
-	for (int i = 0; i < 1; i++) {
-		getResourceCards();
-		getBlueCards();
-		getMilitaryCards();
-		getScienceCards();
-	}
+	getResourceCards();
+	getBlueCards();
+	getMilitaryCards();
+	getScienceCards();
 
 	// TODO: add other types of cards. 
+
+	deck->filterForNumPlayers(numPlayers);
+
+	
 }
 
 void Game::dealRound(int rund) {

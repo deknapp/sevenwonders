@@ -35,6 +35,7 @@ class Deck {
  	bool hasMilitary();
  	bool hasResource();
  	bool hasScience();
+ 	void filterForNumPlayers(int numPlayers);
  	
  private:
 

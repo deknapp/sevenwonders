@@ -5,6 +5,29 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
+void Deck::filterForNumPlayers(int numPlayers) {
+
+	for (int i=0; i < scienceCards.size(); i++) {
+		if (numPlayers < scienceCards.at(i)->minPlayers)
+			scienceCards.erase(i);
+	}
+
+	for (int i=0; i < militaryCards.size(); i++) {
+		if (numPlayers < militaryCards.at(i)->minPlayers)
+			militaryCards.erase(i);
+	}
+
+	for (int i=0; i < blueCards.size(); i++) {
+		if (numPlayers < blueCards.at(i)->minPlayers)
+			blueCards.erase(i);
+	}
+
+	for (int i=0; i < resourceCards.size(); i++) {
+		if (numPlayers < resourceCards.at(i)->minPlayers)
+			resourceCards.erase(i);
+	}
+}
+
 void Deck::print() {
 	std::cout << "PRINTING DECK " << std::endl;
 	std::cout << "ScienceCards total = " << scienceCards.size() << std::endl;

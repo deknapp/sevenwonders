@@ -12,6 +12,7 @@ class Game {
  public:
 
  	const int NUM_ROUNDS = 3;
+ 	const int NUM_CARDS = 7;
 
 	Game(std::shared_ptr<ArgProcessor> args_pointer);
 	~Game();
@@ -29,8 +30,7 @@ class Game {
  	void getScienceCards();
  	void getDeck();
  	void initPlayers();
- 	int minPlayers;
- 	int numCards;
+ 	int numPlayers;
  	std::shared_ptr<Player> playerAt(int i);
 
  	std::shared_ptr<ArgProcessor> args;
