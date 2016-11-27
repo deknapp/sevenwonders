@@ -8,12 +8,18 @@
 
 /Users/nath/sevenwonders/include/Constants.h
 
-/Users/nath/sevenwonders/include/RandomUtility.h
+/Users/nath/sevenwonders/include/Utility.h
 stdlib.h
 -
 time.h
 -
 vector
+-
+cstdbool
+-
+string
+-
+set
 -
 
 /Users/nath/sevenwonders/include/cards/BlueCard.h
@@ -21,6 +27,12 @@ vector
 -
 string
 -
+set
+-
+cstdbool
+-
+../Utility.h
+/Users/nath/sevenwonders/include/Utility.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../components/Resource.h
@@ -39,6 +51,12 @@ vector
 -
 string
 -
+set
+-
+cstdbool
+-
+../Utility.h
+/Users/nath/sevenwonders/include/Utility.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../../include/components/Resource.h
@@ -49,6 +67,12 @@ string
 -
 vector
 -
+set
+-
+cstdbool
+-
+../Utility.h
+/Users/nath/sevenwonders/include/Utility.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../components/Resource.h
@@ -59,6 +83,12 @@ vector
 -
 string
 -
+set
+-
+cstdbool
+-
+../Utility.h
+/Users/nath/sevenwonders/include/Utility.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../components/Resource.h
@@ -93,8 +123,8 @@ string
 -
 set
 -
-../RandomUtility.h
-/Users/nath/sevenwonders/include/RandomUtility.h
+../Utility.h
+/Users/nath/sevenwonders/include/Utility.h
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../cards/BlueCard.h
@@ -139,8 +169,8 @@ Deck.h
 /Users/nath/sevenwonders/include/components/Science.h
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
-../RandomUtility.h
-/Users/nath/sevenwonders/include/RandomUtility.h
+../Utility.h
+/Users/nath/sevenwonders/include/Utility.h
 
 /Users/nath/sevenwonders/src/cards/BlueCard.cpp
 ../../include/cards/BlueCard.h

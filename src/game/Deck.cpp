@@ -5,6 +5,13 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
+std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resource, int gold, std::set<std::string> playedCards) {
+
+	std::shared_ptr<Deck> affordable;
+	// TODO: write method
+	return affordable;
+}
+
 void Deck::print() {
 	std::cout << "PRINTING DECK " << std::endl;
 	std::cout << "ScienceCards total = " << scienceCards.size() << std::endl;

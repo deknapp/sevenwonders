@@ -15,7 +15,7 @@
 #include "../components/Science.h"
 #include "../components/Resource.h"
 
-#include "../RandomUtility.h"
+#include "../Utility.h"
 
 class Player {
 

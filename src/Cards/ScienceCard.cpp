@@ -13,6 +13,18 @@ ScienceCard::ScienceCard(std::string _name,
 
 ScienceCard::~ScienceCard() {}
 
+bool ScienceCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource) {
+
+	if (playedCards.count(name))
+		return false;
+	if (canCardBuy(buyCards, playedCards))
+		return true;
+	if (resourceCost > resource)
+		return false;
+	else
+		return true;
+}
+
 std::string ScienceCard::getCategory() {
 	return category;
 }

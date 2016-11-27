@@ -3,6 +3,10 @@
 
 #include <vector>
 #include <string>
+#include <set>
+#include <cstdbool>
+
+#include "../Utility.h"
 #include "../cards/Card.h"
 #include "../components/Resource.h"
 
@@ -18,9 +22,11 @@ class ScienceCard : public Card {
 						int _minPlayers, std::string _category) ;
 	~ScienceCard();
 	std::string getCategory();
+	bool canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource);
 
  private:
  	std::string category;
+ 	std::set<std::string> buyCards;
  	
  	// prevent generated functions --------------------------------------------
 	ScienceCard(const ScienceCard&);

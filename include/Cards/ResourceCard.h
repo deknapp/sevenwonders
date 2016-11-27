@@ -3,7 +3,10 @@
 
 #include <string>
 #include <vector>
+#include <set>
+#include <cstdbool>
 
+#include "../Utility.h"
 #include "../cards/Card.h"
 #include "../components/Resource.h"
 
@@ -25,6 +28,8 @@ class ResourceCard : public Card {
 	~ResourceCard();
 
 	int getResourceGoldCost();
+
+	bool canBuy(int gold, std::set<std::string> playedCards);
 
  private:
  	int either_or;

@@ -17,6 +17,18 @@ MilitaryCard::MilitaryCard(std::string _name,
 
 MilitaryCard::~MilitaryCard() {}
 
+bool MilitaryCard::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource) {
+
+	if (playedCards.count(name))
+		return false;
+	if (canCardBuy(buyCards, playedCards))
+		return true;
+	if (resourceCost > resource)
+		return false;
+	else
+		return true;
+}
+
 
 int MilitaryCard::getStrength() {
 

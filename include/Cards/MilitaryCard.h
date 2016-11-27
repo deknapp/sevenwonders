@@ -3,6 +3,10 @@
 
 #include <vector>
 #include <string> 
+#include <set>
+#include <cstdbool>
+
+#include "../Utility.h"
 #include "../cards/Card.h"
 #include "../../include/components/Resource.h"
 
@@ -20,7 +24,11 @@ class MilitaryCard : public Card {
 	~MilitaryCard();
  	int getStrength();
 
+ 	bool canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource);
+
  private:
+
+ 	std::set<std::string> buyCards;
  	
  	// prevent generated functions --------------------------------------------
 	MilitaryCard(const MilitaryCard&);

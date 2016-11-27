@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <set>
-#include "../RandomUtility.h"
+#include "../Utility.h"
 #include "../cards/Card.h"
 #include "../cards/BlueCard.h"
 #include "../cards/MilitaryCard.h"
@@ -33,7 +33,8 @@ class Deck {
 
  	int containsCard(std::string card_name);
  	int cardPlayed(std::string card_name);
-
+ 	std::shared_ptr<Deck> getAffordableCards(std::shared_ptr<Resource> resource, int gold, std::set<std::string> playedCards);
+ 	
  private:
 
  	std::set<std::string> currentCards;
