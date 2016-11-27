@@ -155,6 +155,8 @@ vector
 -
 string
 -
+cstdbool
+-
 Deck.h
 /Users/nath/sevenwonders/include/game/Deck.h
 ../cards/Card.h

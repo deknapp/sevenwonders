@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <cstdbool>
 
 #include "Deck.h"
 #include "../cards/Card.h"
@@ -37,6 +38,7 @@ class Player {
 	void endRound(int round);
 	void printScore();
 	void print();
+	void getAffordableCards();
 
 	void getAvailableResources();
 	std::shared_ptr<Resource> getResource();
@@ -51,6 +53,7 @@ class Player {
  	int playResourceCard();
  	int playBlueCard();
  	int playFight();
+ 	bool canBuy(std::shared_ptr<Card> card);
 
  	std::set<std::string> playedCards;
 

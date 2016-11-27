@@ -5,48 +5,6 @@ Deck::Deck() {}
 
 Deck::~Deck() {}
 
-std::shared_ptr<Deck> Deck::getAffordableCards(std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourcesToTradeFor, std::set<std::string> playedCards) {
-
-	std::shared_ptr<Deck> affordable(new Deck());
-
-	for (auto const& card:resourceCards) {
-		if (card->canPurchase(resource->gold, playedCards)) {
-			resource->gold -= card->gold;
-			affordable->addResourceCard(card);
-		}
-	}
-
-	for (auto const& card:blueCards) {
-		// card->cost = 0;
-		//int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
-		//if (newCost >= 0) {
-			//card->cost = newCost;
-			affordable->addBlueCard(card);
-		//}
-	}
-
-	for (auto const& card:militaryCards) {
-		//card->cost = 0;
-		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
-		// if (newCost >= 0) {
-			//card->cost = newCost;
-			affordable->addMilitaryCard(card);
-		//}
-	}
-
-
-	for (auto const& card:scienceCards) {
-		//card->cost = 0;
-		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
-		// if (newCost >= 0) {
-			//card->cost = newCost;
-			affordable->addScienceCard(card);
-		//}
-	}
-	
-	return affordable;
-}
-
 void Deck::print() {
 	std::cout << "PRINTING DECK " << std::endl;
 	std::cout << "ScienceCards total = " << scienceCards.size() << std::endl;

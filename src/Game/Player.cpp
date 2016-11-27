@@ -1,9 +1,50 @@
 #include "../../include/game/Player.h"
 #include <iostream>
 
-Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), resource(std::shared_ptr<Resource>(new Resource())), 
+Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), affordableHand(std::shared_ptr<Deck>(new Deck)), 
+						   resource(std::shared_ptr<Resource>(new Resource())), 
 						   resourcesToTradeFor(std::shared_ptr<Resource>(new Resource())) {}
 Player::~Player() {}
+
+void Player::getAffordableCards() {
+
+	std::shared_ptr<Deck> affordable(new Deck());
+
+	for (auto const& card:hand->resourceCards) {
+		if (card->canPurchase(resource->gold, playedCards)) {
+			resource->gold -= card->gold;
+			affordableHand->addResourceCard(card);
+		}
+	}
+
+	for (auto const& card:hand->blueCards) {
+		// card->cost = 0;
+		//int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
+		//if (newCost >= 0) {
+			//card->cost = newCost;
+			affordableHand->addBlueCard(card);
+		//}
+	}
+
+	for (auto const& card:hand->militaryCards) {
+		//card->cost = 0;
+		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
+		// if (newCost >= 0) {
+			//card->cost = newCost;
+			affordableHand->addMilitaryCard(card);
+		//}
+	}
+
+
+	for (auto const& card:hand->scienceCards) {
+		//card->cost = 0;
+		// int newCost = card->canBuy(playedCards, resource, resourcesToTradeFor);
+		// if (newCost >= 0) {
+			//card->cost = newCost;
+			affordableHand->addScienceCard(card);
+		//}
+	}
+}
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck) {
 
@@ -179,12 +220,24 @@ std::shared_ptr<Resource> Player::getResource() {
 	return resource;
 }
 
+bool Player::canBuy(std::shared_ptr<Card> card) {
+
+	if (playedCards.count(card->getName()))
+		return false;
+	int cost = resource->canBuy(card->getResourceCost(), resourcesToTradeFor);
+	if (cost >= 0)
+		return true;
+	else
+		return false;
+}
+
 void Player::playTurn(int round) {
+
+	std::shared_ptr<Resource> fresh(new Resource());
+	resourcesToTradeFor = fresh;
 
 	resourcesToTradeFor->addTo(leftNeighbor->getResource());
 	resourcesToTradeFor->addTo(rightNeighbor->getResource());
-
-	affordableHand = hand->getAffordableCards(resource, resourcesToTradeFor, playedCards);
 	
 	if (round == 0)
 		play(strategies.at(round));

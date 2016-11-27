@@ -35,15 +35,3 @@ int Card::getAge() {
 	return age;
 }
 
-int Card::canBuy(std::set<std::string> playedCards, std::shared_ptr<Resource> resource, std::shared_ptr<Resource> resourceToTrade) {
-
-	if (playedCards.count(name))
-		return -1;
-	// if (canCardBuy(buyCards, playedCards))
-	// 	return 0;
-	int cost = resource->canBuy(resourceCost, resourceToTrade);
-	if (cost >= 0)
-		return cost;
-	else
-		return -1;
-}
