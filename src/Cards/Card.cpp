@@ -2,16 +2,16 @@
 #include "../../include/cards/ResourceCard.h"
 
 Card::Card(std::string _type, std::string _name, int _age, int _minPlayers) : 
-		   type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource())), age(_age), minPlayers(_minPlayers) {}
+		   type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource())), minPlayers(_minPlayers), age(_age) {}
 
 Card::Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int _age, int _minPlayers) :  
-		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(wood, stone, brick, ore))), age(_age), minPlayers(_minPlayers) {}  
+		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(wood, stone, brick, ore))), minPlayers(_minPlayers), age(_age) {}  
 
 Card::Card(std::string _type, std::string _name, int glass, int paper, int carpet, int _age, int _minPlayers) :	 
-		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(glass, paper, carpet))), age(_age), minPlayers(_minPlayers) {}  
+		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(glass, paper, carpet))), minPlayers(_minPlayers), age(_age) {}  
 
 Card::Card(std::string _type, std::string _name, int wood, int stone, int brick, int ore, int glass, int paper, int carpet, int _age, int _minPlayers) :   
-		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(wood, stone, brick, ore, glass, paper, carpet))), age(_age), minPlayers(_minPlayers) {}  
+		  type(_type), name(_name), resourceCost(std::shared_ptr<Resource>(new Resource(wood, stone, brick, ore, glass, paper, carpet))), minPlayers(_minPlayers), age(_age) {}  
 
 Card::~Card() {}
 

@@ -300,12 +300,14 @@ void Game::getDeck() {
 
 	// TODO: add other types of cards. 
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 3; i++) {
 		decks.at(i)->filterForNumPlayers(numPlayers);
+		decks.at(i)->print();
+	}
 }
 
 void Game::dealRound(int rund) {
-	
+
 	for (const auto& player: players) {
 		for (int i=0; i<NUM_CARDS; i++)  {
 			player->addRandomCardToHand(decks.at(rund));
@@ -355,6 +357,9 @@ void Game::play() {
 
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
+		std::cout << "=====================================" << std::endl;
+		std::cout << "ROUND " << rund << std::endl;
+
 		dealRound(rund);
 
 		for (int turn = 0; turn < NUM_CARDS - 1; turn++) {
@@ -366,6 +371,8 @@ void Game::play() {
 		for (const auto& it: players) {
 			it->updateMilitaryPoints(rund);
 		}
+
+		std::cout << "=====================================" << std::endl;
 	}
 
 	score();

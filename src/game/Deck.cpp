@@ -7,33 +7,36 @@ Deck::~Deck() {}
 
 void Deck::filterForNumPlayers(int numPlayers) {
 
-	for (int i=0; i < scienceCards.size(); i++) {
+
+	for (int i=scienceCards.size() - 1; i >= 0; i--) {
 		if (numPlayers < scienceCards.at(i)->minPlayers)
 			scienceCards.erase(scienceCards.begin() + i);
 	}
 
-	for (int i=0; i < militaryCards.size(); i++) {
+	for (int i=militaryCards.size() - 1; i >= 0; i--) {
 		if (numPlayers < militaryCards.at(i)->minPlayers)
 			militaryCards.erase(militaryCards.begin() + i);
 	}
 
-	for (int i=0; i < blueCards.size(); i++) {
+	for (int i=blueCards.size() - 1; i >= 0; i--) {
 		if (numPlayers < blueCards.at(i)->minPlayers)
 			blueCards.erase(blueCards.begin() + i);
 	}
 
-	for (int i=0; i < resourceCards.size(); i++) {
+	for (int i=resourceCards.size() - 1; i >= 0; i--) {
 		if (numPlayers < resourceCards.at(i)->minPlayers)
 			resourceCards.erase(resourceCards.begin() + i);
 	}
 }
 
 void Deck::print() {
-	std::cout << "PRINTING DECK " << std::endl;
-	std::cout << "ScienceCards total = " << scienceCards.size() << std::endl;
-	std::cout << "ResourceCards total = " << resourceCards.size() << std::endl;
-	std::cout << "MilitaryCards total = " << militaryCards.size() << std::endl;
-	std::cout << "BlueCards total = " << blueCards.size() << std::endl;
+
+	std::cout << "PRINTING DECK" << std::endl;
+	std::cout << scienceCards.size() << " TOTAL SCIENCE CARDS" << std::endl;
+	for (auto const& card:scienceCards) {
+		std::cout << card->getName() << std::endl;
+	}
+
 }
 
 void Deck::discard() {
