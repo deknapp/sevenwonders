@@ -61,83 +61,114 @@ void Player::initStrategies(std::vector<std::string> _strategies) {
 	strategies = _strategies;
 }
 
-void Player::playResourceCard() {
+int Player::playResourceCard() {
 	std::shared_ptr<ResourceCard> card = affordableHand->getResourceCard();
 	if (card) {
 		std::cout << "playing ResourceCard " << std::endl;
 		std::shared_ptr<Resource> value = card->getResourceCost();
 		resource = resource->addTo(value);
 		playedCards.insert(card->getName());
+		return 1;
 	}
-
-	else
-		discard();
+	else 
+		return 0;
 }
 
-void Player::playMilitaryCard() {
+int Player::playMilitaryCard() {
 	
 	std::shared_ptr<MilitaryCard> card = affordableHand->getMilitaryCard();
 	if (card) {
 		std::cout << "playing MilitaryCard " << std::endl;
 		military.addStrength(card->getStrength());
 		playedCards.insert(card->getName());
+		return 1;
 	}
 	else 
-		discard();
+		return 0;
 }
 
-void Player::playScienceCard() {
+int Player::playScienceCard() {
 	
-	std::shared_ptr<ScienceCard> card= affordableHand->getScienceCard();
+	std::shared_ptr<ScienceCard> card = affordableHand->getScienceCard();
 	if (card) {
 		std::cout << "playing ScienceCard " << std::endl;
 		science.addCard(card->getCategory());
 		playedCards.insert(card->getName());
+		return 1;
 	}
 	else 
-		discard();
+		return 0;
 }
 
-void Player::playBlueCard() {
+int Player::playBlueCard() {
 	
 	std::shared_ptr<BlueCard> card = affordableHand->getBlueCard();
 	if (card) {
 		std::cout << "playing BlueCard " << std::endl;
 		bluePoints += card->getPoints();
 		playedCards.insert(card->getName());
+		return 1;
 	}
 	else 
-		discard();
+		return 0;
 }
 
-void Player::playRandomCard() {
+int Player::playFight() {
+
+	int success = playMilitaryCard();
+	if (success == 0)
+		success = playGreedy();
+	return success;
+}
+
+int Player::playGreedy() {
+
+	int success = playBlueCard();
+	if (success == 0)
+		success = playScienceCard();
+	if (success == 0)
+		success = playMilitaryCard();
+	if (success == 0)
+		success = playResourceCard();
+	return success;
+}
+
+void Player::playRandomCard(int recursion_depth) {
+
+	if (recursion_depth > 5)
+		return;
+
 	int selector = randomInt(4000);
+	int success = 0;
 	if (selector < 1000)
-		playResourceCard();
+		success = playResourceCard();
 	else if (selector < 2000)
-		playMilitaryCard();
+		success = playMilitaryCard();
 	else if (selector < 3000)
-		playScienceCard();
+		success = playScienceCard();
 	else if (selector < 4000)
-		playBlueCard();
+		success = playBlueCard();
 	else
-		discard();
+		playRandomCard(recursion_depth + 1);
 }
 
 void Player::play(std::string strategy) {
 
+	int success = 0;
 	if (strategy == "resource")
-		playResourceCard();
+		success = playResourceCard();
 	if (strategy == "military")
-		playMilitaryCard();
+		success = playMilitaryCard();
 	if (strategy == "science")
-		playScienceCard();
+		success = playScienceCard();
 	if (strategy == "blue")
-		playBlueCard();
-	if (strategy == "random")
-		playRandomCard();
-	else
-		discard();
+		success = playBlueCard();
+	if (strategy == "greedy")
+		success = playGreedy();
+	if (strategy == "fight")
+		success = playFight();
+	if (success == 0)
+		playRandomCard(0);
 }
 
 std::shared_ptr<Resource> Player::getResource() {

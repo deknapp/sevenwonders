@@ -37,19 +37,20 @@ class Player {
 	void endRound(int round);
 	void printScore();
 	void print();
-	void play(std::string type);
+
 	void getAvailableResources();
 	std::shared_ptr<Resource> getResource();
 
  private:
 
-
- 	void play();
- 	void playRandomCard();
- 	void playMilitaryCard();
- 	void playScienceCard();
- 	void playResourceCard();
- 	void playBlueCard();
+ 	void play(std::string type);
+ 	void playRandomCard(int depth);
+ 	int playGreedy();
+ 	int playMilitaryCard();
+ 	int playScienceCard();
+ 	int playResourceCard();
+ 	int playBlueCard();
+ 	int playFight();
 
  	std::set<std::string> playedCards;
 
