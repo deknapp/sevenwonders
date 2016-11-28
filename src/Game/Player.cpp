@@ -44,8 +44,10 @@ int Player::score() {
 
 	for (const auto& guild:playedGuilds)
 		scoreGuild(guild);
+	for (const auto& economyCard:playedEconomyCards)
+		scoreEconomy(economyCard);
 	int sum = 0;
-	sum += science.score() + military.getScore() + resource->gold/3 + bluePoints + guildPoints;
+	sum += science.score() + military.getScore() + resource->gold/3 + bluePoints + guildPoints + economyPoints;
 	return sum;
 }
 
@@ -57,6 +59,7 @@ void Player::print() {
 	}
 	std::cout << std::endl;
 
+	resource->print();
 }
 
 void Player::printScore() {
@@ -186,6 +189,7 @@ int Player::playEconomyCard() {
 			std::cout << "playing EconomyCard " << card->getName() << std::endl;
 			playEconomy(card->getName());
 			playedCards.insert(card->getName());
+			playedEconomyCards.insert(card->getName());
 			numEconomyCardsPlayed += 1;
 			return 1;
 		}
@@ -202,6 +206,7 @@ int Player::playGuildCard() {
 			buy(card->getResourceCost());
 			std::cout << "playing GuildCard " << card->getName() << std::endl;
 			playedCards.insert(card->getName());
+			playedGuilds.insert(card->getName());
 			numGuildCardsPlayed += 1;
 			return 1;
 		}
@@ -288,7 +293,7 @@ int Player::playGreedy() {
 
 void Player::playRandomCard(int recursion_depth) {
 
-	if (recursion_depth > 20) {
+	if (recursion_depth > 10000) {
 		discard();
 		return;
 	}
@@ -395,15 +400,36 @@ void Player::updateMilitaryPoints(int round) {
 // returns -1 if component is unaffordable, returns the cost otherwise
 int Player::componentCost(int gold, int cost, int i) {
 
+	int wild = 0;
+	if (i > 3)
+		wild = std::max(resource->silverWild, 0);
+	else
+		wild = std::max(resource->brownWild, 0);
 	int numberToBuy = cost - resource->at(i);
-	if (numberToBuy == 0)
+	if (numberToBuy <= 0)
 		return 0;
+	else if (numberToBuy <= wild) {
+		wild = numberToBuy;
+		if (i > 3)
+			resource->brownWild -= wild;
+		else
+			resource->silverWild -= wild;
+		return 0;
+	}
+
+	numberToBuy = cost - resource->at(i) - wild;
+	if (numberToBuy <= 0) {
+		return 0;
+	}
 
 	int leftNeighborHas = leftNeighbor->resource->at(i);
 	int rightNeighborHas = rightNeighbor->resource->at(i);
-	if (numberToBuy > leftNeighborHas + rightNeighborHas)
-		return -1;
 
+	
+	if (numberToBuy > leftNeighborHas + rightNeighborHas + wild)
+			return -1;
+
+	// GET TRADING COST
 	if (i > 3)
 		cost = numberToBuy*silverCost;
 
@@ -424,8 +450,13 @@ int Player::componentCost(int gold, int cost, int i) {
 
 	if (gold < cost)
 		return -1;
-	else
+	else {
+		if (i > 3)
+			resource->brownWild -= wild;
+		else
+			resource->silverWild -= wild;
 		return cost;
+	}
 }
 
 void Player::buy(std::shared_ptr<Resource> resourceCost) {
@@ -450,17 +481,24 @@ bool Player::canPlay(std::string name, std::shared_ptr<Resource> resourceCost) {
 bool Player::canAfford(std::shared_ptr<Resource> resourceCost) {
 
 	int goldStillThere = resource->gold;
+	int origBrownWild = resource->brownWild;
+	int origSilverWild = resource->silverWild;
 	int cost = 0;
+	int success = true;
 
 	for (int i=0; i < 7; i++) {
 		cost = componentCost(goldStillThere, resourceCost->at(i), i);
-		if (cost < 0)
-			return false;
+		if (cost < 0) {
+			success = false;
+			break;
+		}
 		else 
 			goldStillThere -= cost;
 	}
-	
-	return true;
+
+	resource->silverWild = origSilverWild;
+	resource->brownWild = origBrownWild;
+	return success;
 }
 
 

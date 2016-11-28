@@ -63,6 +63,14 @@ void Resource::addTo(int i, int amount) {
  	resources.at(i) += amount;
 }
 
+void Resource::print() {
+	std::cout << "================== " << std::endl;
+	std::cout << "PRINTING RESOURCE " << std::endl;
+	for (auto const& resource:resources)
+		std::cout << " " << resource;
+	std::cout << std::endl;
+}
+
 
 
 

@@ -77,6 +77,8 @@ class Player {
  	int componentCost(int gold, int cost, int i);
 
  	std::set<std::string> playedCards;
+ 	std::set<std::string> playedEconomyCards;
+ 	std::set<std::string> playedGuilds;
 
  	std::string name;
  	std::shared_ptr<Deck> hand;
@@ -85,9 +87,6 @@ class Player {
  	std::shared_ptr<Player> rightNeighbor;
 
  	std::vector<std::string> strategies;
-
- 	std::vector<std::string> playedGuilds;
- 	std::vector<std::string> playedEconomyCards;
 
  	Science science;
  	Military military;

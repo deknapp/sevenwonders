@@ -20,6 +20,7 @@ class Resource {
  	int silverWild;
  	int at(int i);
  	void addTo(int i, int amount);
+ 	void print();
 
  private: 
 
