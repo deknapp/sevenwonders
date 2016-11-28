@@ -21,9 +21,3 @@ GuildCard::GuildCard(std::string _name,
 						Card("guild", _name, _age, wood, stone, brick, ore, glass, carpet, paper, _minPlayers){}
 
 GuildCard::~GuildCard() {}
-
-
-int GuildCard::getPoints() {
-	return points;
-}
-

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nath/sevenwonders/src/cards/BlueCard.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/cards/BlueCard.cpp.o"
   "/Users/nath/sevenwonders/src/cards/Card.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/cards/Card.cpp.o"
+  "/Users/nath/sevenwonders/src/cards/GuildCard.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o"
   "/Users/nath/sevenwonders/src/cards/MilitaryCard.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o"
   "/Users/nath/sevenwonders/src/cards/ResourceCard.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o"
   "/Users/nath/sevenwonders/src/cards/ScienceCard.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o"

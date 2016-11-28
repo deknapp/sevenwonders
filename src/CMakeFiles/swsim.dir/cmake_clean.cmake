@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o"
   "CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o"
   "CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o"
+  "CMakeFiles/swsim.dir/cards/GuildCard.cpp.o"
   "CMakeFiles/swsim.dir/components/Military.cpp.o"
   "CMakeFiles/swsim.dir/components/Resource.cpp.o"
   "CMakeFiles/swsim.dir/components/Science.cpp.o"

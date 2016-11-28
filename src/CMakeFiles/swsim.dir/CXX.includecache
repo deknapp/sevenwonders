@@ -55,6 +55,8 @@ vector
 /Users/nath/sevenwonders/include/cards/GuildCard.h
 vector
 -
+string
+-
 Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 
@@ -204,6 +206,12 @@ string
 ../../include/cards/ResourceCard.h
 /Users/nath/sevenwonders/include/cards/ResourceCard.h
 
+/Users/nath/sevenwonders/src/cards/GuildCard.cpp
+../../include/cards/GuildCard.h
+/Users/nath/sevenwonders/include/cards/GuildCard.h
+string
+-
+
 /Users/nath/sevenwonders/src/cards/MilitaryCard.cpp
 ../../include/cards/MilitaryCard.h
 /Users/nath/sevenwonders/include/cards/MilitaryCard.h
@@ -267,9 +275,13 @@ iostream
 /Users/nath/sevenwonders/include/cards/ResourceCard.h
 ../../include/cards/ScienceCard.h
 /Users/nath/sevenwonders/include/cards/ScienceCard.h
+../../include/cards/GuildCard.h
+/Users/nath/sevenwonders/include/cards/GuildCard.h
 ../../include/Constants.h
 /Users/nath/sevenwonders/include/Constants.h
 iostream
+-
+string
 -
 
 /Users/nath/sevenwonders/src/game/Player.cpp

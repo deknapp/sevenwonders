@@ -2,6 +2,7 @@
 #define GuildCard_H
 
 #include <vector>
+#include <string>
 #include "Card.h"
 
 class GuildCard : public Card {
