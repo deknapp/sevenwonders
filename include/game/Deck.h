@@ -10,6 +10,8 @@
 #include "../cards/MilitaryCard.h"
 #include "../cards/ResourceCard.h"
 #include "../cards/ScienceCard.h"
+#include "../cards/GuildCard.h"
+#include "../cards/EconomyCard.h"
 
 class Deck {
 
@@ -25,11 +27,15 @@ class Deck {
  	void addMilitaryCard(std::shared_ptr<MilitaryCard> card);
  	void addScienceCard(std::shared_ptr<ScienceCard> card);
  	void addResourceCard(std::shared_ptr<ResourceCard> card);
+ 	void addGuildCard(std::shared_ptr<GuildCard> card);
+ 	void addEconomyCard(std::shared_ptr<EconomyCard> card);
 
  	std::shared_ptr<BlueCard> getBlueCard();
  	std::shared_ptr<MilitaryCard> getMilitaryCard();
  	std::shared_ptr<ScienceCard> getScienceCard();
  	std::shared_ptr<ResourceCard> getResourceCard();
+ 	std::shared_ptr<EconomyCard> getEconomyCard();
+ 	std::shared_ptr<GuildCard> getGuildCard();
 
  	bool hasBlue();
  	bool hasMilitary();
@@ -43,6 +49,8 @@ class Deck {
  	std::vector<std::shared_ptr<MilitaryCard> > militaryCards;
  	std::vector<std::shared_ptr<ResourceCard> > resourceCards;
  	std::vector<std::shared_ptr<ScienceCard> > scienceCards;
+ 	std::vector<std::shared_ptr<GuildCard> > guildCards;
+ 	std::vector<std::shared_ptr<EconomyCard> > economyCards;
 
  	// prevent generated functions --------------------------------------------
 	Deck(const Deck&);

@@ -10,13 +10,14 @@ class Science {
 	~Science();
 	int score();
 	void addCard(std::string type);
+	int wild;
 
  private:
 
  	int wheels;
  	int abacus;
  	int tablet;
- 	int wild;
+
 
  	// prevent generated functions --------------------------------------------
 	Science(const Science&);

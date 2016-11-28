@@ -2,8 +2,6 @@
 #define Game_H
 
 #include <vector>
-
-#include "../cards/Card.h"
 #include "ArgProcessor.h"
 #include "Player.h"
 
@@ -28,6 +26,7 @@ class Game {
  	void getMilitaryCards();
  	void getResourceCards();
  	void getScienceCards();
+ 	void getGuildCards();
  	void getDeck();
  	void initPlayers();
  	int numPlayers;
@@ -35,7 +34,7 @@ class Game {
 
  	std::shared_ptr<ArgProcessor> args;
  	std::vector<std::shared_ptr<Player> > players;
- 	std::vector<std::shared_ptr<Deck>> decks;
+ 	std::vector<std::shared_ptr<Deck> > decks;
 
  	// prevent generated functions --------------------------------------------
 	Game(const Game&);

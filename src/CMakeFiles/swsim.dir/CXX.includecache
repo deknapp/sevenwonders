@@ -48,6 +48,16 @@ set
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
 
+/Users/nath/sevenwonders/include/cards/EconomyCard.h
+vector
+-
+
+/Users/nath/sevenwonders/include/cards/GuildCard.h
+vector
+-
+Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
+
 /Users/nath/sevenwonders/include/cards/MilitaryCard.h
 vector
 -
@@ -139,12 +149,14 @@ set
 /Users/nath/sevenwonders/include/cards/ResourceCard.h
 ../cards/ScienceCard.h
 /Users/nath/sevenwonders/include/cards/ScienceCard.h
+../cards/GuildCard.h
+/Users/nath/sevenwonders/include/cards/GuildCard.h
+../cards/EconomyCard.h
+/Users/nath/sevenwonders/include/cards/EconomyCard.h
 
 /Users/nath/sevenwonders/include/game/Game.h
 vector
 -
-../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
 ArgProcessor.h
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 Player.h
@@ -163,6 +175,8 @@ Deck.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../cards/BlueCard.h
 /Users/nath/sevenwonders/include/cards/BlueCard.h
+../cards/GuildCard.h
+/Users/nath/sevenwonders/include/cards/GuildCard.h
 ../cards/MilitaryCard.h
 /Users/nath/sevenwonders/include/cards/MilitaryCard.h
 ../cards/ResourceCard.h

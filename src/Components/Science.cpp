@@ -12,7 +12,7 @@ int Science::score() {
 	int min_ct = std::min(wheels, std::min(abacus, tablet));
 	min_ct += wild;
 
-	sum += pow(wheels, 2.9);
+	sum += pow(wheels, 2.0);
 	sum += pow(abacus, 2.0);
 	sum += pow(tablet, 2.0);
 

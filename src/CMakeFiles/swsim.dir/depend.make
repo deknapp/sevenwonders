@@ -43,6 +43,8 @@ src/CMakeFiles/swsim.dir/components/Science.cpp.o: src/components/Science.cpp
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/Utility.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/GuildCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/MilitaryCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/ScienceCard.h
@@ -57,6 +59,8 @@ src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: src/game/ArgProcessor.cpp
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/Utility.h
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/GuildCard.h
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/MilitaryCard.h
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: include/cards/ScienceCard.h
@@ -68,6 +72,8 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/Constants.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/Utility.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/GuildCard.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/MilitaryCard.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/ScienceCard.h
@@ -83,6 +89,8 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o: src/game/Game.cpp
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/Utility.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/GuildCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/MilitaryCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/ScienceCard.h
@@ -96,6 +104,8 @@ src/CMakeFiles/swsim.dir/game/Player.cpp.o: src/game/Player.cpp
 src/CMakeFiles/swsim.dir/main.cpp.o: include/Utility.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/GuildCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/MilitaryCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/ScienceCard.h

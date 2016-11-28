@@ -6,17 +6,28 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 						   resourcesToTradeFor(std::shared_ptr<Resource>(new Resource())) {}
 Player::~Player() {}
 
-void Player::addRandomCardToHand(std::shared_ptr<Deck> deck) {
 
-	int selector = randomInt(4000);
+
+void Player::addRandomCardToHand(std::shared_ptr<Deck> deck, int age) {
+
+	int selector = 0;
+	if (age < 2) 
+		selector = randomInt(4000);
+	else 
+		selector = randomInt(5000);
+
+	// TODO: handle null pointers!!!
+
 	if (selector < 1000) 
 		hand->addScienceCard(deck->getScienceCard());
 	else if (selector < 2000)
 		hand->addBlueCard(deck->getBlueCard());
 	else if (selector < 3000)
 		hand->addResourceCard(deck->getResourceCard());
-	else 
+	else if (selector < 4000)
 		hand->addMilitaryCard(deck->getMilitaryCard());
+	else if (selector < 5000)
+		hand->addGuildCard(deck->getGuildCard());
 }
 
 void Player::setLeft(std::shared_ptr<Player> _leftNeighbor) {
@@ -29,6 +40,8 @@ void Player::setRight(std::shared_ptr<Player> _rightNeighbor) {
 
 int Player::score() {
 
+	for (const auto& guild:playedGuilds)
+		scoreGuild(guild);
 	int sum = 0;
 	sum += science.score() + military.getScore() + resource->gold/3 + bluePoints;
 	return sum;
@@ -73,10 +86,65 @@ int Player::playResourceCard() {
 			std::shared_ptr<Resource> value = card->getResourceCost();
 			resource = resource->addTo(value);
 			playedCards.insert(card->getName());
+			if (card->isBrown)
+				numBrownCardsPlayed += 1;
+			else
+				numSilverCardsPlayed += 1;
 			return 1;
 		}
 	}
 	return 0;
+}
+
+void Player::scoreGuild(std::string name) {
+
+	if (name == "magistratesGuild") 
+		guildPoints += leftNeighbor->numBlueCardsPlayed + rightNeighbor->numBlueCardsPlayed;
+
+	else if (name == "shipownersGuild")
+		guildPoints += numBrownCardsPlayed + numSilverCardsPlayed + numGuildCardsPlayed;
+
+	else if (name == "spiesGuild") 
+		guildPoints += leftNeighbor->numMilitaryCardsPlayed + rightNeighbor->numMilitaryCardsPlayed;
+
+	else if (name == "buildersGuild") 
+		guildPoints += numWondersPlayed + leftNeighbor->numWondersPlayed + rightNeighbor->numWondersPlayed;
+
+	else if (name == "scientistsGuild")
+		science.wild += 1;
+
+	else if (name == "tradersGuild") 
+		guildPoints += leftNeighbor->numEconomyCardsPlayed + rightNeighbor->numEconomyCardsPlayed;
+
+	else if (name == "craftsmensGuild")
+		guildPoints += 2*(leftNeighbor->numSilverCardsPlayed + rightNeighbor->numSilverCardsPlayed);
+
+	else if (name == "strategiesGuild") 
+		guildPoints += leftNeighbor->numMinusOnes + rightNeighbor->numMinusOnes;
+
+	else if (name == "philosophersGuild") 
+		guildPoints += leftNeighbor->numScienceCardsPlayed + rightNeighbor->numScienceCardsPlayed;
+
+	else if (name == "workersGuild")
+		guildPoints += leftNeighbor->numBrownCardsPlayed + rightNeighbor->numBrownCardsPlayed;
+
+}
+
+int Player::playGuildCard() {
+
+	std::shared_ptr<GuildCard> card = hand->getGuildCard();
+	if (card) {
+		if (canPlay(card->getName(), card->getResourceCost())) {
+			buy(card->getResourceCost());
+			std::cout << "playing GuildCard " << card->getName() << std::endl;
+			scoreGuild(card->getName());
+			playedCards.insert(card->getName());
+			numGuildCardsPlayed += 1;
+			return 1;
+		}
+	}
+	return 0;
+
 }
 
 int Player::playMilitaryCard() {
@@ -88,6 +156,7 @@ int Player::playMilitaryCard() {
 			std::cout << "playing MilitaryCard " << std::endl;
 			military.addStrength(card->getStrength());
 			playedCards.insert(card->getName());
+			numMilitaryCardsPlayed += 1;
 			return 1;
 		}
 	}
@@ -103,6 +172,7 @@ int Player::playScienceCard() {
 			std::cout << "playing ScienceCard " << std::endl;
 			science.addCard(card->getCategory());
 			playedCards.insert(card->getName());
+			numScienceCardsPlayed += 1;
 			return 1;
 		}
 	}
@@ -118,6 +188,7 @@ int Player::playBlueCard() {
 			std::cout << "playing BlueCard " << std::endl;
 			bluePoints += card->getPoints();
 			playedCards.insert(card->getName());
+			numBlueCardsPlayed += 1;
 			return 1;
 		}
 	}
@@ -231,13 +302,17 @@ void Player::updateMilitaryPoints(int round) {
 
 	if (leftNeighbor->strength() < strength())
 		newPoints += bonus;
-	if (leftNeighbor->strength() > strength())
+	if (leftNeighbor->strength() > strength()) {
+		numMinusOnes += 1;
 		newPoints -= 1;
+	}
 
 	if (rightNeighbor->strength() < strength())
 		newPoints += bonus;
-	if (rightNeighbor->strength() > strength())
+	if (rightNeighbor->strength() > strength()) {
+		numMinusOnes += 1;
 		newPoints -= 1;
+	}
 
 	military.addPoints(newPoints);
 }

@@ -2,19 +2,26 @@
 #define GuildCard_H
 
 #include <vector>
+#include "Card.h"
 
-class GuildCard {
+class GuildCard : public Card {
 
  public:
-	GuildCard();
+ 	GuildCard(std::string _name, int _age, int _minPlayers);
+ 	GuildCard(std::string _name, 
+						 int wood, int stone, int brick, int ore,
+						 int _age, int _minPlayers);
+ 	GuildCard(std::string _name, 
+						 int glass, int carpet, int paper, 
+						 int _age, int _minPlayers);
+ 	GuildCard(std::string _name, 
+						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, 
+						int _minPlayers);
+
 	~GuildCard();
 
  private:
 
- 	std::string name;
- 	Cost cost;
- 	Type type;
- 	
  	// prevent generated functions --------------------------------------------
 	GuildCard(const GuildCard&);
 	GuildCard& operator=(const GuildCard&);

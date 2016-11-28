@@ -57,20 +57,35 @@ int Deck::size() {
 }
 
 // ADD METHODS
+
+void Deck::addGuildCard(std::shared_ptr<GuildCard> card) {
+	if (card)
+		guildCards.push_back(card);
+}
+
+void Deck::addEconomyCard(std::shared_ptr<EconomyCard> card) {
+	if (card)
+		economyCards.push_back(card);
+}
+
 void Deck::addBlueCard(std::shared_ptr<BlueCard> card) {
-	blueCards.push_back(card);
+	if (card)
+		blueCards.push_back(card);
 }
 
 void Deck::addMilitaryCard(std::shared_ptr<MilitaryCard> card) {
-	militaryCards.push_back(card);
+	if (card)
+		militaryCards.push_back(card);
 }
 
 void Deck::addScienceCard(std::shared_ptr<ScienceCard> card) {
-	scienceCards.push_back(card);
+	if (card)
+		scienceCards.push_back(card);
 }
 
 void Deck::addResourceCard(std::shared_ptr<ResourceCard> card) {
-	resourceCards.push_back(card);
+	if (card)
+		resourceCards.push_back(card);
 }
 
 std::shared_ptr<BlueCard> Deck::getBlueCard() {
@@ -115,6 +130,29 @@ std::shared_ptr<ResourceCard> Deck::getResourceCard() {
 
 	std::shared_ptr<ResourceCard> popped = resourceCards.at(resourceCards.size() - 1);
 	resourceCards.pop_back();
+	return popped;
+}
+
+std::shared_ptr<GuildCard> Deck::getGuildCard() {
+
+	if (guildCards.size() == 0) {
+		return nullptr;
+	}
+
+	std::shared_ptr<GuildCard> popped = guildCards.at(guildCards.size() - 1);
+	guildCards.pop_back();
+	return popped;
+}
+
+
+std::shared_ptr<EconomyCard> Deck::getEconomyCard() {
+
+	if (economyCards.size() == 0) {
+		return nullptr;
+	}
+
+	std::shared_ptr<EconomyCard> popped = economyCards.at(economyCards.size() - 1);
+	economyCards.pop_back();
 	return popped;
 }
 

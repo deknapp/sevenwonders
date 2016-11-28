@@ -291,12 +291,32 @@ void Game::getScienceCards() {
 	decks.at(2)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("academy", 0, 3, 0, 0, 1, 0, 0, age, minPlayers, "A")));
 }
 
+
+void Game::getGuildCards() {
+
+	int minPlayers = 3;
+	int age = 3;
+
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("magistratesGuild", 3, 1, 0, 0, 0, 1, 0, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("shipownersGuild", 3, 0, 0, 0, 1, 0, 1, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("spiesGuild", 0, 0, 3, 0, 1, 0, 0, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("buildersGuild", 0, 2, 2, 0, 1, 0, 0, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("scientistsGuild", 0, 0, 2, 2, 0, 0, 1, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("tradersGuild", 0, 0, 0, 0, 1, 1, 1, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("craftsmensGuild", 0, 0, 0, 0, 1, 1, 1, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("strategiesGuild", 0, 1, 0, 2, 0, 1, 0, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("philosophersGuild", 0, 0, 3, 0, 0, 1, 1, age, minPlayers)));
+	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("workersGuild", 1, 1, 1, 2, 0, 0, 0, age, minPlayers)));
+}
+
+
 void Game::getDeck() {
 
 	getResourceCards();
 	getBlueCards();
 	getMilitaryCards();
 	getScienceCards();
+	getGuildCards();
 
 	// TODO: add other types of cards. 
 
@@ -310,7 +330,7 @@ void Game::dealRound(int rund) {
 
 	for (const auto& player: players) {
 		for (int i=0; i<NUM_CARDS; i++)  {
-			player->addRandomCardToHand(decks.at(rund));
+			player->addRandomCardToHand(decks.at(rund), rund);
 		}
 	}
 }

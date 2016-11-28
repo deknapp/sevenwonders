@@ -8,6 +8,7 @@
 #include "Deck.h"
 #include "../cards/Card.h"
 #include "../cards/BlueCard.h"
+#include "../cards/GuildCard.h"
 #include "../cards/MilitaryCard.h"
 #include "../cards/ResourceCard.h"
 #include "../cards/ScienceCard.h"
@@ -26,7 +27,7 @@ class Player {
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
 	void updateMilitaryPoints();
-	void addRandomCardToHand(std::shared_ptr<Deck> newHand);
+	void addRandomCardToHand(std::shared_ptr<Deck> newHand, int rund);
 	int strength();
 	void setLeft(std::shared_ptr<Player> leftNeighbor);
 	void setRight(std::shared_ptr<Player> rightNeighbor);
@@ -42,6 +43,16 @@ class Player {
 
 	void getAvailableResources();
 	std::shared_ptr<Resource> getResource();
+	int numMilitaryCardsPlayed;
+	int numScienceCardsPlayed;
+	int numGuildCardsPlayed;
+	int numEconomyCardsPlayed;
+	int numBlueCardsPlayed;
+	int numBrownCardsPlayed;
+	int numSilverCardsPlayed;
+	int numWondersPlayed;
+	int numMinusOnes;
+
 
  private:
 
@@ -52,6 +63,8 @@ class Player {
  	int playScienceCard();
  	int playResourceCard();
  	int playBlueCard();
+ 	int playGuildCard();
+ 	void scoreGuild(std::string name);
  	int playFight();
  	void buy(std::shared_ptr<Resource> resourceCost);
  	bool canAfford(std::shared_ptr<Resource> resourceCost);
@@ -67,11 +80,14 @@ class Player {
 
  	std::vector<std::string> strategies;
 
+ 	std::vector<std::string> playedGuilds;
+
  	Science science;
  	Military military;
  	std::shared_ptr<Resource> resource;
  	std::shared_ptr<Resource> resourcesToTradeFor;
  	int bluePoints;
+ 	int guildPoints;
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);

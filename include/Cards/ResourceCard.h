@@ -13,7 +13,7 @@
 class ResourceCard : public Card {
 
  public:
-	ResourceCard(std::string _name, int _age, int _minPlayers, int _gold);
+
 	ResourceCard(std::string _name, 
 						 int glass, int carpet, int paper, 
 						 int _age, int _minPlayers, int _gold);
@@ -31,12 +31,13 @@ class ResourceCard : public Card {
 
 	bool canPurchase(int buyGold, std::set<std::string> playedCards);
 
-	 int gold;
+	int gold;
+	bool isBrown;
 
  private:
- 	int either_or;
+ 	bool either_or;
 
- 
+
  	// prevent generated functions --------------------------------------------
 	ResourceCard(const ResourceCard&);
 	ResourceCard& operator=(const ResourceCard&);
