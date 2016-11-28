@@ -203,6 +203,14 @@ int Player::playFight() {
 	return success;
 }
 
+int Player::playGuilds() {
+
+	int success = playGuildCard();
+	if (success == 0)
+		success = playGreedy();
+	return success;
+}
+
 int Player::playGreedy() {
 
 	int success = playBlueCard();
@@ -251,6 +259,8 @@ void Player::play(std::string strategy) {
 		success = playGreedy();
 	else if (strategy == "fight")
 		success = playFight();
+	else if (strategy == "guild")
+		success = playGuilds();
 	if (success == 0)
 		playRandomCard(0);
 }

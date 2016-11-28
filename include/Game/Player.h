@@ -64,6 +64,7 @@ class Player {
  	int playResourceCard();
  	int playBlueCard();
  	int playGuildCard();
+ 	int playGuilds();
  	void scoreGuild(std::string name);
  	int playFight();
  	void buy(std::shared_ptr<Resource> resourceCost);
