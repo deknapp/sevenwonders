@@ -51,6 +51,10 @@ set
 /Users/nath/sevenwonders/include/cards/EconomyCard.h
 vector
 -
+string
+-
+Card.h
+/Users/nath/sevenwonders/include/cards/Card.h
 
 /Users/nath/sevenwonders/include/cards/GuildCard.h
 vector
@@ -205,6 +209,12 @@ string
 /Users/nath/sevenwonders/include/cards/Card.h
 ../../include/cards/ResourceCard.h
 /Users/nath/sevenwonders/include/cards/ResourceCard.h
+
+/Users/nath/sevenwonders/src/cards/EconomyCard.cpp
+../../include/cards/EconomyCard.h
+/Users/nath/sevenwonders/include/cards/EconomyCard.h
+string
+-
 
 /Users/nath/sevenwonders/src/cards/GuildCard.cpp
 ../../include/cards/GuildCard.h

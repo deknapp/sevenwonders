@@ -22,8 +22,3 @@ EconomyCard::EconomyCard(std::string _name,
 
 EconomyCard::~EconomyCard() {}
 
-
-int EconomyCard::getPoints() {
-	return points;
-}
-

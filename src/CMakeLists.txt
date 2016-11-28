@@ -7,7 +7,8 @@ set(SRC_LIST ${SRC_LIST}
     cards/MilitaryCard.cpp
     cards/ResourceCard.cpp
     cards/ScienceCard.cpp
-    cards/GuildCard.cpp)
+    cards/GuildCard.cpp
+    cards/EconomyCard.cpp)
 
 set(SRC_LIST ${SRC_LIST}
     components/Military.cpp

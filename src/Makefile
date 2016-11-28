@@ -179,6 +179,33 @@ cards/Card.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/Card.cpp.s
 .PHONY : cards/Card.cpp.s
 
+cards/EconomyCard.o: cards/EconomyCard.cpp.o
+
+.PHONY : cards/EconomyCard.o
+
+# target to build an object file
+cards/EconomyCard.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o
+.PHONY : cards/EconomyCard.cpp.o
+
+cards/EconomyCard.i: cards/EconomyCard.cpp.i
+
+.PHONY : cards/EconomyCard.i
+
+# target to preprocess a source file
+cards/EconomyCard.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.i
+.PHONY : cards/EconomyCard.cpp.i
+
+cards/EconomyCard.s: cards/EconomyCard.cpp.s
+
+.PHONY : cards/EconomyCard.s
+
+# target to generate assembly for a file
+cards/EconomyCard.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.s
+.PHONY : cards/EconomyCard.cpp.s
+
 cards/GuildCard.o: cards/GuildCard.cpp.o
 
 .PHONY : cards/GuildCard.o
@@ -518,6 +545,9 @@ help:
 	@echo "... cards/Card.o"
 	@echo "... cards/Card.i"
 	@echo "... cards/Card.s"
+	@echo "... cards/EconomyCard.o"
+	@echo "... cards/EconomyCard.i"
+	@echo "... cards/EconomyCard.s"
 	@echo "... cards/GuildCard.o"
 	@echo "... cards/GuildCard.i"
 	@echo "... cards/GuildCard.s"

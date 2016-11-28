@@ -13,6 +13,11 @@ src/CMakeFiles/swsim.dir/cards/Card.cpp.o: include/cards/ResourceCard.h
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/cards/Card.cpp.o: src/cards/Card.cpp
 
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o: src/cards/EconomyCard.cpp
+
 src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o: include/cards/Card.h
 src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o: include/cards/GuildCard.h
 src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o: include/components/Resource.h

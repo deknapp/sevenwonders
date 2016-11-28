@@ -27,6 +27,7 @@ class Game {
  	void getResourceCards();
  	void getScienceCards();
  	void getGuildCards();
+ 	void getEconomyCards();
  	void getDeck();
  	void initPlayers();
  	int numPlayers;

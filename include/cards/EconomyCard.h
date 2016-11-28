@@ -2,11 +2,22 @@
 #define EconomyCard_H
 
 #include <vector>
+#include <string>
+#include "Card.h"
 
-class EconomyCard {
+class EconomyCard : public Card{
 
  public:
-	EconomyCard();
+	EconomyCard(std::string _name, int _age, int _minPlayers);
+	EconomyCard(std::string _name, 
+						 int wood, int stone, int brick, int ore,
+						 int _age, int _minPlayers);
+	EconomyCard(std::string _name, 
+						 int glass, int carpet, int paper, 
+						 int _age, int _minPlayers);
+	EconomyCard(std::string _name, 
+						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, 
+						int _minPlayers);
 	~EconomyCard();
 
  private:

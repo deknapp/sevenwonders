@@ -225,9 +225,33 @@ src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o.provides: src/CMakeFiles/swsim.di
 src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o.provides.build: src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o
 
 
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o: src/CMakeFiles/swsim.dir/flags.make
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o: src/cards/EconomyCard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o -c /Users/nath/sevenwonders/src/cards/EconomyCard.cpp
+
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/swsim.dir/cards/EconomyCard.cpp.i"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nath/sevenwonders/src/cards/EconomyCard.cpp > CMakeFiles/swsim.dir/cards/EconomyCard.cpp.i
+
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/swsim.dir/cards/EconomyCard.cpp.s"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nath/sevenwonders/src/cards/EconomyCard.cpp -o CMakeFiles/swsim.dir/cards/EconomyCard.cpp.s
+
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.requires
+
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.provides: src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.provides.build
+.PHONY : src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.provides
+
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.provides.build: src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o
+
+
 src/CMakeFiles/swsim.dir/components/Military.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/components/Military.cpp.o: src/components/Military.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/swsim.dir/components/Military.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/swsim.dir/components/Military.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/components/Military.cpp.o -c /Users/nath/sevenwonders/src/components/Military.cpp
 
 src/CMakeFiles/swsim.dir/components/Military.cpp.i: cmake_force
@@ -251,7 +275,7 @@ src/CMakeFiles/swsim.dir/components/Military.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/swsim.dir/components/Resource.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/components/Resource.cpp.o: src/components/Resource.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/swsim.dir/components/Resource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/swsim.dir/components/Resource.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/components/Resource.cpp.o -c /Users/nath/sevenwonders/src/components/Resource.cpp
 
 src/CMakeFiles/swsim.dir/components/Resource.cpp.i: cmake_force
@@ -275,7 +299,7 @@ src/CMakeFiles/swsim.dir/components/Resource.cpp.o.provides.build: src/CMakeFile
 
 src/CMakeFiles/swsim.dir/components/Science.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/components/Science.cpp.o: src/components/Science.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/swsim.dir/components/Science.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/swsim.dir/components/Science.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/components/Science.cpp.o -c /Users/nath/sevenwonders/src/components/Science.cpp
 
 src/CMakeFiles/swsim.dir/components/Science.cpp.i: cmake_force
@@ -299,7 +323,7 @@ src/CMakeFiles/swsim.dir/components/Science.cpp.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: src/game/ArgProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o -c /Users/nath/sevenwonders/src/game/ArgProcessor.cpp
 
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.i: cmake_force
@@ -323,7 +347,7 @@ src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o.provides.build: src/CMakeFiles/
 
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/game/Deck.cpp.o: src/game/Deck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/swsim.dir/game/Deck.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/swsim.dir/game/Deck.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/game/Deck.cpp.o -c /Users/nath/sevenwonders/src/game/Deck.cpp
 
 src/CMakeFiles/swsim.dir/game/Deck.cpp.i: cmake_force
@@ -347,7 +371,7 @@ src/CMakeFiles/swsim.dir/game/Deck.cpp.o.provides.build: src/CMakeFiles/swsim.di
 
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: src/game/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/swsim.dir/game/Game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/swsim.dir/game/Game.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/game/Game.cpp.o -c /Users/nath/sevenwonders/src/game/Game.cpp
 
 src/CMakeFiles/swsim.dir/game/Game.cpp.i: cmake_force
@@ -371,7 +395,7 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o.provides.build: src/CMakeFiles/swsim.di
 
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: src/CMakeFiles/swsim.dir/flags.make
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: src/game/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/swsim.dir/game/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/swsim.dir/game/Player.cpp.o"
 	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/game/Player.cpp.o -c /Users/nath/sevenwonders/src/game/Player.cpp
 
 src/CMakeFiles/swsim.dir/game/Player.cpp.i: cmake_force
@@ -402,6 +426,7 @@ swsim_OBJECTS = \
 "CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o" \
 "CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o" \
 "CMakeFiles/swsim.dir/cards/GuildCard.cpp.o" \
+"CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o" \
 "CMakeFiles/swsim.dir/components/Military.cpp.o" \
 "CMakeFiles/swsim.dir/components/Resource.cpp.o" \
 "CMakeFiles/swsim.dir/components/Science.cpp.o" \
@@ -420,6 +445,7 @@ src/swsim: src/CMakeFiles/swsim.dir/cards/MilitaryCard.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o
+src/swsim: src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/components/Military.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/components/Resource.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/components/Science.cpp.o
@@ -429,7 +455,7 @@ src/swsim: src/CMakeFiles/swsim.dir/game/Game.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/Player.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/build.make
 src/swsim: src/CMakeFiles/swsim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable swsim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable swsim"
 	cd /Users/nath/sevenwonders/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/swsim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -444,6 +470,7 @@ src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/cards/MilitaryCard.c
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/cards/ResourceCard.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/cards/ScienceCard.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o.requires
+src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/components/Military.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/components/Resource.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/components/Science.cpp.o.requires

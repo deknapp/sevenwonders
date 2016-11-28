@@ -13,6 +13,11 @@ src/CMakeFiles/swsim.dir/cards/Card.cpp.o
  /Users/nath/sevenwonders/include/cards/ResourceCard.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/src/cards/Card.cpp
+src/CMakeFiles/swsim.dir/cards/EconomyCard.cpp.o
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/cards/EconomyCard.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/src/cards/EconomyCard.cpp
 src/CMakeFiles/swsim.dir/cards/GuildCard.cpp.o
  /Users/nath/sevenwonders/include/cards/Card.h
  /Users/nath/sevenwonders/include/cards/GuildCard.h
