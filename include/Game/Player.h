@@ -59,17 +59,22 @@ class Player {
  	void play(std::string type);
  	void playRandomCard(int depth);
  	int playGreedy();
+
+ 	int playEconomyCard();
  	int playMilitaryCard();
  	int playScienceCard();
  	int playResourceCard();
  	int playBlueCard();
  	int playGuildCard();
  	int playGuilds();
+ 	void playEconomy(std::string name);
  	void scoreGuild(std::string name);
+ 	void scoreEconomy(std::string name);
  	int playFight();
  	void buy(std::shared_ptr<Resource> resourceCost);
  	bool canAfford(std::shared_ptr<Resource> resourceCost);
  	bool canPlay(std::string name, std::shared_ptr<Resource> resourceCost);
+ 	int componentCost(int gold, int cost, int i);
 
  	std::set<std::string> playedCards;
 
@@ -82,13 +87,17 @@ class Player {
  	std::vector<std::string> strategies;
 
  	std::vector<std::string> playedGuilds;
+ 	std::vector<std::string> playedEconomyCards;
 
  	Science science;
  	Military military;
  	std::shared_ptr<Resource> resource;
- 	std::shared_ptr<Resource> resourcesToTradeFor;
  	int bluePoints;
  	int guildPoints;
+ 	int economyPoints;
+ 	int leftCost;
+ 	int rightCost;
+ 	int silverCost;
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);

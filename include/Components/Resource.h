@@ -16,6 +16,8 @@ class Resource {
 	 // order is wood, stone, brick, ore, glass, carpet, paper
  	std::vector<int> resources;
  	int gold;
+ 	int brownWild;
+ 	int silverWild;
  	int at(int i);
  	void addTo(int i, int amount);
 
