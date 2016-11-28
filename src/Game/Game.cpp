@@ -297,7 +297,7 @@ void Game::getScienceCards() {
 void Game::getGuildCards() {
 
 	int minPlayers = 3;
-	int age = 3;
+	int age = 2;
 
 	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("magistratesGuild", 3, 1, 0, 0, 0, 1, 0, age, minPlayers)));
 	decks.at(age)->addGuildCard(std::shared_ptr<GuildCard>(new GuildCard("shipownersGuild", 3, 0, 0, 0, 1, 0, 1, age, minPlayers)));
