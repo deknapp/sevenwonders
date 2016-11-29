@@ -79,6 +79,7 @@ class Player {
  	std::set<std::string> playedCards;
  	std::set<std::string> playedEconomyCards;
  	std::set<std::string> playedGuilds;
+ 	std::set<std::string> chainCards;
 
  	std::string name;
  	std::shared_ptr<Deck> hand;

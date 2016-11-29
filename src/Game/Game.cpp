@@ -102,22 +102,34 @@ void Game::getBlueCards() {
 	int points = 2;
 	int minPlayers = 3;
 
-	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("altar", age, minPlayers, points)));
-	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("theater", age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("altar", "temple", age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("theater", "statue", age, minPlayers, points)));
 
 	points = 3;
-	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("baths", 0, 1, 0, 0, age, minPlayers, points)));
-	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("temple", 0, 1, 0, 0, 1, 0, 0, age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("baths", "aqueduct", 0, 1, 0, 0, age, minPlayers, points)));
 
 	minPlayers = 4;
 	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, minPlayers, points)));
+
+	minPlayers = 5;
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("altar", "temple", age, minPlayers, points)));
+
+	minPlayers = 6;
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("theater", "statue", age, minPlayers, points)));
+
+	minPlayers = 7;
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("baths", "aqueduct", 0, 1, 0, 0, age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("pawnshop", 0, 1, 0, 0, age, minPlayers, points)));
+
 
 	// SECOND AGE
 	age = 2;
 	minPlayers = 3;
 	points = 4;
-	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("statue", 1, 0, 0, 2, age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("temple", "pantheon", 0, 1, 0, 0, 1, 0, 0, age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("statue", "gardens", 1, 0, 0, 2, age, minPlayers, points)));
 	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("courthouse", 0, 0, 2, 0, 0, 1, 0, age, minPlayers, points)));
+
 	points = 5;
 	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("aqueduct", 0, 3, 0, 0, age, minPlayers, points)));
 
@@ -131,7 +143,7 @@ void Game::getBlueCards() {
 
 	minPlayers = 7;
 	points = 4;
-	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("statue", 1, 0, 0, 2, age, minPlayers, points)));
+	decks.at(age)->addBlueCard(std::shared_ptr<BlueCard>(new BlueCard("statue", "gardens", 1, 0, 0, 2, age, minPlayers, points)));
 
 	// THIRD AGE
 	age = 2;
@@ -191,23 +203,23 @@ void Game::getMilitaryCards() {
 	// SECOND AGE
 	age = 2, 
 	minPlayers = 3;
-	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, minPlayers)));
+	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", "fortifications", 0, 3, 0, 0, age, minPlayers)));
 	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, minPlayers)));
 	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, minPlayers)));
 
 	minPlayers = 4;
-	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", "circus", 1, 0, 0, 2, age, minPlayers)));
 
 	minPlayers = 5;
 	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("stables", 1, 0, 1, 1, age, minPlayers)));
 
 	minPlayers = 6;
 	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("archeryRange", 2, 0, 0, 1, age, minPlayers)));
-	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround",  "circus", 1, 0, 0, 2, age, minPlayers)));
 
 	minPlayers = 7;
-	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", 0, 3, 0, 0, age, minPlayers)));
-	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", 1, 0, 0, 2, age, minPlayers)));
+	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("walls", "fortifications", 0, 3, 0, 0, age, minPlayers)));
+	decks.at(age)->addMilitaryCard(std::shared_ptr<MilitaryCard>(new MilitaryCard("trainingGround", "circus", 1, 0, 0, 2, age, minPlayers)));
 
 	// THIRD AGE
 	age = 2;
@@ -237,38 +249,38 @@ void Game::getScienceCards() {
 	// FIRST AGE
 	int age = 0;
 	int minPlayers = 3;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, age, minPlayers, "A")));
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, age, minPlayers, "wheel")));
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, age, minPlayers, "tablet")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, "dispensary", "stables", age, minPlayers, "A")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, "laboratory", "archery range", age, minPlayers, "wheel")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, "courthouse", "library", age, minPlayers, "tablet")));
 
 	minPlayers = 4;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, age, minPlayers, "tablet")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("scriptorium", 0, 0, 1, "courthouse", "library", age, minPlayers, "tablet")));
 
 	minPlayers = 5;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, age, minPlayers, "A")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("apothecary", 0, 1, 0, "dispensary", "stables", age, minPlayers, "A")));
 
 	minPlayers = 7;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, age, minPlayers, "wheel")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("workshop", 1, 0, 0, "laboratory", "archery range", age, minPlayers, "wheel")));
 
 	// SECOND AGE
 	age = 1, 
 	minPlayers = 3;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("dispensary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "wheel")));
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "tablet")));
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "tablet")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("dispensary", 0, 0, 0, 2, 1, 0, 8, "lodge", "arena", age, minPlayers, "A")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "observatory", "siegeWorkshop", age, minPlayers, "wheel")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "senate", "university", age, minPlayers, "tablet")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "academy", "study", age, minPlayers, "tablet")));
 
 	minPlayers = 4;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("dispensary", 0, 0, 0, 2, 1, 0, 8, age, minPlayers, "A")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("dispensary", 0, 0, 0, 2, 1, 0, 8, "lodge", "arena", age, minPlayers, "A")));
 
 	minPlayers = 5;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1,  age, minPlayers, "wheel")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("laboratory", 0, 0, 2, 0, 0, 0, 1, "observatory", "siegeWorkshop", age, minPlayers, "wheel")));
 
 	minPlayers = 6;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0,  age, minPlayers, "tablet")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("library", 0, 2, 0, 0, 0, 1, 0, "senate", "university", age, minPlayers, "tablet")));
 
 	minPlayers = 7;
-	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1,  age, minPlayers, "tablet")));
+	decks.at(age)->addScienceCard(std::shared_ptr<ScienceCard>(new ScienceCard("school", 1, 0, 0, 0, 0, 0, 1, "academy", "study", age, minPlayers, "tablet")));
 
 	// THIRD AGE
 	age = 2;
@@ -315,9 +327,9 @@ void Game::getEconomyCards() {
 
 	int age = 0;
 	int minPlayers = 3;
-	decks.at(age)->addEconomyCard(std::shared_ptr<EconomyCard>(new EconomyCard("eastTradingPost", age, minPlayers)));
-	decks.at(age)->addEconomyCard(std::shared_ptr<EconomyCard>(new EconomyCard("westTradingPost", age, minPlayers)));
-	decks.at(age)->addEconomyCard(std::shared_ptr<EconomyCard>(new EconomyCard("marketPlace", age, minPlayers)));	
+	decks.at(age)->addEconomyCard(std::shared_ptr<EconomyCard>(new EconomyCard("eastTradingPost", "forum",  age, minPlayers)));
+	decks.at(age)->addEconomyCard(std::shared_ptr<EconomyCard>(new EconomyCard("westTradingPost", "forum", age, minPlayers)));
+	decks.at(age)->addEconomyCard(std::shared_ptr<EconomyCard>(new EconomyCard("marketPlace", "caravansery", age, minPlayers)));	
 
 	minPlayers = 4;
 

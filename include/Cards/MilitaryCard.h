@@ -19,6 +19,11 @@ class MilitaryCard : public Card {
 						 int wood, int stone, int brick, int ore, 
 						 int _age, int _minPlayers);
 
+	MilitaryCard(std::string _name, std::string buyCard,
+						 int wood, int stone, int brick, int ore, 
+						 int _age, int _minPlayers);
+
+
 	MilitaryCard(std::string _name, 
 						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, int _minPlayers);
 	~MilitaryCard();

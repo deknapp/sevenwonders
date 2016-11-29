@@ -1,7 +1,4 @@
 TODOs:
 
-1. add economy and guild cards to deck
-2. check card counts in deck
-3. add Wonders functionality
-4. add economy cards functionality
-5. add guild cards functionality
+1. add Wonders functionality 
+2. add chain card buying

@@ -64,7 +64,7 @@ Military:
 stables, cost: 1 ore, 1 wood, 1 brick, buyCards: apothecary, 3+, 5+
 archery range, cost: 2 wood, 1 ore, buyCards: workshop, 3+, 6+
 walls, cost: 3 stone, canBuy: fortifications, 3+, 7+
-training ground: cost: 2 ore, 1 wood, canBUy: circus, 4+, 6+, 7+
+training ground: cost: 2 ore, 1 wood, canBuy: circus, 4+, 6+, 7+
 
 Blue:
 courthouse, cost: 2 brick, 1 carpet, points: 4, buyCards: scriptorium, 3+, 5+

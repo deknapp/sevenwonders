@@ -17,9 +17,18 @@ class ScienceCard : public Card {
  	ScienceCard(std::string _name, 
 						 int glass, int carpet, int paper, 
 						 int _age, int _minPlayers, std::string _category);
+
+ 	ScienceCard(std::string _name, 
+						 int glass, int carpet, int paper, std::string buyCardA, std::string buyCardB,
+						 int _age, int _minPlayers, std::string _category);
+
  	ScienceCard(std::string _name, 
 						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, 
-						int _minPlayers, std::string _category) ;
+						int _minPlayers, std::string _category);
+
+ 	 ScienceCard(std::string _name, 
+						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, std::string buyCardA, std::string buyCardB, int _age, 
+						int _minPlayers, std::string _category);
 	~ScienceCard();
 	std::string getCategory();
 

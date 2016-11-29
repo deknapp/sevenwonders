@@ -14,7 +14,12 @@ class BlueCard : public Card {
 
  public:
 	BlueCard(std::string _name, int _age, int _minPlayers, int _points);
+	BlueCard(std::string _name, std::string buyCard, int _age, int _minPlayers, int _points);
 	BlueCard(std::string _name, 
+						 int glass, int carpet, int paper, 
+						 int _age, int _minPlayers, int _points);
+
+	BlueCard(std::string _name, std::string buyCard,
 						 int glass, int carpet, int paper, 
 						 int _age, int _minPlayers, int _points);
 
@@ -22,8 +27,17 @@ class BlueCard : public Card {
 						 int wood, int stone, int brick, int ore,
 						 int _age, int _minPlayers, int _points);
 
+	BlueCard(std::string _name, std::string buyCard, 
+						 int wood, int stone, int brick, int ore,
+						 int _age, int _minPlayers, int _points);
+
+
 	BlueCard(std::string _name, 
 						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, 
+						int _minPlayers, int _points);
+
+	BlueCard(std::string _name, std::string buyCard,
+						int wood, int stone, int brick, int ore, int glass, int carpet, int paper,  int _age, 
 						int _minPlayers, int _points);
 	~BlueCard();
 

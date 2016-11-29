@@ -190,6 +190,8 @@ int Player::playEconomyCard() {
 			playEconomy(card->getName());
 			playedCards.insert(card->getName());
 			playedEconomyCards.insert(card->getName());
+			for (auto const& chainCard:card->canBuy) 
+				chainCards.insert(chainCard);
 			numEconomyCardsPlayed += 1;
 			return 1;
 		}
@@ -207,6 +209,8 @@ int Player::playGuildCard() {
 			std::cout << "playing GuildCard " << card->getName() << std::endl;
 			playedCards.insert(card->getName());
 			playedGuilds.insert(card->getName());
+			for (auto const& chainCard:card->canBuy) 
+				chainCards.insert(chainCard);
 			numGuildCardsPlayed += 1;
 			return 1;
 		}
@@ -223,6 +227,8 @@ int Player::playMilitaryCard() {
 			buy(card->getResourceCost());
 			std::cout << "playing MilitaryCard " << card->getName() << std::endl;
 			military.addStrength(card->getStrength());
+			for (auto const& chainCard:card->canBuy) 
+				chainCards.insert(chainCard);
 			playedCards.insert(card->getName());
 			numMilitaryCardsPlayed += 1;
 			return 1;
@@ -240,6 +246,8 @@ int Player::playScienceCard() {
 			std::cout << "playing ScienceCard " << card->getName() << std::endl;
 			science.addCard(card->getCategory());
 			playedCards.insert(card->getName());
+			for (auto const& chainCard:card->canBuy) 
+				chainCards.insert(chainCard);
 			numScienceCardsPlayed += 1;
 			return 1;
 		}
@@ -256,6 +264,8 @@ int Player::playBlueCard() {
 			std::cout << "playing BlueCard " << card->getName() << std::endl;
 			bluePoints += card->getPoints();
 			playedCards.insert(card->getName());
+			for (auto const& chainCard:card->canBuy) 
+				chainCards.insert(chainCard);
 			numBlueCardsPlayed += 1;
 			return 1;
 		}
@@ -461,6 +471,9 @@ int Player::componentCost(int gold, int cost, int i) {
 
 void Player::buy(std::shared_ptr<Resource> resourceCost) {
 
+	if (chainCards.count(name))
+		return;
+
 	int cost = 0;
 	for (int i=0; i < 7; i++) {
 		if (cost > 0)
@@ -474,6 +487,8 @@ bool Player::canPlay(std::string name, std::shared_ptr<Resource> resourceCost) {
 
 	if (playedCards.count(name))
 		return false;
+	if (chainCards.count(name))
+		return true;
 	else
 		return canAfford(resourceCost);
 }

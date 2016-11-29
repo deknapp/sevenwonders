@@ -23,9 +23,9 @@ int Science::score() {
 void Science::addCard(std::string type) {
 	if (type == "wild")
 		wild += 1;
-	if (type == "abacus")
+	if (type == "A")
 		abacus += 1;
-	if (type == "wheels")
+	if (type == "wheel")
 		wheels += 1;
 	if (type == "tablet")
 		tablet += 1;

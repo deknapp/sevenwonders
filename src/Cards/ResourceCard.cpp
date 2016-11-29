@@ -10,7 +10,7 @@ ResourceCard::ResourceCard(std::string _name,
 ResourceCard::ResourceCard(std::string _name, 
 						 int wood, int stone, int brick, int ore,
 						 int _age, int _minPlayers, int _either_or, int _gold):
-						 Card("resource", _name, _age, wood, stone, brick, ore,  _minPlayers), either_or(_either_or), gold(_gold), isBrown(true) {}
+						 Card("resource", _name, _age, wood, stone, brick, ore,  _minPlayers), gold(_gold), either_or(_either_or), isBrown(true) {}
 						
 
 ResourceCard::ResourceCard(std::string _name, 

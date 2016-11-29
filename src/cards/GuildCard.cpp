@@ -8,16 +8,16 @@ GuildCard::GuildCard(std::string _name, int _age, int _minPlayers) :
 GuildCard::GuildCard(std::string _name, 
 						 int wood, int stone, int brick, int ore,
 						 int _age, int _minPlayers):
-						 Card("guild", _name, _age, wood, stone, brick, ore, _minPlayers) {}
+						 Card("guild", _name, wood, stone, brick, ore, _age, _minPlayers) {}
 
 GuildCard::GuildCard(std::string _name, 
 						 int glass, int carpet, int paper, 
 						 int _age, int _minPlayers):
-						 Card("guild", _name, _age, glass, carpet, paper, _minPlayers) {}
+						 Card("guild", _name, glass, carpet, paper, _age, _minPlayers) {}
 						
 GuildCard::GuildCard(std::string _name, 
 						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, int _age, 
 						int _minPlayers) :
-						Card("guild", _name, _age, wood, stone, brick, ore, glass, carpet, paper, _minPlayers){}
+						Card("guild", _name,  wood, stone, brick, ore, glass, carpet, paper, _age, _minPlayers){}
 
 GuildCard::~GuildCard() {}
