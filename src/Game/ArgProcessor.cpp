@@ -6,7 +6,7 @@ std::vector<std::string> ArgProcessor::strategiesForPlayer(int i) {
 	return strategies.at(i);
 }
 
-ArgProcessor::ArgProcessor(int argc, char* argv[]) {
+ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 
 	numPlayers = atoi(argv[1]);
 	std::cout << "NUMBER OF PLAYERS " << numPlayers << std::endl;

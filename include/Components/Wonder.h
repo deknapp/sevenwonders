@@ -2,19 +2,21 @@
 #define Wonder_H
 
 #include <vector>
-#include "Card.h"
+#include <string>
+#include "Resource.h"
 
 class Wonder {
 
  public:
-	Wonder();
+	Wonder(std::string _name, int wood, int stone, int brick, int ore);
+	Wonder(std::string _name, int glass, int carpet, int paper);
 	~Wonder();
 	int status;
 
  private:
 
- 	std::vector<Card> WonderCards;
- 	Card freeCard;
+ 	std::string name;
+ 	std::shared_ptr<Resource> resource;
 
  	// prevent generated functions --------------------------------------------
 	Wonder(const Wonder&);

@@ -50,6 +50,10 @@ src/CMakeFiles/swsim.dir/components/Resource.cpp.o: src/components/Resource.cpp
 src/CMakeFiles/swsim.dir/components/Science.cpp.o: include/components/Science.h
 src/CMakeFiles/swsim.dir/components/Science.cpp.o: src/components/Science.cpp
 
+src/CMakeFiles/swsim.dir/components/Wonder.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/components/Wonder.cpp.o: include/components/Wonder.h
+src/CMakeFiles/swsim.dir/components/Wonder.cpp.o: src/components/Wonder.cpp
+
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/Utility.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/BlueCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/Card.h
@@ -61,6 +65,7 @@ src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Science.h
+src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/components/Wonder.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/game/ArgProcessor.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o: include/game/Player.h
@@ -90,6 +95,7 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/components/Science.h
+src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/components/Wonder.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/ArgProcessor.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/Game.h
@@ -107,6 +113,7 @@ src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Science.h
+src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/components/Wonder.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/game/Player.h
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: src/game/Player.cpp
@@ -122,6 +129,7 @@ src/CMakeFiles/swsim.dir/main.cpp.o: include/cards/ScienceCard.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Military.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Resource.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Science.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/components/Wonder.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/ArgProcessor.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Game.h

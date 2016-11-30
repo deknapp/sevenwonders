@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nath/sevenwonders/src/components/Military.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/components/Military.cpp.o"
   "/Users/nath/sevenwonders/src/components/Resource.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/components/Resource.cpp.o"
   "/Users/nath/sevenwonders/src/components/Science.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/components/Science.cpp.o"
+  "/Users/nath/sevenwonders/src/components/Wonder.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/components/Wonder.cpp.o"
   "/Users/nath/sevenwonders/src/game/ArgProcessor.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o"
   "/Users/nath/sevenwonders/src/game/Deck.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/Deck.cpp.o"
   "/Users/nath/sevenwonders/src/game/Game.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/Game.cpp.o"

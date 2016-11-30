@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/swsim.dir/components/Military.cpp.o"
   "CMakeFiles/swsim.dir/components/Resource.cpp.o"
   "CMakeFiles/swsim.dir/components/Science.cpp.o"
+  "CMakeFiles/swsim.dir/components/Wonder.cpp.o"
   "CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o"
   "CMakeFiles/swsim.dir/game/Deck.cpp.o"
   "CMakeFiles/swsim.dir/game/Game.cpp.o"

@@ -4,6 +4,7 @@
 #include <vector>
 #include "ArgProcessor.h"
 #include "Player.h"
+#include "../components/Wonder.h"
 
 class Game {
 
@@ -22,7 +23,9 @@ class Game {
  private:
 
  	void dealRound(int rund);
+ 	void getWonderCards();
  	void getBlueCards();
+ 	void getWonders();
  	void getMilitaryCards();
  	void getResourceCards();
  	void getScienceCards();
@@ -30,10 +33,12 @@ class Game {
  	void getEconomyCards();
  	void getDeck();
  	void initPlayers();
+ 	void initWonder(std::string name);
  	int numPlayers;
  	std::shared_ptr<Player> playerAt(int i);
 
  	std::shared_ptr<ArgProcessor> args;
+ 	std::vector<std::shared_ptr<Wonder> > wonders;
  	std::vector<std::shared_ptr<Player> > players;
  	std::vector<std::shared_ptr<Deck> > decks;
 

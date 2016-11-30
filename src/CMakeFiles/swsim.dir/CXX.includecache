@@ -126,6 +126,14 @@ cstdbool
 vector
 -
 
+/Users/nath/sevenwonders/include/components/Wonder.h
+vector
+-
+string
+-
+Resource.h
+/Users/nath/sevenwonders/include/components/Resource.h
+
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 vector
 -
@@ -167,6 +175,8 @@ ArgProcessor.h
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 Player.h
 /Users/nath/sevenwonders/include/game/Player.h
+../components/Wonder.h
+/Users/nath/sevenwonders/include/components/Wonder.h
 
 /Users/nath/sevenwonders/include/game/Player.h
 vector
@@ -195,6 +205,8 @@ Deck.h
 /Users/nath/sevenwonders/include/components/Science.h
 ../components/Resource.h
 /Users/nath/sevenwonders/include/components/Resource.h
+../components/Wonder.h
+/Users/nath/sevenwonders/include/components/Wonder.h
 ../Utility.h
 /Users/nath/sevenwonders/include/Utility.h
 
@@ -259,6 +271,10 @@ math.h
 -
 string
 -
+
+/Users/nath/sevenwonders/src/components/Wonder.cpp
+../../include/components/Wonder.h
+/Users/nath/sevenwonders/include/components/Wonder.h
 
 /Users/nath/sevenwonders/src/game/ArgProcessor.cpp
 ../../include/game/ArgProcessor.h

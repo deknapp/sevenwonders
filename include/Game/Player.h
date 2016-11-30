@@ -16,6 +16,7 @@
 #include "../components/Military.h"
 #include "../components/Science.h"
 #include "../components/Resource.h"
+#include "../components/Wonder.h"
 
 #include "../Utility.h"
 

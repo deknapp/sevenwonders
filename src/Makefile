@@ -395,6 +395,33 @@ components/Science.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Science.cpp.s
 .PHONY : components/Science.cpp.s
 
+components/Wonder.o: components/Wonder.cpp.o
+
+.PHONY : components/Wonder.o
+
+# target to build an object file
+components/Wonder.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Wonder.cpp.o
+.PHONY : components/Wonder.cpp.o
+
+components/Wonder.i: components/Wonder.cpp.i
+
+.PHONY : components/Wonder.i
+
+# target to preprocess a source file
+components/Wonder.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Wonder.cpp.i
+.PHONY : components/Wonder.cpp.i
+
+components/Wonder.s: components/Wonder.cpp.s
+
+.PHONY : components/Wonder.s
+
+# target to generate assembly for a file
+components/Wonder.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/components/Wonder.cpp.s
+.PHONY : components/Wonder.cpp.s
+
 game/ArgProcessor.o: game/ArgProcessor.cpp.o
 
 .PHONY : game/ArgProcessor.o
@@ -569,6 +596,9 @@ help:
 	@echo "... components/Science.o"
 	@echo "... components/Science.i"
 	@echo "... components/Science.s"
+	@echo "... components/Wonder.o"
+	@echo "... components/Wonder.i"
+	@echo "... components/Wonder.s"
 	@echo "... game/ArgProcessor.o"
 	@echo "... game/ArgProcessor.i"
 	@echo "... game/ArgProcessor.s"

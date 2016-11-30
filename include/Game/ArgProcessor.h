@@ -17,12 +17,14 @@ class ArgProcessor {
 	int getNumPlayers();
 	std::vector<std::vector<std::string> > getStrategies();
 	std::vector<std::string> strategiesForPlayer(int i);
+	std::string wonderSide;
 
  private:
 
  	std::vector<std::vector<std::string> >  strategies;
  	int numPlayers;
  	int numGames;
+
 
  	// prevent generated functions --------------------------------------------
 	ArgProcessor(const ArgProcessor&);

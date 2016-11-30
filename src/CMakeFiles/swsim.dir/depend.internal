@@ -50,6 +50,10 @@ src/CMakeFiles/swsim.dir/components/Resource.cpp.o
 src/CMakeFiles/swsim.dir/components/Science.cpp.o
  /Users/nath/sevenwonders/include/components/Science.h
  /Users/nath/sevenwonders/src/components/Science.cpp
+src/CMakeFiles/swsim.dir/components/Wonder.cpp.o
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
+ /Users/nath/sevenwonders/src/components/Wonder.cpp
 src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
  /Users/nath/sevenwonders/include/Utility.h
  /Users/nath/sevenwonders/include/cards/BlueCard.h
@@ -62,6 +66,7 @@ src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
  /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/include/components/Science.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
  /Users/nath/sevenwonders/include/game/ArgProcessor.h
  /Users/nath/sevenwonders/include/game/Deck.h
  /Users/nath/sevenwonders/include/game/Player.h
@@ -91,6 +96,7 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o
  /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/include/components/Science.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
  /Users/nath/sevenwonders/include/game/ArgProcessor.h
  /Users/nath/sevenwonders/include/game/Deck.h
  /Users/nath/sevenwonders/include/game/Game.h
@@ -108,6 +114,7 @@ src/CMakeFiles/swsim.dir/game/Player.cpp.o
  /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/include/components/Science.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
  /Users/nath/sevenwonders/include/game/Deck.h
  /Users/nath/sevenwonders/include/game/Player.h
  /Users/nath/sevenwonders/src/game/Player.cpp
@@ -123,6 +130,7 @@ src/CMakeFiles/swsim.dir/main.cpp.o
  /Users/nath/sevenwonders/include/components/Military.h
  /Users/nath/sevenwonders/include/components/Resource.h
  /Users/nath/sevenwonders/include/components/Science.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
  /Users/nath/sevenwonders/include/game/ArgProcessor.h
  /Users/nath/sevenwonders/include/game/Deck.h
  /Users/nath/sevenwonders/include/game/Game.h

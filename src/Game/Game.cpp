@@ -20,6 +20,45 @@ Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {
 
 Game::~Game() {}
 
+void Game::initWonder(std::string name) {
+
+	if (name == "OlympiaA") {
+
+	}
+
+	else if (name == "OlympiaB") {
+
+		
+	}
+
+
+}
+
+void Game::getWonders() {
+
+	if (args->wonderSide == "A") {
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("OlympiaA", 1, 0, 0, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("GizahA", 0, 1, 0, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("BabylonA", 0, 0, 1, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("RhodosA", 0, 0, 0, 1)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("AlexandriaA", 1, 0, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("HalikarnassosA", 0, 1, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("EphesosA", 0, 0, 1)));
+
+	} else {
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("OlympiaB", 1, 0, 0, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("GizahB", 0, 1, 0, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("BabylonB", 0, 0, 1, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("RhodosB", 0, 0, 0, 1)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("AlexandriaB", 1, 0, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("HalikarnassosB", 0, 1, 0)));
+		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("EphesosB", 0, 0, 1)));
+	}
+}
+
+
+
+
 void Game::getResourceCards() {
 
 	int gold = 0;

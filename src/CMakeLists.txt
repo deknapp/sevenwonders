@@ -13,7 +13,8 @@ set(SRC_LIST ${SRC_LIST}
 set(SRC_LIST ${SRC_LIST}
     components/Military.cpp
     components/Resource.cpp
-    components/Science.cpp)
+    components/Science.cpp
+    components/Wonder.cpp)
 
 set(SRC_LIST ${SRC_LIST}
     game/ArgProcessor.cpp
