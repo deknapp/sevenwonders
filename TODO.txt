@@ -1,4 +1,9 @@
 TODOs:
 
 1. add Wonders functionality 
-2. add chain card buying
+2. double check chain card buying
+3. replace collections of values with std:tuple<> s 
+4. Use for_each() (from std::algorithm, where possible)
+5. Replace repetitive functions with templates
+6. const auto& to avoid copies
+7. use std::tuple and std::tie for better looking resource code and easier comparison
