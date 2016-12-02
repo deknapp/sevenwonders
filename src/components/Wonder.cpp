@@ -4,4 +4,10 @@ Wonder::Wonder(std::string _name, int wood, int stone, int brick, int ore) : nam
 
 Wonder::Wonder(std::string _name, int glass, int carpet, int paper) : name(_name), resource(std::shared_ptr<Resource>(new Resource(glass, carpet, paper))) {}
 
+
+
 Wonder::~Wonder() {}
+
+std::string Wonder::getName() {
+	return name;
+}

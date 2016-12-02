@@ -12,11 +12,11 @@ class Military {
 	int getStrength();
 	void addPoints(int newPoints);
 	void addStrength(int strength);
+	int strength;
 
  private:
 
  	int score;
- 	int strength;
 
  	// prevent generated functions --------------------------------------------
 	Military(const Military&);

@@ -54,6 +54,7 @@ class Player {
 	int numWondersPlayed;
 	int numMinusOnes;
 
+	 std::shared_ptr<Wonder> wonder;
 
  private:
 
@@ -93,12 +94,18 @@ class Player {
  	Science science;
  	Military military;
  	std::shared_ptr<Resource> resource;
+
  	int bluePoints;
  	int guildPoints;
  	int economyPoints;
+ 	int wonderPoints;
+
  	int leftCost;
  	int rightCost;
  	int silverCost;
+
+ 	bool canAffordNextWonder();
+ 	void playWonder(std::string side);
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);

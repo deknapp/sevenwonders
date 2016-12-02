@@ -33,9 +33,9 @@ class Game {
  	void getEconomyCards();
  	void getDeck();
  	void initPlayers();
- 	void initWonder(std::string name);
  	int numPlayers;
  	std::shared_ptr<Player> playerAt(int i);
+ 	void dealWonders();
 
  	std::shared_ptr<ArgProcessor> args;
  	std::vector<std::shared_ptr<Wonder> > wonders;

@@ -7,7 +7,52 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 						   rightCost(2) {}
 Player::~Player() {}
 
+bool Player::canAffordNextWonder() {
+	// TODO 
 
+	return false;
+}
+
+void Player::playWonder(std::string side) {
+	if (side == "A") {
+
+		if (numWondersPlayed == 0)
+			wonderPoints += 3;
+
+		else if (numWondersPlayed == 2)
+			wonderPoints += 7;
+
+		else {
+
+			if (wonder->getName() == "GizahA") 
+				wonderPoints += 5;
+
+			//else if (wonder->getName() == "OlympiaA") 
+					// TODO
+
+			else if (wonder->getName() == "EphesosA") 
+				resource->gold += 9;
+
+			else if (wonder->getName() == "BabylonA") 
+				science.wild += 1;
+
+			else if (wonder->getName() == "AlexandriaA") 
+				resource->brownWild += 1;
+
+			else if (wonder->getName() == "RhodosA") 
+				military.strength += 2;
+
+			// else if (wonder->getName() == "HalikarnassosA") 
+					// TODO
+		}
+	}
+
+	else {
+
+	}
+
+	numWondersPlayed += 1;
+}
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck, int age) {
 

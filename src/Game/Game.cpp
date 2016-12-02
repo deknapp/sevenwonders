@@ -20,19 +20,6 @@ Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {
 
 Game::~Game() {}
 
-void Game::initWonder(std::string name) {
-
-	if (name == "OlympiaA") {
-
-	}
-
-	else if (name == "OlympiaB") {
-
-		
-	}
-
-
-}
 
 void Game::getWonders() {
 
@@ -53,6 +40,16 @@ void Game::getWonders() {
 		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("AlexandriaB", 1, 0, 0)));
 		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("HalikarnassosB", 0, 1, 0)));
 		wonders.push_back(std::shared_ptr<Wonder>(new Wonder("EphesosB", 0, 0, 1)));
+	}
+}
+
+void Game::dealWonders() {
+
+	// TODO: make this random
+	int i = 0;
+	for (const auto& player: players) {
+		player->wonder = wonders.at(i);
+		i += 1;
 	}
 }
 
