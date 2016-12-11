@@ -104,6 +104,7 @@ class Player {
  	int rightCost;
  	int silverCost;
 
+ 	bool playTwoLastRound;
  	bool canAffordNextWonder();
  	void playWonder(std::string side);
 

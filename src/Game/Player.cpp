@@ -14,12 +14,16 @@ bool Player::canAffordNextWonder() {
 }
 
 void Player::playWonder(std::string side) {
+
+
+	numWondersPlayed += 1;
+
 	if (side == "A") {
 
-		if (numWondersPlayed == 0)
+		if (numWondersPlayed == 1)
 			wonderPoints += 3;
 
-		else if (numWondersPlayed == 2)
+		else if (numWondersPlayed == 3)
 			wonderPoints += 7;
 
 		else {
@@ -47,11 +51,104 @@ void Player::playWonder(std::string side) {
 		}
 	}
 
-	else {
+	else if (side == "B") {
 
+		if (wonder->getName() == "OlympiaB") {
+
+			if (numWondersPlayed == 1) {
+				leftCost = 1;
+				rightCost = 1;
+			}
+
+			else if (numWondersPlayed == 2) {
+				wonderPoints += 5;
+			}
+
+			// TOOD
+			// else { play a guild card of a neighbor
+			//}
+		}
+
+		if (wonder->getName() == "GizahB") {
+
+			if (numWondersPlayed == 1) 
+				wonderPoints += 3;
+			else if (numWondersPlayed == 2) 
+				wonderPoints += 5;
+			else if (numWondersPlayed == 3)
+				wonderPoints += 5;
+			else 
+				wonderPoints += 7;
+		}
+
+		if (wonder->getName() == "EphesosB") {
+
+			if (numWondersPlayed == 1) {
+				wonderPoints += 2;
+				resource->gold += 4;
+			}
+			else if (numWondersPlayed == 2) {
+				wonderPoints += 3;
+				resource->gold += 4;
+			}
+			else if (numWondersPlayed == 3) {
+				wonderPoints += 5;
+				resource->gold += 4;
+			}
+		}
+
+		if (wonder->getName() == "BabylonB") {
+
+			if (numWondersPlayed == 1) {
+				wonderPoints += 3;			}
+			else if (numWondersPlayed == 2) {
+				playTwoLastRound = true;
+			}
+		}
+
+		if (wonder->getName() == "AlexandriaB") {
+
+			if (numWondersPlayed == 1)
+				resource->brownWild += 1;
+			else if (numWondersPlayed == 2)
+				science.wild += 1;
+			else if (numWondersPlayed == 3)
+				wonderPoints += 7;
+
+		}
+
+		if (wonder->getName() == "HalikarnassosB") {
+
+			if (numWondersPlayed == 1) {
+				wonderPoints += 2;
+				playTwoLastRound = true;
+			}
+
+			else if (numWondersPlayed == 2) {
+				wonderPoints += 1;
+				playTwoLastRound = true;
+			}
+
+			else if (numWondersPlayed == 3) {
+				playTwoLastRound = true;
+			}
+		}
+
+		if (wonder->getName() == "RhodosB") {
+
+			if (numWondersPlayed == 1) {
+				military.strength += 1;
+				wonderPoints += 3;
+				resource->gold += 3;
+			}		
+
+			else if (numWondersPlayed == 2) {
+				military.strength += 1;
+				wonderPoints += 4;
+				resource->gold += 4;
+			}
+		}
 	}
-
-	numWondersPlayed += 1;
 }
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck, int age) {
