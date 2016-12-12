@@ -11,3 +11,11 @@ Wonder::~Wonder() {}
 std::string Wonder::getName() {
 	return name;
 }
+
+std::shared_ptr<Resource> Wonder::getCost(int i) {
+	return resourceCost.at(i);
+} 
+
+std::shared_ptr<Resource> Wonder::getFreeResource() {
+	return resource;
+} 

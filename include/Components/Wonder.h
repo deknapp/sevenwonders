@@ -13,6 +13,8 @@ class Wonder {
 	~Wonder();
 	int status;
 	std::string getName();
+	std::shared_ptr<Resource> getCost(int i);
+	std::shared_ptr<Resource> getFreeResource();
 
  private:
 

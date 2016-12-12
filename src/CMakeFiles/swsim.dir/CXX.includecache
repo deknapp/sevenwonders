@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/nath/sevenwonders/include/Constants.h
+/home/Administrator/sevenwonders/include/Constants.h
 
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 stdlib.h
 -
 time.h
@@ -22,7 +22,7 @@ string
 set
 -
 
-/Users/nath/sevenwonders/include/cards/BlueCard.h
+/home/Administrator/sevenwonders/include/cards/BlueCard.h
 vector
 -
 string
@@ -32,13 +32,13 @@ set
 cstdbool
 -
 ../Utility.h
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 vector
 -
 string
@@ -46,25 +46,25 @@ string
 set
 -
 ../components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 
-/Users/nath/sevenwonders/include/cards/EconomyCard.h
+/home/Administrator/sevenwonders/include/cards/EconomyCard.h
 vector
 -
 string
 -
 Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 
-/Users/nath/sevenwonders/include/cards/GuildCard.h
+/home/Administrator/sevenwonders/include/cards/GuildCard.h
 vector
 -
 string
 -
 Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 
-/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+/home/Administrator/sevenwonders/include/cards/MilitaryCard.h
 vector
 -
 string
@@ -74,13 +74,13 @@ set
 cstdbool
 -
 ../Utility.h
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../../include/components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 
-/Users/nath/sevenwonders/include/cards/ResourceCard.h
+/home/Administrator/sevenwonders/include/cards/ResourceCard.h
 string
 -
 vector
@@ -90,13 +90,13 @@ set
 cstdbool
 -
 ../Utility.h
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 
-/Users/nath/sevenwonders/include/cards/ScienceCard.h
+/home/Administrator/sevenwonders/include/cards/ScienceCard.h
 vector
 -
 string
@@ -106,45 +106,45 @@ set
 cstdbool
 -
 ../Utility.h
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 
-/Users/nath/sevenwonders/include/components/Military.h
+/home/Administrator/sevenwonders/include/components/Military.h
 vector
 -
 
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 vector
 -
 cstdbool
 -
 
-/Users/nath/sevenwonders/include/components/Science.h
+/home/Administrator/sevenwonders/include/components/Science.h
 vector
 -
 
-/Users/nath/sevenwonders/include/components/Wonder.h
+/home/Administrator/sevenwonders/include/components/Wonder.h
 vector
 -
 string
 -
 Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 
-/Users/nath/sevenwonders/include/game/ArgProcessor.h
+/home/Administrator/sevenwonders/include/game/ArgProcessor.h
 vector
 -
 string
 -
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../game/Player.h
-/Users/nath/sevenwonders/include/game/Player.h
+/home/Administrator/sevenwonders/include/game/Player.h
 
-/Users/nath/sevenwonders/include/game/Deck.h
+/home/Administrator/sevenwonders/include/game/Deck.h
 vector
 -
 string
@@ -152,33 +152,33 @@ string
 set
 -
 ../Utility.h
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../cards/BlueCard.h
-/Users/nath/sevenwonders/include/cards/BlueCard.h
+/home/Administrator/sevenwonders/include/cards/BlueCard.h
 ../cards/MilitaryCard.h
-/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+/home/Administrator/sevenwonders/include/cards/MilitaryCard.h
 ../cards/ResourceCard.h
-/Users/nath/sevenwonders/include/cards/ResourceCard.h
+/home/Administrator/sevenwonders/include/cards/ResourceCard.h
 ../cards/ScienceCard.h
-/Users/nath/sevenwonders/include/cards/ScienceCard.h
+/home/Administrator/sevenwonders/include/cards/ScienceCard.h
 ../cards/GuildCard.h
-/Users/nath/sevenwonders/include/cards/GuildCard.h
+/home/Administrator/sevenwonders/include/cards/GuildCard.h
 ../cards/EconomyCard.h
-/Users/nath/sevenwonders/include/cards/EconomyCard.h
+/home/Administrator/sevenwonders/include/cards/EconomyCard.h
 
-/Users/nath/sevenwonders/include/game/Game.h
+/home/Administrator/sevenwonders/include/game/Game.h
 vector
 -
 ArgProcessor.h
-/Users/nath/sevenwonders/include/game/ArgProcessor.h
+/home/Administrator/sevenwonders/include/game/ArgProcessor.h
 Player.h
-/Users/nath/sevenwonders/include/game/Player.h
+/home/Administrator/sevenwonders/include/game/Player.h
 ../components/Wonder.h
-/Users/nath/sevenwonders/include/components/Wonder.h
+/home/Administrator/sevenwonders/include/components/Wonder.h
 
-/Users/nath/sevenwonders/include/game/Player.h
+/home/Administrator/sevenwonders/include/game/Player.h
 vector
 -
 string
@@ -186,141 +186,141 @@ string
 cstdbool
 -
 Deck.h
-/Users/nath/sevenwonders/include/game/Deck.h
+/home/Administrator/sevenwonders/include/game/Deck.h
 ../cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../cards/BlueCard.h
-/Users/nath/sevenwonders/include/cards/BlueCard.h
+/home/Administrator/sevenwonders/include/cards/BlueCard.h
 ../cards/GuildCard.h
-/Users/nath/sevenwonders/include/cards/GuildCard.h
+/home/Administrator/sevenwonders/include/cards/GuildCard.h
 ../cards/MilitaryCard.h
-/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+/home/Administrator/sevenwonders/include/cards/MilitaryCard.h
 ../cards/ResourceCard.h
-/Users/nath/sevenwonders/include/cards/ResourceCard.h
+/home/Administrator/sevenwonders/include/cards/ResourceCard.h
 ../cards/ScienceCard.h
-/Users/nath/sevenwonders/include/cards/ScienceCard.h
+/home/Administrator/sevenwonders/include/cards/ScienceCard.h
 ../components/Military.h
-/Users/nath/sevenwonders/include/components/Military.h
+/home/Administrator/sevenwonders/include/components/Military.h
 ../components/Science.h
-/Users/nath/sevenwonders/include/components/Science.h
+/home/Administrator/sevenwonders/include/components/Science.h
 ../components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 ../components/Wonder.h
-/Users/nath/sevenwonders/include/components/Wonder.h
+/home/Administrator/sevenwonders/include/components/Wonder.h
 ../Utility.h
-/Users/nath/sevenwonders/include/Utility.h
+/home/Administrator/sevenwonders/include/Utility.h
 
-/Users/nath/sevenwonders/src/cards/BlueCard.cpp
+/home/Administrator/sevenwonders/src/cards/BlueCard.cpp
 ../../include/cards/BlueCard.h
-/Users/nath/sevenwonders/include/cards/BlueCard.h
+/home/Administrator/sevenwonders/include/cards/BlueCard.h
 string
 -
 
-/Users/nath/sevenwonders/src/cards/Card.cpp
+/home/Administrator/sevenwonders/src/cards/Card.cpp
 ../../include/cards/Card.h
-/Users/nath/sevenwonders/include/cards/Card.h
+/home/Administrator/sevenwonders/include/cards/Card.h
 ../../include/cards/ResourceCard.h
-/Users/nath/sevenwonders/include/cards/ResourceCard.h
+/home/Administrator/sevenwonders/include/cards/ResourceCard.h
 
-/Users/nath/sevenwonders/src/cards/EconomyCard.cpp
+/home/Administrator/sevenwonders/src/cards/EconomyCard.cpp
 ../../include/cards/EconomyCard.h
-/Users/nath/sevenwonders/include/cards/EconomyCard.h
+/home/Administrator/sevenwonders/include/cards/EconomyCard.h
 string
 -
 
-/Users/nath/sevenwonders/src/cards/GuildCard.cpp
+/home/Administrator/sevenwonders/src/cards/GuildCard.cpp
 ../../include/cards/GuildCard.h
-/Users/nath/sevenwonders/include/cards/GuildCard.h
+/home/Administrator/sevenwonders/include/cards/GuildCard.h
 string
 -
 
-/Users/nath/sevenwonders/src/cards/MilitaryCard.cpp
+/home/Administrator/sevenwonders/src/cards/MilitaryCard.cpp
 ../../include/cards/MilitaryCard.h
-/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+/home/Administrator/sevenwonders/include/cards/MilitaryCard.h
 string
 -
 
-/Users/nath/sevenwonders/src/cards/ResourceCard.cpp
+/home/Administrator/sevenwonders/src/cards/ResourceCard.cpp
 ../../include/cards/ResourceCard.h
-/Users/nath/sevenwonders/include/cards/ResourceCard.h
+/home/Administrator/sevenwonders/include/cards/ResourceCard.h
 string
 -
 iostream
 -
 
-/Users/nath/sevenwonders/src/cards/ScienceCard.cpp
+/home/Administrator/sevenwonders/src/cards/ScienceCard.cpp
 ../../include/cards/ScienceCard.h
-/Users/nath/sevenwonders/include/cards/ScienceCard.h
+/home/Administrator/sevenwonders/include/cards/ScienceCard.h
 string
 -
 
-/Users/nath/sevenwonders/src/components/Military.cpp
+/home/Administrator/sevenwonders/src/components/Military.cpp
 ../../include/components/Military.h
-/Users/nath/sevenwonders/include/components/Military.h
+/home/Administrator/sevenwonders/include/components/Military.h
 
-/Users/nath/sevenwonders/src/components/Resource.cpp
+/home/Administrator/sevenwonders/src/components/Resource.cpp
 ../../include/components/Resource.h
-/Users/nath/sevenwonders/include/components/Resource.h
+/home/Administrator/sevenwonders/include/components/Resource.h
 iostream
 -
 
-/Users/nath/sevenwonders/src/components/Science.cpp
+/home/Administrator/sevenwonders/src/components/Science.cpp
 ../../include/components/Science.h
-/Users/nath/sevenwonders/include/components/Science.h
+/home/Administrator/sevenwonders/include/components/Science.h
 math.h
 -
 string
 -
 
-/Users/nath/sevenwonders/src/components/Wonder.cpp
+/home/Administrator/sevenwonders/src/components/Wonder.cpp
 ../../include/components/Wonder.h
-/Users/nath/sevenwonders/include/components/Wonder.h
+/home/Administrator/sevenwonders/include/components/Wonder.h
 
-/Users/nath/sevenwonders/src/game/ArgProcessor.cpp
+/home/Administrator/sevenwonders/src/game/ArgProcessor.cpp
 ../../include/game/ArgProcessor.h
-/Users/nath/sevenwonders/include/game/ArgProcessor.h
+/home/Administrator/sevenwonders/include/game/ArgProcessor.h
 iostream
 -
 string
 -
 
-/Users/nath/sevenwonders/src/game/Deck.cpp
+/home/Administrator/sevenwonders/src/game/Deck.cpp
 ../../include/game/Deck.h
-/Users/nath/sevenwonders/include/game/Deck.h
+/home/Administrator/sevenwonders/include/game/Deck.h
 iostream
 -
 
-/Users/nath/sevenwonders/src/game/Game.cpp
+/home/Administrator/sevenwonders/src/game/Game.cpp
 ../../include/game/Game.h
-/Users/nath/sevenwonders/include/game/Game.h
+/home/Administrator/sevenwonders/include/game/Game.h
 ../../include/cards/BlueCard.h
-/Users/nath/sevenwonders/include/cards/BlueCard.h
+/home/Administrator/sevenwonders/include/cards/BlueCard.h
 ../../include/cards/MilitaryCard.h
-/Users/nath/sevenwonders/include/cards/MilitaryCard.h
+/home/Administrator/sevenwonders/include/cards/MilitaryCard.h
 ../../include/cards/ResourceCard.h
-/Users/nath/sevenwonders/include/cards/ResourceCard.h
+/home/Administrator/sevenwonders/include/cards/ResourceCard.h
 ../../include/cards/ScienceCard.h
-/Users/nath/sevenwonders/include/cards/ScienceCard.h
+/home/Administrator/sevenwonders/include/cards/ScienceCard.h
 ../../include/cards/GuildCard.h
-/Users/nath/sevenwonders/include/cards/GuildCard.h
+/home/Administrator/sevenwonders/include/cards/GuildCard.h
 ../../include/Constants.h
-/Users/nath/sevenwonders/include/Constants.h
+/home/Administrator/sevenwonders/include/Constants.h
 iostream
 -
 string
 -
 
-/Users/nath/sevenwonders/src/game/Player.cpp
+/home/Administrator/sevenwonders/src/game/Player.cpp
 ../../include/game/Player.h
-/Users/nath/sevenwonders/include/game/Player.h
+/home/Administrator/sevenwonders/include/game/Player.h
 iostream
 -
 
-/Users/nath/sevenwonders/src/main.cpp
+/home/Administrator/sevenwonders/src/main.cpp
 ../include/game/ArgProcessor.h
-/Users/nath/sevenwonders/include/game/ArgProcessor.h
+/home/Administrator/sevenwonders/include/game/ArgProcessor.h
 ../include/game/Game.h
-/Users/nath/sevenwonders/include/game/Game.h
+/home/Administrator/sevenwonders/include/game/Game.h
 iostream
 -
 

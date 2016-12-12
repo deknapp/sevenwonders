@@ -8,13 +8,14 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 Player::~Player() {}
 
 bool Player::canAffordNextWonder() {
-	// TODO 
-
-	return false;
+	return canAfford(wonder.getCost(numWondersPlayed));
 }
 
 void Player::playWonder(std::string side) {
 
+
+	if (!canAffordNexWonder()) 
+		return 0;
 
 	numWondersPlayed += 1;
 
@@ -149,6 +150,8 @@ void Player::playWonder(std::string side) {
 			}
 		}
 	}
+
+	return 1;
 }
 
 void Player::addRandomCardToHand(std::shared_ptr<Deck> deck, int age) {
@@ -489,6 +492,8 @@ void Player::play(std::string strategy) {
 		success = playFight();
 	else if (strategy == "guild")
 		success = playGuilds();
+	else if (strategy == playWonder())
+		success = playWonder();
 
 	if (success == 0)
 		playRandomCard(0);
@@ -499,11 +504,13 @@ std::shared_ptr<Resource> Player::getResource() {
 }
 
 void Player::playTurn(int round) {
-	if (round == 0)
+	if (round == 0) {
+		resource = resource->addTo(wonder->getFreeResource());
 		play(strategies.at(round));
-	if (round == 1)
+	}
+	else if (round == 1)
 		play(strategies.at(round));
-	if (round == 2)
+	else if (round == 2)
 		play(strategies.at(round));
 }
 
@@ -611,17 +618,69 @@ int Player::componentCost(int gold, int cost, int i) {
 	}
 }
 
+// returns -1 if component is unaffordable, returns the cost otherwise
+int Player::componentCost(std::string side, int gold, int cost, int i) {
+
+	int wild = 0;
+	if (i > 3)
+		wild = std::max(resource->silverWild, 0);
+	else
+		wild = std::max(resource->brownWild, 0);
+	int numberToBuy = cost - resource->at(i);
+	if (numberToBuy <= 0)
+		return 0;
+	else if (numberToBuy <= wild) {
+		wild = numberToBuy;
+		if (i > 3)
+			resource->brownWild -= wild;
+		else
+			resource->silverWild -= wild;
+		return 0;
+	}
+
+	numberToBuy = cost - resource->at(i) - wild;
+	if (numberToBuy <= 0) {
+		return 0;
+	}
+
+	int leftNeighborHas = leftNeighbor->resource->at(i);
+	int rightNeighborHas = rightNeighbor->resource->at(i);
+
+	// GET TRADING COST
+	if (i > 3)
+		cost = numberToBuy*silverCost;
+
+	else if (side == "left")
+		cost = numberToBuy*leftCost;
+
+	else if (side == "right")
+		cost = numberToBuy*rightCost;
+
+
+	if (i > 3)
+		resource->brownWild -= wild;
+	else
+		resource->silverWild -= wild;
+
+	return cost;
+}
+
 void Player::buy(std::shared_ptr<Resource> resourceCost) {
 
 	if (chainCards.count(name))
 		return;
 
 	int cost = 0;
+	int leftCompCost = 0;
+	int rightCompCost = 0;
 	for (int i=0; i < 7; i++) {
 		if (cost > 0)
 			std::cout << "TRADED " << std::endl;
-		cost = componentCost(resource->gold, resourceCost->at(i), i);
-		resource->gold -= cost;
+		leftCompCost = componentCost("left", resource->gold, resourceCost->at(i), i);
+		rightCompCost = componentCost("right", resource->gold, resourceCost->at(i) - leftCompCost/leftCost, i);
+		leftNeighbor->resource->gold += leftCompCost;
+		rightNeighbor->resource->gold += rightCompCost;
+		resource->gold -= leftCost + rightCost;
 	}
 }
 

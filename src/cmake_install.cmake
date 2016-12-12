@@ -1,4 +1,4 @@
-# Install script for directory: /Users/nath/sevenwonders/src
+# Install script for directory: /home/Administrator/sevenwonders/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
