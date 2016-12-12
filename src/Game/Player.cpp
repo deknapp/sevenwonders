@@ -651,23 +651,38 @@ int Player::componentCost(std::string side, int gold, int cost, int i) {
 	int leftNeighborHas = leftNeighbor->resource->at(i);
 	int rightNeighborHas = rightNeighbor->resource->at(i);
 
+	
+	if (numberToBuy > leftNeighborHas + rightNeighborHas + wild)
+			return -1;
+
+	int numberFromLeft = 0;
+	int numberFromRight = 0;
+
 	// GET TRADING COST
-	if (i > 3)
-		cost = numberToBuy*silverCost;
+	if (i > 3) {
+		numberFromRight = std::min(numberToBuy, leftNeighborHas);
+		numberFromLeft = numberToBuy - numberFromRight;
+	}
 
-	else if (side == "left")
-		cost = numberToBuy*leftCost;
+	if ((leftCost == 2) && (rightCost == 2)) {
+		numberFromLeft = std::min(numberToBuy, leftNeighborHas);
+		numberFromRight = numberToBuy - numberFromLeft;
+	}
 
-	else if (side == "right")
-		cost = numberToBuy*rightCost;
+	else if (leftCost == 1) {
+		numberFromLeft = std::min(numberToBuy, leftNeighborHas);
+		numberFromRight = numberToBuy - numberFromLeft;
+	}
 
+	else if (rightCost == 1) {
+		numberFromRight = std::min(numberToBuy, rightNeighborHas);
+		numberFromLeft = numberToBuy - numberFromRight;
+	}
 
-	if (i > 3)
-		resource->brownWild -= wild;
-	else
-		resource->silverWild -= wild;
-
-	return cost;
+	if (side == "left")
+		return leftCost*numberFromLeft;
+	if (side == "right")
+		return rightCost*numberFromRight;
 }
 
 void Player::buy(std::shared_ptr<Resource> resourceCost) {
@@ -678,6 +693,7 @@ void Player::buy(std::shared_ptr<Resource> resourceCost) {
 	int cost = 0;
 	int leftCompCost = 0;
 	int rightCompCost = 0;
+
 	for (int i=0; i < 7; i++) {
 		if (cost > 0)
 			std::cout << "TRADED " << std::endl;
@@ -685,7 +701,8 @@ void Player::buy(std::shared_ptr<Resource> resourceCost) {
 		rightCompCost = componentCost("right", resource->gold, resourceCost->at(i) - leftCompCost/leftCost, i);
 		leftNeighbor->resource->gold += leftCompCost;
 		rightNeighbor->resource->gold += rightCompCost;
-		resource->gold -= leftCost + rightCost;
+		cost = componentCost(resource->gold, resourceCost->at(i), i);
+		resource->gold -= cost;
 	}
 }
 
