@@ -4,8 +4,13 @@
 Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), 
 						   resource(std::shared_ptr<Resource>(new Resource())), 
 						   leftCost(2),
-						   rightCost(2) {}
+						   rightCost(2),
+						   silverCost(2) {}
 Player::~Player() {}
+
+void Player::setWonder(std::shared_ptr<Wonder> dealtWonder) {
+	wonder = dealtWonder;
+}
 
 bool Player::canAffordNextWonder() {
 	return canAfford(wonder->getCost(numWondersPlayed));

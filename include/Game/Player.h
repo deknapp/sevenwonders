@@ -44,6 +44,10 @@ class Player {
 
 	void getAvailableResources();
 	std::shared_ptr<Resource> getResource();
+
+
+	void setWonder(std::shared_ptr<Wonder> dealtWonder);
+	
 	int numMilitaryCardsPlayed;
 	int numScienceCardsPlayed;
 	int numGuildCardsPlayed;
@@ -53,8 +57,6 @@ class Player {
 	int numSilverCardsPlayed;
 	int numWondersPlayed;
 	int numMinusOnes;
-
-	 std::shared_ptr<Wonder> wonder;
 
  private:
 
@@ -79,6 +81,7 @@ class Player {
  	int componentCost(int gold, int cost, int i);
  	int componentCost(std::string side, int gold, int cost, int i);
 
+
  	std::set<std::string> playedCards;
  	std::set<std::string> playedEconomyCards;
  	std::set<std::string> playedGuilds;
@@ -95,6 +98,7 @@ class Player {
  	Science science;
  	Military military;
  	std::shared_ptr<Resource> resource;
+ 	std::shared_ptr<Wonder> wonder;
 
  	int bluePoints;
  	int guildPoints;

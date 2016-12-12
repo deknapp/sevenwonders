@@ -48,13 +48,10 @@ void Game::dealWonders() {
 	// TODO: make this random
 	int i = 0;
 	for (const auto& player: players) {
-		player->wonder = wonders.at(i);
+		player->setWonder(wonders.at(i));
 		i += 1;
 	}
 }
-
-
-
 
 void Game::getResourceCards() {
 
@@ -498,6 +495,8 @@ void Game::play() {
 
 	initPlayers();
 	getDeck();
+	getWonders();
+	dealWonders();
 
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
