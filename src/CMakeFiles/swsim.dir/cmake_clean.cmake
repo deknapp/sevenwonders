@@ -16,8 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/swsim.dir/game/Game.cpp.o"
   "CMakeFiles/swsim.dir/game/Player.cpp.o"
   "swsim.pdb"
-  "swsim.exe"
-  "libswsim.dll.a"
+  "swsim"
 )
 
 # Per-language clean rules from dependency scanning.

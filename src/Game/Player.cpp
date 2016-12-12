@@ -8,13 +8,13 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 Player::~Player() {}
 
 bool Player::canAffordNextWonder() {
-	return canAfford(wonder.getCost(numWondersPlayed));
+	return canAfford(wonder->getCost(numWondersPlayed));
 }
 
-void Player::playWonder(std::string side) {
+int Player::playWonder(std::string side) {
 
 
-	if (!canAffordNexWonder()) 
+	if (!canAffordNextWonder()) 
 		return 0;
 
 	numWondersPlayed += 1;
@@ -492,8 +492,8 @@ void Player::play(std::string strategy) {
 		success = playFight();
 	else if (strategy == "guild")
 		success = playGuilds();
-	else if (strategy == playWonder())
-		success = playWonder();
+	else if (strategy == "wonder")
+		success = playWonder("A");
 
 	if (success == 0)
 		playRandomCard(0);

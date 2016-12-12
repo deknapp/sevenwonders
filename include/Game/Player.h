@@ -77,6 +77,7 @@ class Player {
  	bool canAfford(std::shared_ptr<Resource> resourceCost);
  	bool canPlay(std::string name, std::shared_ptr<Resource> resourceCost);
  	int componentCost(int gold, int cost, int i);
+ 	int componentCost(std::string side, int gold, int cost, int i);
 
  	std::set<std::string> playedCards;
  	std::set<std::string> playedEconomyCards;
@@ -106,7 +107,7 @@ class Player {
 
  	bool playTwoLastRound;
  	bool canAffordNextWonder();
- 	void playWonder(std::string side);
+ 	int playWonder(std::string side);
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);
