@@ -63,7 +63,9 @@ class Player {
  	void play(std::string type);
  	void playRandomCard(int depth);
  	int playGreedy();
+ 	void playNeighborGuildCard();
 
+ 	void playDistribution();
  	int playEconomyCard();
  	int playMilitaryCard();
  	int playScienceCard();

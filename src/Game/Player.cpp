@@ -16,6 +16,28 @@ bool Player::canAffordNextWonder() {
 	return canAfford(wonder->getCost(numWondersPlayed));
 }
 
+void Player::playDistribution() {
+	// TODO: implement strategy to choose a card based on probablity P
+}
+
+void Player::playNeighborGuildCard() {
+
+	std::shared_ptr<GuildCard> card = nullptr;
+	std::shared_ptr<GuildCard> leftGuildCard = leftNeighbor->hand->getGuildCard();
+	std::shared_ptr<GuildCard> rightGuildCard = rightNeighbor->hand->getGuildCard();
+
+	if (leftGuildCard)
+		card = leftGuildCard;
+	else if (rightGuildCard)
+		card = rightGuildCard;
+
+	if (card) {
+		std::cout << "playing neighbor GuildCard " << card->getName() << std::endl;
+		playedCards.insert(card->getName());
+		playedGuilds.insert(card->getName());
+	}
+}
+
 int Player::playWonder(std::string side) {
 
 
@@ -37,8 +59,8 @@ int Player::playWonder(std::string side) {
 			if (wonder->getName() == "GizahA") 
 				wonderPoints += 5;
 
-			//else if (wonder->getName() == "OlympiaA") 
-					// TODO
+			else if (wonder->getName() == "OlympiaA") 
+					playTwoLastRound = true;
 
 			else if (wonder->getName() == "EphesosA") 
 				resource->gold += 9;
@@ -52,8 +74,8 @@ int Player::playWonder(std::string side) {
 			else if (wonder->getName() == "RhodosA") 
 				military.strength += 2;
 
-			// else if (wonder->getName() == "HalikarnassosA") 
-					// TODO
+			else if (wonder->getName() == "HalikarnassosA") 
+				playTwoLastRound = true;
 		}
 	}
 
@@ -70,9 +92,9 @@ int Player::playWonder(std::string side) {
 				wonderPoints += 5;
 			}
 
-			// TOOD
-			// else { play a guild card of a neighbor
-			//}
+			else {
+				playNeighborGuildCard();
+			}
 		}
 
 		if (wonder->getName() == "GizahB") {
