@@ -8,6 +8,10 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 						   silverCost(2) {}
 Player::~Player() {}
 
+std::vector<std::string> Player::getStrategies() {
+	return strategies;
+}
+
 void Player::setWonder(std::shared_ptr<Wonder> dealtWonder) {
 	wonder = dealtWonder;
 }

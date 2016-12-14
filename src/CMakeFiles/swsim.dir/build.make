@@ -441,6 +441,54 @@ src/CMakeFiles/swsim.dir/game/Player.cpp.o.provides: src/CMakeFiles/swsim.dir/ga
 src/CMakeFiles/swsim.dir/game/Player.cpp.o.provides.build: src/CMakeFiles/swsim.dir/game/Player.cpp.o
 
 
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: src/CMakeFiles/swsim.dir/flags.make
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: src/results/Results.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/swsim.dir/results/Results.cpp.o"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/results/Results.cpp.o -c /Users/nath/sevenwonders/src/results/Results.cpp
+
+src/CMakeFiles/swsim.dir/results/Results.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/swsim.dir/results/Results.cpp.i"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nath/sevenwonders/src/results/Results.cpp > CMakeFiles/swsim.dir/results/Results.cpp.i
+
+src/CMakeFiles/swsim.dir/results/Results.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/swsim.dir/results/Results.cpp.s"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nath/sevenwonders/src/results/Results.cpp -o CMakeFiles/swsim.dir/results/Results.cpp.s
+
+src/CMakeFiles/swsim.dir/results/Results.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/swsim.dir/results/Results.cpp.o.requires
+
+src/CMakeFiles/swsim.dir/results/Results.cpp.o.provides: src/CMakeFiles/swsim.dir/results/Results.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Results.cpp.o.provides.build
+.PHONY : src/CMakeFiles/swsim.dir/results/Results.cpp.o.provides
+
+src/CMakeFiles/swsim.dir/results/Results.cpp.o.provides.build: src/CMakeFiles/swsim.dir/results/Results.cpp.o
+
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: src/CMakeFiles/swsim.dir/flags.make
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: src/results/Score.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/swsim.dir/results/Score.cpp.o"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/swsim.dir/results/Score.cpp.o -c /Users/nath/sevenwonders/src/results/Score.cpp
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/swsim.dir/results/Score.cpp.i"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/nath/sevenwonders/src/results/Score.cpp > CMakeFiles/swsim.dir/results/Score.cpp.i
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/swsim.dir/results/Score.cpp.s"
+	cd /Users/nath/sevenwonders/src && /Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/nath/sevenwonders/src/results/Score.cpp -o CMakeFiles/swsim.dir/results/Score.cpp.s
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.o.requires:
+
+.PHONY : src/CMakeFiles/swsim.dir/results/Score.cpp.o.requires
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.o.provides: src/CMakeFiles/swsim.dir/results/Score.cpp.o.requires
+	$(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Score.cpp.o.provides.build
+.PHONY : src/CMakeFiles/swsim.dir/results/Score.cpp.o.provides
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.o.provides.build: src/CMakeFiles/swsim.dir/results/Score.cpp.o
+
+
 # Object files for target swsim
 swsim_OBJECTS = \
 "CMakeFiles/swsim.dir/main.cpp.o" \
@@ -458,7 +506,9 @@ swsim_OBJECTS = \
 "CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o" \
 "CMakeFiles/swsim.dir/game/Deck.cpp.o" \
 "CMakeFiles/swsim.dir/game/Game.cpp.o" \
-"CMakeFiles/swsim.dir/game/Player.cpp.o"
+"CMakeFiles/swsim.dir/game/Player.cpp.o" \
+"CMakeFiles/swsim.dir/results/Results.cpp.o" \
+"CMakeFiles/swsim.dir/results/Score.cpp.o"
 
 # External object files for target swsim
 swsim_EXTERNAL_OBJECTS =
@@ -479,9 +529,11 @@ src/swsim: src/CMakeFiles/swsim.dir/game/ArgProcessor.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/Deck.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/Game.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/game/Player.cpp.o
+src/swsim: src/CMakeFiles/swsim.dir/results/Results.cpp.o
+src/swsim: src/CMakeFiles/swsim.dir/results/Score.cpp.o
 src/swsim: src/CMakeFiles/swsim.dir/build.make
 src/swsim: src/CMakeFiles/swsim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable swsim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/nath/sevenwonders/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable swsim"
 	cd /Users/nath/sevenwonders/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/swsim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -505,6 +557,8 @@ src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/ArgProcessor.cp
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/Deck.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/Game.cpp.o.requires
 src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/game/Player.cpp.o.requires
+src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/results/Results.cpp.o.requires
+src/CMakeFiles/swsim.dir/requires: src/CMakeFiles/swsim.dir/results/Score.cpp.o.requires
 
 .PHONY : src/CMakeFiles/swsim.dir/requires
 

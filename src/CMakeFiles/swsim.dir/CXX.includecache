@@ -171,12 +171,18 @@ set
 /Users/nath/sevenwonders/include/game/Game.h
 vector
 -
+string
+-
+map
+-
 ArgProcessor.h
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 Player.h
 /Users/nath/sevenwonders/include/game/Player.h
 ../components/Wonder.h
 /Users/nath/sevenwonders/include/components/Wonder.h
+../results/Score.h
+/Users/nath/sevenwonders/include/results/Score.h
 
 /Users/nath/sevenwonders/include/game/Player.h
 vector
@@ -209,6 +215,22 @@ Deck.h
 /Users/nath/sevenwonders/include/components/Wonder.h
 ../Utility.h
 /Users/nath/sevenwonders/include/Utility.h
+
+/Users/nath/sevenwonders/include/results/Results.h
+vector
+-
+Score.h
+/Users/nath/sevenwonders/include/results/Score.h
+
+/Users/nath/sevenwonders/include/results/Score.h
+vector
+-
+string
+-
+map
+-
+../game/Player.h
+/Users/nath/sevenwonders/include/game/Player.h
 
 /Users/nath/sevenwonders/src/cards/BlueCard.cpp
 ../../include/cards/BlueCard.h
@@ -309,6 +331,8 @@ iostream
 -
 string
 -
+map
+-
 
 /Users/nath/sevenwonders/src/game/Player.cpp
 ../../include/game/Player.h
@@ -321,6 +345,22 @@ iostream
 /Users/nath/sevenwonders/include/game/ArgProcessor.h
 ../include/game/Game.h
 /Users/nath/sevenwonders/include/game/Game.h
+../include/results/Results.h
+/Users/nath/sevenwonders/include/results/Results.h
 iostream
+-
+
+/Users/nath/sevenwonders/src/results/Results.cpp
+../../include/results/Results.h
+/Users/nath/sevenwonders/include/results/Results.h
+
+/Users/nath/sevenwonders/src/results/Score.cpp
+../../include/results/Score.h
+/Users/nath/sevenwonders/include/results/Score.h
+map
+-
+string
+-
+vector
 -
 

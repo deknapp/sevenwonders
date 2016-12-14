@@ -10,8 +10,8 @@ class Results {
 
 	Results();
 	~Results();
-	add(Score score);
-	print();
+	void add(std::shared_ptr<Score> score);
+	void printJsonFile();
 
  private:
 

@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/swsim.dir/game/Deck.cpp.o"
   "CMakeFiles/swsim.dir/game/Game.cpp.o"
   "CMakeFiles/swsim.dir/game/Player.cpp.o"
+  "CMakeFiles/swsim.dir/results/Results.cpp.o"
+  "CMakeFiles/swsim.dir/results/Score.cpp.o"
   "swsim.pdb"
   "swsim"
 )

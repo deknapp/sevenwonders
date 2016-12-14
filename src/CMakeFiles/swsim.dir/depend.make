@@ -100,6 +100,7 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/ArgProcessor.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/Game.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/game/Player.h
+src/CMakeFiles/swsim.dir/game/Game.cpp.o: include/results/Score.h
 src/CMakeFiles/swsim.dir/game/Game.cpp.o: src/game/Game.cpp
 
 src/CMakeFiles/swsim.dir/game/Player.cpp.o: include/Utility.h
@@ -134,5 +135,42 @@ src/CMakeFiles/swsim.dir/main.cpp.o: include/game/ArgProcessor.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Game.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Player.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/results/Results.h
+src/CMakeFiles/swsim.dir/main.cpp.o: include/results/Score.h
 src/CMakeFiles/swsim.dir/main.cpp.o: src/main.cpp
+
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/Utility.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/BlueCard.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/GuildCard.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/MilitaryCard.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/ResourceCard.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/cards/ScienceCard.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/components/Military.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/components/Science.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/components/Wonder.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/game/Deck.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/game/Player.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/results/Results.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/results/Score.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: src/results/Results.cpp
+
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/Utility.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/BlueCard.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/Card.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/EconomyCard.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/GuildCard.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/MilitaryCard.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/ResourceCard.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/cards/ScienceCard.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/components/Military.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/components/Resource.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/components/Science.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/components/Wonder.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/game/Deck.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/game/Player.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/results/Score.h
+src/CMakeFiles/swsim.dir/results/Score.cpp.o: src/results/Score.cpp
 

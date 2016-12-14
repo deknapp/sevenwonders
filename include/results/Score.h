@@ -3,18 +3,23 @@
 
 #include <vector>
 #include <string>
+#include <map>
+#include "../game/Player.h"
 
 class Score {
 
  public:
 	Score();
 	~Score();
-	print();
+	void print();
+	void addPlayer(std::shared_ptr<Player> player);
+	std::map<std::vector<std::string>, int> getPlaces();
+	std::map<std::vector<std::string>, int> getScores();
 
  private:
 
- 	std::map<std::string, int> playerScores;
- 	std::map<std::string, int> playerPlaces;
+ 	std::map<int, std::vector<std::string> > orderedScores;
+  	std::map<std::vector<std::string>, int> scores;
 
  	// prevent generated functions --------------------------------------------
 	Score(const Score&);

@@ -101,6 +101,7 @@ src/CMakeFiles/swsim.dir/game/Game.cpp.o
  /Users/nath/sevenwonders/include/game/Deck.h
  /Users/nath/sevenwonders/include/game/Game.h
  /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/results/Score.h
  /Users/nath/sevenwonders/src/game/Game.cpp
 src/CMakeFiles/swsim.dir/game/Player.cpp.o
  /Users/nath/sevenwonders/include/Utility.h
@@ -135,4 +136,41 @@ src/CMakeFiles/swsim.dir/main.cpp.o
  /Users/nath/sevenwonders/include/game/Deck.h
  /Users/nath/sevenwonders/include/game/Game.h
  /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/results/Results.h
+ /Users/nath/sevenwonders/include/results/Score.h
  /Users/nath/sevenwonders/src/main.cpp
+src/CMakeFiles/swsim.dir/results/Results.cpp.o
+ /Users/nath/sevenwonders/include/Utility.h
+ /Users/nath/sevenwonders/include/cards/BlueCard.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/cards/EconomyCard.h
+ /Users/nath/sevenwonders/include/cards/GuildCard.h
+ /Users/nath/sevenwonders/include/cards/MilitaryCard.h
+ /Users/nath/sevenwonders/include/cards/ResourceCard.h
+ /Users/nath/sevenwonders/include/cards/ScienceCard.h
+ /Users/nath/sevenwonders/include/components/Military.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Science.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
+ /Users/nath/sevenwonders/include/game/Deck.h
+ /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/results/Results.h
+ /Users/nath/sevenwonders/include/results/Score.h
+ /Users/nath/sevenwonders/src/results/Results.cpp
+src/CMakeFiles/swsim.dir/results/Score.cpp.o
+ /Users/nath/sevenwonders/include/Utility.h
+ /Users/nath/sevenwonders/include/cards/BlueCard.h
+ /Users/nath/sevenwonders/include/cards/Card.h
+ /Users/nath/sevenwonders/include/cards/EconomyCard.h
+ /Users/nath/sevenwonders/include/cards/GuildCard.h
+ /Users/nath/sevenwonders/include/cards/MilitaryCard.h
+ /Users/nath/sevenwonders/include/cards/ResourceCard.h
+ /Users/nath/sevenwonders/include/cards/ScienceCard.h
+ /Users/nath/sevenwonders/include/components/Military.h
+ /Users/nath/sevenwonders/include/components/Resource.h
+ /Users/nath/sevenwonders/include/components/Science.h
+ /Users/nath/sevenwonders/include/components/Wonder.h
+ /Users/nath/sevenwonders/include/game/Deck.h
+ /Users/nath/sevenwonders/include/game/Player.h
+ /Users/nath/sevenwonders/include/results/Score.h
+ /Users/nath/sevenwonders/src/results/Score.cpp

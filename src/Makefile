@@ -557,6 +557,60 @@ main.cpp.s:
 	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+results/Results.o: results/Results.cpp.o
+
+.PHONY : results/Results.o
+
+# target to build an object file
+results/Results.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Results.cpp.o
+.PHONY : results/Results.cpp.o
+
+results/Results.i: results/Results.cpp.i
+
+.PHONY : results/Results.i
+
+# target to preprocess a source file
+results/Results.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Results.cpp.i
+.PHONY : results/Results.cpp.i
+
+results/Results.s: results/Results.cpp.s
+
+.PHONY : results/Results.s
+
+# target to generate assembly for a file
+results/Results.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Results.cpp.s
+.PHONY : results/Results.cpp.s
+
+results/Score.o: results/Score.cpp.o
+
+.PHONY : results/Score.o
+
+# target to build an object file
+results/Score.cpp.o:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Score.cpp.o
+.PHONY : results/Score.cpp.o
+
+results/Score.i: results/Score.cpp.i
+
+.PHONY : results/Score.i
+
+# target to preprocess a source file
+results/Score.cpp.i:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Score.cpp.i
+.PHONY : results/Score.cpp.i
+
+results/Score.s: results/Score.cpp.s
+
+.PHONY : results/Score.s
+
+# target to generate assembly for a file
+results/Score.cpp.s:
+	cd /Users/nath/sevenwonders && $(MAKE) -f src/CMakeFiles/swsim.dir/build.make src/CMakeFiles/swsim.dir/results/Score.cpp.s
+.PHONY : results/Score.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -614,6 +668,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... results/Results.o"
+	@echo "... results/Results.i"
+	@echo "... results/Results.s"
+	@echo "... results/Score.o"
+	@echo "... results/Score.i"
+	@echo "... results/Score.s"
 .PHONY : help
 
 

@@ -22,4 +22,8 @@ set(SRC_LIST ${SRC_LIST}
     game/Game.cpp
     game/Player.cpp)
 
+set(SRC_LIST ${SRC_LIST}
+    results/Results.cpp
+    results/Score.cpp)
+
 add_executable(swsim ${SRC_LIST})

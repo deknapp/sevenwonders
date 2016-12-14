@@ -2,9 +2,12 @@
 #define Game_H
 
 #include <vector>
+#include <string>
+#include <map>
 #include "ArgProcessor.h"
 #include "Player.h"
 #include "../components/Wonder.h"
+#include "../results/Score.h"
 
 class Game {
 
@@ -16,12 +19,12 @@ class Game {
 	Game(std::shared_ptr<ArgProcessor> args_pointer);
 	~Game();
 
-	void play();
+	std::shared_ptr<Score> play();
 	void setup();
-	void score();
 
  private:
 
+ 	void printScore();
  	void dealRound(int rund);
  	void getWonderCards();
  	void getBlueCards();

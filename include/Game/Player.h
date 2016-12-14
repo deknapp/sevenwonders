@@ -45,6 +45,7 @@ class Player {
 	void getAvailableResources();
 	std::shared_ptr<Resource> getResource();
 
+	std::vector<std::string> getStrategies();
 
 	void setWonder(std::shared_ptr<Wonder> dealtWonder);
 	

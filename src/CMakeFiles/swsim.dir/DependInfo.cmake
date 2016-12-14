@@ -20,6 +20,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/nath/sevenwonders/src/game/Game.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/Game.cpp.o"
   "/Users/nath/sevenwonders/src/game/Player.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/game/Player.cpp.o"
   "/Users/nath/sevenwonders/src/main.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/main.cpp.o"
+  "/Users/nath/sevenwonders/src/results/Results.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/results/Results.cpp.o"
+  "/Users/nath/sevenwonders/src/results/Score.cpp" "/Users/nath/sevenwonders/src/CMakeFiles/swsim.dir/results/Score.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include <map>
 
 
 Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {
@@ -480,7 +481,7 @@ void Game::initPlayers() {
 		players.at(i)->initStrategies(args->strategiesForPlayer(i));
 }
 
-void Game::score() {
+void Game::printScore() {
 
 	int i = 0;
 	for (const auto& it: players) {
@@ -491,12 +492,13 @@ void Game::score() {
 	}
 }
 
-void Game::play() {
+std::shared_ptr<Score> Game::play() {
 
 	initPlayers();
 	getDeck();
 	getWonders();
 	dealWonders();
+	std::shared_ptr<Score> score(new Score());
 
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
@@ -518,7 +520,13 @@ void Game::play() {
 		std::cout << "=====================================" << std::endl;
 	}
 
-	score();
+	for (const auto& it: players) {
+		score->addPlayer(it);
+	}
+
+	printScore();
+
+	return score;
 }
 
 
