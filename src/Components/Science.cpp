@@ -3,13 +3,13 @@
 #include <string>
 
 
-Science::Science() {}
+Science::Science() : wild(0), wheels(0), abacus(0), tablet(0) {}
 Science::~Science() {}
 
-int Science::score() {
+unsigned int Science::score() {
 
-	int sum = 0;
-	int min_ct = std::min(wheels, std::min(abacus, tablet));
+	unsigned int sum = 0;
+	unsigned int min_ct = std::min(wheels, std::min(abacus, tablet));
 	min_ct += wild;
 
 	sum += pow(wheels, 2.0);

@@ -8,16 +8,15 @@ class Science {
  public:
 	Science();
 	~Science();
-	int score();
+	unsigned int score();
 	void addCard(std::string type);
-	int wild;
+	unsigned int wild;
 
  private:
 
- 	int wheels;
- 	int abacus;
- 	int tablet;
-
+ 	unsigned int wheels;
+ 	unsigned int abacus;
+ 	unsigned int tablet;
 
  	// prevent generated functions --------------------------------------------
 	Science(const Science&);

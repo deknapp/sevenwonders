@@ -9,10 +9,10 @@ class Military {
 	Military();
 	~Military();
 	int getScore();
-	int getStrength();
+	unsigned int getStrength();
 	void addPoints(int newPoints);
 	void addStrength(int strength);
-	int strength;
+	unsigned int strength;
 
  private:
 

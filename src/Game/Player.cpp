@@ -3,9 +3,28 @@
 
 Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), 
 						   resource(std::shared_ptr<Resource>(new Resource())), 
-						   leftCost(2),
-						   rightCost(2),
-						   silverCost(2) {}
+						 
+							numMilitaryCardsPlayed(0),
+							numScienceCardsPlayed(0),
+							numGuildCardsPlayed(0),
+							numEconomyCardsPlayed(0),
+							numBlueCardsPlayed(0),
+							numBrownCardsPlayed(0),
+							numSilverCardsPlayed(0),
+							numWondersPlayed(0),
+							numMinusOnes(0),
+
+ 							bluePoints(0),
+ 					    	guildPoints(0),
+ 							economyPoints(0),
+ 							wonderPoints(0),
+
+							leftCost(2),
+						   	rightCost(2),
+						   	silverCost(2)
+
+
+						    {}
 Player::~Player() {}
 
 std::vector<std::string> Player::getStrategies() {

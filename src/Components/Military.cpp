@@ -1,6 +1,6 @@
 #include "../../include/components/Military.h"
 
-Military::Military() : score(0), strength(0) {}
+Military::Military() : strength(0), score(0) {}
 
 Military::~Military() {}
 
@@ -9,7 +9,7 @@ int Military::getScore() {
 	return score;
 }
 
-int Military::getStrength() {
+unsigned int Military::getStrength() {
 
 	return strength;
 }
