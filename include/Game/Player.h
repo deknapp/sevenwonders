@@ -84,6 +84,13 @@ class Player {
  	int componentCost(int gold, int cost, int i);
  	int componentCost(std::string side, int gold, int cost, int i);
 
+ 	void assignValue();
+
+	// get the value of a card
+	void getValue();
+
+	// sort cards by value 
+	void sortByValue();
 
  	std::set<std::string> playedCards;
  	std::set<std::string> playedEconomyCards;
@@ -92,6 +99,7 @@ class Player {
 
  	std::string name;
  	std::shared_ptr<Deck> hand;
+ 	std::shared_ptr<Deck> affordableHand;
  	
  	std::shared_ptr<Player> leftNeighbor;
  	std::shared_ptr<Player> rightNeighbor;

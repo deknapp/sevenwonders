@@ -88,6 +88,37 @@ void Deck::addResourceCard(std::shared_ptr<ResourceCard> card) {
 		resourceCards.push_back(card);
 }
 
+std::vector<std::shared_ptr<BlueCard> > Deck::getBlueCards() {
+
+	return blueCards;
+}
+
+std::vector<std::shared_ptr<MilitaryCard> > Deck::getMilitaryCards() {
+
+	return militaryCards;
+}
+
+std::vector<std::shared_ptr<ScienceCard> > Deck::getScienceCards() {
+
+	return scienceCards;
+}
+
+std::vector<std::shared_ptr<ResourceCard> > Deck::getResourceCards() {
+
+	return resourceCards;
+}
+
+std::vector<std::shared_ptr<GuildCard> > Deck::getGuildCards() {
+
+	return guildCards;
+}
+
+
+std::vector<std::shared_ptr<EconomyCard> > Deck::getEconomyCards() {
+
+	return economyCards;
+}
+
 std::shared_ptr<BlueCard> Deck::getBlueCard() {
 
 	if (blueCards.size() == 0) {

@@ -30,6 +30,14 @@ class Deck {
  	void addGuildCard(std::shared_ptr<GuildCard> card);
  	void addEconomyCard(std::shared_ptr<EconomyCard> card);
 
+ 	std::vector<std::shared_ptr<BlueCard> > getBlueCards();
+ 	std::vector<std::shared_ptr<MilitaryCard> > getMilitaryCards();
+ 	std::vector<std::shared_ptr<ResourceCard> > getResourceCards();
+ 	std::vector<std::shared_ptr<ScienceCard> > getScienceCards();
+ 	std::vector<std::shared_ptr<GuildCard> > getGuildCards();
+ 	std::vector<std::shared_ptr<EconomyCard> > getEconomyCards();
+
+
  	std::shared_ptr<BlueCard> getBlueCard();
  	std::shared_ptr<MilitaryCard> getMilitaryCard();
  	std::shared_ptr<ScienceCard> getScienceCard();

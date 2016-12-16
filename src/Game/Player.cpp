@@ -2,7 +2,9 @@
 #include <iostream>
 #define PRINT 0
 
-Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), 
+Player::Player(int name) : name(std::to_string(name)),
+						   hand(std::shared_ptr<Deck>(new Deck())), 
+						   affordableHand(std::shared_ptr<Deck>(new Deck())),
 						   resource(std::shared_ptr<Resource>(new Resource())), 
 						 
 							numMilitaryCardsPlayed(0),
@@ -22,14 +24,65 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 
 							leftCost(2),
 						   	rightCost(2),
-						   	silverCost(2)
-
-
-						    {}
+						   	silverCost(2) {}
 Player::~Player() {}
 
 std::string Player::getStrategy() {
 	return strategy;
+}
+
+// assign values to affordable cards based on the player's strategy
+void Player::assignValue() {
+
+	// TODO
+}
+
+// get the value of a card
+void Player::getValue() {
+
+	// TODO
+
+}
+
+// sort cards by value 
+void Player::sortByValue() {
+
+	// TODO
+
+}
+
+void Player::getAffordableCards() {
+
+	for (auto const& it: hand->getBlueCards()) {
+		if (canAfford(it->getResourceCost()))
+			affordableHand->addBlueCard(it);
+	}
+
+	for (auto const& it: hand->getEconomyCards()) {
+		if (canAfford(it->getResourceCost()))
+			affordableHand->addEconomyCard(it);
+	}
+
+	for (auto const& it: hand->getGuildCards()) {
+		if (canAfford(it->getResourceCost()))
+			affordableHand->addGuildCard(it);
+	}
+
+	for (auto const& it: hand->getResourceCards()) {
+		if (canAfford(it->getResourceCost()))
+			affordableHand->addResourceCard(it);
+	}
+	
+	for (auto const& it: hand->getMilitaryCards()) {
+		if (canAfford(it->getResourceCost()))
+			affordableHand->addMilitaryCard(it);
+	}
+
+	for (auto const& it: hand->getScienceCards()) {
+		if (canAfford(it->getResourceCost()))
+			affordableHand->addScienceCard(it);
+	}
+
 }
 
 void Player::setWonder(std::shared_ptr<Wonder> dealtWonder) {
@@ -559,6 +612,9 @@ std::shared_ptr<Resource> Player::getResource() {
 }
 
 void Player::playTurn(int round) {
+
+	getAffordableCards();
+
 	if (round == 0) {
 		resource = resource->addTo(wonder->getFreeResource());
 		play();
