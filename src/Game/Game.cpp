@@ -478,7 +478,7 @@ void Game::initPlayers() {
 	}
 
 	for (int i = 0; i < players.size(); i ++) 
-		players.at(i)->initStrategies(args->strategiesForPlayer(i));
+		players.at(i)->setStrategy(args->strategyForPlayer(i));
 }
 
 void Game::printScore() {
@@ -486,6 +486,7 @@ void Game::printScore() {
 	int i = 0;
 	for (const auto& it: players) {
 
+		std::cout << "==============================" << std::endl;
 		std::cout << "Player " << i << std::endl;
 		it->printScore();
 		i++;
@@ -508,8 +509,16 @@ std::shared_ptr<Score> Game::play() {
 		dealRound(rund);
 
 		for (int turn = 0; turn < NUM_CARDS - 1; turn++) {
+
+			std::cout << "=====================================" << std::endl;
+			std::cout << "TURN " << turn << std::endl << std::endl;
+			int i = 0;
 			for (const auto& it: players) {
+
+				std::cout << "PLAYER " << i << std::endl;
 				it->playTurn(rund);
+				i++;
+				std::cout << std::endl;
 			}
 		}
 

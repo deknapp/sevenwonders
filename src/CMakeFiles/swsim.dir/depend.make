@@ -137,6 +137,22 @@ src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Game.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/game/Player.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/results/Results.h
 src/CMakeFiles/swsim.dir/main.cpp.o: include/results/Score.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/allocators.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/encodings.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/diyfp.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/dtoa.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/ieee754.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/itoa.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/stack.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/strfunc.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/internal/swap.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/msinttypes/inttypes.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/msinttypes/stdint.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/prettywriter.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/rapidjson.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/stream.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/stringbuffer.h
+src/CMakeFiles/swsim.dir/main.cpp.o: rapidjson/include/rapidjson/writer.h
 src/CMakeFiles/swsim.dir/main.cpp.o: src/main.cpp
 
 src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/Utility.h
@@ -155,6 +171,22 @@ src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/game/Deck.h
 src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/game/Player.h
 src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/results/Results.h
 src/CMakeFiles/swsim.dir/results/Results.cpp.o: include/results/Score.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/allocators.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/encodings.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/diyfp.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/dtoa.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/ieee754.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/itoa.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/stack.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/strfunc.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/internal/swap.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/msinttypes/inttypes.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/msinttypes/stdint.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/prettywriter.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/rapidjson.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/stream.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/stringbuffer.h
+src/CMakeFiles/swsim.dir/results/Results.cpp.o: rapidjson/include/rapidjson/writer.h
 src/CMakeFiles/swsim.dir/results/Results.cpp.o: src/results/Results.cpp
 
 src/CMakeFiles/swsim.dir/results/Score.cpp.o: include/Utility.h

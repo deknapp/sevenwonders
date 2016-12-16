@@ -27,8 +27,8 @@ Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck
 						    {}
 Player::~Player() {}
 
-std::vector<std::string> Player::getStrategies() {
-	return strategies;
+std::string Player::getStrategy() {
+	return strategy;
 }
 
 void Player::setWonder(std::shared_ptr<Wonder> dealtWonder) {
@@ -248,16 +248,12 @@ int Player::score() {
 
 void Player::print() {
 
-	std::cout << "Strategies are ";;
-	for (const auto& strategy:strategies) {
-		std::cout << strategy << " ";
-	}
-	std::cout << std::endl;
-
+	std::cout << "Strategy is " << strategy << std::endl;
 	resource->print();
 }
 
 void Player::printScore() {
+	
 	print();
 	int sum = score();
 	std::cout << "TOTAL IS " << sum << std::endl;
@@ -276,8 +272,8 @@ void Player::discard() {
 	std::cout << "DISCARDED" << std::endl;
 }
 
-void Player::initStrategies(std::vector<std::string> _strategies) {
-	strategies = _strategies;
+void Player::setStrategy(std::string _strategy) {
+	strategy = _strategy;
 }
 
 int Player::playResourceCard() {
@@ -519,7 +515,7 @@ void Player::playRandomCard(int recursion_depth) {
 		playRandomCard(recursion_depth + 1);
 }
 
-void Player::play(std::string strategy) {
+void Player::play() {
 
 	int success = 0;
 
@@ -556,12 +552,12 @@ std::shared_ptr<Resource> Player::getResource() {
 void Player::playTurn(int round) {
 	if (round == 0) {
 		resource = resource->addTo(wonder->getFreeResource());
-		play(strategies.at(round));
+		play();
 	}
 	else if (round == 1)
-		play(strategies.at(round));
+		play();
 	else if (round == 2)
-		play(strategies.at(round));
+		play();
 }
 
 void Player::endRound(int round) {

@@ -138,6 +138,22 @@ src/CMakeFiles/swsim.dir/main.cpp.o
  /Users/nath/sevenwonders/include/game/Player.h
  /Users/nath/sevenwonders/include/results/Results.h
  /Users/nath/sevenwonders/include/results/Score.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/allocators.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/encodings.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/diyfp.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/dtoa.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/ieee754.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/itoa.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/stack.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/strfunc.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/swap.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/msinttypes/inttypes.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/msinttypes/stdint.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/prettywriter.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/rapidjson.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/stream.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/stringbuffer.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/writer.h
  /Users/nath/sevenwonders/src/main.cpp
 src/CMakeFiles/swsim.dir/results/Results.cpp.o
  /Users/nath/sevenwonders/include/Utility.h
@@ -156,6 +172,22 @@ src/CMakeFiles/swsim.dir/results/Results.cpp.o
  /Users/nath/sevenwonders/include/game/Player.h
  /Users/nath/sevenwonders/include/results/Results.h
  /Users/nath/sevenwonders/include/results/Score.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/allocators.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/encodings.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/diyfp.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/dtoa.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/ieee754.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/itoa.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/stack.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/strfunc.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/internal/swap.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/msinttypes/inttypes.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/msinttypes/stdint.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/prettywriter.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/rapidjson.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/stream.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/stringbuffer.h
+ /Users/nath/sevenwonders/rapidjson/include/rapidjson/writer.h
  /Users/nath/sevenwonders/src/results/Results.cpp
 src/CMakeFiles/swsim.dir/results/Score.cpp.o
  /Users/nath/sevenwonders/include/Utility.h

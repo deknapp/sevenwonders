@@ -13,13 +13,13 @@ class Score {
 	~Score();
 	void print();
 	void addPlayer(std::shared_ptr<Player> player);
-	std::map<std::vector<std::string>, int> getPlaces();
-	std::map<std::vector<std::string>, int> getScores();
+	std::map<std::string, int> getPlaces();
+	std::map<std::string, int> getScores();
 
  private:
 
- 	std::map<int, std::vector<std::string> > orderedScores;
-  	std::map<std::vector<std::string>, int> scores;
+ 	std::map<int, std::string > orderedScores;
+  	std::map<std::string, int> scores;
 
  	// prevent generated functions --------------------------------------------
 	Score(const Score&);

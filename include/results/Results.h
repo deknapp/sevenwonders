@@ -3,6 +3,8 @@
 
 #include <vector>
 #include "Score.h"
+#include "../../rapidjson/include/rapidjson/prettywriter.h"
+#include "../../rapidjson/include/rapidjson/stringbuffer.h"
 
 class Results {
 
@@ -18,7 +20,7 @@ class Results {
  	int totalGames;
 
  	// map of strategies to a fraction list that indicates the fraction of the time that the strategy wins
- 	std::map<std::string, double> getPercentageOfWins();
+ 	std::map<double, std::string> getPercentageOfWins();
 
  	// map of strategies to a number list that indicates the total score 
  	std::map<std::string, int> strategyScores;
