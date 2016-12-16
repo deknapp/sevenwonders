@@ -11,5 +11,6 @@ int main(int argc, char* argv[]) {
 		Game game(args);
 		results.add(game.play());
 	}
+	
 	results.printJsonFile();
 }

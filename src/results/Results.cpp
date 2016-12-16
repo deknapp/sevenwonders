@@ -26,6 +26,8 @@ void Results::printJsonFile() {
 
 void Results::add(std::shared_ptr<Score> score) {
 
+	totalGames += 1;
+
 	for (auto const& it:score->getScores()) {
 		if (!strategyScores.count(it.first)) 
 			strategyScores.insert(std::pair<std::string, int>(it.first, it.second));
