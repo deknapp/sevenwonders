@@ -9,7 +9,7 @@
 #include <iostream>
 #include <string>
 #include <map>
-#define PRINT 0
+#define PRINT 1
 
 
 Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {

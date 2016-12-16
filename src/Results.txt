@@ -1,2 +1,13 @@
 {
-    "random": 0.0
+    "percentageMap": [
+        {
+            "greedy": 0.19
+        },
+        {
+            "guild": 0.2
+        },
+        {
+            "random": 0.61
+        }
+    ]
+}

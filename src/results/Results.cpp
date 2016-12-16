@@ -14,11 +14,17 @@ void Results::printJsonFile() {
 	rapidjson::StringBuffer s;
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(s);
 
+    writer.StartObject();
+    writer.Key("percentageWinsMap");
+    writer.StartArray();
     for (auto const& it:getPercentageOfWins()) {
     	writer.StartObject();
     	writer.Key(it.second.c_str());
     	writer.Double(it.first);
+    	writer.EndObject();
     }
+    writer.EndArray();
+    writer.EndObject();
 
     myfile << s.GetString();
   	myfile.close();
@@ -56,7 +62,7 @@ std::map<double, std::string> Results::getPercentageOfWins() {
 	std::map<double, std::string> percentageMap;
 
 	for (auto const& it:strategyPlaces)
-		percentageMap.insert(std::pair<double, std::string>(it.second.at(0) / totalGames, it.first));
+		percentageMap.insert(std::pair<double, std::string>(static_cast<double>(it.second.at(0)) / static_cast<double>(totalGames), it.first));
 
 	return percentageMap;
 }

@@ -8,6 +8,7 @@ std::string ArgProcessor::strategyForPlayer(int i) {
 
 ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 
+
 	numPlayers = atoi(argv[1]);
 	std::cout << "NUMBER OF PLAYERS " << numPlayers << std::endl;
 
@@ -17,8 +18,8 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 	for (int i=0; i < numPlayers; i++) {
 		std::string playerStrategy;
 
-		if (3*i + 3 < argc - 1)
-			playerStrategy = std::string(argv[3*i + 3]);
+		if (i + 3 < argc)
+			playerStrategy = std::string(argv[i + 3]);
 		else
 			playerStrategy = std::string("random");
 
