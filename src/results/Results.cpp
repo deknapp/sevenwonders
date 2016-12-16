@@ -42,6 +42,10 @@ void Results::add(std::shared_ptr<Score> score) {
 			strategyPlaces.insert(std::pair<std::string, std::vector<int> >(it.first, newVector));
 		}
 		
+		if (strategyPlaces[it.first].size() < it.second + 1) {
+			strategyPlaces[it.first].resize(it.second + 1, 0);
+		}
+
 		strategyPlaces[it.first].at(it.second) += 1;
 	}
 

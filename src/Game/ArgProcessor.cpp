@@ -17,8 +17,8 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 	for (int i=0; i < numPlayers; i++) {
 		std::string playerStrategy;
 
-		if (3*i + 2 < argc - 1)
-			playerStrategy = std::string(argv[3*i + 2]);
+		if (3*i + 3 < argc - 1)
+			playerStrategy = std::string(argv[3*i + 3]);
 		else
 			playerStrategy = std::string("random");
 

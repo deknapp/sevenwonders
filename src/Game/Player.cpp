@@ -1,5 +1,6 @@
 #include "../../include/game/Player.h"
 #include <iostream>
+#define PRINT 0
 
 Player::Player(int name) : name(std::to_string(name)), hand(std::shared_ptr<Deck>(new Deck())), 
 						   resource(std::shared_ptr<Resource>(new Resource())), 
@@ -55,7 +56,8 @@ void Player::playNeighborGuildCard() {
 		card = rightGuildCard;
 
 	if (card) {
-		std::cout << "playing neighbor GuildCard " << card->getName() << std::endl;
+		if (PRINT)
+			std::cout << "playing neighbor GuildCard " << card->getName() << std::endl;
 		playedCards.insert(card->getName());
 		playedGuilds.insert(card->getName());
 	}
@@ -269,7 +271,8 @@ void Player::printScore() {
 void Player::discard() {
 	hand->discard();
 	resource->gold += 3;
-	std::cout << "DISCARDED" << std::endl;
+	if (PRINT)
+		std::cout << "DISCARDED" << std::endl;
 }
 
 void Player::setStrategy(std::string _strategy) {
@@ -282,7 +285,8 @@ int Player::playResourceCard() {
 		if (playedCards.count(card->getName()))
 			return 0;
 		if (resource->gold > card->getResourceGoldCost()) {
-			std::cout << "playing ResourceCard " << card->getName() << std::endl;
+			if (PRINT)
+				std::cout << "playing ResourceCard " << card->getName() << std::endl;
 			std::shared_ptr<Resource> value = card->getResourceCost();
 			resource = resource->addTo(value);
 			playedCards.insert(card->getName());
@@ -377,7 +381,8 @@ int Player::playEconomyCard() {
 	if (card) {
 		if (canPlay(card->getName(), card->getResourceCost())) {
 			buy(card->getResourceCost());
-			std::cout << "playing EconomyCard " << card->getName() << std::endl;
+			if (PRINT)
+				std::cout << "playing EconomyCard " << card->getName() << std::endl;
 			playEconomy(card->getName());
 			playedCards.insert(card->getName());
 			playedEconomyCards.insert(card->getName());
@@ -397,7 +402,8 @@ int Player::playGuildCard() {
 	if (card) {
 		if (canPlay(card->getName(), card->getResourceCost())) {
 			buy(card->getResourceCost());
-			std::cout << "playing GuildCard " << card->getName() << std::endl;
+			if (PRINT)
+				std::cout << "playing GuildCard " << card->getName() << std::endl;
 			playedCards.insert(card->getName());
 			playedGuilds.insert(card->getName());
 			for (auto const& chainCard:card->canBuy) 
@@ -416,7 +422,8 @@ int Player::playMilitaryCard() {
 	if (card) {
 		if (canPlay(card->getName(), card->getResourceCost())) {
 			buy(card->getResourceCost());
-			std::cout << "playing MilitaryCard " << card->getName() << std::endl;
+			if (PRINT)
+				std::cout << "playing MilitaryCard " << card->getName() << std::endl;
 			military.addStrength(card->getStrength());
 			for (auto const& chainCard:card->canBuy) 
 				chainCards.insert(chainCard);
@@ -434,7 +441,8 @@ int Player::playScienceCard() {
 	if (card) {
 		if (canPlay(card->getName(), card->getResourceCost())) {
 			buy(card->getResourceCost());
-			std::cout << "playing ScienceCard " << card->getName() << std::endl;
+			if (PRINT)
+				std::cout << "playing ScienceCard " << card->getName() << std::endl;
 			science.addCard(card->getCategory());
 			playedCards.insert(card->getName());
 			for (auto const& chainCard:card->canBuy) 
@@ -452,7 +460,8 @@ int Player::playBlueCard() {
 	if (card) {
 		if (canPlay(card->getName(), card->getResourceCost())) {
 			buy(card->getResourceCost());
-			std::cout << "playing BlueCard " << card->getName() << std::endl;
+			if (PRINT)
+				std::cout << "playing BlueCard " << card->getName() << std::endl;
 			bluePoints += card->getPoints();
 			playedCards.insert(card->getName());
 			for (auto const& chainCard:card->canBuy) 
@@ -736,7 +745,7 @@ void Player::buy(std::shared_ptr<Resource> resourceCost) {
 	int rightCompCost = 0;
 
 	for (int i=0; i < 7; i++) {
-		if (cost > 0)
+		if (cost > 0 && PRINT)
 			std::cout << "TRADED " << std::endl;
 		leftCompCost = componentCost("left", resource->gold, resourceCost->at(i), i);
 		rightCompCost = componentCost("right", resource->gold, resourceCost->at(i) - leftCompCost/leftCost, i);

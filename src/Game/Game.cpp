@@ -9,6 +9,7 @@
 #include <iostream>
 #include <string>
 #include <map>
+#define PRINT 0
 
 
 Game::Game(std::shared_ptr<ArgProcessor> args_pointer) : args(args_pointer) {
@@ -444,7 +445,8 @@ void Game::getDeck() {
 
 	for (int i = 0; i < 3; i++) {
 		decks.at(i)->filterForNumPlayers(numPlayers);
-		decks.at(i)->print();
+		if (PRINT == 1)
+			decks.at(i)->print();
 	}
 }
 
@@ -486,9 +488,12 @@ void Game::printScore() {
 	int i = 0;
 	for (const auto& it: players) {
 
-		std::cout << "==============================" << std::endl;
-		std::cout << "Player " << i << std::endl;
-		it->printScore();
+		if (PRINT == 1) {
+			std::cout << "==============================" << std::endl;
+			std::cout << "Player " << i << std::endl;
+			it->printScore();
+		}
+
 		i++;
 	}
 }
@@ -503,22 +508,29 @@ std::shared_ptr<Score> Game::play() {
 
 	for (int rund=0; rund<NUM_ROUNDS; rund++) {
 
-		std::cout << "=====================================" << std::endl;
-		std::cout << "ROUND " << rund << std::endl;
+		if (PRINT) {
+			std::cout << "=====================================" << std::endl;
+			std::cout << "ROUND " << rund << std::endl;
+		}
 
 		dealRound(rund);
 
 		for (int turn = 0; turn < NUM_CARDS - 1; turn++) {
 
-			std::cout << "=====================================" << std::endl;
-			std::cout << "TURN " << turn << std::endl << std::endl;
+			if (PRINT) {
+				std::cout << "=====================================" << std::endl;
+				std::cout << "TURN " << turn << std::endl << std::endl;
+			}
+
 			int i = 0;
 			for (const auto& it: players) {
 
-				std::cout << "PLAYER " << i << std::endl;
+				if (PRINT)
+					std::cout << "PLAYER " << i << std::endl;
 				it->playTurn(rund);
 				i++;
-				std::cout << std::endl;
+				if (PRINT)
+					std::cout << std::endl;
 			}
 		}
 
@@ -526,14 +538,16 @@ std::shared_ptr<Score> Game::play() {
 			it->updateMilitaryPoints(rund);
 		}
 
-		std::cout << "=====================================" << std::endl;
+		if (PRINT)
+			std::cout << "=====================================" << std::endl;
 	}
 
 	for (const auto& it: players) {
 		score->addPlayer(it);
 	}
 
-	printScore();
+	if (PRINT == 1)
+		printScore();
 
 	return score;
 }
