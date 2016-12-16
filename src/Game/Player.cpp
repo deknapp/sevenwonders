@@ -768,6 +768,9 @@ bool Player::canPlay(std::string name, std::shared_ptr<Resource> resourceCost) {
 
 bool Player::canAfford(std::shared_ptr<Resource> resourceCost) {
 
+	if (resourceCost == nullptr)
+		return false;
+
 	int goldStillThere = resource->gold;
 	int origBrownWild = resource->brownWild;
 	int origSilverWild = resource->silverWild;

@@ -1,13 +1,25 @@
 {
-    "percentageMap": [
+    "percentageWinsMap": [
         {
-            "greedy": 0.19
+            "resource": 0.069
         },
         {
-            "guild": 0.2
+            "random": 0.079
         },
         {
-            "random": 0.61
+            "greedy": 0.088
+        },
+        {
+            "fight": 0.129
+        },
+        {
+            "science": 0.182
+        },
+        {
+            "wonder": 0.186
+        },
+        {
+            "blue": 0.267
         }
     ]
 }

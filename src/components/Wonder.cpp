@@ -13,7 +13,10 @@ std::string Wonder::getName() {
 }
 
 std::shared_ptr<Resource> Wonder::getCost(int i) {
-	return resourceCost.at(i);
+	if (resourceCost.size() > i)
+		return resourceCost.at(i);
+	else 
+		return nullptr;
 } 
 
 std::shared_ptr<Resource> Wonder::getFreeResource() {
