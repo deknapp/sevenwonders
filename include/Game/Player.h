@@ -68,31 +68,39 @@ class Player {
 	int numSilverCardsPlayed;
 	int numWondersPlayed;
 	int numMinusOnes;
-	
+
 	int getMilitaryStrength();
+	std::string getBestValueCard(int round); 
 
  private:
 
 
- 	double getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double exponent, double constant);
+ 	double resource_weight;
+ 	double resource_constant;
+
+ 	double getResourceCardValue(std::shared_ptr<ResourceCard> card);
  	double getBlueValue(std::shared_ptr<BlueCard> card);
 
- 	void play();
- 	void playRandomCard(int depth);
- 	int playGreedy();
+ 	std::string getBestValueCard(int round, double neighbor_resource_weight, double constant);
+
  	void playNeighborGuildCard();
- 	void playDistribution();
- 	int playEconomyCard();
- 	int playMilitaryCard();
- 	int playScienceCard();
- 	int playResourceCard();
- 	int playBlueCard();
- 	int playGuildCard();
- 	int playGuilds();
+
+ 	void playEconomyCard(std::shared_ptr<EconomyCard> card);
+ 	void playMilitaryCard(std::shared_ptr<MilitaryCard> card);
+ 	void playScienceCard(std::shared_ptr<ScienceCard> card);
+ 	void playResourceCard(std::shared_ptr<ResourceCard> card);
+ 	void playBlueCard(std::shared_ptr<BlueCard> card);
+ 	void playGuildCard(std::shared_ptr<GuildCard> card);
+
+ 	void playCardNamed(std::string name);
+
+ 	void playCard(int round);
+
+ 	void playGuilds();
  	void playEconomy(std::string name);
  	void scoreGuild(std::string name);
  	void scoreEconomy(std::string name);
- 	int playFight();
+ 	void playFight();
  	void buy(std::shared_ptr<Resource> resourceCost);
  	bool canAfford(std::shared_ptr<Resource> resourceCost);
  	bool canPlay(std::string name, std::shared_ptr<Resource> resourceCost);
@@ -100,6 +108,8 @@ class Player {
  	int componentCost(std::string side, int gold, int cost, int i);
 
  	void assignValue();
+
+ 	void playCard(std::string name);
 
 	// get the value of a card
 	void getValue();
@@ -137,7 +147,7 @@ class Player {
 
  	bool playTwoLastRound;
  	bool canAffordNextWonder();
- 	int playWonder(std::string side);
+ 	void playWonder(std::string side);
 
  	// prevent generated functions --------------------------------------------
 	Player(const Player&);
