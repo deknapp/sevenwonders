@@ -15,16 +15,17 @@ class ArgProcessor {
 	ArgProcessor(int argc, char* argv[]);
 	int getNumGames();
 	int getNumPlayers();
-	std::vector<std::string> getStrategies();
-	std::string strategyForPlayer(int i);
+	double getResourceConstant();
+	double getResourceWeight();
 	std::string wonderSide;
 
  private:
 
- 	std::vector<std::string>  strategies;
+ 	double resourceWeight;
+ 	double resourceConstant;
+
  	int numPlayers;
  	int numGames;
-
 
  	// prevent generated functions --------------------------------------------
 	ArgProcessor(const ArgProcessor&);

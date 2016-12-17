@@ -2,7 +2,7 @@
 #include <iostream>
 #define PRINT 0
 
-Player::Player(int name) : name(std::to_string(name)),
+Player::Player(int name, double resource_weight, double resource_constant) : name(std::to_string(name)),
 						   hand(std::shared_ptr<Deck>(new Deck())), 
 						   affordableHand(std::shared_ptr<Deck>(new Deck())),
 						   resource(std::shared_ptr<Resource>(new Resource())), 

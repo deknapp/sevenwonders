@@ -467,7 +467,7 @@ void Game::initPlayers() {
 
 	int numPlayers = args->getNumPlayers();
 	for (int i=0; i<numPlayers; i++) 
-		players.push_back(std::shared_ptr<Player>(new Player(i)));
+		players.push_back(std::shared_ptr<Player>(new Player(i, args->getResourceWeight(), args->getResourceConstant())));
 	
 	playerAt(0)->setLeft(playerAt(numPlayers - 1));
 	playerAt(0)->setRight(playerAt(1));
@@ -478,9 +478,6 @@ void Game::initPlayers() {
 		playerAt(i)->setLeft(playerAt(i-1));
 		playerAt(i)->setRight(playerAt(i+1));
 	}
-
-	for (int i = 0; i < players.size(); i ++) 
-		players.at(i)->setStrategy(args->strategyForPlayer(i));
 }
 
 void Game::printScore() {

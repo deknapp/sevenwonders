@@ -2,10 +2,6 @@
 #include <iostream>
 #include <string>
 
-std::string ArgProcessor::strategyForPlayer(int i) {
-	return strategies.at(i);
-}
-
 ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 
 
@@ -15,16 +11,12 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 	numGames = atoi(argv[2]);
 	std::cout << "NUMBER OF GAMES " << numGames << std::endl;
 
-	for (int i=0; i < numPlayers; i++) {
-		std::string playerStrategy;
+	resourceWeight = atoi(argv[3]);
+	std::cout << "resourceWeight " << resourceWeight << std::endl;
 
-		if (i + 3 < argc)
-			playerStrategy = std::string(argv[i + 3]);
-		else
-			playerStrategy = std::string("random");
+	resourceConstant = atoi(argv[4]);
+	std::cout << "resourceConstant " << resourceConstant << std::endl;
 
-		strategies.push_back(playerStrategy);
-	}
 }
 
 int ArgProcessor::getNumPlayers() {
@@ -35,6 +27,10 @@ int ArgProcessor::getNumGames() {
 	return numGames;
 }
 
-std::vector<std::string> ArgProcessor::getStrategies() {
-	return strategies;
+double ArgProcessor::getResourceConstant() {
+	return resourceConstant;
+}
+
+double ArgProcessor::getResourceWeight() {
+	return resourceWeight;
 }

@@ -25,7 +25,7 @@
 class Player {
 
  public:
-	Player(int name);
+	Player(int name, double resource_weight, double resource_constant);
 	~Player();
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);

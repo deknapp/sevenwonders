@@ -1,25 +1,7 @@
 {
     "percentageWinsMap": [
         {
-            "resource": 0.069
-        },
-        {
-            "random": 0.079
-        },
-        {
-            "greedy": 0.088
-        },
-        {
-            "fight": 0.129
-        },
-        {
-            "science": 0.182
-        },
-        {
-            "wonder": 0.186
-        },
-        {
-            "blue": 0.267
+            "": 1.0
         }
     ]
 }
