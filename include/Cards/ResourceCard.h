@@ -33,6 +33,7 @@ class ResourceCard : public Card {
 
 	int gold;
 	bool isBrown;
+	int index;
 
  private:
  	bool either_or;

@@ -24,7 +24,7 @@ ScienceCard::ScienceCard(std::string _name,
 
 ScienceCard::~ScienceCard() {}
 
-std::string ScienceCard::getCategory() {
+std::string ScienceCard::getType() {
 	return category;
 }
 

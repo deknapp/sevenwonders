@@ -30,7 +30,7 @@ class ScienceCard : public Card {
 						int wood, int stone, int brick, int ore, int glass, int carpet, int paper, std::string buyCardA, std::string buyCardB, int _age, 
 						int _minPlayers, std::string _category);
 	~ScienceCard();
-	std::string getCategory();
+	std::string getType();
 
  private:
  	std::string category;

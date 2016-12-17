@@ -21,6 +21,7 @@ unsigned int Science::score() {
 }
 
 void Science::addCard(std::string type) {
+
 	if (type == "wild")
 		wild += 1;
 	if (type == "A")
@@ -29,4 +30,10 @@ void Science::addCard(std::string type) {
 		wheels += 1;
 	if (type == "tablet")
 		tablet += 1;
+}
+
+double Science::getValue(std::string type, int round) {
+
+	// TODO
+	return 0.0;
 }

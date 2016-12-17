@@ -29,7 +29,14 @@ class Player {
 	~Player();
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
-	void getResourceValue();
+
+	double getGuildValue(std::string card_name);
+	double getEconomyValue(std::string card_name);
+	double getMilitaryValue(int round);
+	double getScienceValue(std::shared_ptr<ScienceCard> card, int round);
+	double getBlueValue(std::shared_ptr<BlueCard> card, int round);
+	double getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double constant);
+
 	void updateMilitaryPoints();
 	void addRandomCardToHand(std::shared_ptr<Deck> newHand, int rund);
 	int strength();
@@ -61,6 +68,8 @@ class Player {
 	int numSilverCardsPlayed;
 	int numWondersPlayed;
 	int numMinusOnes;
+	
+	int getMilitaryStrength();
 
  private:
 

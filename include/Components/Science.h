@@ -11,6 +11,7 @@ class Science {
 	unsigned int score();
 	void addCard(std::string type);
 	unsigned int wild;
+	double getValue(std::string type, int round);
 
  private:
 

@@ -21,3 +21,9 @@ void Military::addPoints(int newPoints) {
 void Military::addStrength(int newStrength) {
 	strength += newStrength;
 }
+
+double Military::getValue(int round, int left_strength, int right_strength) {
+
+	// TODO
+	return 0.0;
+}

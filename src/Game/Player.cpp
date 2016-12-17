@@ -27,6 +27,10 @@ Player::Player(int name) : name(std::to_string(name)),
 						   	silverCost(2) {}
 Player::~Player() {}
 
+int Player::getMilitaryStrength() {
+	return military.getStrength();
+}
+
 std::string Player::getStrategy() {
 	return strategy;
 }
@@ -62,21 +66,41 @@ void Player::getAffordableCards() {
 		if (canAfford(it->getResourceCost()))
 			affordableHand->addScienceCard(it);
 	}
-
 }
 
-double Player::getBlueValue(std::shared_ptr<BlueCard> card) {
+double Player::getGuildValue(std::string card_name) {
+
+	// TODO
+	return 0.0;
+}
+
+
+double Player::getEconomyValue(std::string card_name) {
+
+	// TODO
+	return 0.0;
+}
+
+double Player::getMilitaryValue(int round) {
+	int left_strength = leftNeighbor->getMilitaryStrength();
+	int right_strength = rightNeighbor->getMilitaryStrength();
+	return military.getValue(round, left_strength, right_strength);
+}
+
+double Player::getScienceValue(std::shared_ptr<ScienceCard> card, int round) {
+	return science.getValue(card->getType(), round);
+}
+
+double Player::getBlueValue(std::shared_ptr<BlueCard> card, int round) {
 	return static_cast<double>(card->getPoints());
 }
 
-double Player::getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double exponent, double constant) {
+double Player::getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double constant) {
 
-	// TODO: get index of resource based on card 
-	int i = 0;
+	int i = card->index;
 	int number = resource->at(i);
 	int neighborNumber = leftNeighbor->getResource()->resources.at(i) + rightNeighbor->getResource()->resources.at(i);
-	double base = number + neighbor_resource_weight*neighborNumber;
-	double value = constant - pow(base,exponent);
+	double value = constant - number + neighbor_resource_weight*neighborNumber;
 	return value;
 }
 
@@ -491,7 +515,7 @@ int Player::playScienceCard() {
 			buy(card->getResourceCost());
 			if (PRINT)
 				std::cout << "playing ScienceCard " << card->getName() << std::endl;
-			science.addCard(card->getCategory());
+			science.addCard(card->getType());
 			playedCards.insert(card->getName());
 			for (auto const& chainCard:card->canBuy) 
 				chainCards.insert(chainCard);
