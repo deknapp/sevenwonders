@@ -5,6 +5,8 @@
 #include <string>
 #include <cstdbool>
 
+#include <math.h>
+
 #include "Deck.h"
 #include "../cards/Card.h"
 #include "../cards/BlueCard.h"
@@ -27,6 +29,7 @@ class Player {
 	~Player();
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
+	void getResourceValue();
 	void updateMilitaryPoints();
 	void addRandomCardToHand(std::shared_ptr<Deck> newHand, int rund);
 	int strength();
@@ -61,11 +64,14 @@ class Player {
 
  private:
 
+
+ 	double getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double exponent, double constant);
+ 	double getBlueValue(std::shared_ptr<BlueCard> card);
+
  	void play();
  	void playRandomCard(int depth);
  	int playGreedy();
  	void playNeighborGuildCard();
-
  	void playDistribution();
  	int playEconomyCard();
  	int playMilitaryCard();

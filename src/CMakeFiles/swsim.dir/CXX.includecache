@@ -191,6 +191,8 @@ string
 -
 cstdbool
 -
+math.h
+-
 Deck.h
 /Users/nath/sevenwonders/include/game/Deck.h
 ../cards/Card.h

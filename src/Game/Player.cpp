@@ -31,26 +31,6 @@ std::string Player::getStrategy() {
 	return strategy;
 }
 
-// assign values to affordable cards based on the player's strategy
-void Player::assignValue() {
-
-	// TODO
-}
-
-// get the value of a card
-void Player::getValue() {
-
-	// TODO
-
-}
-
-// sort cards by value 
-void Player::sortByValue() {
-
-	// TODO
-
-}
-
 void Player::getAffordableCards() {
 
 	for (auto const& it: hand->getBlueCards()) {
@@ -83,6 +63,21 @@ void Player::getAffordableCards() {
 			affordableHand->addScienceCard(it);
 	}
 
+}
+
+double Player::getBlueValue(std::shared_ptr<BlueCard> card) {
+	return static_cast<double>(card->getPoints());
+}
+
+double Player::getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double exponent, double constant) {
+
+	// TODO: get index of resource based on card 
+	int i = 0;
+	int number = resource->at(i);
+	int neighborNumber = leftNeighbor->getResource()->resources.at(i) + rightNeighbor->getResource()->resources.at(i);
+	double base = number + neighbor_resource_weight*neighborNumber;
+	double value = constant - pow(base,exponent);
+	return value;
 }
 
 void Player::setWonder(std::shared_ptr<Wonder> dealtWonder) {
