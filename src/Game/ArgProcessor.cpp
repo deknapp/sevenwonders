@@ -2,10 +2,21 @@
 #include <iostream>
 #include <string>
 
-ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
+ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A"), problems(false) {
 
+
+	if (argc != 6) {
+		problems = true;
+		return;
+	}
 
 	numPlayers = atoi(argv[1]);
+	
+	if (numPlayers < 3 || numPlayers > 7) {
+		problems = true;
+		return;
+	}
+
 	std::cout << "NUMBER OF PLAYERS " << numPlayers << std::endl;
 
 	numGames = atoi(argv[2]);
@@ -17,6 +28,13 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A") {
 	resourceConstant = atoi(argv[4]);
 	std::cout << "resourceConstant " << resourceConstant << std::endl;
 
+	scienceWeight = atoi(argv[5]);
+	std::cout << "scienceWeight " << scienceWeight << std::endl;
+
+}
+
+bool ArgProcessor::areNotCorrect() {
+	return problems;
 }
 
 int ArgProcessor::getNumPlayers() {
@@ -33,4 +51,8 @@ double ArgProcessor::getResourceConstant() {
 
 double ArgProcessor::getResourceWeight() {
 	return resourceWeight;
+}
+
+double ArgProcessor::getScienceWeight() {
+	return scienceWeight;
 }

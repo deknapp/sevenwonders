@@ -3,10 +3,10 @@
 
 #include <vector>
 #include <string>
+#include <cstdbool>
 
 #include "../cards/Card.h"
 #include "../game/Player.h"
-
 
 class ArgProcessor {
 
@@ -17,15 +17,20 @@ class ArgProcessor {
 	int getNumPlayers();
 	double getResourceConstant();
 	double getResourceWeight();
+	double getScienceWeight();
+	bool areNotCorrect();
 	std::string wonderSide;
 
  private:
 
  	double resourceWeight;
  	double resourceConstant;
+ 	double scienceWeight;
 
  	int numPlayers;
  	int numGames;
+
+ 	bool problems;
 
  	// prevent generated functions --------------------------------------------
 	ArgProcessor(const ArgProcessor&);

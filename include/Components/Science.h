@@ -9,9 +9,9 @@ class Science {
 	Science();
 	~Science();
 	unsigned int score();
-	void addCard(std::string type);
+	void addCard(std::string type, int amount);
 	unsigned int wild;
-	double getValue(std::string type, int round);
+	double getValue(std::string type, int round, double weight);
 
  private:
 

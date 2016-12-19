@@ -139,6 +139,8 @@ vector
 -
 string
 -
+cstdbool
+-
 ../cards/Card.h
 /Users/nath/sevenwonders/include/cards/Card.h
 ../game/Player.h

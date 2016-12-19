@@ -25,7 +25,7 @@
 class Player {
 
  public:
-	Player(int name, double resource_weight, double resource_constant);
+	Player(int name, double resource_weight, double resource_constant, double science_weight);
 	~Player();
 	int canAfford(std::shared_ptr<Card> card);
 	void playTurn(int round);
@@ -33,7 +33,7 @@ class Player {
 	double getGuildValue(std::string card_name);
 	double getEconomyValue(std::string card_name);
 	double getMilitaryValue(int round);
-	double getScienceValue(std::shared_ptr<ScienceCard> card, int round);
+	double getScienceValue(std::shared_ptr<ScienceCard> card, int round); 
 	double getBlueValue(std::shared_ptr<BlueCard> card, int round);
 	double getResourceCardValue(std::shared_ptr<ResourceCard> card, double neighbor_resource_weight, double constant);
 
@@ -77,6 +77,7 @@ class Player {
 
  	double resource_weight;
  	double resource_constant;
+ 	double science_weight;
 
  	double getResourceCardValue(std::shared_ptr<ResourceCard> card);
  	double getBlueValue(std::shared_ptr<BlueCard> card);
@@ -110,12 +111,6 @@ class Player {
  	void assignValue();
 
  	void playCard(std::string name);
-
-	// get the value of a card
-	void getValue();
-
-	// sort cards by value 
-	void sortByValue();
 
  	std::set<std::string> playedCards;
  	std::set<std::string> playedEconomyCards;

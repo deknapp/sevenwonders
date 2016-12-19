@@ -20,20 +20,24 @@ unsigned int Science::score() {
 	return sum;
 }
 
-void Science::addCard(std::string type) {
+void Science::addCard(std::string type, int amount) {
 
 	if (type == "wild")
-		wild += 1;
+		wild += amount;
 	if (type == "A")
-		abacus += 1;
+		abacus += amount;
 	if (type == "wheel")
-		wheels += 1;
+		wheels += amount;
 	if (type == "tablet")
-		tablet += 1;
+		tablet += amount;
 }
 
-double Science::getValue(std::string type, int round) {
+double Science::getValue(std::string type, int round, double weight) {
 
-	// TODO
-	return 0.0;
+	int scoreWithoutCard = score();
+	addCard(type, 1);
+	int scoreWithCard = score();
+	addCard(type, -1);
+	double difference = scoreWithCard - scoreWithoutCard;
+	return weight*difference;
 }

@@ -2,7 +2,7 @@
 #include <iostream>
 #define PRINT 0
 
-Player::Player(int name, double resource_weight, double resource_constant) : name(std::to_string(name)),
+Player::Player(int name, double resource_weight, double resource_constant, double science_weight) : name(std::to_string(name)),
 						   hand(std::shared_ptr<Deck>(new Deck())), 
 						   affordableHand(std::shared_ptr<Deck>(new Deck())),
 						   resource(std::shared_ptr<Resource>(new Resource())), 
@@ -88,7 +88,7 @@ double Player::getMilitaryValue(int round) {
 }
 
 double Player::getScienceValue(std::shared_ptr<ScienceCard> card, int round) {
-	return science.getValue(card->getType(), round);
+	return science.getValue(card->getType(), round, science_weight);
 }
 
 double Player::getBlueValue(std::shared_ptr<BlueCard> card, int round) {
@@ -468,7 +468,7 @@ void Player::playScienceCard(std::shared_ptr<ScienceCard> card) {
 	buy(card->getResourceCost());
 	if (PRINT)
 		std::cout << "playing ScienceCard " << card->getName() << std::endl;
-	science.addCard(card->getType());
+	science.addCard(card->getType(), 1);
 	playedCards.insert(card->getName());
 	for (auto const& chainCard:card->canBuy) 
 		chainCards.insert(chainCard);
@@ -490,37 +490,58 @@ void Player::playBlueCard(std::shared_ptr<BlueCard> card) {
 std::string Player::getBestValueCard(int round) {
 
 	double max_value = 0.0;
+	double temp = 0.0;
 	std::string bestValueName;
 
 	for (auto const& it: affordableHand->getBlueCards()) {
-		if (getBlueValue(it, round) > max_value)
+
+		temp = getBlueValue(it, round);
+		if (temp > max_value) {
 			bestValueName = it->getName();
+			max_value = temp;
+		}
 	}
 
 	for (auto const& it: affordableHand->getEconomyCards()) {
-		if (getEconomyValue(it->getName()) > max_value)
+
+		temp = getEconomyValue(it->getName());
+		if (temp > max_value) {
 			bestValueName = it->getName();
+			max_value = temp;
+		}
 
 	}
 
 	for (auto const& it: affordableHand->getGuildCards()) {
-		if (getGuildValue(it->getName()) > max_value)
-			bestValueName = it->getName();
 
+		temp = getGuildValue(it->getName());
+		if (temp > max_value) {
+			bestValueName = it->getName();
+			max_value = temp;
+		}
 	}
 
 	for (auto const& it: affordableHand->getResourceCards()) {
-		if (getResourceCardValue(it) > max_value)
+
+		temp = getResourceCardValue(it);
+		if (temp > max_value) {
 			bestValueName = it->getName();
+			max_value = temp;
+		}
 	}
 	
 	for (auto const& it: affordableHand->getMilitaryCards()) {
-		if (getMilitaryValue(round) > max_value) 
+
+		temp = getMilitaryValue(round);
+		if (temp > max_value) {
 			bestValueName = it->getName();
+			max_value = temp;
+		}
 	}
 
 	for (auto const& it: affordableHand->getScienceCards()) {
-		if (getScienceValue(it, round) > max_value)
+
+		if (getScienceValue(it, round) > max_value) 
 			bestValueName = it->getName();
 	}
 
