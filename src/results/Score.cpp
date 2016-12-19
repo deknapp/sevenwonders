@@ -10,9 +10,9 @@ Score::~Score() {}
 void Score::print() {}
 
 void Score::addPlayer(std::shared_ptr<Player> player) {
-	std::string strategy = player->getStrategy();
-	orderedScores.insert(std::pair<int, std::string >(player->score(), strategy));
-	scores.insert(std::pair<std::string, int>(strategy, player->score()));
+	// std::string strategy = player->getStrategy();
+	// orderedScores.insert(std::pair<int, std::string >(player->score(), strategy));
+	// scores.insert(std::pair<std::string, int>(strategy, player->score()));
 }
 
 std::map<std::string, int> Score::getPlaces() {

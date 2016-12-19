@@ -31,10 +31,6 @@ int Player::getMilitaryStrength() {
 	return military.getStrength();
 }
 
-std::string Player::getStrategy() {
-	return strategy;
-}
-
 void Player::getAffordableCards() {
 
 	for (auto const& it: hand->getBlueCards()) {
@@ -84,7 +80,7 @@ double Player::getEconomyValue(std::string card_name) {
 double Player::getMilitaryValue(int round) {
 	int left_strength = leftNeighbor->getMilitaryStrength();
 	int right_strength = rightNeighbor->getMilitaryStrength();
-	return military.getValue(round, left_strength, right_strength);
+	return military.getValue(round, left_strength, right_strength, 1);
 }
 
 double Player::getScienceValue(std::shared_ptr<ScienceCard> card, int round) {
@@ -311,8 +307,6 @@ int Player::score() {
 }
 
 void Player::print() {
-
-	std::cout << "Strategy is " << strategy << std::endl;
 	resource->print();
 }
 
@@ -335,10 +329,6 @@ void Player::discard() {
 	resource->gold += 3;
 	if (PRINT)
 		std::cout << "DISCARDED" << std::endl;
-}
-
-void Player::setStrategy(std::string _strategy) {
-	strategy = _strategy;
 }
 
 void Player::playResourceCard(std::shared_ptr<ResourceCard> card) {

@@ -10,7 +10,7 @@ class Military {
 	~Military();
 	int getScore();
 	unsigned int getStrength();
-	double getValue(int round, int left_strength, int right_strength);
+	double getValue(int round, int left_strength, int right_strength, double military_weight);
 	void addPoints(int newPoints);
 	void addStrength(int strength);
 	unsigned int strength;
