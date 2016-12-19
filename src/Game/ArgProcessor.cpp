@@ -20,15 +20,35 @@ ArgProcessor::ArgProcessor(int argc, char* argv[]) : wonderSide("A"), problems(f
 	std::cout << "NUMBER OF PLAYERS " << numPlayers << std::endl;
 
 	numGames = atoi(argv[2]);
+	if (numGames <= 0) {
+		problems = true;
+		return;
+	}
+
 	std::cout << "NUMBER OF GAMES " << numGames << std::endl;
 
-	resourceWeight = atoi(argv[3]);
+	resourceWeight = atof(argv[3]);
+	if (resourceWeight < 0 || resourceWeight > 1) {
+		problems = true;
+		return;
+	}
+
 	std::cout << "resourceWeight " << resourceWeight << std::endl;
 
-	resourceConstant = atoi(argv[4]);
+	resourceConstant = atof(argv[4]);
+	if (resourceConstant <= 0) {
+		problems = true;
+		return;
+	}
+	
 	std::cout << "resourceConstant " << resourceConstant << std::endl;
 
-	scienceWeight = atoi(argv[5]);
+	scienceWeight = atof(argv[5]);
+	if (scienceWeight < 1) {
+		problems = true;
+		return;
+	}
+
 	std::cout << "scienceWeight " << scienceWeight << std::endl;
 
 }
